@@ -8,133 +8,95 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
-import { link as linkStyles } from "@heroui/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
-
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import Image from "next/image";
+import PisamaLogo from "../public/EspacioPisama80.png";
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+  const navLinks = [
+    { name: "Consultorios", href: "/consultorios" },
+    { name: "Precios", href: "/precios" },
+    { name: "Disponibilidad", href: "/disponibilidad" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contacto", href: "/contacto" },
+  ];
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
-          </NextLink>
-        </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
+    <HeroUINavbar disableAnimation isBordered>
+      {/* --- Menú Móvil: Botón de hamburguesa y Logo --- */}
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
+      <NavbarContent className="sm:hidden" justify="center">
+        <NavbarBrand>
+          <Image
+            src={PisamaLogo}
+            alt="Logo de Pisama"
+            height={36}
+            width={36}
+            className="mr-2"
+          />
+          <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
+        </NavbarBrand>
+      </NavbarContent>
+
+      {/* --- Menú de Escritorio: Logo y Enlaces --- */}
+      <NavbarContent className="hidden sm:flex gap-4" justify="start">
+        <NavbarBrand>
+          <Image
+            src={PisamaLogo}
+            alt="Logo de Pisama"
+            height={36}
+            width={36}
+            className="mr-2"
+          />
+          <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {/* 2. Mapeamos tus enlaces para el menú de escritorio */}
+        {navLinks.map((link) => (
+          <NavbarItem
+            key={link.href}
+            // isActive={pathname === link.href} // Descomenta esto si usas un hook para la ruta activa
           >
-            Sponsor
+            <Link
+              color="foreground"
+              href={link.href}
+              // aria-current={pathname === link.href ? "page" : undefined} // Para accesibilidad
+            >
+              {link.name}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+
+      {/* --- Botones de Acción (Login/Sign Up) --- */}
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button as={Link} color="warning" href="/signup" variant="flat">
+            Sign Up
           </Button>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
+      {/* --- Contenido del Menú Móvil --- */}
       <NavbarMenu>
-        {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
+        {/* 3. Mapeamos tus mismos enlaces para el menú móvil */}
+        {navLinks.map((item, index) => (
+          <NavbarMenuItem key={`${item.name}-${index}`}>
+            <Link
+              className="w-full"
+              color="foreground" // Simplificamos el color, puedes personalizarlo
+              href={item.href}
+              size="lg"
+            >
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
       </NavbarMenu>
     </HeroUINavbar>
   );
