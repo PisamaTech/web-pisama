@@ -37,12 +37,16 @@ export default function HeroSection() {
 
         {/* Botones de Llamada a la Acción */}
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Link
+          <Button
+            as={Link}
             href="/disponibilidad"
-            className="rounded-md bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 transition-colors"
+            size="lg"
+            color="primary"
+            radius="md"
+            variant="shadow"
           >
             Ver Disponibilidad
-          </Link>
+          </Button>
           <Link
             href="/mas-informacion"
             className="rounded-md border border-white/80 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"

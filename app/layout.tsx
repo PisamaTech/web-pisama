@@ -42,13 +42,14 @@ export default function RootLayout({
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Tu Dirección Aquí",
-      addressLocality: "Tu Ciudad",
-      postalCode: "Tu Código Postal",
-      addressCountry: "AR", // Código de país (Argentina)
+      streetAddress: "Juan Paullier 1192",
+      addressLocality: "Montevideo",
+      addressRegion: "Montevideo",
+      postalCode: "11200",
+      addressCountry: "UY",
     },
     // Agrega tu teléfono si lo tienes
-    // telephone: "+54-11-XXXX-XXXX",
+    telephone: "+598-95-961-360",
   };
 
   return (
@@ -65,7 +66,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main>{children}</main>

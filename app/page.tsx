@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/homepage/HeroSection";
 
 export const metadata: Metadata = {
   title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
