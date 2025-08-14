@@ -33,9 +33,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Espacio Pisama",
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/EspacioPisama80.png`,
+    description: siteConfig.description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Tu Dirección Aquí",
+      addressLocality: "Tu Ciudad",
+      postalCode: "Tu Código Postal",
+      addressCountry: "AR", // Código de país (Argentina)
+    },
+    // Agrega tu teléfono si lo tienes
+    // telephone: "+54-11-XXXX-XXXX",
+  };
+
   return (
     <html suppressHydrationWarning lang="es">
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
