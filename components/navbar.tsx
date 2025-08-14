@@ -21,38 +21,31 @@ export const Navbar = () => {
     { name: "Contacto", href: "/contacto" },
   ];
 
+  const brandContent = (
+    <NavbarBrand>
+      <Image
+        src={PisamaLogo}
+        alt="Logo de Pisama"
+        height={36}
+        width={36}
+        className="mr-2"
+      />
+      <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
+    </NavbarBrand>
+  );
+
   return (
     <HeroUINavbar disableAnimation isBordered>
-      {/* --- Menú Móvil: Botón de hamburguesa y Logo --- */}
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden" justify="center">
-        <NavbarBrand>
-          <Image
-            src={PisamaLogo}
-            alt="Logo de Pisama"
-            height={36}
-            width={36}
-            className="mr-2"
-          />
-          <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
-        </NavbarBrand>
+      <NavbarContent className="sm:hidden pr-3" justify="center">
+        {brandContent}
       </NavbarContent>
 
-      {/* --- Menú de Escritorio: Logo y Enlaces --- */}
       <NavbarContent className="hidden sm:flex gap-4" justify="start">
-        <NavbarBrand>
-          <Image
-            src={PisamaLogo}
-            alt="Logo de Pisama"
-            height={36}
-            width={36}
-            className="mr-2"
-          />
-          <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
-        </NavbarBrand>
+        {brandContent}
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
