@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
 import HeroSection from "@/components/homepage/HeroSection";
+import FeaturesSection from "@/components/homepage/FeaturesSection";
+import TestimonialsSection from "@/components/homepage/TestimonialsSection";
 
 export const metadata: Metadata = {
   title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
@@ -13,5 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HeroSection />;
+  return (
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <TestimonialsSection />
+    </>
+  );
 }
