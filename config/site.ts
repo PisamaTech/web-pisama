@@ -1,7 +1,10 @@
+import { url } from "inspector";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
+  name: "Espacio PISAMA - Alquiler de consultorios por hora.",
+  url: "https://www.pisama.uy",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {

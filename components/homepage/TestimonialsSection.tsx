@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
                   src={testimonial.avatar}
                   name={testimonial.name}
                   classNames={{
-                    image: "ring-2 ring-terracotta-suave/50",
+                    img: "ring-2 ring-terracotta-suave/50",
                   }}
                 />
                 <div className="flex flex-col">
