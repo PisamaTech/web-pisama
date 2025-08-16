@@ -1,24 +1,31 @@
 import { Card, CardBody } from "@heroui/card";
 import { FaClock, FaMapMarkerAlt, FaCouch } from "react-icons/fa";
+import { MdAppShortcut } from "react-icons/md";
 
 export default function BeneficiosClave() {
   const beneficios = [
     {
       titulo: "Flexibilidad horaria",
       descripcion:
-        "Reservá consultorios por hora, mañana, tarde o fin de semana.",
+        "Abierto todos los días de 7:00 a 23:00 hs. Los 365 días del año.",
       icono: <FaClock className="text-primary text-4xl mb-3" />,
     },
     {
       titulo: "Ubicación estratégica",
       descripcion:
-        "En el corazón de Montevideo, fácil acceso para vos y tus pacientes.",
+        "Parque Rodó, en el corazón de Montevideo. Fácil acceso para vos y tus pacientes.",
       icono: <FaMapMarkerAlt className="text-primary text-4xl mb-3" />,
+    },
+    {
+      titulo: "Reservas Online 24/7",
+      descripcion:
+        "Gestiona tus horarios desde tu celular o computadora con nuestro sistema de reservas online.",
+      icono: <MdAppShortcut className="text-primary text-4xl mb-3" />,
     },
     {
       titulo: "Comodidad y profesionalismo",
       descripcion:
-        "Espacios cuidados, amoblados y listos para recibir a tus clientes.",
+        "Espacios cuidados, amoblados y listos para recibir a tus pacientes.",
       icono: <FaCouch className="text-primary text-4xl mb-3" />,
     },
   ];
@@ -31,7 +38,7 @@ export default function BeneficiosClave() {
           <span className="text-primary">Espacio Pisama</span>
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
           {beneficios.map((beneficio, index) => (
             <Card
               key={index}

@@ -70,7 +70,7 @@ export const Navbar = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button as={Link} color="warning" href="/signup" variant="flat">
-            Sign Up
+            Reservar ahora
           </Button>
         </NavbarItem>
       </NavbarContent>
