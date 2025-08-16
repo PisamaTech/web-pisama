@@ -8,7 +8,7 @@ const espacios = [
   {
     id: "consultorio-1",
     nombre: "Consultorio 1",
-    img: "/images/consultorio1-1.jpg",
+    img: "/images/consultorio1-2.jpg",
   },
   {
     id: "consultorio-2",
