@@ -12,7 +12,7 @@ export default function CtaSection() {
           ¿Listo para reservar tu consultorio?
         </h2>
         <p className="text-lg mb-8 text-white/90">
-          Espacios profesionales, cómodos y listos para recibir a tus clientes.
+          Espacios profesionales, cómodos y listos para recibir a tus pacientes.
           Reserva en minutos y empieza a trabajar en el ambiente que mereces.
         </p>
 

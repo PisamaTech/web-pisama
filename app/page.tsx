@@ -6,6 +6,11 @@ import FeaturesSection from "@/components/homepage/FeaturesSection";
 import TestimonialsSection from "@/components/homepage/TestimonialsSection";
 import CtaSection from "@/components/homepage/CtaSection";
 import Gallery from "@/components/homepage/Gallery";
+import PreciosPage from "./precios/page";
+import FaqSection from "@/components/precios/FaqSection";
+import PricingTeaser from "@/components/homepage/PricingTeaser";
+import GalleryCard from "@/components/homepage/GalleryCard";
+import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
 
 export const metadata: Metadata = {
   title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
@@ -21,8 +26,10 @@ export default function Home() {
     <>
       <HeroSection />
       <FeaturesSection />
+      <ProfessionalsSection />
+      <GalleryCard />
       <TestimonialsSection />
-      <Gallery />
+      <PricingTeaser />
       <CtaSection />
     </>
   );

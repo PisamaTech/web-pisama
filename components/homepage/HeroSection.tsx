@@ -24,15 +24,17 @@ export default function HeroSection() {
       {/* 4. Contenedor del contenido, centrado */}
       <div className="mx-auto max-w-4xl text-center px-6 z-25">
         {/* Título Principal (ahora en color blanco) */}
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-          Alquiler de Consultorios por Hora en el Corazón de Parque Rodó
+        <h1 className="-bold tracking-tight text-white sm:text-6xl">
+          Alquiler de Consultorios por Hora en Montevideo: El espacio que
+          Impulsa tu Profesión
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
         <p className="mt-6 text-lg leading-8 text-gray-200 ">
           Espacios diseñados para psicólogos, terapeutas, coaches y
-          profesionales independientes. Reserva online, acceso autónomo y
-          facturación automática.
+          profesionales independientes. Contamos con reserva online, descuentos
+          por paquetes de horas, cancelación con más de 24 horas sin costo y
+          posibilidad de reagendar, en cancelacione de menos de 24 horas.
         </p>
 
         {/* Botones de Llamada a la Acción */}
@@ -44,15 +46,21 @@ export default function HeroSection() {
             color="primary"
             radius="md"
             variant="shadow"
+            className="border border-white/30"
           >
             Ver Disponibilidad
           </Button>
-          <Link
+          <Button
+            as={Link}
             href="/mas-informacion"
-            className="rounded-md border border-white/80 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            size="lg"
+            color="secondary"
+            radius="md"
+            variant="shadow"
+            className="border border-white/30"
           >
-            Conocer Más
-          </Link>
+            Conocer Precios
+          </Button>
         </div>
       </div>
     </section>

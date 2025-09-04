@@ -30,12 +30,16 @@ export const Navbar = () => {
         width={36}
         className="mr-2"
       />
-      <p className="font-bold text-inherit">espacio PISAMA</p>{" "}
+      <p className="font-bold text-primary">espacio PISAMA</p>{" "}
     </NavbarBrand>
   );
 
   return (
-    <HeroUINavbar disableAnimation isBordered>
+    <HeroUINavbar
+      disableAnimation
+      isBordered
+      className="bg-content1 text-secondary font-semibold"
+    >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
@@ -56,7 +60,7 @@ export const Navbar = () => {
             // isActive={pathname === link.href} // Descomenta esto si usas un hook para la ruta activa
           >
             <Link
-              color="foreground"
+              color="primary"
               href={link.href}
               // aria-current={pathname === link.href ? "page" : undefined} // Para accesibilidad
             >
@@ -69,7 +73,7 @@ export const Navbar = () => {
       {/* --- Botones de Acción (Login/Sign Up) --- */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="warning" href="/signup" variant="flat">
+          <Button as={Link} color="warning" href="/signup" variant="solid">
             Reservar ahora
           </Button>
         </NavbarItem>

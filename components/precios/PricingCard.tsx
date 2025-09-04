@@ -1,53 +1,69 @@
 import Link from "next/link";
 import { Card } from "@heroui/card";
 import { Button } from "@heroui/button";
+import { Chip } from "@heroui/chip";
 import { FaCheckCircle } from "react-icons/fa";
-import clsx from "clsx";
-import { FC } from "react";
+import { MdOutlineFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 
+// TIPADO: Definimos la interfaz para las props del componente
 interface PricingCardProps {
   title: string;
   price: number;
+  priceSubtitle: string;
   description: string;
   features: string[];
   isFeatured: boolean;
 }
 
-const PricingCard: FC<PricingCardProps> = ({
+export default function PricingCard({
   title,
   price,
+  priceSubtitle,
   description,
   features,
   isFeatured,
-}) => {
-  const cardClasses = clsx("flex h-full flex-col rounded-2xl p-8 shadow-lg", {
-    "bg-marron-cafe text-crema-suave ring-4 ring-terracotta-suave": isFeatured,
-    "bg-crema-suave text-marron-cafe": !isFeatured,
-  });
-
-  const textColor = isFeatured ? "text-crema-suave" : "text-marron-cafe";
-  const mutedTextColor = isFeatured
-    ? "text-gris-calido"
-    : "text-marron-cafe/90";
+}: PricingCardProps) {
+  const cardClasses = isFeatured
+    ? "bg-marron-cafe text-crema-suave ring-4 ring-terracotta-suave"
+    : "bg-crema-suave text-marron-cafe";
 
   return (
-    <Card className={cardClasses}>
-      <h3 className={`font-display text-2xl font-bold ${textColor}`}>
-        {title}
-      </h3>
-      <p className={`mt-4 font-sans ${mutedTextColor}`}>{description}</p>
+    <Card
+      className={`relative flex h-full flex-col overflow-visible p-8 shadow-lg ${cardClasses}`}
+    >
+      {isFeatured && (
+        <Chip
+          color="warning"
+          variant="shadow"
+          size="lg"
+          startContent={<MdOutlineFavoriteBorder className="h-5 w-5" />}
+          className="absolute z-10 -right-3 -top-3 text-default text-sm bg-linear-to-t/srgb from-yellow-400 to-yellow-500"
+        >
+          Más elegido
+        </Chip>
+      )}
+      <h3 className="font-display text-2xl font-bold">{title}</h3>
+      <p
+        className={`mt-4 font-sans ${isFeatured ? "text-gris-calido" : "text-marron-cafe/90"}`}
+      >
+        {description}
+      </p>
       <div className="mt-6">
-        <span className={`font-display text-5xl font-bold ${textColor}`}>
-          ${price}
+        <span className="font-display text-5xl font-bold">${price}</span>
+        <span
+          className={`ml-2 font-sans ${isFeatured ? "text-gris-calido" : "text-marron-cafe/90"}`}
+        >
+          / hora
         </span>
-        <span className={`ml-2 font-sans ${mutedTextColor}`}>por hora</span>
+        <p
+          className={`mt-2 font-sans text-sm font-bold ${isFeatured ? "text-terracotta-suave" : "text-terracotta-suave"}`}
+        >
+          {priceSubtitle}
+        </p>
       </div>
-      <ul className="mt-8 flex-grow space-y-3">
+      <ul className="mt-8 space-y-3">
         {features.map((feature, index) => (
-          <li
-            key={index}
-            className={`flex items-center font-sans ${textColor}`}
-          >
+          <li key={index} className="flex items-center font-sans">
             <FaCheckCircle className="mr-3 h-5 w-5 text-terracotta-suave" />
             <span>{feature}</span>
           </li>
@@ -57,12 +73,7 @@ const PricingCard: FC<PricingCardProps> = ({
         <Button
           as={Link}
           href="/disponibilidad"
-          className={clsx("w-full font-display font-semibold", {
-            "bg-terracotta-suave text-white hover:bg-terracotta-suave/90":
-              isFeatured,
-            "bg-marron-cafe text-crema-suave hover:bg-marron-cafe/90":
-              !isFeatured,
-          })}
+          className={`w-full font-display font-semibold ${isFeatured ? "bg-terracotta-suave text-white" : "bg-marron-cafe text-crema-suave"}`}
           variant="solid"
         >
           Ver Disponibilidad
@@ -70,6 +81,4 @@ const PricingCard: FC<PricingCardProps> = ({
       </div>
     </Card>
   );
-};
-
-export default PricingCard;
+}
