@@ -32,9 +32,9 @@ export default function HeroSection() {
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
         <p className="mt-6 text-lg leading-8 text-gray-200 ">
           Espacios diseñados para psicólogos, terapeutas, coaches y
-          profesionales independientes. Contamos con reserva online, descuentos
-          por paquetes de horas, cancelación con más de 24 horas sin costo y
-          posibilidad de reagendar, en cancelacione de menos de 24 horas.
+          profesionales independientes. Gestiona tu agenda online, olvídate de
+          las cuponeras y recibe a tus pacientes en un ambiente de calma y
+          profesionalismo.
         </p>
 
         {/* Botones de Llamada a la Acción */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
             variant="shadow"
             className="border border-white/30"
           >
-            Conocer Precios
+            Contactanos
           </Button>
         </div>
       </div>

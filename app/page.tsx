@@ -11,6 +11,7 @@ import FaqSection from "@/components/precios/FaqSection";
 import PricingTeaser from "@/components/homepage/PricingTeaser";
 import GalleryCard from "@/components/homepage/GalleryCard";
 import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
+import BookingSystemSection from "@/components/homepage/BookingSystemSection";
 
 export const metadata: Metadata = {
   title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
@@ -28,7 +29,8 @@ export default function Home() {
       <FeaturesSection />
       <ProfessionalsSection />
       <GalleryCard />
-      <TestimonialsSection />
+      <BookingSystemSection />
+      {/* <TestimonialsSection /> */}
       <PricingTeaser />
       <CtaSection />
     </>

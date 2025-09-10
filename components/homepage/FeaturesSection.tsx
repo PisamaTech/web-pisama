@@ -32,7 +32,7 @@ export default function BeneficiosClave() {
     {
       titulo: "Comodidad y profesionalismo",
       descripcion:
-        "Espacios cuidadosamente ambientados, con calidez y estilo. Listos para recibir a tus pacientes y potenciar cada sesión.",
+        "Cada detalle, desde la acústica hasta la decoración, fueron pensado por dos psicólogos para el bienestar de profesionales y pacientes. Un espacio creado desde la experiencia.",
       icono: <FaCouch className="text-terracotta-suave text-4xl mb-3" />,
     },
     {
