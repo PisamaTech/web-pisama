@@ -17,7 +17,7 @@ export default function ConsultoriosSection() {
   return (
     <section className="py-12 px-6 max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-8">
-        Nuestros Consultorios
+        Nuestros Espacios: Ambientes que potencian tu práctica profesional
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {consultorios.map((consultorio, idx) => (

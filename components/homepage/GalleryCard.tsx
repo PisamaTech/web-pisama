@@ -55,7 +55,7 @@ export default function GalleryCard() {
         <h2 className="text-4xl font-bold text-primary">
           Un Entorno que Inspira Confianza y Bienestar.
         </h2>
-        <p className="my-8 font-sans text-lg text-default">
+        <p className="my-8 font-sans text-lg text-marron-cafe">
           Cada uno de nuestros espacios fue cuidadosamente diseñado para
           encontrar el equilibrio perfecto entre profesionalismo y calidez.
           Creemos que el entorno es una herramienta fundamental en tu trabajo.
