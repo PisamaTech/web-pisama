@@ -5,6 +5,7 @@ import { Card, CardBody, CardFooter } from "@heroui/card";
 import { FaCheckCircle } from "react-icons/fa";
 import GalleryModal from "./GalleryModal";
 import { Espacio } from "@/src/consultoriosData";
+import { Chip } from "@heroui/chip";
 
 export default function ConsultorioCard({ espacio }: { espacio: Espacio }) {
   const [open, setOpen] = useState(false);
@@ -17,12 +18,12 @@ export default function ConsultorioCard({ espacio }: { espacio: Espacio }) {
 
   return (
     <>
-      <Card className="shadow-lg rounded-xl overflow-hidden hover:scale-[1.02] transition-transform">
+      <Card className="shadow-lg rounded-xl overflow-hidden hover:scale-[1.03] transition-transform">
         <CardBody className="p-0">
           <img
             src={espacio.media[0].src}
             alt={espacio.nombre}
-            className="w-full h-56 object-cover cursor-pointer"
+            className="w-full h-70  object-cover cursor-pointer"
             onClick={() => handleOpen(0)}
           />
           <div className="grid grid-cols-3 gap-2 p-2">
@@ -45,6 +46,12 @@ export default function ConsultorioCard({ espacio }: { espacio: Espacio }) {
         </CardBody>
         <CardFooter className="flex flex-col items-start gap-3">
           <h3 className="text-lg font-bold">{espacio.nombre}</h3>
+          <Chip
+            color={espacio.tipo === "premium" ? "success" : "primary"}
+            className="capitalize"
+          >
+            {espacio.tipo}
+          </Chip>
           <p className="text-gray-600">{espacio.descripcion}</p>
           {espacio.precio && (
             <p className="text-primary font-semibold">{espacio.precio}</p>

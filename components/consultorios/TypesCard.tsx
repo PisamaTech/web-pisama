@@ -4,10 +4,10 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { FaCheckCircle } from "react-icons/fa";
 import { Divider } from "@heroui/divider";
-import { MdOutlineFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 // TIPADO: Definimos la interfaz para las props del componente
-interface PricingCardProps {
+interface TypesCardProps {
   title: string;
   price: number;
   priceSubtitle: string;
@@ -16,14 +16,12 @@ interface PricingCardProps {
   isFeatured: boolean;
 }
 
-export default function PricingCard({
+export default function TypesCard({
   title,
-  price,
-  priceSubtitle,
   description,
   features,
   isFeatured,
-}: PricingCardProps) {
+}: TypesCardProps) {
   const cardClasses = isFeatured
     ? "bg-marron-cafe text-crema-suave ring-4 ring-terracotta-suave"
     : "bg-crema-suave text-marron-cafe ring-1 ring-gray-300";
@@ -43,27 +41,16 @@ export default function PricingCard({
           Más elegido
         </Chip>
       )}
-      <h3 className="font-display text-2xl font-bold mb-3">{title}</h3>
+      <h3 className="font-display text-2xl font-bold mb-3 text-left">
+        {title}
+      </h3>
       <Divider />
       <p
-        className={`mt-4 font-sans ${isFeatured ? "text-gris-calido" : "text-marron-cafe/90"}`}
+        className={`mt-4 font-sans text-left ${isFeatured ? "text-gris-calido" : "text-marron-cafe/90"}`}
       >
         {description}
       </p>
-      <div className="mt-6">
-        <span className="font-display text-5xl font-bold">${price}</span>
-        <span
-          className={`ml-2 font-sans ${isFeatured ? "text-gris-calido" : "text-marron-cafe/90"}`}
-        >
-          / hora
-        </span>
-        <p
-          className={`mt-2 font-sans text-sm font-bold ${isFeatured ? "text-terracotta-suave" : "text-terracotta-suave"}`}
-        >
-          {priceSubtitle}
-        </p>
-      </div>
-      <ul className="mt-8 space-y-3">
+      <ul className="mt-8 space-y-3 text-left">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center font-sans">
             <FaCheckCircle className="mr-3 h-5 w-5 text-terracotta-suave" />

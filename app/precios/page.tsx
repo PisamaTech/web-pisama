@@ -4,47 +4,7 @@ import DiscountCalculator from "@/components/precios/DiscountCalculator"; // Imp
 import SavingsIntroSection from "@/components/precios/SavingsIntroSection";
 import ComparisonTable from "@/components/precios/ComparisonTable";
 import DiscountsSection from "@/components/precios/DiscountsSection";
-
-// TIPADO: Definimos la interfaz para los datos de precios
-interface PricingPlan {
-  title: string;
-  price: number;
-  priceSubtitle: string;
-  description: string;
-  features: string[];
-  isFeatured: boolean;
-}
-
-const pricingData: PricingPlan[] = [
-  {
-    title: "Consultorio Estándar",
-    price: 200,
-    priceSubtitle: "(o hasta $120/hora con descuentos)",
-    description:
-      "La opción ideal para sesiones individuales que buscan un entorno funcional, acogedor y eficiente.",
-    features: [
-      "Espacio optimizado",
-      "Dos cómodos sillones individuales",
-      "Mesa de apoyo",
-      "Máxima privacidad",
-    ],
-    isFeatured: false,
-  },
-  {
-    title: "Consultorio Premium",
-    price: 250,
-    priceSubtitle: "(o hasta $170/hora con descuentos)",
-    description:
-      "Amplitud, diseño y luz natural para una experiencia superior. Perfecto para potenciar tu imagen profesional.",
-    features: [
-      "Mayor amplitud y confort",
-      "Sillones amplios, para más de una persona",
-      "Diseño cálido y confortable",
-      "Ideal para terapia de pareja, niños y adultos",
-    ],
-    isFeatured: true, // Destacamos el plan Premium
-  },
-];
+import { pricingData } from "@/src/pricingData";
 
 export default function PreciosPage() {
   return (
@@ -92,7 +52,7 @@ export default function PreciosPage() {
               ni compromisos.
             </p>
           </div>
-
+          <DiscountCalculator />
           {/* 3. (Opcional) Pequeño texto de cierre */}
           <p className="mt-8 text-center font-sans text-sm text-marron-cafe/70">
             Nota: El descuento se calcula automáticamente a fin de cada semana
@@ -111,11 +71,6 @@ export default function PreciosPage() {
           </div>
           <ComparisonTable /> {/* <-- Lo insertas aquí */}
         </div>
-      </section>
-
-      {/* Sección 4: La Calculadora Interactiva */}
-      <section className="bg-crema-suave py-1 sm:py-24">
-        <DiscountCalculator />
       </section>
 
       {/* Sección 4: FAQ (Actualizar FaqSection.tsx también sería ideal) */}

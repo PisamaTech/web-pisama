@@ -5,6 +5,7 @@ export interface Espacio {
   precio?: string;
   caracteristicas: string[];
   media: { type: "image" | "video"; src: string }[];
+  tipo: "premium" | "estandar";
 }
 
 export const consultoriosData: Espacio[] = [
@@ -25,6 +26,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio1-3.jpg" },
       { type: "video", src: "/videos/consultorio1.mp4" },
     ],
+    tipo: "premium",
   },
   {
     id: "consultorio-2",
@@ -42,6 +44,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio2-3.jpg" },
       { type: "video", src: "/videos/consultorio2.mp4" },
     ],
+    tipo: "premium",
   },
   {
     id: "consultorio-3",
@@ -59,6 +62,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio3-3.jpg" },
       { type: "video", src: "/videos/consultorio3.mp4" },
     ],
+    tipo: "premium",
   },
   {
     id: "consultorio-4",
@@ -76,6 +80,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio4-3.jpg" },
       { type: "video", src: "/videos/consultorio4.mp4" },
     ],
+    tipo: "premium",
   },
   {
     id: "consultorio-5",
@@ -93,6 +98,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio5-3.jpg" },
       { type: "video", src: "/videos/consultorio5.mp4" },
     ],
+    tipo: "estandar",
   },
   {
     id: "consultorio-6",
@@ -111,5 +117,6 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio6-3.jpg" },
       { type: "video", src: "/videos/consultorio6.mp4" },
     ],
+    tipo: "premium",
   },
 ];
