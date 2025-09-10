@@ -34,6 +34,7 @@ export default function ConsultoriosPage() {
               conscientemente para ser una extensión de tu profesionalismo.
               Creamos entornos serenos, privados y funcionales donde tanto vos
               como tus pacientes se sentirán cómodos y en completa confianza.
+              <br />
               Haz click en las imágenes para recorrer cada consultorio en
               detalle.
             </p>

@@ -47,7 +47,7 @@ export default function ConsultorioCard({ espacio }: { espacio: Espacio }) {
         <CardFooter className="flex flex-col items-start gap-3">
           <h3 className="text-lg font-bold">{espacio.nombre}</h3>
           <Chip
-            color={espacio.tipo === "premium" ? "success" : "primary"}
+            color={espacio.tipo === "premium" ? "primary" : "secondary"}
             className="capitalize"
           >
             {espacio.tipo}
