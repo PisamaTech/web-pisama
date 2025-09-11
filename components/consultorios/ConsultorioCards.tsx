@@ -1,14 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Card, CardBody, CardFooter } from "@heroui/card";
-import { FaCheckCircle } from "react-icons/fa";
+import { Card } from "@heroui/card";
 import GalleryModal from "./GalleryModal";
-import { Divider } from "@heroui/divider";
 import { Espacio } from "@/src/consultoriosData";
-import { Chip } from "@heroui/chip";
-import { Button } from "@heroui/button";
 import CardImageGallery from "./CardImageGallery";
 import CardInfo from "./CardInfo";
 

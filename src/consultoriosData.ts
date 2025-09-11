@@ -26,7 +26,10 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio1-3.webp" },
       { type: "image", src: "/images/consultorio1-4.webp" },
       { type: "image", src: "/images/consultorio1-5.webp" },
-      { type: "video", src: "/videos/consultorio1.mp4" },
+      {
+        type: "video",
+        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+      },
     ],
     tipo: "premium",
   },
