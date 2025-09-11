@@ -8,43 +8,43 @@ const espacios = [
   {
     id: "consultorio-1",
     title: "Consultorio 1",
-    img: "/images/consultorio1-2.jpg",
+    img: "/images/consultorio1-2.webp",
   },
   {
     id: "consultorio-2",
     title: "Consultorio 2",
-    img: "/images/consultorio2-1.jpg",
+    img: "/images/consultorio2-1.webp",
   },
   {
     id: "consultorio-3",
     title: "Consultorio 3",
-    img: "/images/consultorio3-1.jpg",
+    img: "/images/consultorio3-1.webp",
   },
   {
     id: "consultorio-4",
     title: "Consultorio 4",
-    img: "/images/consultorio4-1.jpg",
+    img: "/images/consultorio4-1.webp",
   },
   {
     id: "consultorio-5",
     title: "Consultorio 5",
-    img: "/images/consultorio5-1.jpg",
+    img: "/images/consultorio5-1.webp",
   },
   {
     id: "consultorio-6",
     title: "Consultorio 6",
-    img: "/images/consultorio6-1.jpg",
+    img: "/images/consultorio6-1.webp",
   },
   {
     id: "sala-espera",
     title: "Sala de Espera",
-    img: "/images/salaespera-1.jpg",
+    img: "/images/salaespera-1.webp",
   },
-  { id: "fachada", title: "Fachada", img: "/images/fachada.jpg" },
+  { id: "fachada", title: "Fachada", img: "/images/fachada-1.1.webp" },
   {
     id: "sala-descanso",
     title: "Sala de Descanso",
-    img: "/images/saladescanso-1.jpg",
+    img: "/images/saladescanso-1.webp",
   },
 ];
 
