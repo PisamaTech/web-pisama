@@ -7,7 +7,7 @@ export default function ConsultoriosPage() {
   return (
     <>
       {/* Sección 1: Tipos de Consultorio */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-gray-50 py-20 sm:py-24 ">
         <div className="container mx-auto max-w-5xl px-4 text-center lg:px-8">
           <h1 className="font-display text-5xl font-bold text-marron-cafe">
             Nuestros Espacios: Ambientes que potencian tu práctica profesional
@@ -48,7 +48,7 @@ export default function ConsultoriosPage() {
       </section>
 
       {/* Sección 3: Otras Áreas */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-gray-50 py-20 sm:py-24 container mx-auto max-w-5xl">
         <OtrasAreasSection />
       </section>
     </>

@@ -65,7 +65,7 @@ export default function TypesCard({
           className={`w-full font-display font-semibold ${isFeatured ? "bg-terracotta-suave text-white" : "bg-marron-cafe text-crema-suave"}`}
           variant="solid"
         >
-          Ver Disponibilidad
+          Ver Precios
         </Button>
       </div>
     </Card>
