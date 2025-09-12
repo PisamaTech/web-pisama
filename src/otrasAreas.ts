@@ -59,10 +59,10 @@ const otrasAreas = [
   {
     nombre: "Fachada",
     descripcion:
-      "Una elegante fachada de época que resguarda un espacio profesional en una ubicación céntrica.",
+      "Una elegante fachada de época con valor arquitectónico, que brinda una presencia profesional y distinguida.",
     caracteristicas: [
-      "Ubicación céntrica y accesible",
-      "Diseño arquitectónico de época",
+      "Diseño arquitectónico de época con detalles ornamentales",
+      "Ubicación de fácil acceso para profesionales y pacientes",
       "Facilidad para estacionar en la zona",
       "Entorno seguro y tranquilo",
     ],
@@ -72,7 +72,7 @@ const otrasAreas = [
       "/images/fachada-1.3.webp",
       "/images/fachada-1.4.webp",
       "/images/fachada-1.5.webp",
-      "/video/espera.mp4",
+      // "/video/espera.mp4",
     ],
   },
 ];

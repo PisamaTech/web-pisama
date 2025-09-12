@@ -80,19 +80,19 @@ export default function GalleryModal({
       <ModalContent>
         <div className="relative flex items-center justify-center h-screen">
           <button
-            className="absolute top-5 right-5 text-white text-3xl z-20"
+            className="absolute top-5 right-5 text-white text-3xl z-20 cursor-pointer"
             onClick={onClose}
           >
             <FaTimes />
           </button>
           <button
-            className="absolute left-5 text-white text-3xl z-20"
+            className="absolute left-5 text-white text-3xl z-20 cursor-pointer"
             onClick={prev}
           >
             <FaArrowLeft />
           </button>
           <button
-            className="absolute right-5 text-white text-3xl z-20"
+            className="absolute right-5 text-white text-3xl z-20 cursor-pointer"
             onClick={next}
           >
             <FaArrowRight />
