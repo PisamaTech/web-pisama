@@ -79,6 +79,7 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/fachada-1.3.webp" },
       { type: "image", src: "/images/fachada-1.4.webp" },
       { type: "image", src: "/images/fachada-1.5.webp" },
+      { type: "video", src: "/video/espera.mp4" },
     ],
   },
 ];

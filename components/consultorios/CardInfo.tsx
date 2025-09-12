@@ -19,12 +19,12 @@ const CardInfo = ({ espacio }: { espacio: Espacio }) => (
     </Chip>
     <p className="text-default">{espacio.descripcion}</p>
     {espacio.precio && (
-      <p className="text-secondary font-semibold">{espacio.precio}</p>
+      <p className="text-amber-950/80 font-semibold">{espacio.precio}</p>
     )}
     <ul className="text-sm text-default space-y-2">
       {espacio.caracteristicas.map((c, idx) => (
         <li key={idx} className="flex items-center gap-2">
-          <FaCheckCircle className="text-teal-600" /> {c}
+          <FaCheckCircle className="text-secondary" /> {c}
         </li>
       ))}
     </ul>

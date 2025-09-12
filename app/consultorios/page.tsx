@@ -2,6 +2,8 @@ import ConsultorioCard from "@/components/consultorios/ConsultorioCards";
 import { consultoriosData } from "@/src/consultoriosData";
 import OtrasAreasSection from "./OtrasAreasSection";
 import ConsultorioTypes from "@/components/consultorios/ConsultorioTypes";
+import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
+import CtaSection from "@/components/homepage/CtaSection";
 
 export default function ConsultoriosPage() {
   return (
@@ -51,6 +53,19 @@ export default function ConsultoriosPage() {
       <section className="bg-gray-50 py-20 sm:py-24 container mx-auto max-w-5xl">
         <OtrasAreasSection />
       </section>
+
+      {/* Sección 4: Servicios Incluidos */}
+      <section className="bg-white py-20 sm:py-24">
+        <ServiciosIncluidosSection />
+      </section>
+
+      {/* Sección 5: Call to Action */}
+      <CtaSection
+        title="¿Ya sabes cuál es el espacio ideal para vos?"
+        description="Gestiona tu agenda con total libertad y ofrece a tus pacientes la experiencia que merecen."
+        buttonText="Ver Disponibilidad y Reservar"
+        buttonLink="/disponibilidad"
+      />
     </>
   );
 }

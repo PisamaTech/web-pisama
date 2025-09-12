@@ -5,6 +5,7 @@ import SavingsIntroSection from "@/components/precios/SavingsIntroSection";
 import ComparisonTable from "@/components/precios/ComparisonTable";
 import DiscountsSection from "@/components/precios/DiscountsSection";
 import { pricingData } from "@/src/pricingData";
+import CtaSection from "@/components/homepage/CtaSection";
 
 export default function PreciosPage() {
   return (
@@ -75,6 +76,13 @@ export default function PreciosPage() {
 
       {/* Sección 4: FAQ (Actualizar FaqSection.tsx también sería ideal) */}
       <FaqSection />
+
+      <CtaSection
+        title="¿Convencido? Empieza a disfrutar de la flexibilidad"
+        description="Regístrate en nuestra plataforma, explora la disponibilidad en tiempo real y reserva tu primer turno en menos de 5 minutos."
+        buttonText="Ver Disponibilidad y Reservar"
+        buttonLink="/disponibilidad"
+      />
     </>
   );
 }

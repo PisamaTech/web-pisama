@@ -32,7 +32,12 @@ export default function Home() {
       <BookingSystemSection />
       {/* <TestimonialsSection /> */}
       <PricingTeaser />
-      <CtaSection />
+      <CtaSection
+        title="¿Listo para reservar tu consultorio?"
+        description="Espacios profesionales, cómodos y listos para recibir a tus pacientes. Reserva en minutos y empieza a trabajar en el ambiente que mereces."
+        buttonText="Reservar ahora"
+        buttonLink="/disponibilidad"
+      />
     </>
   );
 }

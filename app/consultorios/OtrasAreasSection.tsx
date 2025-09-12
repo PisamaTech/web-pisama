@@ -60,21 +60,17 @@ export default function OtrasAreasSection() {
                       />
                     </div>
                   ))}
-                  {area.media.find((item) => item.type === "video") ? (
-                    <div
-                      className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
-                      onClick={() =>
-                        openModal(
-                          area.media,
-                          area.media.findIndex((item) => item.type === "video")
-                        )
-                      }
-                    >
-                      <FaPlayCircle className="h-6 w-6 text-white/80" />
-                    </div>
-                  ) : (
-                    <div />
-                  )}
+                  <div
+                    className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
+                    onClick={() =>
+                      openModal(
+                        area.media,
+                        area.media.findIndex((item) => item.type === "video")
+                      )
+                    }
+                  >
+                    <FaPlayCircle className="h-6 w-6 text-white/80" />
+                  </div>
                 </div>
               </CardBody>
               <CardFooter className="flex flex-col items-start gap-3">
@@ -83,10 +79,10 @@ export default function OtrasAreasSection() {
                   {area.nombre}
                 </h3>
                 <p className="text-default">{area.descripcion}</p>
-                <ul className="text-sm text-default space-y-2">
+                <ul className="text-sm text-default space-y-2 mb-3">
                   {area.caracteristicas.map((c, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <FaCheckCircle className="text-teal-600" /> {c}
+                      <FaCheckCircle className="text-secondary" /> {c}
                     </li>
                   ))}
                 </ul>
