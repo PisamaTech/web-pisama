@@ -1,4 +1,11 @@
-const otrasAreas = [
+export interface OtraArea {
+  nombre: string;
+  descripcion: string;
+  caracteristicas: string[];
+  media: { type: "image" | "video"; src: string }[];
+}
+
+export const otrasAreas: OtraArea[] = [
   {
     nombre: "Sala de Espera",
     descripcion:
@@ -10,12 +17,12 @@ const otrasAreas = [
       "Musica funcional de fondo",
     ],
     media: [
-      "/images/salaespera-1.webp",
-      "/images/salaespera-1-1.webp",
-      "/images/salaespera-1-2.webp",
-      "/images/salaespera-1-3.webp",
-      "/images/salaespera-1-4.webp",
-      "/video/espera.mp4",
+      { type: "image", src: "/images/salaespera-1.webp" },
+      { type: "image", src: "/images/salaespera-1-1.webp" },
+      { type: "image", src: "/images/salaespera-1-2.webp" },
+      { type: "image", src: "/images/salaespera-1-3.webp" },
+      { type: "image", src: "/images/salaespera-1-4.webp" },
+      { type: "video", src: "/video/espera.mp4" },
     ],
   },
   {
@@ -29,12 +36,12 @@ const otrasAreas = [
       "Ambiente calefaccionado",
     ],
     media: [
-      "/images/saladescanso-1.webp",
-      "/images/saladescanso-1-1.webp",
-      "/images/saladescanso-1-2.webp",
-      "/images/saladescanso-1-3.webp",
-      "/images/saladescanso-1-4.webp",
-      "/video/espera.mp4",
+      { type: "image", src: "/images/saladescanso-1.webp" },
+      { type: "image", src: "/images/saladescanso-1-1.webp" },
+      { type: "image", src: "/images/saladescanso-1-2.webp" },
+      { type: "image", src: "/images/saladescanso-1-3.webp" },
+      { type: "image", src: "/images/saladescanso-1-4.webp" },
+      { type: "video", src: "/video/espera.mp4" },
     ],
   },
   {
@@ -48,12 +55,12 @@ const otrasAreas = [
       "Completamente equipados",
     ],
     media: [
-      "/images/banos1-1.webp",
-      "/images/banos1-2.webp",
-      "/images/banos1-3.webp",
-      "/images/banos1-4.webp",
-      "/images/banos1-5.webp",
-      "/video/espera.mp4",
+      { type: "image", src: "/images/banos1-1.webp" },
+      { type: "image", src: "/images/banos1-2.webp" },
+      { type: "image", src: "/images/banos1-3.webp" },
+      { type: "image", src: "/images/banos1-4.webp" },
+      { type: "image", src: "/images/banos1-5.webp" },
+      { type: "video", src: "/video/espera.mp4" },
     ],
   },
   {
@@ -67,12 +74,11 @@ const otrasAreas = [
       "Entorno seguro y tranquilo",
     ],
     media: [
-      "/images/fachada-1.1.webp",
-      "/images/fachada-1.2.webp",
-      "/images/fachada-1.3.webp",
-      "/images/fachada-1.4.webp",
-      "/images/fachada-1.5.webp",
-      // "/video/espera.mp4",
+      { type: "image", src: "/images/fachada-1.1.webp" },
+      { type: "image", src: "/images/fachada-1.2.webp" },
+      { type: "image", src: "/images/fachada-1.3.webp" },
+      { type: "image", src: "/images/fachada-1.4.webp" },
+      { type: "image", src: "/images/fachada-1.5.webp" },
     ],
   },
 ];

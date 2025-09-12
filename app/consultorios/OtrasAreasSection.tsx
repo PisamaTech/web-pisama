@@ -3,23 +3,17 @@ import { useState } from "react";
 import Image from "next/image";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaPlayCircle } from "react-icons/fa";
 import GalleryModal from "@/components/consultorios/GalleryModal";
-import otrasAreas from "@/src/otrasAreas";
+import { otrasAreas, OtraArea } from "@/src/otrasAreas";
 
 export default function OtrasAreasSection() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [currentMedia, setCurrentMedia] = useState<
-    { type: "image" | "video"; src: string }[]
-  >([]);
+  const [currentMedia, setCurrentMedia] = useState<OtraArea["media"]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (media: string[], index: number, videoIndex: number) => {
-    const formattedMedia = media.map((item, idx) => ({
-      type: idx === videoIndex ? "video" : "image",
-      src: item,
-    }));
-    setCurrentMedia(formattedMedia);
+  const openModal = (media: OtraArea["media"], index: number) => {
+    setCurrentMedia(media);
     setCurrentIndex(index);
     setModalOpen(true);
   };
@@ -39,14 +33,15 @@ export default function OtrasAreasSection() {
               <CardBody className="p-0">
                 <div
                   className="relative w-full h-70 cursor-pointer"
-                  onClick={() => openModal(area.media, 0, 3)}
+                  onClick={() => openModal(area.media, 0)}
                 >
                   <Image
-                    src={area.media[0]}
+                    src={area.media[0].src}
                     alt={`Imagen principal de ${area.nombre}`}
                     className="object-cover"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
                   />
                 </div>
                 <div className="grid grid-cols-3 gap-2 p-2">
@@ -54,10 +49,10 @@ export default function OtrasAreasSection() {
                     <div
                       key={idx}
                       className="relative w-full h-20 cursor-pointer rounded overflow-hidden"
-                      onClick={() => openModal(area.media, idx + 1, 3)}
+                      onClick={() => openModal(area.media, idx + 1)}
                     >
                       <Image
-                        src={item}
+                        src={item.src}
                         alt={`Imagen extra de ${area.nombre} ${idx + 1}`}
                         className="object-cover"
                         fill
@@ -65,12 +60,21 @@ export default function OtrasAreasSection() {
                       />
                     </div>
                   ))}
-                  <div
-                    className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
-                    onClick={() => openModal(area.media, 3, 3)}
-                  >
-                    🎥 Video
-                  </div>
+                  {area.media.find((item) => item.type === "video") ? (
+                    <div
+                      className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
+                      onClick={() =>
+                        openModal(
+                          area.media,
+                          area.media.findIndex((item) => item.type === "video")
+                        )
+                      }
+                    >
+                      <FaPlayCircle className="h-6 w-6 text-white/80" />
+                    </div>
+                  ) : (
+                    <div />
+                  )}
                 </div>
               </CardBody>
               <CardFooter className="flex flex-col items-start gap-3">
