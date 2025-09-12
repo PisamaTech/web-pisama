@@ -1,11 +1,7 @@
 import { Card, CardBody } from "@heroui/card";
-import {
-  FaClock,
-  FaMapMarkerAlt,
-  FaCouch,
-  FaShieldAlt,
-  FaChartLine,
-} from "react-icons/fa";
+import { FaClock, FaMapMarkerAlt, FaCouch } from "react-icons/fa";
+import { RiMoneyDollarBoxFill } from "react-icons/ri";
+import { MdCancel } from "react-icons/md";
 import { MdAppShortcut } from "react-icons/md";
 
 export default function BeneficiosClave() {
@@ -20,14 +16,16 @@ export default function BeneficiosClave() {
       titulo: "Ahorro Inteligente",
       descripcion:
         "Nuestro sistema de tarifas es superior a las cuponeras. Cuantas más horas usas, más barato se vuelve el costo. Impulsamos tu crecimiento, sin pagos por adelantado.",
-      icono: <FaChartLine className="text-terracotta-suave text-4xl mb-3" />,
+      icono: (
+        <RiMoneyDollarBoxFill className="text-terracotta-suave text-4xl mb-3" />
+      ),
     },
 
     {
       titulo: "Cancelaciones Sin Estrés",
       descripcion:
         "Sabemos que surgen imprevistos. Cancela sin costo hasta 24 horas antes. Si es con menos tiempo, puedes reagendar esa hora sin perder tu inversión.",
-      icono: <FaShieldAlt className="text-primary text-4xl mb-3" />,
+      icono: <MdCancel className="text-primary text-4xl mb-3" />,
     },
     {
       titulo: "Comodidad y profesionalismo",
