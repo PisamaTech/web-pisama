@@ -48,17 +48,24 @@ const discounts: Discount[] = [
     premium: "$170/hora",
     estandar: "$120/hora",
   },
+  {
+    horas: "20 a 24 hs",
+    descuento: "-$100",
+    premium: "$150/hora",
+    estandar: "$100/hora",
+  },
 ];
 
 export default function DiscountsSection() {
   return (
-    <section className="w-full flex flex-col items-center bg-crema-suave p-8 rounded-2xl shadow-md">
+    <section className="w-full flex flex-col items-center pb-12">
       {/* Título */}
-      <h2 className="text-2xl font-bold text-marron-cafe mb-2 text-center">
+      <h2 className="text-2xl font-bold text-marron-cafe mb-4 text-center">
         Tabla de descuentos acumulativos
       </h2>
-      <p className="text-base text-terracotta-suave font-medium mb-6 text-center">
-        Por cada 4 horas semanales → -$20 por hora
+      <p className="text-base text-terracotta-suave font-medium mb-4 text-center">
+        Cada 4 horas semanales que reserves, se descuentan $20 del costo por
+        hora
       </p>
 
       {/* Tabla */}
@@ -74,10 +81,10 @@ export default function DiscountsSection() {
             Descuento/hora
           </TableColumn>
           <TableColumn className="text-default text-center">
-            Precio final Premium
+            Consultorios Premium
           </TableColumn>
           <TableColumn className="text-default text-center">
-            Precio final Estándar
+            Consultorio Estándar
           </TableColumn>
         </TableHeader>
         <TableBody>
@@ -85,7 +92,7 @@ export default function DiscountsSection() {
             <TableRow
               key={index}
               className={`${
-                index % 2 === 0 ? "bg-crema-suave" : "bg-gris-calido"
+                index % 2 === 0 ? "bg-gray-100" : "bg-gris-calido"
               } hover:bg-terracotta-suave/20 hover:text-crema-suave transition-colors`}
             >
               <TableCell className="text-center text-marron-cafe font-semibold">

@@ -12,6 +12,7 @@ type DiscountInfo = {
 };
 
 const getDiscountInfo = (hours: number): DiscountInfo => {
+  if (hours >= 20) return { discount: 100 };
   if (hours >= 16) return { discount: 80 };
   if (hours >= 12) return { discount: 60 };
   if (hours >= 8) return { discount: 40 };
@@ -21,7 +22,7 @@ const getDiscountInfo = (hours: number): DiscountInfo => {
 
 export default function DiscountCalculator() {
   // TIPADO: Especificamos que el estado 'hours' es un número
-  const [hours, setHours] = useState<number>(8);
+  const [hours, setHours] = useState<number>(7);
 
   const { discount } = useMemo(() => getDiscountInfo(hours), [hours]);
 
@@ -45,7 +46,7 @@ export default function DiscountCalculator() {
           }
         }}
         minValue={1}
-        maxValue={20}
+        maxValue={24}
         step={1}
         className="mt-6"
         classNames={{
@@ -57,7 +58,7 @@ export default function DiscountCalculator() {
       <div className="mt-8 grid grid-cols-2 gap-6 text-center">
         <div className="rounded-md bg-gris-calido/50 p-4">
           <p className="font-sans text-sm text-marron-cafe/80">
-            Precio Final / Premium
+            Precio Consultorios Premium
           </p>
           <p className="font-display text-3xl font-bold text-terracotta-suave">
             ${finalPricePremium}
@@ -65,7 +66,7 @@ export default function DiscountCalculator() {
         </div>
         <div className="rounded-md bg-gris-calido/50 p-4">
           <p className="font-sans text-sm text-marron-cafe/80">
-            Precio Final / Estándar
+            Precio Consultorio Estándar
           </p>
           <p className="font-display text-3xl font-bold text-terracotta-suave">
             ${finalPriceEstandar}
@@ -75,7 +76,7 @@ export default function DiscountCalculator() {
       {weeklySaving > 0 && (
         <div className="mt-6 rounded-md bg-terracotta-suave/20 p-4 text-center">
           <p className="font-display text-xl font-bold text-marron-cafe">
-            ¡Estás ahorrando ${weeklySaving} esta semana!
+            ¡Estás ahorrando ${weeklySaving} esa semana!
           </p>
         </div>
       )}

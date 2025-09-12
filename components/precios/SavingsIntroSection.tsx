@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa"; // Un icono que representa la confianz
 
 export default function SavingsIntroSection(): JSX.Element {
   return (
-    <section className="bg-crema-suave sm:py-16 py-14">
+    <section className="sm:py-16 py-14">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex items-center justify-center mb-8">
@@ -17,16 +17,16 @@ export default function SavingsIntroSection(): JSX.Element {
           </h2>
 
           <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
-            En Espacio Pisama, entendemos que tu éxito es nuestro éxito. Por
-            eso, hemos creado un sistema de ahorro automático que te recompensa
-            a medida que tu práctica crece. No necesitas comprar paquetes ni
-            comprometerte a nada.
+            Entendemos que tu éxito es nuestro éxito. Por eso, hemos creado un
+            sistema de ahorro automático que te recompensa a medida que tu
+            práctica crece. No necesitas comprar paquetes ni comprometerte a
+            nada.
             <br />
             <br />
-            Simplemente, cuanto más utilices nuestros espacios en una semana,
-            más económico se vuelve el costo de cada hora. Es nuestra forma de
-            agradecer tu confianza y de invertir en una relación profesional a
-            largo plazo.
+            Simplemente, cuanto más utilices nuestros consultorios en una
+            semana, más económico se vuelve el costo de cada hora. Es nuestra
+            forma de agradecer tu confianza y de invertir en una relación
+            profesional a largo plazo.
           </p>
         </div>
       </div>

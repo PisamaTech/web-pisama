@@ -23,11 +23,29 @@ const faqData = [
     answer:
       "Sí, todos nuestros precios son finales e incluyen los impuestos correspondientes. Transparencia total, sin sorpresas.",
   },
+  {
+    question: '¿Cómo se computa la "semana" para los descuentos?',
+    answer:
+      "La semana se cuenta de lunes a domingo. El sistema suma todas tus horas reservadas dentro de ese período para calcular el descuento correspondiente y lo aplica en tu facturación.",
+  },
+  {
+    question: "¿Necesito comprar un paquete de horas por adelantado?",
+    answer:
+      "No, nunca. El sistema es flexible. Simplemente reservas las horas que necesitas cada semana. Si llegas a uno de los umbrales de descuento, el beneficio se aplica automáticamente. No hay ningún compromiso previo.",
+  },
+  {
+    question: "Qué métodos de pago aceptan",
+    answer: "Aceptamos pagos a través de transferencia bancaria.",
+  },
+  {
+    question: "",
+    answer: "",
+  },
 ];
 
 export default function FaqSection() {
   return (
-    <section className="bg-content2 py-20 sm:py-24">
+    <section className="bg-content1 py-20 sm:py-24">
       <div className="container mx-auto max-w-3xl px-4 lg:px-8">
         <h2 className="mb-12 text-center font-display text-4xl font-bold text-marron-cafe">
           Dudas resueltas. Transparencia total.
@@ -41,7 +59,7 @@ export default function FaqSection() {
               key={item.question}
               title={item.question}
               classNames={{
-                base: "bg-crema-suave !shadow-lg", // La clave 'item' se convierte en 'base' para cada AccordionItem
+                base: "bg-content2/80 !shadow-lg", // La clave 'item' se convierte en 'base' para cada AccordionItem
                 trigger: "p-6 font-display font-bold text-marron-cafe",
                 indicator: "text-marron-cafe",
                 content: "p-6 pt-0 font-sans text-marron-cafe/90",

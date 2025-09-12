@@ -45,7 +45,7 @@ const comparisonData: ComparisonRow[] = [
   {
     feature: "Sistema de Ahorro",
     pisamaModel:
-      "Automático e inteligente. Tu ahorro aumenta a medida que tu práctica crece.",
+      "Automático e inteligente. Tu ahorro aumenta a medida que tu consulta crece.",
     cuponeraModel:
       "Estático. El precio es fijo y no recompensa tu crecimiento profesional.",
   },
@@ -60,13 +60,14 @@ const comparisonData: ComparisonRow[] = [
 
 export default function ComparisonTable(): JSX.Element {
   return (
-    <div className="mx-auto mt-12 w-full max-w-5xl rounded-lg border border-gris-calido shadow-lg">
+    <div className="mx-auto mt-12 w-full max-w-4xl">
       <Table
-        aria-label="Tabla comparativa del modelo de precios de Espacio Pisama vs. Paquetes fijos"
+        aria-label="Tabla comparativa del modelo de precios de Espacio Pisama vs. Paquetes fijos (Cuponeras)"
         selectionMode="none"
+        className="shadow-xl rounded-xl"
         classNames={{
           wrapper: "overflow-x-auto",
-          th: "bg-crema-suave p-4 font-display text-lg text-marron-cafe text-left",
+          th: "bg-content1 p-4 font-display text-lg text-marron-cafe text-left ",
           td: "p-4 align-top font-sans text-marron-cafe/90",
           tr: "border-b border-gris-calido/50",
           base: "bg-crema-suave",
@@ -76,8 +77,8 @@ export default function ComparisonTable(): JSX.Element {
           <TableColumn className="w-[150px] sm:w-[200px] lg:w-[250px] p-4 font-display text-lg font-bold text-marron-cafe text-left">
             Característica
           </TableColumn>
-          <TableColumn className="border-l border-gris-calido bg-terracotta-suave/10 p-4 font-display text-lg font-bold text-marron-cafe text-left">
-            ✅ Nuestro Modelo Flexible
+          <TableColumn className="border-l bg-terracotta-suave/10 border-gris-calido p-4 font-display text-lg font-bold text-marron-cafe text-left">
+            Nuestro Modelo Flexible
           </TableColumn>
           <TableColumn className="border-l border-gris-calido p-4 font-display text-lg font-bold text-marron-cafe text-left">
             Paquetes Fijos (Cuponeras)
@@ -95,7 +96,7 @@ export default function ComparisonTable(): JSX.Element {
               {/* Columna de "Espacio Pisama" */}
               <TableCell className="border-l border-gris-calido bg-terracotta-suave/10 p-4 align-top">
                 <div className="flex items-start gap-3">
-                  <FaCheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-terracotta-suave" />
+                  <FaCheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-success" />
                   <span className="font-sans text-marron-cafe">
                     {row.pisamaModel}
                   </span>
@@ -105,7 +106,7 @@ export default function ComparisonTable(): JSX.Element {
               {/* Columna de "Cuponeras" */}
               <TableCell className="border-l border-gris-calido p-4 align-top">
                 <div className="flex items-start gap-3">
-                  <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-marron-cafe/50" />
+                  <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
                   <span className="font-sans text-marron-cafe/80">
                     {row.cuponeraModel}
                   </span>
