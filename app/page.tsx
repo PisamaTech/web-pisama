@@ -12,6 +12,7 @@ import PricingTeaser from "@/components/homepage/PricingTeaser";
 import GalleryCard from "@/components/homepage/GalleryCard";
 import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
 import BookingSystemSection from "@/components/homepage/BookingSystemSection";
+import LocationSection from "@/components/homepage/LocationSection";
 
 export const metadata: Metadata = {
   title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
@@ -31,6 +32,7 @@ export default function Home() {
       <GalleryCard />
       <BookingSystemSection />
       {/* <TestimonialsSection /> */}
+      <LocationSection />
       <PricingTeaser />
       <CtaSection
         title="¿Listo para reservar tu consultorio?"
