@@ -9,19 +9,18 @@ const faqData = [
       "A fin de mes, nuestro sistema calcula automáticamente las horas que utilizaste y te envía una factura detallada a tu correo. Puedes pagarla cómodamente por transferencia bancaria.",
   },
   {
-    question: "¿Existe un mínimo de horas o un costo de inscripción?",
+    question: "¿Existe un mínimo de horas a reservar?",
     answer:
-      "No. No hay costos de inscripción, matrículas ni mínimo de horas. Creemos en la libertad y la flexibilidad. Usas lo que necesitas, pagas por lo que usas. Así de simple.",
+      "No, no hay mínimo de horas. Creemos en la libertad y la flexibilidad. Usas lo que necesitas, pagas por lo que usas. Así de simple.",
   },
   {
     question: "¿Cuál es la política de cancelación?",
     answer:
-      "Puedes cancelar o modificar tus reservas sin costo alguno hasta 24 horas antes del horario agendado, directamente desde nuestra plataforma web.",
+      'Nuestra política busca ser justa para todos. Puedes cancelar cualquier reserva sin costo si lo haces con más de 24 horas de antelación. Si cancelas con 24 horas o menos de antelación, la reserva se considera "Penalizada", lo que significa que deberás pagarla y se incluirá en tu facturación. Sin embargo, no pierdes la hora, ya que tienes la opción de reagendarla por un plazo de 6 días a partir de la fecha de la reserva original.',
   },
   {
-    question: "¿Los precios incluyen impuestos?",
-    answer:
-      "Sí, todos nuestros precios son finales e incluyen los impuestos correspondientes. Transparencia total, sin sorpresas.",
+    question: "",
+    answer: "",
   },
   {
     question: '¿Cómo se computa la "semana" para los descuentos?',
@@ -38,8 +37,10 @@ const faqData = [
     answer: "Aceptamos pagos a través de transferencia bancaria.",
   },
   {
-    question: "",
-    answer: "",
+    question:
+      "¿Tengo que hacer las reservas con anticipación o puedo agendar en el mismo día?",
+    answer:
+      "¡Tienes total flexibilidad! Puedes agendar tus reservas con la anticipación que desees o incluso para el mismo día, siempre y cuando el horario esté disponible en la aplicación. La plataforma te mostrará la disponibilidad en tiempo real. Si un horario aparece como libre, puedes reservarlo inmediatamente.",
   },
 ];
 
