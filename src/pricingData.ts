@@ -16,8 +16,8 @@ export const pricingData: PricingPlan[] = [
     description:
       "Acogedor, funcional y con todo lo indispensable para una sesión productiva. Un ambiente íntimo y profesional, optimizado para terapias individuales, coaching o consultas nutricionales. La solución más eficiente en costos.",
     features: [
-      "Espacio optimizado para sesiones individuales.",
       "Ideal para sesiones individuales",
+      "Espacio cálido y acogedor",
       "Dos cómodos sillones individuales",
       "Mesa de apoyo funcional",
       "Máxima privacidad",
