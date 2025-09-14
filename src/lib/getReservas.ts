@@ -18,7 +18,7 @@ export const getReservas = async (
     .from("reservas")
     .select("start_time, end_time, consultorio_id, tipo_reserva")
     // ¡FILTRO CRÍTICO! Solo mostramos las reservas confirmadas.
-    .eq("estado", "confirmada");
+    .eq("estado", "activa");
 
   // Si nos pasan un ID de consultorio, añadimos ese filtro a la consulta
   if (consultorioId) {
@@ -27,7 +27,7 @@ export const getReservas = async (
 
   // Ejecutamos la consulta
   const { data, error } = await query;
-
+  console.log(data);
   if (error) {
     console.error("Error al obtener las reservas desde Supabase:", error);
     return []; // Devolvemos un array vacío si hay un error
