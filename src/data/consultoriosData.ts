@@ -10,37 +10,37 @@ export const consultoriosData: Consultorio[] = [
   // --- CONSULTORIOS ---
   {
     id: 1,
-    title: "Consultorio Premium 1",
+    title: "Consultorio 1",
     category: "consultorio",
     type: "Premium",
   },
   {
     id: 2,
-    title: "Consultorio Premium 2",
+    title: "Consultorio 2",
     category: "consultorio",
     type: "Premium",
   },
   {
     id: 3,
-    title: "Consultorio Premium 3",
+    title: "Consultorio 3",
     category: "consultorio",
     type: "Premium",
   },
   {
     id: 4,
-    title: "Consultorio Premium 4",
+    title: "Consultorio 4",
     category: "consultorio",
     type: "Premium",
   },
   {
     id: 5,
-    title: "Consultorio Estándar 5",
+    title: "Consultorio 5",
     category: "consultorio",
     type: "Estándar",
   },
   {
     id: 6,
-    title: "Consultorio Premium 6",
+    title: "Consultorio 6",
     category: "consultorio",
     type: "Premium",
   },
