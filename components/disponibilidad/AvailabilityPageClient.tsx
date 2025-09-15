@@ -267,7 +267,7 @@ function AvailabilityPageContent() {
             messages={calendarMessages}
             formats={{
               ...formatosPersonalizadosDayjs,
-              eventTimeRangeFormat: () => null, // Esto oculta el label de la hora por defecto
+              eventTimeRangeFormat: () => "", // Esto oculta el label de la hora por defecto
             }}
             // --- La Lógica de Vistas Dinámicas ---
             defaultView={Views.DAY} // Siempre empieza en una vista, luego se ajusta
@@ -277,8 +277,16 @@ function AvailabilityPageContent() {
               toolbar: CustomToolbar,
             }}
             resources={selectedConsultorio === "all" ? resources : undefined}
-            resourceIdAccessor="resourceId"
-            resourceTitleAccessor="resourceTitle"
+            resourceIdAccessor={
+              selectedConsultorio === "all"
+                ? (resource: any) => resource.resourceId
+                : undefined
+            }
+            resourceTitleAccessor={
+              selectedConsultorio === "all"
+                ? (resource: any) => resource.resourceTitle
+                : undefined
+            }
             // --- Horarios ---
             min={new Date(0, 0, 0, 7, 0, 0)} // 8:00 AM
             max={new Date(0, 0, 0, 23, 0, 0)} // 11:00 PM

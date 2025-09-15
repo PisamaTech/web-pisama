@@ -6,6 +6,7 @@ import { LuCalendarSync } from "react-icons/lu";
 import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
 import dayjs from "dayjs";
 import { ToolbarProps } from "react-big-calendar";
+import { CalendarEvent } from "@/src/lib/getReservas";
 import {
   CalendarDate,
   fromDate,
@@ -13,7 +14,9 @@ import {
   ZonedDateTime,
 } from "@internationalized/date";
 
-const CustomToolbar: React.FC<ToolbarProps> = (toolbar) => {
+const CustomToolbar: React.FC<ToolbarProps<CalendarEvent, object>> = (
+  toolbar
+) => {
   const { date, onNavigate, label } = toolbar;
 
   const goToBack = () => {
