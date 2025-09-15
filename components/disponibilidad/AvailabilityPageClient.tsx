@@ -10,8 +10,15 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 
 // --- Importaciones de Componentes de HeroUI ---
 import { Select, SelectItem } from "@heroui/select";
-import { Chip } from "@heroui/chip";
 import { Spinner } from "@heroui/spinner";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@heroui/modal";
+import { Button } from "@heroui/button";
 
 // --- Importaciones de nuestra Lógica y Datos ---
 import { getReservas, CalendarEvent } from "@/src/lib/getReservas"; // Nuestra función de fetching
@@ -37,7 +44,17 @@ function AvailabilityPageContent() {
   // 1. LEER PARÁMETROS DE LA URL
   // 'useSearchParams' nos permite leer "?consultorio=c1" de la URL.
   const searchParams = useSearchParams();
-  const initialConsultorio = searchParams.get("consultorio") || "all";
+  const consultorioIdFromUrl = searchParams.get("id"); // p. ej. "consultorio-1"
+
+  let initialConsultorio = "all";
+  if (consultorioIdFromUrl) {
+    // Los datos usan IDs numéricos, pero la URL puede ser más descriptiva.
+    // Extraemos el número de "consultorio-X".
+    const match = consultorioIdFromUrl.match(/consultorio-(\d+)/);
+    if (match && match[1]) {
+      initialConsultorio = match[1]; // p. ej. "1"
+    }
+  }
 
   // 2. MANEJO DE ESTADOS
   const [selectedConsultorio, setSelectedConsultorio] =
@@ -45,6 +62,7 @@ function AvailabilityPageContent() {
   // 'allEvents' contendrá TODAS las reservas cargadas del servidor.
   const [allEvents, setAllEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   // Nuevo estado para rastrear los rangos de fechas que ya hemos cargado.
   const [loadedRanges, setLoadedRanges] = useState<
@@ -77,9 +95,13 @@ function AvailabilityPageContent() {
   useEffect(() => {
     const initialFetch = async () => {
       setLoading(true);
-      const today = new Date();
-      const oneMonthFromNow = dayjs(today).add(1, "month").toDate();
-      const initialRange = { start: today, end: oneMonthFromNow };
+      // Ajustamos el rango inicial para que siempre comience desde el lunes de la semana actual.
+      // Esto asegura que la vista semanal siempre tenga los datos completos de la semana en curso.
+      const startOfCurrentWeek = dayjs().startOf("week").toDate();
+      const oneMonthFromNow = dayjs(startOfCurrentWeek)
+        .add(1, "month")
+        .toDate();
+      const initialRange = { start: startOfCurrentWeek, end: oneMonthFromNow };
 
       const fetchedEvents = await getReservas(initialRange);
       setAllEvents(fetchedEvents);
@@ -137,7 +159,19 @@ function AvailabilityPageContent() {
     );
   }, [allEvents, selectedConsultorio]);
 
-  // 7. LÓGICA DE ESTILOS PARA LOS EVENTOS
+  // 7. MANEJADOR PARA EL CAMBIO DE VISTA
+  const handleViewChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newView = e.target.value;
+
+    // Si se selecciona el consultorio 2 (ID '2'), mostramos el modal.
+    if (newView === "2") {
+      setIsModalOpen(true);
+    } else {
+      setSelectedConsultorio(newView);
+    }
+  };
+
+  // 8. LÓGICA DE ESTILOS PARA LOS EVENTOS
   // Esta función aplica el color correcto a cada evento del calendario.
   const eventPropGetter = (event: object) => {
     const calendarEvent = event as CalendarEvent; // Hacemos un cast para acceder a nuestra propiedad 'type'
@@ -150,15 +184,13 @@ function AvailabilityPageContent() {
     return {
       style: {
         backgroundColor,
-        borderRadius: "4px",
-        color: "white",
+        borderRadius: "5px",
         border: "1px solid hsl(214.3 31.8% 91.4%)",
-        padding: "2px 5px",
       },
     };
   };
 
-  // 8. RENDERIZADO DEL COMPONENTE (JSX)
+  // 9. RENDERIZADO DEL COMPONENTE (JSX)
   // Aquí es donde construimos la interfaz visual.
   return (
     <div className="container mx-auto px-4 lg:px-8">
@@ -176,7 +208,7 @@ function AvailabilityPageContent() {
           <Select
             label="Selecciona una vista"
             selectedKeys={[selectedConsultorio]}
-            onChange={(e) => setSelectedConsultorio(e.target.value)}
+            onChange={handleViewChange}
             className="w-full md:w-auto md:min-w-[300px]"
             aria-label="Filtro de vista de disponibilidad"
             items={selectOptions}
@@ -253,11 +285,35 @@ function AvailabilityPageContent() {
           />
         )}
       </div>
+      {/* Modal para el consultorio no disponible */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Consultorio no disponible
+              </ModalHeader>
+              <ModalBody>
+                <p>
+                  Actualmente este consultorio no se encuentra disponible, ya
+                  que se encuentra alquilado en exclusividad por una
+                  profesional.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onPress={onClose}>
+                  Entendido
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
 
-// 9. COMPONENTE WRAPPER CON SUSPENSE
+// 10. COMPONENTE WRAPPER CON SUSPENSE
 // 'useSearchParams' necesita estar dentro de un <Suspense>. Este es el patrón recomendado por Next.js.
 export default function AvailabilityPageClient() {
   return (
