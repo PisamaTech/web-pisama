@@ -11,14 +11,8 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 // --- Importaciones de Componentes de HeroUI ---
 import { Select, SelectItem } from "@heroui/select";
 import { Spinner } from "@heroui/spinner";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-} from "@heroui/modal";
-import { Button } from "@heroui/button";
+import { Alert } from "@heroui/alert";
+import { FaExclamationCircle } from "react-icons/fa";
 
 // --- Importaciones de nuestra Lógica y Datos ---
 import { getReservas, CalendarEvent } from "@/src/lib/getReservas"; // Nuestra función de fetching
@@ -62,7 +56,6 @@ function AvailabilityPageContent() {
   // 'allEvents' contendrá TODAS las reservas cargadas del servidor.
   const [allEvents, setAllEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
   // Nuevo estado para rastrear los rangos de fechas que ya hemos cargado.
   const [loadedRanges, setLoadedRanges] = useState<
@@ -161,14 +154,8 @@ function AvailabilityPageContent() {
 
   // 7. MANEJADOR PARA EL CAMBIO DE VISTA
   const handleViewChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newView = e.target.value;
-
-    // Si se selecciona el consultorio 2 (ID '2'), mostramos el modal.
-    if (newView === "2") {
-      setIsModalOpen(true);
-    } else {
-      setSelectedConsultorio(newView);
-    }
+    // Simplificamos el manejador para que siempre actualice el estado.
+    setSelectedConsultorio(e.target.value);
   };
 
   // 8. LÓGICA DE ESTILOS PARA LOS EVENTOS
@@ -240,6 +227,26 @@ function AvailabilityPageContent() {
             </div>
           </div>
         </div>
+
+        {/* Aquí se muestra el Alert condicionalmente */}
+        {selectedConsultorio === "2" && (
+          <Alert color="danger" className="mt-6 text-left border-1">
+            <div className="flex">
+              <div className="ml-3">
+                <h3 className="text-sm font-medium">
+                  Consultorio no disponible
+                </h3>
+                <div className="mt-2 text-sm">
+                  <p>
+                    Actualmente el <strong>consultorio 2 </strong> no se
+                    encuentra disponible, ya que se encuentra alquilado en
+                    exclusividad por una profesional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Alert>
+        )}
       </div>
 
       {/* Calendario */}
@@ -293,30 +300,6 @@ function AvailabilityPageContent() {
           />
         )}
       </div>
-      {/* Modal para el consultorio no disponible */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">
-                Consultorio no disponible
-              </ModalHeader>
-              <ModalBody>
-                <p>
-                  Actualmente este consultorio no se encuentra disponible, ya
-                  que se encuentra alquilado en exclusividad por una
-                  profesional.
-                </p>
-              </ModalBody>
-              <ModalFooter>
-                <Button color="primary" onPress={onClose}>
-                  Entendido
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
     </div>
   );
 }
