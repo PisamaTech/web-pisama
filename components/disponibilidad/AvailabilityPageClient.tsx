@@ -15,7 +15,13 @@ import { Spinner } from "@heroui/spinner";
 
 // --- Importaciones de nuestra Lógica y Datos ---
 import { getReservas, CalendarEvent } from "@/src/lib/getReservas"; // Nuestra función de fetching
+import {
+  calendarMessages,
+  formatosPersonalizadosDayjs,
+} from "./calendario/personalizacionCalendario";
+import { CustomEventComponent } from "./calendario/customEventComponent";
 import { consultoriosData } from "@/src/data/consultoriosData"; // Los datos de nuestros consultorios
+import CustomToolbar from "./calendario/customToolbar";
 
 // --- CONFIGURACIÓN INICIAL DE DAY.JS ---
 const localizer = dayjsLocalizer(dayjs);
@@ -36,8 +42,14 @@ function AvailabilityPageContent() {
   // 2. MANEJO DE ESTADOS
   const [selectedConsultorio, setSelectedConsultorio] =
     useState<string>(initialConsultorio);
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  // 'allEvents' contendrá TODAS las reservas cargadas del servidor.
+  const [allEvents, setAllEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [currentDate, setCurrentDate] = useState(new Date());
+  // Nuevo estado para rastrear los rangos de fechas que ya hemos cargado.
+  const [loadedRanges, setLoadedRanges] = useState<
+    { start: Date; end: Date }[]
+  >([]);
 
   // 3. PREPARACIÓN DE DATOS PARA EL CALENDARIO
   // Usamos 'useMemo' para que esta lista solo se calcule una vez.
@@ -60,44 +72,93 @@ function AvailabilityPageContent() {
     [resources]
   );
 
-  // 4. EFECTO PARA CARGAR DATOS DE SUPABASE
-  // Este código se ejecuta cada vez que 'selectedConsultorio' cambia.
+  // 4. EFECTO PARA LA CARGA INICIAL DE DATOS
+  // Se ejecuta solo una vez al montar el componente.
   useEffect(() => {
-    const fetchAndSetReservas = async () => {
+    const initialFetch = async () => {
       setLoading(true);
-      const fetchedEvents = await getReservas(
-        selectedConsultorio === "all" ? undefined : selectedConsultorio
-      );
-      setEvents(fetchedEvents);
+      const today = new Date();
+      const oneMonthFromNow = dayjs(today).add(1, "month").toDate();
+      const initialRange = { start: today, end: oneMonthFromNow };
+
+      const fetchedEvents = await getReservas(initialRange);
+      setAllEvents(fetchedEvents);
+      setLoadedRanges([initialRange]); // Guardamos el rango que acabamos de cargar
       setLoading(false);
     };
 
-    fetchAndSetReservas();
-  }, [selectedConsultorio]);
+    initialFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // El array vacío asegura que solo se ejecute una vez.
 
-  // 5. LÓGICA DE ESTILOS PARA LOS EVENTOS
+  // 5. FUNCIÓN PARA NAVEGACIÓN Y CARGA BAJO DEMANDA
+  const handleNavigate = async (newDate: Date) => {
+    setCurrentDate(newDate); // Actualizamos la vista del calendario inmediatamente.
+
+    // Comprobamos si el mes de la nueva fecha ya está cargado.
+    const isMonthLoaded = loadedRanges.some(
+      (range) =>
+        dayjs(newDate).isAfter(dayjs(range.start).subtract(1, "day")) &&
+        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day"))
+    );
+
+    // Si el mes no está cargado, lo buscamos.
+    if (!isMonthLoaded) {
+      setLoading(true);
+      const startOfMonth = dayjs(newDate).startOf("month").toDate();
+      const endOfMonth = dayjs(newDate).endOf("month").toDate();
+      const newRange = { start: startOfMonth, end: endOfMonth };
+
+      const newEvents = await getReservas(newRange);
+
+      // Usamos un Map para evitar duplicados al combinar los eventos nuevos y los existentes.
+      const eventsMap = new Map(
+        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e])
+      );
+      newEvents.forEach((e) => {
+        eventsMap.set(`${e.start.toISOString()}-${e.resourceId}`, e);
+      });
+
+      setAllEvents(Array.from(eventsMap.values()));
+      setLoadedRanges((prev) => [...prev, newRange]); // Añadimos el nuevo rango a la lista.
+      setLoading(false);
+    }
+  };
+
+  // 6. FILTRADO DE EVENTOS EN EL CLIENTE
+  // 'useMemo' recalculará esta lista solo si 'allEvents' o 'selectedConsultorio' cambian.
+  const filteredEvents = useMemo(() => {
+    if (selectedConsultorio === "all") {
+      return allEvents; // Si es "Vista General", mostramos todos los eventos.
+    }
+    // Si se selecciona un consultorio, filtramos los eventos que ya tenemos.
+    return allEvents.filter(
+      (event) => event.resourceId?.toString() === selectedConsultorio
+    );
+  }, [allEvents, selectedConsultorio]);
+
+  // 7. LÓGICA DE ESTILOS PARA LOS EVENTOS
   // Esta función aplica el color correcto a cada evento del calendario.
   const eventPropGetter = (event: object) => {
     const calendarEvent = event as CalendarEvent; // Hacemos un cast para acceder a nuestra propiedad 'type'
-    const azulFijo = "#3182CE";
-    const verdeEventual = "#48BB78";
+    const azulFijo = "#5b9bd5";
+    const verdeEventual = "#92d050";
 
     const backgroundColor =
-      calendarEvent.type === "fija" ? azulFijo : verdeEventual;
+      calendarEvent.type === "Fija" ? azulFijo : verdeEventual;
 
     return {
       style: {
         backgroundColor,
-        borderRadius: "2px",
-        opacity: 0.9,
+        borderRadius: "4px",
         color: "white",
-        border: "0px",
+        border: "1px solid hsl(214.3 31.8% 91.4%)",
         padding: "2px 5px",
       },
     };
   };
 
-  // 6. RENDERIZADO DEL COMPONENTE (JSX)
+  // 8. RENDERIZADO DEL COMPONENTE (JSX)
   // Aquí es donde construimos la interfaz visual.
   return (
     <div className="container mx-auto px-4 lg:px-8">
@@ -162,28 +223,32 @@ function AvailabilityPageContent() {
         ) : (
           <Calendar
             localizer={localizer}
-            events={events}
+            events={filteredEvents} // Usamos los eventos filtrados
+            date={currentDate}
+            onNavigate={handleNavigate} // Usamos nuestro nuevo manejador de navegación
             culture="es"
-            messages={{
-              next: "Siguiente",
-              previous: "Anterior",
-              today: "Hoy",
-              month: "Mes",
-              week: "Semana",
-              day: "Día",
-              agenda: "Agenda",
-            }}
+            step={60}
+            timeslots={1}
             eventPropGetter={eventPropGetter}
             startAccessor="start"
             endAccessor="end"
+            messages={calendarMessages}
+            formats={{
+              ...formatosPersonalizadosDayjs,
+              eventTimeRangeFormat: () => null, // Esto oculta el label de la hora por defecto
+            }}
             // --- La Lógica de Vistas Dinámicas ---
             defaultView={Views.DAY} // Siempre empieza en una vista, luego se ajusta
             view={selectedConsultorio === "all" ? Views.DAY : Views.WEEK}
+            components={{
+              event: CustomEventComponent,
+              toolbar: CustomToolbar,
+            }}
             resources={selectedConsultorio === "all" ? resources : undefined}
             resourceIdAccessor="resourceId"
             resourceTitleAccessor="resourceTitle"
             // --- Horarios ---
-            min={new Date(0, 0, 0, 7, 0, 0)} // 7:00 AM
+            min={new Date(0, 0, 0, 7, 0, 0)} // 8:00 AM
             max={new Date(0, 0, 0, 23, 0, 0)} // 11:00 PM
           />
         )}
@@ -192,7 +257,7 @@ function AvailabilityPageContent() {
   );
 }
 
-// 7. COMPONENTE WRAPPER CON SUSPENSE
+// 9. COMPONENTE WRAPPER CON SUSPENSE
 // 'useSearchParams' necesita estar dentro de un <Suspense>. Este es el patrón recomendado por Next.js.
 export default function AvailabilityPageClient() {
   return (

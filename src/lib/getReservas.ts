@@ -6,28 +6,31 @@ export interface CalendarEvent {
   start: Date;
   end: Date;
   resourceId?: number; // El ID del consultorio, como número
-  type: "fija" | "eventual"; // El tipo de reserva para los colores
+  type: "Fija" | "Eventual"; // El tipo de reserva para los colores
+}
+
+interface DateRange {
+  start: Date;
+  end: Date;
 }
 
 // La función que obtiene y transforma las reservas
 export const getReservas = async (
-  consultorioId?: string
+  dateRange: DateRange
 ): Promise<CalendarEvent[]> => {
   // Iniciamos la consulta a Supabase
   let query = supabase
     .from("reservas")
     .select("start_time, end_time, consultorio_id, tipo_reserva")
-    // ¡FILTRO CRÍTICO! Solo mostramos las reservas confirmadas.
-    .eq("estado", "activa");
-
-  // Si nos pasan un ID de consultorio, añadimos ese filtro a la consulta
-  if (consultorioId) {
-    query = query.eq("consultorio_id", consultorioId);
-  }
+    // ¡FILTRO CRÍTICO! Solo mostramos las reservas activas o ya utilizadas.
+    .in("estado", ["activa", "utilizada"])
+    // Filtramos por el rango de fechas dinámico que nos pasan.
+    .gte("start_time", dateRange.start.toISOString())
+    .lte("start_time", dateRange.end.toISOString());
 
   // Ejecutamos la consulta
   const { data, error } = await query;
-  console.log(data);
+
   if (error) {
     console.error("Error al obtener las reservas desde Supabase:", error);
     return []; // Devolvemos un array vacío si hay un error
@@ -35,11 +38,11 @@ export const getReservas = async (
 
   // Si todo va bien, transformamos los datos al formato que necesita react-big-calendar
   const formattedEvents: CalendarEvent[] = data.map((reserva) => ({
-    title: "Ocupado",
+    title: reserva.tipo_reserva === "Fija" ? "Fija" : "Eventual",
     start: new Date(reserva.start_time),
     end: new Date(reserva.end_time),
     resourceId: reserva.consultorio_id,
-    type: reserva.tipo_reserva === "fija" ? "fija" : "eventual",
+    type: reserva.tipo_reserva === "Fija" ? "Fija" : "Eventual",
   }));
 
   return formattedEvents;
