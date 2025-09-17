@@ -28,8 +28,8 @@ export default function HeroSection() {
         <Image
           src={logoImagen}
           alt="Logo Espacio Pisama"
-          width={200} // Ajusta el tamaño según sea necesario
-          height={200} // Ajusta el tamaño según sea necesario
+          width={250} // Ajusta el tamaño según sea necesario
+          height={250} // Ajusta el tamaño según sea necesario
           className="mx-auto mb-8" // Centra el logo y añade margen inferior
         />
         {/* Título Principal (ahora en color blanco) */}
