@@ -39,11 +39,10 @@ export default function ProfessionalsSection(): JSX.Element {
     <section className="bg-gris-calido/40 py-20 sm:py-24">
       <div className="max-w-5xl mx-auto px-4 lg:px-8">
         {/* Encabezado de la Sección */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-4xl font-bold text-marron-cafe">
-            Un Espacio Diseñado para Profesionales como Vos
-          </h2>
-        </div>
+        <h2 className="mx-auto max-w-2xl text-center text-4xl font-bold text-primary">
+          Un Espacio Diseñado para{" "}
+          <span className="text-secondary">Profesionales</span> como Vos
+        </h2>
 
         {/* Grilla de Tarjetas */}
         <div className="mx-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

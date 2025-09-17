@@ -32,6 +32,7 @@ dayjs.locale("es");
 interface Resource {
   resourceId: number;
   resourceTitle: string;
+  available: boolean;
 }
 
 function AvailabilityPageContent() {
@@ -68,18 +69,29 @@ function AvailabilityPageContent() {
     () =>
       consultoriosData
         .filter((c) => c.category === "consultorio")
-        .map((c) => ({ resourceId: c.id, resourceTitle: c.title })),
+        .map((c) => ({
+          resourceId: c.id,
+          resourceTitle: c.title,
+          available: c.available ?? true, // Asumimos 'true' si no está definido
+        })),
     []
   );
 
   const selectOptions = useMemo(
     () => [
-      { id: "all", title: "Vista General Diaria" },
+      { id: "all", title: "Vista General Diaria", disabled: false },
       ...resources.map((res) => ({
-        id: res.resourceId,
+        id: res.resourceId.toString(),
         title: `${res.resourceTitle} (Semanal)`,
+        disabled: !res.available,
       })),
     ],
+    [resources]
+  );
+
+  // Filtramos los recursos para la vista del calendario, excluyendo el consultorio 2
+  const calendarViewResources = useMemo(
+    () => resources.filter((res) => res.available),
     [resources]
   );
 
@@ -171,8 +183,8 @@ function AvailabilityPageContent() {
     return {
       style: {
         backgroundColor,
-        borderRadius: "5px",
-        border: "1px solid hsl(214.3 31.8% 91.4%)",
+        borderRadius: "5px", // Sin bordes redondeados
+        border: "2px solid hsl(214.3 31.8% 91.4%)", // Sin borde
       },
     };
   };
@@ -199,8 +211,15 @@ function AvailabilityPageContent() {
             className="w-full md:w-auto md:min-w-[300px]"
             aria-label="Filtro de vista de disponibilidad"
             items={selectOptions}
+            disabledKeys={selectOptions
+              .filter((item) => item.disabled)
+              .map((item) => item.id)}
           >
-            {(item) => <SelectItem key={item.id}>{item.title}</SelectItem>}
+            {(item) => (
+              <SelectItem key={item.id} textValue={item.title}>
+                {item.title}
+              </SelectItem>
+            )}
           </Select>
 
           {/* Leyenda de Colores de Eventos */}
@@ -229,28 +248,26 @@ function AvailabilityPageContent() {
         </div>
 
         {/* Aquí se muestra el Alert condicionalmente */}
-        {selectedConsultorio === "2" && (
-          <Alert
-            color="danger"
-            className="mt-6 text-left border-1"
-            icon={<FaExclamationCircle />}
-          >
-            <div className="flex">
-              <div className="ml-3">
-                <h3 className="text-sm font-medium">
-                  Consultorio 2 - No Disponible
-                </h3>
-                <div className="mt-2 text-sm">
-                  <p>
-                    Actualmente el <strong>consultorio 2 </strong> no se
-                    encuentra disponible, ya que se encuentra alquilado en
-                    exclusividad por una profesional.
-                  </p>
-                </div>
+        <Alert
+          color="danger"
+          className="mt-6 text-left border-1"
+          icon={<FaExclamationCircle />}
+        >
+          <div className="flex">
+            <div className="ml-3">
+              <h3 className="text-base font-medium">
+                Consultorio 2 - No Disponible
+              </h3>
+              <div className="mt-2 text-sm">
+                <p>
+                  Actualmente el <strong>Consultorio 2 </strong> no se encuentra
+                  disponible, ya que se encuentra alquilado en exclusividad por
+                  una profesional.
+                </p>
               </div>
             </div>
-          </Alert>
-        )}
+          </div>
+        </Alert>
       </div>
 
       {/* Calendario */}
@@ -287,7 +304,9 @@ function AvailabilityPageContent() {
               event: CustomEventComponent,
               toolbar: CustomToolbar,
             }}
-            resources={selectedConsultorio === "all" ? resources : undefined}
+            resources={
+              selectedConsultorio === "all" ? calendarViewResources : undefined
+            }
             resourceIdAccessor={
               selectedConsultorio === "all"
                 ? (resource: any) => resource.resourceId

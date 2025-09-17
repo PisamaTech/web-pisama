@@ -52,8 +52,9 @@ export default function GalleryCard() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="mx-auto max-w-5xl text-center mb-16">
-        <h2 className="text-4xl font-bold text-primary">
-          Un Entorno que Inspira Confianza y Bienestar.
+        <h2 className="text-4xl font-bold text-primary max-w-2xl mx-auto">
+          Un <span className="text-secondary">Entorno</span> que Inspira
+          Confianza y Bienestar.
         </h2>
         <p className="my-8 font-sans text-lg text-marron-cafe">
           Cada uno de nuestros espacios fue cuidadosamente diseñado para
@@ -65,7 +66,7 @@ export default function GalleryCard() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {espacios.map((espacio) => (
-            <Link key={espacio.id} href={`/espacios/${espacio.id}`}>
+            <Link key={espacio.id} href={`/consultorios`}>
               <Card isFooterBlurred isPressable className="h-[300px] w-full">
                 <Image
                   alt={espacio.title}

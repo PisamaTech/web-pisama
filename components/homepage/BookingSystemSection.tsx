@@ -12,8 +12,10 @@ export default function BookingSystemSection(): JSX.Element {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           {/* Columna Izquierda: Texto Persuasivo */}
           <div className="text-center md:text-left">
-            <h2 className="font-display text-4xl font-bold text-marron-cafe">
-              Toma el Control de tu Agenda. Se Acabó la Espera.
+            <h2 className="font-display text-4xl font-bold text-primary">
+              Una Aplicación para{" "}
+              <span className="text-secondary">Gestionar Tus Consultas </span>{" "}
+              Sin Intermediarios.
             </h2>
             <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
               ¿Conoces esta situación? Consultas por un horario libre, contactas
@@ -36,7 +38,7 @@ export default function BookingSystemSection(): JSX.Element {
                 size="lg"
                 endContent={<FaArrowRight />}
               >
-                Descubre nuestra Aplicación de Reservas
+                Descubre nuestra Aplicación
               </Button>
             </div>
           </div>

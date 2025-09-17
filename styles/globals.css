@@ -12,3 +12,7 @@
 .rbc-time-view .rbc-time-header-content > .rbc-row:first-child {
   min-height: 0;
 }
+
+.rbc-day-slot .rbc-events-container {
+  margin-right: 0px !important;
+}

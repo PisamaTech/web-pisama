@@ -28,16 +28,16 @@ export default function BeneficiosClave() {
       icono: <MdCancel className="text-primary text-4xl mb-3" />,
     },
     {
-      titulo: "Comodidad y profesionalismo",
-      descripcion:
-        "Cada detalle, desde la acústica hasta la decoración, fueron pensado por dos psicólogos para el bienestar de profesionales y pacientes. Un espacio creado desde la experiencia.",
-      icono: <FaCouch className="text-terracotta-suave text-4xl mb-3" />,
-    },
-    {
       titulo: "Ubicación estratégica",
       descripcion:
         "Parque Rodó, en el corazón de Montevideo. Una zona que realza tu imagen profesional y es de fácil acceso para vos y tus pacientes. ",
       icono: <FaMapMarkerAlt className="text-primary text-4xl mb-3" />,
+    },
+    {
+      titulo: "Comodidad y profesionalismo",
+      descripcion:
+        "Cada detalle, desde la acústica hasta la decoración, fueron pensado por dos psicólogos para el bienestar de profesionales y pacientes. Un espacio creado desde la experiencia.",
+      icono: <FaCouch className="text-terracotta-suave text-4xl mb-3" />,
     },
     {
       titulo: "Flexibilidad horaria",
@@ -50,11 +50,9 @@ export default function BeneficiosClave() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-14 text-primary">
-          Beneficios clave de{" "}
-          <span className="bg-gradient-to-b from-yellow-800 to-amber-500 bg-clip-text text-transparent">
-            Espacio Pisama
-          </span>
+        <h2 className="text-4xl font-bold text-center mb-14 text-primary max-w-2xl mx-auto">
+          Un Conjunto de <span className="text-secondary">Ventajas</span> para
+          Simplificar tu Práctica.
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">

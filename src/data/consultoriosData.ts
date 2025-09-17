@@ -4,6 +4,7 @@ export interface Consultorio {
   title: string;
   category: "consultorio" | "comun";
   type: "Premium" | "Estándar";
+  available?: boolean; // Hacemos la propiedad opcional
 }
 
 export const consultoriosData: Consultorio[] = [
@@ -13,35 +14,41 @@ export const consultoriosData: Consultorio[] = [
     title: "Consultorio 1",
     category: "consultorio",
     type: "Premium",
+    available: true,
   },
   {
     id: 2,
     title: "Consultorio 2",
     category: "consultorio",
     type: "Premium",
+    available: false,
   },
   {
     id: 3,
     title: "Consultorio 3",
     category: "consultorio",
     type: "Premium",
+    available: true,
   },
   {
     id: 4,
     title: "Consultorio 4",
     category: "consultorio",
     type: "Premium",
+    available: true,
   },
   {
     id: 5,
     title: "Consultorio 5",
     category: "consultorio",
     type: "Estándar",
+    available: true,
   },
   {
     id: 6,
     title: "Consultorio 6",
     category: "consultorio",
     type: "Premium",
+    available: true,
   },
 ];

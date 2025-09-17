@@ -8,8 +8,9 @@ export default function PricingTeaser() {
     <section className="bg-gray-50 py-20 sm:py-24">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-bold text-marron-cafe">
-            Una Tarifa que Premia tu Crecimiento.
+          <h2 className="max-w-2xl mx-auto text-4xl font-bold text-primary">
+            Una <span className="text-secondary">Tarifa</span> que Premia tu
+            Crecimiento.
           </h2>
           <p className="mt-6 font-sans text-lg text-marron-cafe/90">
             Buscamos construir relaciones profesionales a largo plazo, no

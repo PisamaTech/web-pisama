@@ -20,8 +20,9 @@ export default function LocationSection(): JSX.Element {
 
           {/* Columna Derecha: Texto Persuasivo */}
           <div className="text-center lg:text-left">
-            <h2 className="font-display text-4xl font-bold text-marron-cafe">
-              Una Ubicación que Eleva tu Práctica.
+            <h2 className="text-4xl font-bold text-primary">
+              Una <span className="text-secondary">Ubicación</span> que Eleva tu
+              Práctica.
             </h2>
             <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
               Nos encontramos en el corazón de <strong>Parque Rodó</strong>, una
