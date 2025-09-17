@@ -20,7 +20,6 @@ import {
   calendarMessages,
   formatosPersonalizadosDayjs,
 } from "./calendario/personalizacionCalendario";
-import { CustomEventComponent } from "./calendario/customEventComponent";
 import { consultoriosData } from "@/src/data/consultoriosData"; // Los datos de nuestros consultorios
 import CustomToolbar from "./calendario/customToolbar";
 
@@ -34,6 +33,26 @@ interface Resource {
   resourceTitle: string;
   available: boolean;
 }
+
+// Componente personalizado para los eventos del calendario
+const CustomEventComponent = ({ event }: { event: CalendarEvent }) => {
+  const { title, start, end } = event;
+  const startTime = dayjs(start).format("HH:mm");
+  const endTime = dayjs(end).format("HH:mm");
+
+  return (
+    // Contenedor del evento
+    <div className="flex h-full w-full flex-col items-center justify-center text-center text-black/70">
+      {/* El texto solo será visible en pantallas 'md' (768px) o más grandes */}
+      <div className="hidden md:block">
+        <div className="text-xs">
+          {startTime} - {endTime}
+        </div>
+        <div className="text-sm font-bold">{title}</div>
+      </div>
+    </div>
+  );
+};
 
 function AvailabilityPageContent() {
   // 1. LEER PARÁMETROS DE LA URL
