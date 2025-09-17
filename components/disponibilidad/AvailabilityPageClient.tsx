@@ -12,6 +12,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Select, SelectItem } from "@heroui/select";
 import { Spinner } from "@heroui/spinner";
 import { Alert } from "@heroui/alert";
+import { Link } from "@heroui/link";
 import { FaExclamationCircle } from "react-icons/fa";
 
 // --- Importaciones de nuestra Lógica y Datos ---
@@ -218,8 +219,21 @@ function AvailabilityPageContent() {
           Disponibilidad en Tiempo Real
         </h1>
         <p className="mt-6 font-sans text-lg text-marron-cafe/90">
-          Explora la ocupación de nuestros espacios. Si ves un horario libre,
-          está disponible para ti.
+          Explora la ocupación de nuestros espacios. <br />
+          Selecciona una vista para ver la disponibilidad en tiempo real.
+          <br /> Puedes ver una lista de <em>todos los consultorios</em> o la{" "}
+          <em>disponibilidad semanal</em> de uno en particular.
+          <br />
+          Si ves un horario libre, está disponible para vos.
+          <br />{" "}
+          <Link
+            isExternal
+            href="https://reservas.pisama.uy/"
+            className="font-semibold text-primary underline"
+          >
+            Registrándote en nuestra aplicación
+          </Link>{" "}
+          podes acceder ya mismo a reservarlo.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-6 rounded-lg border border-gris-calido bg-white p-4 shadow-sm md:flex-row md:justify-between">

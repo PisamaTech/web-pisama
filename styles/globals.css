@@ -16,3 +16,30 @@
 .rbc-day-slot .rbc-events-container {
   margin-right: 0px !important;
 }
+
+.rbc-time-slot {
+  display: flex; /* Activa Flexbox para estos elementos */
+  justify-content: center; /* Centra horizontalmente el contenido (texto) */
+  align-items: center; /* Centra verticalmente el contenido (texto) */
+  font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+  /* Opcional: Puedes ajustar otros estilos aquí si lo deseas, como el tamaño de fuente, etc. */
+}
+
+.rbc-time-view-resources .rbc-day-slot {
+  min-width: 105px !important;
+  -webkit-box-flex: 1;
+}
+
+.rbc-time-header-content {
+  width: 105px !important;
+}
+
+.rbc-time-view-resources .rbc-header,
+.rbc-time-view-resources .rbc-day-bg {
+  width: 105px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  -ms-flex-preferred-size: 0 px;
+  flex-basis: 0 px;
+}
