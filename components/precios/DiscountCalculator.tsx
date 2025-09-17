@@ -22,7 +22,7 @@ const getDiscountInfo = (hours: number): DiscountInfo => {
 
 export default function DiscountCalculator() {
   // TIPADO: Especificamos que el estado 'hours' es un número
-  const [hours, setHours] = useState<number>(7);
+  const [hours, setHours] = useState<number>(0);
 
   const { discount } = useMemo(() => getDiscountInfo(hours), [hours]);
 
