@@ -10,7 +10,7 @@ import {
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-import PisamaLogo from "../public/EspacioPisama80.png";
+import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";
 
 export const Navbar = () => {
   const navLinks = [
@@ -22,15 +22,17 @@ export const Navbar = () => {
   ];
 
   const brandContent = (
-    <NavbarBrand>
+    <NavbarBrand as={Link} href="/">
       <Image
         src={PisamaLogo}
         alt="Logo de Pisama"
-        height={36}
-        width={36}
+        height={45}
+        width={45}
         className="mr-2"
       />
-      <p className="font-bold text-primary">espacio PISAMA</p>{" "}
+      <p className="font-bold text-primary">
+        <span className="hidden md:inline">espacio </span>PISAMA
+      </p>
     </NavbarBrand>
   );
 
