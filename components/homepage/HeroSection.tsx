@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@heroui/button";
 import heroImagen from "../../public/images/consultorio3-1.webp";
+import logoImagen from "@/public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 
 export default function HeroSection() {
   return (
     // 1. Contenedor principal con posicionamiento relativo y altura de pantalla completa
-    <section className="relative flex h-[70vh] items-center justify-center text-center text-white">
+    <section className="relative flex h-[80vh] items-center justify-center text-center text-white">
       {/* 2. Imagen de fondo que cubre todo el contenedor */}
       <Image
         src={heroImagen} // Ruta desde la carpeta 'public'
@@ -23,14 +24,22 @@ export default function HeroSection() {
 
       {/* 4. Contenedor del contenido, centrado */}
       <div className="mx-auto max-w-4xl text-center px-6 z-25">
+        {/* Logo */}
+        <Image
+          src={logoImagen}
+          alt="Logo Espacio Pisama"
+          width={200} // Ajusta el tamaño según sea necesario
+          height={200} // Ajusta el tamaño según sea necesario
+          className="mx-auto mb-8" // Centra el logo y añade margen inferior
+        />
         {/* Título Principal (ahora en color blanco) */}
-        <h1 className="-bold tracking-tight text-white sm:text-6xl">
+        <h1 className="font-semibold text-2xl tracking-tight text-white md:text-5xl">
           Alquiler de Consultorios por Hora en Montevideo: El espacio que
           Impulsa tu Profesión
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
-        <p className="mt-6 text-lg leading-8 text-gray-200 ">
+        <p className="mt-6 text-sm leading-8 text-gray-200 sm:text-xl">
           Espacios diseñados para psicólogos, terapeutas, coaches y
           profesionales independientes. Gestiona tu agenda online, olvídate de
           las cuponeras y recibe a tus pacientes en un ambiente de calma y

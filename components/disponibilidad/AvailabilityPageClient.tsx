@@ -230,11 +230,15 @@ function AvailabilityPageContent() {
 
         {/* Aquí se muestra el Alert condicionalmente */}
         {selectedConsultorio === "2" && (
-          <Alert color="danger" className="mt-6 text-left border-1">
+          <Alert
+            color="danger"
+            className="mt-6 text-left border-1"
+            icon={<FaExclamationCircle />}
+          >
             <div className="flex">
               <div className="ml-3">
                 <h3 className="text-sm font-medium">
-                  Consultorio no disponible
+                  Consultorio 2 - No Disponible
                 </h3>
                 <div className="mt-2 text-sm">
                   <p>
@@ -250,7 +254,7 @@ function AvailabilityPageContent() {
       </div>
 
       {/* Calendario */}
-      <div className="h-[85vh] rounded-lg border-2 border-gris-calido bg-white p-2 text-marron-cafe shadow-lg sm:p-4">
+      <div className="h-[85vh] mx-auto max-w-4xl rounded-lg border-2 border-gris-calido bg-white p-2 text-marron-cafe shadow-lg sm:p-4">
         {loading ? (
           <div className="flex h-full w-full items-center justify-center">
             <Spinner
