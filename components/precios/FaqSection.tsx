@@ -55,20 +55,22 @@ export default function FaqSection() {
           variant="splitted"
           className="space-y-4" // Estilo para el contenedor principal del acordeón
         >
-          {faqData.map((item) => (
-            <AccordionItem
-              key={item.question}
-              title={item.question}
-              classNames={{
-                base: "bg-content2/80 !shadow-lg", // La clave 'item' se convierte en 'base' para cada AccordionItem
-                trigger: "p-6 font-display font-bold text-marron-cafe",
-                indicator: "text-marron-cafe",
-                content: "p-6 pt-0 font-sans text-marron-cafe/90",
-              }}
-            >
-              {item.answer}
-            </AccordionItem>
-          ))}
+          {faqData
+            .filter((item) => item.question) // Filtramos los elementos que no tienen pregunta
+            .map((item) => (
+              <AccordionItem
+                key={item.question}
+                title={item.question}
+                classNames={{
+                  base: "bg-content2/80 !shadow-lg", // La clave 'item' se convierte en 'base' para cada AccordionItem
+                  trigger: "p-6 font-display font-bold text-marron-cafe",
+                  indicator: "text-marron-cafe",
+                  content: "p-6 pt-0 font-sans text-marron-cafe/90",
+                }}
+              >
+                {item.answer}
+              </AccordionItem>
+            ))}
         </Accordion>
       </div>
     </section>
