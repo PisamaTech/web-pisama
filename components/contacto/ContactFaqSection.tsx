@@ -28,7 +28,7 @@ const faqData = [
 
 export default function ContactFaqSection() {
   return (
-    <section className="bg-gris-calido/40 py-20 sm:py-24">
+    <section className="bg-content4 py-20 sm:py-20">
       <div className="container mx-auto max-w-3xl px-4 lg:px-8">
         <h2 className="mb-12 text-center font-display text-4xl font-bold text-marron-cafe">
           Antes de escribir, quizás encuentres tu respuesta aquí
