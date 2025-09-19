@@ -19,11 +19,14 @@ export default function ContactInfoSection() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<{
-    loading: boolean;
-    error: string | null;
-    success: boolean;
-  }>({ loading: false, error: null, success: false });
+
+  type FormStatus =
+    | { type: "idle" }
+    | { type: "loading" }
+    | { type: "success" }
+    | { type: "error"; message: string };
+
+  const [status, setStatus] = useState<FormStatus>({ type: "idle" });
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,21 +37,28 @@ export default function ContactInfoSection() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus({ loading: true, error: null, success: false });
+    setStatus({ type: "loading" });
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok) {
-      setStatus({ loading: false, error: null, success: true });
-      setFormData({ name: "", email: "", message: "" }); // Limpiar formulario
-    } else {
-      setStatus({ loading: false, error: data.error, success: false });
+      if (response.ok) {
+        setStatus({ type: "success" });
+        setFormData({ name: "", email: "", message: "" }); // Limpiar formulario
+      } else {
+        setStatus({ type: "error", message: data.error || "Algo salió mal." });
+      }
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "No se pudo enviar el mensaje. Intenta de nuevo.",
+      });
     }
   };
 
@@ -56,12 +66,11 @@ export default function ContactInfoSection() {
     <section className="py-20 bg-content2 ">
       <div className="container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2 lg:px-8 items-center  max-w-5xl">
         {/* Columna Izquierda: Mapa */}
-        <div className="h-[500px] max-w-[500px]  overflow-hidden rounded-xl shadow-2xl">
+        <div className="w-full h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
           <iframe
             title="Ubicación de Espacio Pisama en Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81afa8928cc1%3A0x8bd901040c3bfb91!2sJuan%20Paullier%201192%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1758164896331!5m2!1ses!2suy"
-            width="500"
-            height="500"
+            className="w-full h-full"
             style={{ border: 0 }}
             allowFullScreen={true}
             loading="lazy"
@@ -97,8 +106,10 @@ export default function ContactInfoSection() {
             <p className="flex items-center font-sans text-primary pb-6">
               <FaWhatsapp className="mr-3 h-5 w-5 text-terracotta-suave" />{" "}
               <a
-                href="https://api.whatsapp.com/send/?phone=598095961360"
+                href="https://wa.me/59895961360"
                 className="hover:text-terracotta-suave"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 +598 95961360
               </a>
@@ -117,7 +128,7 @@ export default function ContactInfoSection() {
               required
               value={formData.name}
               onChange={handleChange}
-              disabled={status.loading}
+              disabled={status.type === "loading"}
             />
             <Input
               label="Tu Email"
@@ -127,7 +138,7 @@ export default function ContactInfoSection() {
               required
               value={formData.email}
               onChange={handleChange}
-              disabled={status.loading}
+              disabled={status.type === "loading"}
             />
             <Textarea
               label="Tu Mensaje"
@@ -136,28 +147,30 @@ export default function ContactInfoSection() {
               required
               value={formData.message}
               onChange={handleChange}
-              disabled={status.loading}
+              disabled={status.type === "loading"}
             />
             <Button
               type="submit"
               className="w-full bg-terracotta-suave font-display font-semibold text-white"
               size="lg"
               startContent={
-                status.loading ? <Spinner color="white" size="sm" /> : undefined
+                status.type === "loading" ? (
+                  <Spinner color="white" size="sm" />
+                ) : undefined
               }
-              disabled={status.loading}
+              disabled={status.type === "loading"}
             >
-              {status.loading ? "Enviando..." : "Enviar mensaje"}
+              {status.type === "loading" ? "Enviando..." : "Enviar mensaje"}
             </Button>
-            {status.success && (
+            {status.type === "success" && (
               <Alert color="success" className="mt-4 text-left">
                 ¡Mensaje enviado! Gracias por contactarnos, te responderemos a
                 la brevedad.
               </Alert>
             )}
-            {status.error && (
+            {status.type === "error" && (
               <Alert color="danger" className="mt-4 text-left">
-                {status.error}
+                {status.message}
               </Alert>
             )}
           </form>
