@@ -1,10 +1,9 @@
 // src/components/consultorios/ConsultorioTypes.tsx
 import React from "react";
-import Link from "next/link";
-import { Divider } from "@heroui/divider";
-import { FaCheckCircle } from "react-icons/fa";
-import { pricingData } from "@/src/pricingData";
+
 import TypesCard from "./TypesCard";
+
+import { pricingData } from "@/src/pricingData";
 
 export default function ConsultorioTypes(): JSX.Element {
   return (

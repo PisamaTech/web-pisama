@@ -61,7 +61,7 @@ export default function TypesCard({
       <div className="mt-auto pt-8">
         <Button
           as={Link}
-          href="/disponibilidad"
+          href="/precios"
           className={`w-full font-display font-semibold ${isFeatured ? "bg-terracotta-suave text-white" : "bg-marron-cafe text-crema-suave"}`}
           variant="solid"
         >

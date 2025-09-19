@@ -1,8 +1,9 @@
+import OtrasAreasSection from "./OtrasAreasSection";
+import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
+
 import ConsultorioCard from "@/components/consultorios/ConsultorioCards";
 import { consultoriosData } from "@/src/consultoriosData";
-import OtrasAreasSection from "./OtrasAreasSection";
 import ConsultorioTypes from "@/components/consultorios/ConsultorioTypes";
-import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
 import CtaSection from "@/components/homepage/CtaSection";
 
 export default function ConsultoriosPage() {

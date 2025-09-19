@@ -17,6 +17,7 @@ const getDiscountInfo = (hours: number): DiscountInfo => {
   if (hours >= 12) return { discount: 60 };
   if (hours >= 8) return { discount: 40 };
   if (hours >= 4) return { discount: 20 };
+
   return { discount: 0 };
 };
 
@@ -36,23 +37,23 @@ export default function DiscountCalculator() {
         Desliza y descubre tu ahorro
       </h3>
       <Slider
-        label="Horas por semana"
+        className="mt-6"
         value={hours}
         // TIPADO: El evento onChange puede devolver un 'number' o 'number[]'.
         // Hacemos una comprobación para asegurarnos de que solo procesamos el número.
-        onChange={(value) => {
-          if (typeof value === "number") {
-            setHours(value);
-          }
-        }}
-        minValue={1}
-        maxValue={24}
-        step={1}
-        className="mt-6"
         classNames={{
           label: "font-sans font-bold text-marron-cafe",
           track: "bg-gris-calido",
           filler: "bg-terracotta-suave",
+        }}
+        label="Horas por semana"
+        maxValue={24}
+        minValue={1}
+        step={1}
+        onChange={(value) => {
+          if (typeof value === "number") {
+            setHours(value);
+          }
         }}
       />
       <div className="mt-8 grid grid-cols-2 gap-6 text-center">

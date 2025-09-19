@@ -32,6 +32,7 @@ export default function ContactInfoSection() {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -57,28 +58,15 @@ export default function ContactInfoSection() {
     } catch (error) {
       setStatus({
         type: "error",
-        message: "No se pudo enviar el mensaje. Intenta de nuevo.",
+        message: `No se pudo enviar el mensaje. Intenta de nuevo. Error: ${error instanceof Error ? error.message : String(error)}`,
       });
     }
   };
 
   return (
     <section className="py-20 bg-content2 ">
-      <div className="container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2 lg:px-8 items-center  max-w-5xl">
-        {/* Columna Izquierda: Mapa */}
-        <div className="w-full h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
-          <iframe
-            title="Ubicación de Espacio Pisama en Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81afa8928cc1%3A0x8bd901040c3bfb91!2sJuan%20Paullier%201192%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1758164896331!5m2!1ses!2suy"
-            className="w-full h-full"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-
-        {/* Columna Derecha: Datos y Formulario */}
+      <div className="container mx-auto grid grid-cols-1 gap-22 px-4 lg:grid-cols-2 lg:px-8 items-center  max-w-5xl">
+        {/* Columna Izquierda: Datos y Formulario */}
         <div>
           <h2 className="font-display text-3xl font-bold text-primary">
             Nuestros Datos
@@ -86,30 +74,37 @@ export default function ContactInfoSection() {
           <div className="mt-6 space-y-4">
             <p className="flex items-center font-sans text-primary">
               <FaMapMarkerAlt className="mr-3 h-5 w-5 text-terracotta-suave" />{" "}
-              Juan Paullier 1192, Parque Rodó, Montevideo
+              <a
+                href="https://maps.app.goo.gl/vCc3HGvZGsQsjuTf9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-terracotta-suave"
+              >
+                Juan Paullier 1192, Parque Rodó, Montevideo
+              </a>
             </p>
             <p className="flex items-center font-sans text-primary">
               <FaEnvelope className="mr-3 h-5 w-5 text-terracotta-suave" />{" "}
               <a
-                href="mailto:info@pisama.uy"
                 className="hover:text-terracotta-suave"
+                href="mailto:info@pisama.uy"
               >
                 info@pisama.uy
               </a>
             </p>
             <p className="flex items-center font-sans text-primary">
               <FaPhoneAlt className="mr-3 h-4 w-5 text-terracotta-suave" />{" "}
-              <a href="tel:+5985961360" className="hover:text-terracotta-suave">
+              <a className="hover:text-terracotta-suave" href="tel:+5985961360">
                 +598 95961360
               </a>
             </p>
             <p className="flex items-center font-sans text-primary pb-6">
               <FaWhatsapp className="mr-3 h-5 w-5 text-terracotta-suave" />{" "}
               <a
-                href="https://wa.me/59895961360"
                 className="hover:text-terracotta-suave"
-                target="_blank"
+                href="https://wa.me/59895961360"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 +598 95961360
               </a>
@@ -121,59 +116,72 @@ export default function ContactInfoSection() {
           </h2>
           <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
             <Input
+              fullWidth
+              required
+              disabled={status.type === "loading"}
               label="Tu Nombre"
               name="name"
               type="text"
-              fullWidth
-              required
               value={formData.name}
               onChange={handleChange}
-              disabled={status.type === "loading"}
             />
             <Input
+              fullWidth
+              required
+              disabled={status.type === "loading"}
               label="Tu Email"
               name="email"
               type="email"
-              fullWidth
-              required
               value={formData.email}
               onChange={handleChange}
-              disabled={status.type === "loading"}
             />
             <Textarea
-              label="Tu Mensaje"
-              name="message"
               fullWidth
               required
+              disabled={status.type === "loading"}
+              label="Tu Mensaje"
+              name="message"
               value={formData.message}
               onChange={handleChange}
-              disabled={status.type === "loading"}
             />
             <Button
-              type="submit"
               className="w-full bg-terracotta-suave font-display font-semibold text-white"
+              disabled={status.type === "loading"}
               size="lg"
               startContent={
                 status.type === "loading" ? (
                   <Spinner color="white" size="sm" />
                 ) : undefined
               }
-              disabled={status.type === "loading"}
+              type="submit"
             >
               {status.type === "loading" ? "Enviando..." : "Enviar mensaje"}
             </Button>
             {status.type === "success" && (
-              <Alert color="success" className="mt-4 text-left">
+              <Alert className="mt-4 text-left" color="success">
                 ¡Mensaje enviado! Gracias por contactarnos, te responderemos a
                 la brevedad.
               </Alert>
             )}
             {status.type === "error" && (
-              <Alert color="danger" className="mt-4 text-left">
+              <Alert className="mt-4 text-left" color="danger">
                 {status.message}
               </Alert>
             )}
           </form>
+        </div>
+
+        {/* Columna Derecha: Mapa */}
+        <div className="w-full h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
+          <iframe
+            allowFullScreen={true}
+            className="w-full h-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81afa8928cc1%3A0x8bd901040c3bfb91!2sJuan%20Paullier%201192%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1758164896331!5m2!1ses!2suy"
+            style={{ border: 0 }}
+            title="Ubicación de Espacio Pisama en Google Maps"
+          />
         </div>
       </div>
     </section>
