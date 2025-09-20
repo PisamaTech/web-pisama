@@ -52,7 +52,7 @@ export default function BeneficiosClave() {
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-14 text-primary max-w-2xl mx-auto">
           Un Conjunto de <span className="text-secondary">Ventajas</span> para
-          Simplificar tu Práctica.
+          Simplificar tus Consultas.
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">

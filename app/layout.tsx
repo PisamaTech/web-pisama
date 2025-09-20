@@ -10,6 +10,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/Navbar";
 import SiteFooter from "@/components/Footer";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: {
@@ -68,6 +69,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+          <ScrollIndicator />
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main>{children}</main>
