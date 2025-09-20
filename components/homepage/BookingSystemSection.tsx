@@ -32,7 +32,7 @@ export default function BookingSystemSection(): JSX.Element {
             <div className="mt-8">
               <Button
                 as={Link}
-                href="/aplicacion-de-reservas"
+                href="/sistema-de-reservas"
                 className="bg-terracotta-suave font-display font-semibold text-white shadow-lg"
                 variant="solid"
                 size="lg"
@@ -45,7 +45,7 @@ export default function BookingSystemSection(): JSX.Element {
 
           {/* Columna Derecha: Visual de la App */}
           <div className="relative mx-auto h-[450px] w-[250px] rounded-[30px] border-[10px] border-black bg-white shadow-2xl sm:h-[500px] sm:w-[280px]">
-            <div className="absolute left-1/2 top-3 h-2 w-16 -translate-x-1/2 rounded-full bg-black"></div>
+            <div className="absolute left-1/2 top-3 h-2 w-16 -translate-x-1/2 rounded-full bg-black" />
             <div className="absolute inset-[10px] overflow-hidden rounded-[20px]">
               <Image
                 src={imagenAppReserva}
