@@ -120,7 +120,9 @@ export default function PlatformLogicSection(): JSX.Element {
                 </h3>
                 <Divider />
               </CardHeader>
-              <CardBody className="p-8 pt-0 text-sm">{item.content}</CardBody>
+              <CardBody className="p-8 pt-0 text-sm/6 ">
+                {item.content}
+              </CardBody>
             </Card>
           ))}
         </div>

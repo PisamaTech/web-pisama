@@ -124,7 +124,7 @@ export default function PlatformTourSection(): JSX.Element {
   };
 
   return (
-    <section className="py-20 bg-content2">
+    <section className="py-20 bg-content4">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="text-4xl font-bold text-primary">

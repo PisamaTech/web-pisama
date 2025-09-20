@@ -49,21 +49,21 @@ const BeforeAfterSection = () => (
         <ul className="mt-6 space-y-4 font-sans text-marron-cafe/80">
           <li className="flex items-start gap-3">
             <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
-            <span>Recibes una consulta y ofreces un horario tentativo.</span>
+            <span>Consultas disponibilidad al consultorio y esperas.</span>
           </li>
           <li className="flex items-start gap-3">
             <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
-            <span>Contactas por mensaje para verificar disponibilidad.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
-            <span>Esperas una respuesta, perdiendo un tiempo valioso.</span>
+            <span>Ofreces los horarios a tu paciente y esperas de nuevo.</span>
           </li>
           <li className="flex items-start gap-3">
             <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
             <span>
-              Para cuando te confirman, el horario ya no está disponible.
+              Tu paciente confirma. Vuelves a contactar al consultorio y...
             </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
+            <span>Disculpa, esa hora ya no está disponible.</span>
           </li>
         </ul>
       </div>
