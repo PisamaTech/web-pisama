@@ -1,6 +1,7 @@
 "use client";
 
 import { Accordion, AccordionItem } from "@heroui/accordion";
+import { Divider } from "@heroui/divider";
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
@@ -129,22 +130,14 @@ export default function PlatformTourSection(): JSX.Element {
           <h2 className="text-4xl font-bold text-primary">
             Un Tour Guiado por tu Futura Plataforma
           </h2>
-          <p className="mt-6 font-sans text-lg text-primary/90">
+          <p className="mt-6 text-lg text-primary/90">
             Hemos diseñado cada apartado para que sea intuitivo y potente. Haz
             clic en cada sección para descubrir cómo te ayudará a gestionar tu
             práctica de forma más eficiente.
           </p>
         </div>
         <div className="mx-auto max-w-4xl">
-          <Accordion
-            selectionMode="multiple"
-            variant="splitted"
-            classNames={{
-              item: "bg-content1 !shadow-lg",
-              trigger: "p-6",
-              content: "p-6 pt-0",
-            }}
-          >
+          <Accordion selectionMode="multiple" variant="splitted">
             {tourData.map((item) => (
               <AccordionItem
                 key={item.key}
@@ -159,8 +152,14 @@ export default function PlatformTourSection(): JSX.Element {
                     {item.subtitle}
                   </span>
                 }
+                classNames={{
+                  base: "bg-content1/50 !shadow-lg",
+                  trigger: "p-6",
+                  content: "p-6 pt-0",
+                }}
               >
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <Divider />
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 pt-8">
                   {/* Columna de Texto */}
                   <div>
                     <h4 className="font-display font-bold text-primary">
