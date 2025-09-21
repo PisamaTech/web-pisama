@@ -49,7 +49,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
     <>
       <main className="bg-content2 py-20">
         <article
-          className="prose prose-lg mx-auto max-w-5xl px-4 
+          className="prose prose-lg mx-auto max-w-4xl px-4 
                      prose-headings:font-display prose-headings:text-primary-500
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
@@ -94,8 +94,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
               src={consultorio1}
               alt="Consultorio de psicología profesional y acogedor"
               className="rounded-lg shadow-xl"
-              width={700}
-              height={450}
+              width={500}
             />
           </div>
           <blockquote>
@@ -162,8 +161,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
               src={consultorio3}
               alt="Detalle de la decoración de un consultorio"
               className="rounded-lg shadow-xl"
-              width={700}
-              height={450}
+              width={500}
             />
           </div>
           <h3>
@@ -211,7 +209,6 @@ export default function ArticuloPsicologosPage(): JSX.Element {
               alt="Aplicación de reservas de Espacio Pisama"
               className="rounded-lg shadow-xl"
               width={250}
-              // height={450}
             />
           </div>
           <h3>
