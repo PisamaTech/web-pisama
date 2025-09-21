@@ -3,8 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@heroui/button";
-import { Accordion, AccordionItem } from "@heroui/accordion";
-import ConsultorioPsicologosFaqSection from "@/components/precios/ConsultorioPsicologosFaqSection";
+import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {

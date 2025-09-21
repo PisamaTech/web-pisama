@@ -8,6 +8,7 @@ import {
   FaRegLightbulb,
   FaUsers,
 } from "react-icons/fa"; // Iconos para los pilares
+
 import { GrGrow } from "react-icons/gr";
 import Gaston from "@/public/images/Gaston.webp";
 import { FaPersonRays } from "react-icons/fa6";
