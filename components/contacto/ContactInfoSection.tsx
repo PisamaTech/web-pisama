@@ -64,8 +64,8 @@ export default function ContactInfoSection() {
   };
 
   return (
-    <section className="py-20 bg-content2 ">
-      <div className="container mx-auto grid grid-cols-1 gap-22 px-4 lg:grid-cols-2 lg:px-8 items-center  max-w-5xl">
+    <section className="py-20 bg-content1 ">
+      <div className="container mx-auto grid grid-cols-1 gap-22 px-4 lg:grid-cols-2 lg:px-8 items-center  max-w-4xl">
         {/* Columna Izquierda: Datos y Formulario */}
         <div>
           <h2 className="font-display text-3xl font-bold text-primary">

@@ -1,5 +1,6 @@
 "use client";
 
+import { Divider } from "@heroui/divider";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 
 // DATOS para la sección de FAQ
@@ -28,8 +29,8 @@ const faqData = [
 
 export default function ContactFaqSection() {
   return (
-    <section className="bg-content4 py-20 sm:py-20">
-      <div className="container mx-auto max-w-3xl px-4 lg:px-8">
+    <section className="bg-content2 pb-20 pt-10">
+      <div className="container mx-auto max-w-4xl px-6 lg:px-8">
         <h2 className="mb-12 text-center font-display text-4xl font-bold text-marron-cafe">
           Antes de escribir, quizás encuentres tu respuesta aquí
         </h2>
@@ -40,12 +41,13 @@ export default function ContactFaqSection() {
               aria-label={item.question}
               title={item.question}
               classNames={{
-                base: "bg-content2 shadow-xl",
+                base: "bg-content1/70 shadow-xl",
                 title: "text-primary",
                 trigger: "font-bold text-primary",
-                content: "text-primary/80 text-sm",
+                content: "text-primary/80 text-sm/6 pb-4",
               }}
             >
+              <Divider className="mb-4" />
               {item.answer}
             </AccordionItem>
           ))}
