@@ -23,7 +23,7 @@ const config = {
     },
   },
   darkMode: "class",
-  plugins: [heroui(themeHeroUI)],
+  plugins: [heroui(themeHeroUI), require("@tailwindcss/typography")],
 };
 
 module.exports = config;
