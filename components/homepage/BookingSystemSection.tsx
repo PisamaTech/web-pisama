@@ -13,9 +13,8 @@ export default function BookingSystemSection(): JSX.Element {
           {/* Columna Izquierda: Texto Persuasivo */}
           <div className="text-center md:text-left">
             <h2 className="font-display text-4xl font-bold text-primary">
-              Una Aplicación para{" "}
-              <span className="text-secondary">Gestionar Tus Consultas </span>{" "}
-              Sin Intermediarios.
+              Una <span className="text-secondary">Gestión </span> de tus{" "}
+              Reservas Sin Intermediarios.
             </h2>
             <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
               ¿Conoces esta situación? Consultas por un horario libre, contactas
@@ -33,7 +32,7 @@ export default function BookingSystemSection(): JSX.Element {
               <Button
                 as={Link}
                 href="/sistema-de-reservas"
-                className="bg-terracotta-suave font-display font-semibold text-white shadow-lg"
+                className="bg-secondary font-display font-semibold text-white shadow-lg"
                 variant="solid"
                 size="lg"
                 endContent={<FaArrowRight />}

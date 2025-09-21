@@ -16,9 +16,7 @@ export default function BeneficiosClave() {
       titulo: "Ahorro Inteligente",
       descripcion:
         "Nuestro sistema de tarifas es superior a las cuponeras. Cuantas más horas usas, más barato se vuelve el costo. Impulsamos tu crecimiento, sin pagos por adelantado.",
-      icono: (
-        <RiMoneyDollarBoxFill className="text-terracotta-suave text-4xl mb-3" />
-      ),
+      icono: <RiMoneyDollarBoxFill className="text-secondary text-4xl mb-3" />,
     },
 
     {
@@ -31,19 +29,19 @@ export default function BeneficiosClave() {
       titulo: "Ubicación estratégica",
       descripcion:
         "Parque Rodó, en el corazón de Montevideo. Una zona que realza tu imagen profesional y es de fácil acceso para vos y tus pacientes. ",
-      icono: <FaMapMarkerAlt className="text-primary text-4xl mb-3" />,
+      icono: <FaMapMarkerAlt className="text-secondary text-4xl mb-3" />,
     },
     {
       titulo: "Comodidad y profesionalismo",
       descripcion:
         "Cada detalle, desde la acústica hasta la decoración, fueron pensado por dos psicólogos para el bienestar de profesionales y pacientes. Un espacio creado desde la experiencia.",
-      icono: <FaCouch className="text-terracotta-suave text-4xl mb-3" />,
+      icono: <FaCouch className="text-primary text-4xl mb-3" />,
     },
     {
       titulo: "Flexibilidad horaria",
       descripcion:
         "Abierto todos los días de 7:00 a 23:00 hs, incluso domingos y feriados. Los 365 días del año a tu disposición.",
-      icono: <FaClock className="text-terracotta-suave text-4xl mb-3" />,
+      icono: <FaClock className="text-secondary text-4xl mb-3" />,
     },
   ];
 

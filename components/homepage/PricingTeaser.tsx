@@ -72,7 +72,7 @@ export default function PricingTeaser() {
             size="lg"
             endContent={<FaArrowRight />} // Añadimos un icono para mayor claridad
           >
-            Descubre cómo funciona el ahorro inteligente
+            Conoce nuestro sistema de ahorro
           </Button>
         </div>
       </div>

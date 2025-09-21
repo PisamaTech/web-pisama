@@ -7,7 +7,7 @@ import logoImagen from "@/public/images/Logo-Espacio-Pisama-Texturado-300px.png"
 export default function HeroSection() {
   return (
     // 1. Contenedor principal con posicionamiento relativo y altura de pantalla completa
-    <section className="relative flex h-[80vh] items-center justify-center text-center text-white">
+    <section className="relative flex h-[90vh] items-center justify-center text-center text-white">
       {/* 2. Imagen de fondo que cubre todo el contenedor */}
       <Image
         src={heroImagen} // Ruta desde la carpeta 'public'
@@ -28,14 +28,14 @@ export default function HeroSection() {
         <Image
           src={logoImagen}
           alt="Logo Espacio Pisama"
-          width={250} // Ajusta el tamaño según sea necesario
-          height={250} // Ajusta el tamaño según sea necesario
+          width={220} // Ajusta el tamaño según sea necesario
+          height={220} // Ajusta el tamaño según sea necesario
           className="mx-auto mb-8" // Centra el logo y añade margen inferior
         />
         {/* Título Principal (ahora en color blanco) */}
         <h1 className="font-semibold text-2xl tracking-tight text-white md:text-5xl">
           Alquiler de Consultorios por Hora en Montevideo: El espacio que
-          Impulsa tu Profesión
+          Impulsa tu Crecimiento
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
           </Button>
           <Button
             as={Link}
-            href="/mas-informacion"
+            href="/contacto"
             size="lg"
             color="secondary"
             radius="md"
