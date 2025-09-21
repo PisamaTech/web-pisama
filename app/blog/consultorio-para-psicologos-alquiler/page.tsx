@@ -3,9 +3,16 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@heroui/button";
+import Image from "next/image";
 
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 import CtaSection from "@/components/homepage/CtaSection";
+
+import consultorio1 from "@/public/images/consultorio5-1.webp";
+import salaespera1 from "@/public/images/salaespera-1.webp";
+import consultorio3 from "@/public/images/consultorio3-1.webp";
+import appReservas from "@/public/images/aplicacion-web-reservas.webp";
+import fachada1 from "@/public/images/fachada-1.1.webp";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
@@ -16,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const CtaBox = () => (
-  <div className="my-10 rounded-2xl bg-content3 shadow-lg p-4 text-center">
+  <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400">
     <h3 className="font-display text-3xl font-bold text-primary-500 mt-8!">
       ¿Listo/a para encontrar tu encuadre perfecto?
     </h3>
@@ -82,8 +89,17 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             Pero, ¿qué pasa con el espacio? El consultorio es, quizás, el
             elemento más tangible de ese encuadre.
           </p>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={consultorio1}
+              alt="Consultorio de psicología profesional y acogedor"
+              className="rounded-lg shadow-xl"
+              width={700}
+              height={450}
+            />
+          </div>
           <blockquote>
-            Por qué la estabilidad del espacio es tan crucial para ti como para
+            Por qué la estabilidad del espacio es tan crucial para vos como para
             tus pacientes
           </blockquote>
           <p>
@@ -119,6 +135,14 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             sala de espera para enmascarar cualquier sonido y garantizar una
             privacidad total.
           </p>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={salaespera1}
+              alt="Sala de espera confortable y profesional"
+              className="rounded-lg shadow-xl"
+              width={400}
+            />
+          </div>
           <h3>
             El Ambiente: Cómo una decoración y limpieza impecables impactan la
             sesión
@@ -133,6 +157,15 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             acogedora. Un lugar que invite a la calma, no que genere
             distracciones.
           </p>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={consultorio3}
+              alt="Detalle de la decoración de un consultorio"
+              className="rounded-lg shadow-xl"
+              width={700}
+              height={450}
+            />
+          </div>
           <h3>
             La Funcionalidad: Esos pequeños detalles (pañuelos, iluminación) que
             lo cambian todo
@@ -172,6 +205,15 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             </Link>
             .
           </p>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={appReservas}
+              alt="Aplicación de reservas de Espacio Pisama"
+              className="rounded-lg shadow-xl"
+              width={250}
+              // height={450}
+            />
+          </div>
           <h3>
             La Comunidad de Colegas: Por qué la baja rotación y el respeto son
             clave
@@ -202,8 +244,16 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             detalle, especialmente en Montevideo, es el estacionamiento. Estar
             en una zona como Parque Rodó, sin estacionamiento tarifado y donde
             siempre se encuentra lugar, elimina una barrera importante para
-            muchos pacientes.
+            nuestros pacientes.
           </p>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={fachada1}
+              alt="Fachada de Espacio Pisama"
+              className="rounded-lg shadow-xl"
+              width={350}
+            />
+          </div>
 
           {/* --- SECCIÓN 4: BANDERAS ROJAS --- */}
           <h2>
@@ -250,7 +300,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
       </main>
       <CtaSection
         title="Tu Práctica Merece el Mejor Entorno"
-        description="Has visto lo que importa: privacidad, ambiente y una logística que te libere. Descubre un espacio donde todo está resuelto para que puedas enfocarte en lo esencial: tus pacientes."
+        description="Has visto lo que importa: privacidad, ambiente y una logística que te libere. Descubre un espacio donde todo esto está resuelto para que puedas enfocarte en lo esencial: tus pacientes."
         buttonText="Ver Disponibilidad en Tiempo Real"
         buttonLink="/disponibilidad"
       />

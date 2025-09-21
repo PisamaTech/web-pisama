@@ -58,7 +58,7 @@ export default function ConsultorioPsicologosFaqSection() {
             key={item.key}
             title={item.question}
             classNames={{
-              base: "bg-content4 !shadow-lg mb-2",
+              base: "bg-content4 !shadow-lg mb-2 border-1 border-gray-300",
               trigger: "p-6 font-bold text-default-700",
               heading: "mt-0 mb-0",
               title: " text-lg text-default-700",

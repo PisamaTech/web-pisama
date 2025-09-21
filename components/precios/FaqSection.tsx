@@ -1,12 +1,13 @@
 "use client";
 
 import { Accordion, AccordionItem } from "@heroui/accordion";
+import { Divider } from "@heroui/divider";
 
 const faqData = [
   {
     question: "¿Cómo funciona el pago?",
     answer:
-      "A fin de mes, nuestro sistema calcula automáticamente las horas que utilizaste y te envía una factura detallada a tu correo. Puedes pagarla cómodamente por transferencia bancaria.",
+      "Según tu modalidad de pago (semanal o mensual), nuestro sistema calcula automáticamente las horas que utilizaste y te genera una factura detallada que podes ver en la aplicación. Podes pagarla cómodamente por transferencia bancaria.",
   },
   {
     question: "¿Existe un mínimo de horas a reservar?",
@@ -16,7 +17,7 @@ const faqData = [
   {
     question: "¿Cuál es la política de cancelación?",
     answer:
-      'Nuestra política busca ser justa para todos. Puedes cancelar cualquier reserva sin costo si lo haces con más de 24 horas de antelación. Si cancelas con 24 horas o menos de antelación, la reserva se considera "Penalizada", lo que significa que deberás pagarla y se incluirá en tu facturación. Sin embargo, no pierdes la hora, ya que tienes la opción de reagendarla por un plazo de 6 días a partir de la fecha de la reserva original.',
+      'Nuestra política busca ser justa para todos. Puedes cancelar cualquier reserva sin costo si lo haces con más de 24 horas de antelación. Si cancelas con 24 horas o menos de antelación, la reserva se considera "Penalizada", lo que significa que deberás pagarla y se incluirá en tu facturación. Sin embargo, no pierdes la hora, ya que tienes la opción de reagendarla por un plazo de 6 días, a partir de la fecha de la reserva original. Todo esto lo gestionas directamente desde nuestra aplicación web.',
   },
   {
     question: "",
@@ -47,7 +48,7 @@ const faqData = [
 export default function FaqSection() {
   return (
     <section className="bg-content1 py-20 sm:py-24">
-      <div className="container mx-auto max-w-3xl px-4 lg:px-8">
+      <div className="container mx-auto max-w-4xl px-4 lg:px-8">
         <h2 className="mb-12 text-center font-display text-4xl font-bold text-marron-cafe">
           Dudas resueltas. Transparencia total.
         </h2>
@@ -62,12 +63,14 @@ export default function FaqSection() {
                 key={item.question}
                 title={item.question}
                 classNames={{
-                  base: "bg-content2/80 !shadow-lg", // La clave 'item' se convierte en 'base' para cada AccordionItem
+                  base: "bg-content2 !shadow-lg border-1 border-gray-300",
                   trigger: "p-6 font-display font-bold text-marron-cafe",
-                  indicator: "text-marron-cafe",
-                  content: "p-6 pt-0 font-sans text-marron-cafe/90",
+                  title: "text-primary-500 text-lg",
+                  indicator: "text-primary",
+                  content: "p-6 mb-3 pt-0 text-primary-400",
                 }}
               >
+                <Divider className="mb-4" />
                 {item.answer}
               </AccordionItem>
             ))}
