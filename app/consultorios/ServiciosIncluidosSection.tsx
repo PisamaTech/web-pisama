@@ -61,7 +61,9 @@ export default function ServiciosIncluidosSection() {
                 aria-hidden="true"
               />
             </div>
-            <h3 className="text-xl font-bold text-primary">{servicio.title}</h3>
+            <h3 className="text-xl text-center font-bold text-primary">
+              {servicio.title}
+            </h3>
             <p className="mt-2 font-sans text-base text-primary/80">
               {servicio.description}
             </p>

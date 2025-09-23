@@ -198,7 +198,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             ya no estaba disponible. Tener que cambiar un horario ya confirmado
             proyecta una imagen poco profesional y desorganizada. Es un desgaste
             innecesario que resolvimos con{" "}
-            <Link href="/plataforma-de-reservas">
+            <Link href="/sistema-de-reservas">
               nuestra plataforma de reservas en tiempo real
             </Link>
             .

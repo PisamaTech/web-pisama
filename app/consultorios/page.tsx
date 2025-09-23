@@ -15,7 +15,7 @@ export default function ConsultoriosPage() {
           <h1 className="font-display text-5xl font-bold text-marron-cafe">
             Nuestros Espacios: Ambientes que potencian tu práctica profesional
           </h1>
-          <p className="mx-auto mt-6 font-sans text-lg text-marron-cafe/90">
+          <p className="mx-auto max-w-3xl mt-6 font-sans text-lg text-marron-cafe/90">
             Descubre las dos experiencias que tenemos disponibles y elige la que
             mejor se adapte a las necesidades de tu práctica profesional.
           </p>
