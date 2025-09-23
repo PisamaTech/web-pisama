@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import PricingCard from "@/components/precios/PricingCard";
 import FaqSection from "@/components/precios/FaqSection";
 import DiscountCalculator from "@/components/precios/DiscountCalculator"; // Importamos la nueva calculadora
@@ -6,6 +7,13 @@ import ComparisonTable from "@/components/precios/ComparisonTable";
 import DiscountsSection from "@/components/precios/DiscountsSection";
 import { pricingData } from "@/src/pricingData";
 import CtaSection from "@/components/homepage/CtaSection";
+
+export const metadata: Metadata = {
+  title:
+    "Precios y Ahorros Flexibles | Alquiler de Consultorios | Espacio Pisama",
+  description:
+    "Descubre nuestras tarifas. Ahorra hasta $100/hora con nuestro sistema de descuentos por volumen. ¡Sin contratos ni paquetes fijos!",
+};
 
 export default function PreciosPage() {
   return (

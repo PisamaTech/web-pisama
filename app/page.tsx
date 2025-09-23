@@ -12,9 +12,10 @@ import BookingSystemSection from "@/components/homepage/BookingSystemSection";
 import LocationSection from "@/components/homepage/LocationSection";
 
 export const metadata: Metadata = {
-  title: "Inicio", // Esto se combinará con el template: "Inicio - espacio PISAMA"
+  title:
+    "Alquiler de Consultorios por Hora en Montevideo | Flexibles y Autónomos | Espacio Pisama",
   description:
-    "Bienvenido a Espacio Pisama. Ofrecemos alquiler de consultorios por hora para profesionales de la salud mental. Encuentra un espacio tranquilo y profesional para tus terapias.",
+    "Encuentra consultorios por hora en Parque Rodó. Gestiona tus reservas 100% online y ahorra con nuestro sistema flexible. ¡Conoce Espacio Pisama!",
   alternates: {
     canonical: "/", // URL canónica para la página de inicio
   },

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | Espacio Pisama",
+  title: "Términos y Condiciones de Servicio | Espacio Pisama",
   description:
-    "Conoce las políticas de uso, reservas, cancelaciones y facturación de Espacio Pisama. Nuestro compromiso con una relación profesional clara y transparente.",
+    "Consulta nuestras políticas de uso, reservas, cancelaciones, reagendamientos y facturación. Nuestro compromiso con una relación profesional transparente.",
 };
 
 export default function TerminosYCondicionesPage(): JSX.Element {

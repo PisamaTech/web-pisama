@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import OtrasAreasSection from "./OtrasAreasSection";
 import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
 
@@ -5,6 +6,12 @@ import ConsultorioCard from "@/components/consultorios/ConsultorioCards";
 import { consultoriosData } from "@/src/consultoriosData";
 import ConsultorioTypes from "@/components/consultorios/ConsultorioTypes";
 import CtaSection from "@/components/homepage/CtaSection";
+
+export const metadata: Metadata = {
+  title: "Consultorios Premium y Estándar en Parque Rodó | Espacio Pisama",
+  description:
+    "Explora en detalle nuestros consultorios. Diseñados por psicólogos para garantizar confort, privacidad y profesionalismo.",
+};
 
 export default function ConsultoriosPage() {
   return (

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { title, subtitle } from "@/components/primitives";
@@ -13,6 +14,13 @@ const blogPosts = [
   },
   // ... more posts here
 ];
+
+export const metadata: Metadata = {
+  title:
+    "Blog para Profesionales | Marketing, Gestión y Terapia | Espacio Pisama",
+  description:
+    "Artículos y guías prácticas para psicólogos y terapeutas independientes en Uruguay. Aprende sobre gestión de consultorios, marketing y crecimiento profesional.",
+};
 
 export default function BlogPage() {
   return (

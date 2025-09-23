@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/button";
@@ -7,6 +8,13 @@ import { GrGrow } from "react-icons/gr";
 import { FaPersonRays } from "react-icons/fa6";
 
 import Gaston from "@/public/images/Gaston.webp";
+
+export const metadata: Metadata = {
+  title:
+    "Nuestra Filosofía: Creado por un Psicólogo, para Colegas | Espacio Pisama",
+  description:
+    "Conoce la historia detrás de Espacio Pisama. Un espacio fundado desde la experiencia para ofrecer autonomía, flexibilidad y una comunidad profesional estable.",
+};
 
 // --- COMPONENTES DE LA PÁGINA ---
 

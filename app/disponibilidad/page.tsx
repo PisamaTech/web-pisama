@@ -1,5 +1,13 @@
+import { Metadata } from "next";
 import AvailabilityPageClient from "@/components/disponibilidad/AvailabilityPageClient";
 import CtaSection from "@/components/homepage/CtaSection"; // Reutilizamos el CTA
+
+export const metadata: Metadata = {
+  title:
+    "Ver Disponibilidad en Tiempo Real | Calendario Online | Espacio Pisama",
+  description:
+    "Consulta la disponibilidad de todos nuestros consultorios por hora en nuestro calendario online. Mira en tiempo real qué horarios están libres y planifica tu semana.",
+};
 
 export default function DisponibilidadPage(): JSX.Element {
   return (
