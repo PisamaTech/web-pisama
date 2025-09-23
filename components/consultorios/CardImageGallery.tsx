@@ -1,6 +1,7 @@
 import { CardBody } from "@heroui/card";
-import { Espacio } from "@/src/consultoriosData";
 import Image from "next/image";
+
+import { Espacio } from "@/src/consultoriosData";
 
 const CardImageGallery = ({
   media,

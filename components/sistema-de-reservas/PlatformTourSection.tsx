@@ -5,6 +5,7 @@ import { Divider } from "@heroui/divider";
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
+
 import LightboxModal from "@/components/LightboxModal";
 
 // TIPADO Y DATOS

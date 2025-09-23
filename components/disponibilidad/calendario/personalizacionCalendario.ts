@@ -37,6 +37,7 @@ const capitalizeFirstLetter = (string) => {
   if (!string) {
     return string;
   }
+
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 };
 
@@ -57,6 +58,7 @@ const miFormatoEncabezadoDiaDayjs = (date, culture, localizer) => {
 const customDayFormat = (date) => {
   const dia = capitalizeFirstLetter(dayjs(date).format("dddd"));
   const resto = dayjs(date).format(" D");
+
   return dia + resto;
 }; // "Lunes 10"
 

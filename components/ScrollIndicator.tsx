@@ -7,13 +7,17 @@ const ScrollIndicator = () => {
 
   const onScroll = () => {
     const Scrolled = document.documentElement.scrollTop;
-    const MaxHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const MaxHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     const ScrollPercent = (Scrolled / MaxHeight) * 100;
+
     setScroll(ScrollPercent);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -22,7 +26,7 @@ const ScrollIndicator = () => {
       <div
         className="h-1 bg-gradient-to-r from-rose-400 to-amber-800"
         style={{ width: `${scroll}%` }}
-      ></div>
+      />
     </div>
   );
 };

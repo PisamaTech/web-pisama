@@ -2,16 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
-import {
-  FaUserShield,
-  FaHandshake,
-  FaRegLightbulb,
-  FaUsers,
-} from "react-icons/fa"; // Iconos para los pilares
-
+import { FaHandshake, FaUsers } from "react-icons/fa"; // Iconos para los pilares
 import { GrGrow } from "react-icons/gr";
-import Gaston from "@/public/images/Gaston.webp";
 import { FaPersonRays } from "react-icons/fa6";
+
+import Gaston from "@/public/images/Gaston.webp";
 
 // --- COMPONENTES DE LA PÁGINA ---
 

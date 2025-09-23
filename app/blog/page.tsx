@@ -1,5 +1,6 @@
-import { title, subtitle } from "@/components/primitives";
 import Link from "next/link";
+
+import { title, subtitle } from "@/components/primitives";
 
 const blogPosts = [
   {

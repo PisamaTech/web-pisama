@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, Suspense } from "react";
-
 import { useSearchParams } from "next/navigation";
 import { Calendar, dayjsLocalizer, Views } from "react-big-calendar";
 import dayjs from "dayjs";
 import "dayjs/locale/es"; // Importamos el locale en español para Day.js
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
 // --- Importaciones de Componentes de HeroUI ---
 import { Select, SelectItem } from "@heroui/select";
 import { Spinner } from "@heroui/spinner";
@@ -16,16 +14,18 @@ import { Link } from "@heroui/link";
 import { FaExclamationCircle } from "react-icons/fa";
 
 // --- Importaciones de nuestra Lógica y Datos ---
-import { getReservas, CalendarEvent } from "@/src/lib/getReservas"; // Nuestra función de fetching
 import {
   calendarMessages,
   formatosPersonalizadosDayjs,
 } from "./calendario/personalizacionCalendario";
-import { consultoriosData } from "@/src/data/consultoriosData"; // Los datos de nuestros consultorios
 import CustomToolbar from "./calendario/customToolbar";
+
+import { getReservas, CalendarEvent } from "@/src/lib/getReservas"; // Nuestra función de fetching
+import { consultoriosData } from "@/src/data/consultoriosData"; // Los datos de nuestros consultorios
 
 // --- CONFIGURACIÓN INICIAL DE DAY.JS ---
 const localizer = dayjsLocalizer(dayjs);
+
 dayjs.locale("es");
 
 // TIPADO: Definimos la interfaz para los 'resources' del calendario
@@ -62,10 +62,12 @@ function AvailabilityPageContent() {
   const consultorioIdFromUrl = searchParams.get("id"); // p. ej. "consultorio-1"
 
   let initialConsultorio = "all";
+
   if (consultorioIdFromUrl) {
     // Los datos usan IDs numéricos, pero la URL puede ser más descriptiva.
     // Extraemos el número de "consultorio-X".
     const match = consultorioIdFromUrl.match(/consultorio-(\d+)/);
+
     if (match && match[1]) {
       initialConsultorio = match[1]; // p. ej. "1"
     }
@@ -94,7 +96,7 @@ function AvailabilityPageContent() {
           resourceTitle: c.title,
           available: c.available ?? true, // Asumimos 'true' si no está definido
         })),
-    []
+    [],
   );
 
   const selectOptions = useMemo(
@@ -106,13 +108,13 @@ function AvailabilityPageContent() {
         disabled: !res.available,
       })),
     ],
-    [resources]
+    [resources],
   );
 
   // Filtramos los recursos para la vista del calendario, excluyendo el consultorio 2
   const calendarViewResources = useMemo(
     () => resources.filter((res) => res.available),
-    [resources]
+    [resources],
   );
 
   // 4. EFECTO PARA LA CARGA INICIAL DE DATOS
@@ -129,13 +131,13 @@ function AvailabilityPageContent() {
       const initialRange = { start: startOfCurrentWeek, end: oneMonthFromNow };
 
       const fetchedEvents = await getReservas(initialRange);
+
       setAllEvents(fetchedEvents);
       setLoadedRanges([initialRange]); // Guardamos el rango que acabamos de cargar
       setLoading(false);
     };
 
     initialFetch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // El array vacío asegura que solo se ejecute una vez.
 
   // 5. FUNCIÓN PARA NAVEGACIÓN Y CARGA BAJO DEMANDA
@@ -146,7 +148,7 @@ function AvailabilityPageContent() {
     const isMonthLoaded = loadedRanges.some(
       (range) =>
         dayjs(newDate).isAfter(dayjs(range.start).subtract(1, "day")) &&
-        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day"))
+        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day")),
     );
 
     // Si el mes no está cargado, lo buscamos.
@@ -160,8 +162,9 @@ function AvailabilityPageContent() {
 
       // Usamos un Map para evitar duplicados al combinar los eventos nuevos y los existentes.
       const eventsMap = new Map(
-        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e])
+        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e]),
       );
+
       newEvents.forEach((e) => {
         eventsMap.set(`${e.start.toISOString()}-${e.resourceId}`, e);
       });
@@ -178,9 +181,10 @@ function AvailabilityPageContent() {
     if (selectedConsultorio === "all") {
       return allEvents; // Si es "Vista General", mostramos todos los eventos.
     }
+
     // Si se selecciona un consultorio, filtramos los eventos que ya tenemos.
     return allEvents.filter(
-      (event) => event.resourceId?.toString() === selectedConsultorio
+      (event) => event.resourceId?.toString() === selectedConsultorio,
     );
   }, [allEvents, selectedConsultorio]);
 
@@ -265,7 +269,7 @@ function AvailabilityPageContent() {
               <div
                 className="w-4 h-4 rounded-sm mr-2 border border-slate-400/50"
                 style={{ backgroundColor: "#5b9bd5" }}
-              ></div>
+              />
               <p className="text-sm text-slate-700">
                 <span className="font-semibold">Reservas Fijas:</span> se
                 repiten todas las semanas.
@@ -275,7 +279,7 @@ function AvailabilityPageContent() {
               <div
                 className="w-4 h-4 rounded-sm mr-2 border border-slate-400/50"
                 style={{ backgroundColor: "#92d050" }}
-              ></div>
+              />
               <p className="text-sm text-slate-700">
                 <span className="font-semibold">Reservas Eventuales:</span> uso
                 único en esa fecha.

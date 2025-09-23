@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@heroui/button";
 import { FaArrowRight } from "react-icons/fa";
+
 import imagenAppReserva from "@/public/images/aplicacion-web-reservas.webp";
 
 export default function BookingSystemSection(): JSX.Element {

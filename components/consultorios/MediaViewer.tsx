@@ -37,7 +37,7 @@ const MediaViewer: FC<MediaViewerProps> = ({ space }) => {
   if (!space) {
     // Placeholder para cuando no hay un espacio seleccionado
     return (
-      <div className="relative aspect-video w-full animate-pulse overflow-hidden rounded-lg bg-gray-200 shadow-lg"></div>
+      <div className="relative aspect-video w-full animate-pulse overflow-hidden rounded-lg bg-gray-200 shadow-lg" />
     );
   }
 
@@ -122,10 +122,9 @@ const MediaViewer: FC<MediaViewerProps> = ({ space }) => {
               height="100%"
               src={space.videoUrl}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            />
           </ModalBody>
         </ModalContent>
       </Modal>

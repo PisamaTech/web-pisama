@@ -1,9 +1,11 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 import { FaCheckCircle, FaPlayCircle } from "react-icons/fa";
+
 import GalleryModal from "@/components/consultorios/GalleryModal";
 import { otrasAreas, OtraArea } from "@/src/otrasAreas";
 

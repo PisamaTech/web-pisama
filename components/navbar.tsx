@@ -10,6 +10,7 @@ import {
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import Image from "next/image";
+
 import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";
 
 export const Navbar = () => {

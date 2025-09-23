@@ -16,7 +16,9 @@ const LightboxModal = ({ isOpen, image, onClose }: LightboxModalProps) => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
+
     window.addEventListener("keydown", handleKey);
+
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 

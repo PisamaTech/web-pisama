@@ -2,19 +2,18 @@
 // src/app/plataforma-de-reservas/page.tsx
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import Image, { StaticImageData } from "next/image";
-import { FaCheckCircle, FaTimes, FaTimesCircle } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { useState } from "react";
+import { MdOutlineEventAvailable } from "react-icons/md";
+import { FaPeopleArrows, FaRegRectangleList } from "react-icons/fa6";
+import { CgUnavailable } from "react-icons/cg";
 
 import CtaSection from "@/components/homepage/CtaSection"; // Assuming this is the correct path
 import aplicacionRegistro from "@/public/images/aplicacion-registro.webp";
 import aplicacionVisualiza from "@/public/images/aplicacion-visualiza.webp";
 import aplicacionConfirma from "@/public/images/aplicacion-confirma.webp";
-import { MdOutlineEventAvailable } from "react-icons/md";
-import { FaPeopleArrows, FaRegRectangleList } from "react-icons/fa6";
-import { CgUnavailable } from "react-icons/cg";
 import PlatformLogicSection from "@/components/sistema-de-reservas/PlataformLogicSection";
 import PlatformTourSection from "@/components/sistema-de-reservas/PlatformTourSection";
-
 import LightboxModal from "@/components/LightboxModal";
 
 // --- SECCIÓN 1: HÉROE DE LA PÁGINA ---
@@ -106,7 +105,7 @@ const BeforeAfterSection = () => (
 const HowItWorksSection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
-    null
+    null,
   );
 
   const openLightbox = (image: StaticImageData) => {

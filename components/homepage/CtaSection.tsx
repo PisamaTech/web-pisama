@@ -17,7 +17,7 @@ export default function CtaSection({
   return (
     <section className="relative py-20 bg-primary-500 text-white">
       {/* Patrón decorativo opcional */}
-      <div className="absolute inset-0 bg-[url('/patterns/waves.svg')] bg-bottom bg-no-repeat bg-cover opacity-10 pointer-events-none scale-y-[-1]"></div>
+      <div className="absolute inset-0 bg-[url('/patterns/waves.svg')] bg-bottom bg-no-repeat bg-cover opacity-10 pointer-events-none scale-y-[-1]" />
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <h2 className="text-4xl font-bold mb-6">{title}</h2>

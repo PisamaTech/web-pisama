@@ -48,7 +48,9 @@ export default function GalleryModal({
         onClose();
       }
     };
+
     window.addEventListener("keydown", handleKeyDown);
+
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [open, prev, next, onClose]);
 
@@ -120,6 +122,7 @@ export default function GalleryModal({
             >
               {(() => {
                 const currentMedia = media[current];
+
                 if (
                   currentMedia.type === "video" &&
                   currentMedia.src.includes("youtube.com")
@@ -132,7 +135,7 @@ export default function GalleryModal({
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       className="aspect-video w-full max-w-[90vw] max-h-[80vh] rounded-lg"
-                    ></iframe>
+                    />
                   );
                 }
                 if (currentMedia.type === "video") {
@@ -149,6 +152,7 @@ export default function GalleryModal({
                     />
                   );
                 }
+
                 return (
                   <Image
                     src={currentMedia.src}

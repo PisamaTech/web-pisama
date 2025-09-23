@@ -4,6 +4,7 @@ import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
 import { Button } from "@heroui/button";
 import { FaCheckCircle } from "react-icons/fa";
+
 import { Espacio } from "@/src/consultoriosData";
 
 const CardInfo = ({ espacio }: { espacio: Espacio }) => (

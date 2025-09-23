@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
+
 import MediaModal from "./MediaModal";
+
 import consultorios from "@/src/consultorios";
 
 export default function ConsultoriosSection() {
@@ -63,12 +65,12 @@ export default function ConsultoriosSection() {
         onClose={() => setModalOpen(false)}
         onPrev={() =>
           setCurrentIndex((prev) =>
-            prev === 0 ? currentItems.length - 1 : prev - 1
+            prev === 0 ? currentItems.length - 1 : prev - 1,
           )
         }
         onNext={() =>
           setCurrentIndex((prev) =>
-            prev === currentItems.length - 1 ? 0 : prev + 1
+            prev === currentItems.length - 1 ? 0 : prev + 1,
           )
         }
       />

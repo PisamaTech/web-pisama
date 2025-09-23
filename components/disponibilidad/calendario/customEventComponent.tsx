@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import React from "react";
 import { EventProps } from "react-big-calendar";
+
 import { CalendarEvent } from "@/src/lib/getReservas";
 
 export const CustomEventComponent: React.FC<EventProps<CalendarEvent>> = ({

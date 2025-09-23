@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { FaCheckCircle } from "react-icons/fa";
 import { Divider } from "@heroui/divider";
-import { MdOutlineFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 // TIPADO: Definimos la interfaz para las props del componente
 interface PricingCardProps {

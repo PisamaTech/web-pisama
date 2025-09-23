@@ -29,7 +29,7 @@ export default function ContactInfoSection() {
   const [status, setStatus] = useState<FormStatus>({ type: "idle" });
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 

@@ -1,4 +1,4 @@
-import { FaBus, FaCar, FaCompass, FaMapMarkerAlt } from "react-icons/fa";
+import { FaBus, FaCar, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function LocationSection(): JSX.Element {
   return (
@@ -8,6 +8,7 @@ export default function LocationSection(): JSX.Element {
           {/* Columna Izquierda: Mapa Embebido */}
           <div className="h-[450px] w-full overflow-hidden rounded-lg shadow-xl">
             <iframe
+              title="Mapa de ubicación de Espacio Pisama"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81afa8928cc1%3A0x8bd901040c3bfb91!2sJuan%20Paullier%201192%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1757690720638!5m2!1ses!2suy"
               width="100%"
               height="100%"
@@ -15,7 +16,7 @@ export default function LocationSection(): JSX.Element {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
           </div>
 
           {/* Columna Derecha: Texto Persuasivo */}
