@@ -12,16 +12,16 @@ import { Navbar } from "@/components/navbar";
 import SiteFooter from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/EspacioPisama32.png",
-  },
-};
+// export const metadata: Metadata = {
+//   title: {
+//     default: siteConfig.name,
+//     template: `%s - ${siteConfig.name}`,
+//   },
+//   description: siteConfig.description,
+//   icons: {
+//     icon: "/EspacioPisama32.png",
+//   },
+// };
 
 export const viewport: Viewport = {
   themeColor: [
