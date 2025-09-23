@@ -34,31 +34,31 @@ export const Navbar = () => {
         width={45}
         className="mr-2"
       />
-      <p className="font-bold text-primary/70">
-        <span className="hidden md:inline">espacio </span>PISAMA
-      </p>
+      <div className="flex flex-col items-center gap-0 text-primary/60">
+        <p className="text-sm mb-[-4px]">espacio</p>
+        <p>PISAMA</p>
+      </div>
     </NavbarBrand>
   );
 
   return (
     <HeroUINavbar
-      disableAnimation
       isBordered
       className="bg-content1 text-secondary font-semibold"
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="md:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="md:hidden pr-3" justify="center">
         {brandContent}
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="start">
+      <NavbarContent className="hidden md:flex gap-4" justify="start">
         {brandContent}
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
         {/* 2. Mapeamos tus enlaces para el menú de escritorio */}
         {navLinks.map((link) => (
           <NavbarItem
@@ -76,7 +76,7 @@ export const Navbar = () => {
         ))}
       </NavbarContent>
 
-      {/* --- Botones de Acción (Login/Sign Up) --- */}
+      {/* --- Botones de Acción --- */}
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
@@ -99,7 +99,7 @@ export const Navbar = () => {
           <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
               className="w-full"
-              color="foreground" // Simplificamos el color, puedes personalizarlo
+              color="primary" // Simplificamos el color, puedes personalizarlo
               href={item.href}
               size="lg"
             >
