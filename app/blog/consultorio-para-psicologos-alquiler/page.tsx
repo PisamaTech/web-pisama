@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 import CtaSection from "@/components/homepage/CtaSection";
-
 import consultorio1 from "@/public/images/consultorio5-1.webp";
 import salaespera1 from "@/public/images/salaespera-1.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";

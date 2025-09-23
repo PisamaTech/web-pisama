@@ -30,11 +30,11 @@ export default function GalleryModal({
 
   const prev = useCallback(
     () => setCurrent((current) => (current - 1 + media.length) % media.length),
-    [media.length]
+    [media.length],
   );
   const next = useCallback(
     () => setCurrent((current) => (current + 1) % media.length),
-    [media.length]
+    [media.length],
   );
 
   useEffect(() => {

@@ -10,7 +10,6 @@ import {
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import Image from "next/image";
-
 import { TbCalendarPlus } from "react-icons/tb";
 
 import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";

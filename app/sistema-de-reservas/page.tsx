@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import CtaSection from "@/components/homepage/CtaSection";
 import PlatformLogicSection from "@/components/sistema-de-reservas/PlataformLogicSection";
 import PlatformTourSection from "@/components/sistema-de-reservas/PlatformTourSection";

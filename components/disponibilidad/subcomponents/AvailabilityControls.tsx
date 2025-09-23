@@ -56,8 +56,8 @@ const AvailabilityControls = ({
           style={{ backgroundColor: "#92d050" }}
         />
         <p className="text-sm text-slate-700">
-          <span className="font-semibold">Reservas Eventuales:</span> uso
-          único en esa fecha.
+          <span className="font-semibold">Reservas Eventuales:</span> uso único
+          en esa fecha.
         </p>
       </div>
     </div>

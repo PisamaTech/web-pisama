@@ -21,7 +21,7 @@ interface MediaViewerProps {
 
 const MediaViewer: FC<MediaViewerProps> = ({ space }) => {
   const [selectedMedia, setSelectedMedia] = useState<string | null>(
-    space ? space.images[0] : null
+    space ? space.images[0] : null,
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 

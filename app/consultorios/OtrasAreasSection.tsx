@@ -67,7 +67,7 @@ export default function OtrasAreasSection() {
                     onClick={() =>
                       openModal(
                         area.media,
-                        area.media.findIndex((item) => item.type === "video")
+                        area.media.findIndex((item) => item.type === "video"),
                       )
                     }
                   >

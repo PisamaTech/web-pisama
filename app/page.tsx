@@ -1,9 +1,7 @@
 import { Metadata } from "next";
 
-import { siteConfig } from "@/config/site";
 import HeroSection from "@/components/homepage/HeroSection";
 import FeaturesSection from "@/components/homepage/FeaturesSection";
-import TestimonialsSection from "@/components/homepage/TestimonialsSection";
 import CtaSection from "@/components/homepage/CtaSection";
 import PricingTeaser from "@/components/homepage/PricingTeaser";
 import GalleryCard from "@/components/homepage/GalleryCard";

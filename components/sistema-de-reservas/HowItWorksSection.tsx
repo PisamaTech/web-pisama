@@ -11,7 +11,7 @@ import aplicacionConfirma from "@/public/images/aplicacion-confirma.webp";
 const HowItWorksSection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
-    null
+    null,
   );
 
   const openLightbox = (image: StaticImageData) => {

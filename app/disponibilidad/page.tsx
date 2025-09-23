@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import AvailabilityPageClient from "@/components/disponibilidad/AvailabilityPageClient";
 import CtaSection from "@/components/homepage/CtaSection"; // Reutilizamos el CTA
 

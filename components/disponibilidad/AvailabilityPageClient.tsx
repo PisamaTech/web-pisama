@@ -14,8 +14,6 @@ import {
   formatosPersonalizadosDayjs,
 } from "./calendario/personalizacionCalendario";
 import CustomToolbar from "./calendario/customToolbar";
-import { getReservas, CalendarEvent } from "@/src/lib/getReservas";
-import { consultoriosData } from "@/src/data/consultoriosData";
 
 // Importar los nuevos subcomponentes
 import AvailabilityHeader from "./subcomponents/AvailabilityHeader";
@@ -23,7 +21,11 @@ import AvailabilityControls from "./subcomponents/AvailabilityControls";
 import NonAvailableAlert from "./subcomponents/NonAvailableAlert";
 import AvailabilityCalendar from "./subcomponents/AvailabilityCalendar";
 
+import { consultoriosData } from "@/src/data/consultoriosData";
+import { getReservas, CalendarEvent } from "@/src/lib/getReservas";
+
 const localizer = dayjsLocalizer(dayjs);
+
 dayjs.locale("es");
 
 interface Resource {
@@ -54,8 +56,10 @@ function AvailabilityPageContent() {
   const consultorioIdFromUrl = searchParams.get("id");
 
   let initialConsultorio = "all";
+
   if (consultorioIdFromUrl) {
     const match = consultorioIdFromUrl.match(/consultorio-(\d+)/);
+
     if (match && match[1]) {
       initialConsultorio = match[1];
     }
@@ -79,7 +83,7 @@ function AvailabilityPageContent() {
           resourceTitle: c.title,
           available: c.available ?? true,
         })),
-    []
+    [],
   );
 
   const selectOptions = useMemo(
@@ -91,12 +95,12 @@ function AvailabilityPageContent() {
         disabled: !res.available,
       })),
     ],
-    [resources]
+    [resources],
   );
 
   const calendarViewResources = useMemo(
     () => resources.filter((res) => res.available),
-    [resources]
+    [resources],
   );
 
   useEffect(() => {
@@ -124,7 +128,7 @@ function AvailabilityPageContent() {
     const isMonthLoaded = loadedRanges.some(
       (range) =>
         dayjs(newDate).isAfter(dayjs(range.start).subtract(1, "day")) &&
-        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day"))
+        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day")),
     );
 
     if (!isMonthLoaded) {
@@ -136,8 +140,9 @@ function AvailabilityPageContent() {
       const newEvents = await getReservas(newRange);
 
       const eventsMap = new Map(
-        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e])
+        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e]),
       );
+
       newEvents.forEach((e) => {
         eventsMap.set(`${e.start.toISOString()}-${e.resourceId}`, e);
       });
@@ -152,8 +157,9 @@ function AvailabilityPageContent() {
     if (selectedConsultorio === "all") {
       return allEvents;
     }
+
     return allEvents.filter(
-      (event) => event.resourceId?.toString() === selectedConsultorio
+      (event) => event.resourceId?.toString() === selectedConsultorio,
     );
   }, [allEvents, selectedConsultorio]);
 

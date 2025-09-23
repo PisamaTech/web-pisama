@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import PricingCard from "@/components/precios/PricingCard";
 import FaqSection from "@/components/precios/FaqSection";
 import DiscountCalculator from "@/components/precios/DiscountCalculator"; // Importamos la nueva calculadora

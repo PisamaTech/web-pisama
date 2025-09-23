@@ -16,7 +16,7 @@ interface DateRange {
 
 // La función que obtiene y transforma las reservas
 export const getReservas = async (
-  dateRange: DateRange
+  dateRange: DateRange,
 ): Promise<CalendarEvent[]> => {
   // Iniciamos la consulta a Supabase
   let query = supabase
@@ -33,6 +33,7 @@ export const getReservas = async (
 
   if (error) {
     console.error("Error al obtener las reservas desde Supabase:", error);
+
     return []; // Devolvemos un array vacío si hay un error
   }
 
