@@ -93,7 +93,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             <Image
               src={consultorio1}
               alt="Consultorio de psicología profesional y acogedor"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl h-auto"
               width={500}
             />
           </div>
@@ -138,7 +138,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             <Image
               src={salaespera1}
               alt="Sala de espera confortable y profesional"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl h-auto"
               width={400}
             />
           </div>
@@ -160,7 +160,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             <Image
               src={consultorio3}
               alt="Detalle de la decoración de un consultorio"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl h-auto"
               width={500}
             />
           </div>
@@ -207,7 +207,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             <Image
               src={appReservas}
               alt="Aplicación de reservas de Espacio Pisama"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl h-auto"
               width={250}
             />
           </div>
@@ -247,7 +247,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             <Image
               src={fachada1}
               alt="Fachada de Espacio Pisama"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl h-auto"
               width={350}
             />
           </div>
