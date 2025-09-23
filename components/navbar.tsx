@@ -11,6 +11,8 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import Image from "next/image";
 
+import { TbCalendarPlus } from "react-icons/tb";
+
 import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";
 
 export const Navbar = () => {
@@ -18,6 +20,7 @@ export const Navbar = () => {
     { name: "Consultorios", href: "/consultorios" },
     { name: "Precios", href: "/precios" },
     { name: "Disponibilidad", href: "/disponibilidad" },
+    { name: "Reservas", href: "/sistema-de-reservas" },
     { name: "Blog", href: "/blog" },
     { name: "Contacto", href: "/contacto" },
   ];
@@ -31,7 +34,7 @@ export const Navbar = () => {
         width={45}
         className="mr-2"
       />
-      <p className="font-bold text-primary">
+      <p className="font-bold text-primary/70">
         <span className="hidden md:inline">espacio </span>PISAMA
       </p>
     </NavbarBrand>
@@ -63,7 +66,7 @@ export const Navbar = () => {
             // isActive={pathname === link.href} // Descomenta esto si usas un hook para la ruta activa
           >
             <Link
-              color="primary"
+              color="secondary"
               href={link.href}
               // aria-current={pathname === link.href ? "page" : undefined} // Para accesibilidad
             >
@@ -76,7 +79,14 @@ export const Navbar = () => {
       {/* --- Botones de Acción (Login/Sign Up) --- */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="warning" href="/signup" variant="solid">
+          <Button
+            as={Link}
+            color="warning"
+            href="https://reservas.pisama.uy"
+            variant="solid"
+            startContent={<TbCalendarPlus size={18} />}
+            className="px-2 hover: transition-transform duration-200 hover:scale-105"
+          >
             Reservar ahora
           </Button>
         </NavbarItem>

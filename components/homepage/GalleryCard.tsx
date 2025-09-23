@@ -53,7 +53,7 @@ export default function GalleryCard() {
     <section className="py-20 bg-gray-50">
       <div className="mx-auto max-w-5xl text-center mb-16">
         <h2 className="text-4xl font-bold text-primary max-w-2xl mx-auto">
-          Un <span className="text-secondary">Entorno</span> que Inspira
+          Un <span className="text-secondary">Ambiente</span> que Inspira
           Confianza y Bienestar.
         </h2>
         <p className="my-8 font-sans text-lg text-marron-cafe">
