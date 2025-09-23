@@ -4,7 +4,7 @@ import CtaSection from "@/components/homepage/CtaSection"; // Reutilizamos el CT
 export default function DisponibilidadPage(): JSX.Element {
   return (
     <>
-      <section className="bg-crema-suave py-20 sm:py-24">
+      <section className="bg-content2 py-20 sm:py-24">
         {/* Aquí insertamos nuestro componente cliente que contiene toda la lógica interactiva */}
         <AvailabilityPageClient />
       </section>
