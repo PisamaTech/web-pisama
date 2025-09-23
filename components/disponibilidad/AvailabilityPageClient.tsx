@@ -221,8 +221,10 @@ function AvailabilityPageContent() {
         <p className="mt-6 font-sans text-lg text-marron-cafe/90">
           Explora la ocupación de nuestros espacios. <br />
           Selecciona una vista para ver la disponibilidad en tiempo real.
-          <br /> Puedes ver una lista de <em>todos los consultorios</em> o la{" "}
-          <em>disponibilidad semanal</em> de uno en particular.
+          <br /> Puedes ver una vista diaria de <em>
+            todos los consultorios
+          </em>{" "}
+          o la <em>disponibilidad semanal</em> de uno en particular.
           <br />
           Si ves un horario libre, está disponible para vos.
           <br />{" "}
@@ -242,6 +244,8 @@ function AvailabilityPageContent() {
             selectedKeys={[selectedConsultorio]}
             onChange={handleViewChange}
             className="w-full md:w-auto md:min-w-[300px]"
+            color="primary"
+            size="lg"
             aria-label="Filtro de vista de disponibilidad"
             items={selectOptions}
             disabledKeys={selectOptions

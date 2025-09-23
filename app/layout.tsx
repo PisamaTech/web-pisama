@@ -8,7 +8,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/navbar";
 import SiteFooter from "@/components/Footer";
 import ScrollIndicator from "@/components/ScrollIndicator";
 

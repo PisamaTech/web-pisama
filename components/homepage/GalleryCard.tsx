@@ -67,7 +67,11 @@ export default function GalleryCard() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {espacios.map((espacio) => (
             <Link key={espacio.id} href={`/consultorios`}>
-              <Card isFooterBlurred isPressable className="h-[300px] w-full">
+              <Card
+                isFooterBlurred
+                isPressable
+                className="h-[300px] w-[96%] mx-auto"
+              >
                 <Image
                   alt={espacio.title}
                   className="z-0 h-full w-full object-cover"

@@ -3,9 +3,9 @@ import {
   FaKey,
   FaCalendarCheck,
   FaChair,
-  FaShieldAlt,
   FaCoffee,
 } from "react-icons/fa";
+import { TbMassage } from "react-icons/tb";
 
 const servicios = [
   {
@@ -30,9 +30,10 @@ const servicios = [
       "Un ambiente profesional y sereno para recibir a tus pacientes.",
   },
   {
-    icon: FaShieldAlt,
-    title: "Privacidad y Seguridad",
-    description: "Instalaciones diseñadas para garantizar la confidencialidad.",
+    icon: TbMassage,
+    title: "Uso de Camilla",
+    description:
+      "El espacio cuenta con una camilla a diposición para su uso en cualquier de nuestro consultorios, sin costo extra.",
   },
   {
     icon: FaCoffee,
@@ -45,25 +46,23 @@ const servicios = [
 export default function ServiciosIncluidosSection() {
   return (
     <div className="container mx-auto max-w-5xl px-4 text-center lg:px-8">
-      <h2 className="font-display text-4xl font-bold text-marron-cafe">
+      <h2 className="font-display text-4xl font-bold text-primary">
         Tu Alquiler Siempre Incluye
       </h2>
       <div className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {servicios.map((servicio) => (
           <div
             key={servicio.title}
-            className="rounded-xl bg-gray-50 p-8 text-left shadow-sm transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-50 p-8 text-left shadow-lg transition-transform hover:-translate-y-1"
           >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-terracotta-suave/10">
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto">
               <servicio.icon
                 className="h-7 w-7 text-secondary"
                 aria-hidden="true"
               />
             </div>
-            <h3 className="text-xl font-bold text-marron-cafe">
-              {servicio.title}
-            </h3>
-            <p className="mt-2 font-sans text-base text-marron-cafe/80">
+            <h3 className="text-xl font-bold text-primary">{servicio.title}</h3>
+            <p className="mt-2 font-sans text-base text-primary/80">
               {servicio.description}
             </p>
           </div>
