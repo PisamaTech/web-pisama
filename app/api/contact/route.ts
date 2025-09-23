@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   ) {
     return NextResponse.json(
       { error: "El servidor de correo no está configurado." },
-      { status: 500 },
+      { status: 500 }
     );
   }
 
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Todos los campos son requeridos." },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -48,8 +48,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
-      { error: "Error al enviar el mensaje." },
-      { status: 500 },
+      { error: "Error al enviar el mensaje: " + error },
+      { status: 500 }
     );
   }
 }

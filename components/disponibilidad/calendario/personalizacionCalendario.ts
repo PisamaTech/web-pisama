@@ -22,7 +22,7 @@ export const calendarMessages = {
    * params {remainingEvents} remaining events
    * params {events} all events in day
    */
-  showMore: (total, remainingEvents, events) => `+${total} más`,
+  showMore: (total: any) => `+${total} más`,
 };
 
 export const resources = [
@@ -33,7 +33,7 @@ export const resources = [
   { id: 6, title: "Consultorio 6" },
 ];
 
-const capitalizeFirstLetter = (string) => {
+const capitalizeFirstLetter = (string: string) => {
   if (!string) {
     return string;
   }
@@ -41,7 +41,11 @@ const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 };
 
-const miFormatoEncabezadoDiaDayjs = (date, culture, localizer) => {
+const miFormatoEncabezadoDiaDayjs = (
+  date: any,
+  culture: any,
+  localizer: { format: (arg0: any, arg1: string, arg2: any) => any }
+) => {
   const formatoFecha = localizer.format(date, "dddd, D [de] MMMM", culture); // Formato base: "lunes, 20 de febrero"
   const partes = formatoFecha.split(", "); // Separar día de la semana y el resto: ["lunes", "20 de febrero"]
   const diaSemanaCapitalizado = capitalizeFirstLetter(partes[0]); // Capitalizar "lunes" -> "Lunes"
@@ -55,7 +59,9 @@ const miFormatoEncabezadoDiaDayjs = (date, culture, localizer) => {
 };
 
 // Función para formatear el encabezado del día
-const customDayFormat = (date) => {
+const customDayFormat = (
+  date: string | number | Date | dayjs.Dayjs | null | undefined
+) => {
   const dia = capitalizeFirstLetter(dayjs(date).format("dddd"));
   const resto = dayjs(date).format(" D");
 

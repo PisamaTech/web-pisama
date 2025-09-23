@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { dayjsLocalizer, Views } from "react-big-calendar";
+import { Views } from "react-big-calendar";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -23,10 +23,6 @@ import AvailabilityCalendar from "./subcomponents/AvailabilityCalendar";
 
 import { consultoriosData } from "@/src/data/consultoriosData";
 import { getReservas, CalendarEvent } from "@/src/lib/getReservas";
-
-const localizer = dayjsLocalizer(dayjs);
-
-dayjs.locale("es");
 
 interface Resource {
   resourceId: number;

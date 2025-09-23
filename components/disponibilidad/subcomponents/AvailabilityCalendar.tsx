@@ -7,6 +7,9 @@ import { CalendarEvent } from "@/src/lib/getReservas";
 // Definimos el tipo para el localizador
 const localizer = dayjsLocalizer(dayjs);
 
+// Configuramos el idioma a español
+dayjs.locale("es");
+
 // Props para el componente Calendar de react-big-calendar
 type BigCalendarProps = CalendarProps<CalendarEvent, object>;
 
