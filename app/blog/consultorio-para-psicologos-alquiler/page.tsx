@@ -71,18 +71,18 @@ export default function ArticuloPsicologosPage(): JSX.Element {
           </p>
           <p>
             He pasado por ese proceso. He lidiado con las frustraciones, las
-            incomodidades y las "banderas rojas" que muchos de nosotros
+            incomodidades y las &quot;banderas rojas&quot; que muchos de nosotros
             enfrentamos al empezar. Y en ese camino, entendí una verdad
             fundamental que quiero compartir contigo.
           </p>
 
           {/* --- SECCIÓN 1: EL ENCUADRE --- */}
           <h2>
-            Más Allá de las Cuatro Paredes: El Consultorio como "Encuadre Fijo"
-            de tu Terapia
+            Más Allá de las Cuatro Paredes: El Consultorio como &quot;Encuadre
+            Fijo&quot; de tu Terapia
           </h2>
           <p>
-            En nuestra jerga teórica, hablamos del "encuadre" como ese conjunto
+            En nuestra jerga teórica, hablamos del &quot;encuadre&quot; como ese conjunto
             de constantes que dan estabilidad al proceso terapéutico.
             Generalmente pensamos en el horario, los honorarios, nuestro rol.
             Pero, ¿qué pasa con el espacio? El consultorio es, quizás, el
@@ -284,7 +284,7 @@ export default function ArticuloPsicologosPage(): JSX.Element {
           <p className="pb-8">
             Elegir un consultorio es una decisión estratégica para tu práctica.
             El lugar correcto no es el más barato ni el más lujoso. Es aquel que
-            funciona como un verdadero "encuadre fijo": un pilar estable e
+            funciona como un verdadero &quot;encuadre fijo&quot;: un pilar estable e
             invisible que te da la tranquilidad y la confianza para dedicarte
             por completo a tu paciente. Es un espacio donde puedes, simplemente,
             ser psicólogo.
