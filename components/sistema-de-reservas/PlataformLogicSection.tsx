@@ -1,5 +1,6 @@
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Divider } from "@heroui/divider";
+import React from "react";
 import {
   FaCalendarAlt,
   FaShieldAlt,
@@ -9,7 +10,7 @@ import {
 
 // TIPADO: Definimos la interfaz para los datos de cada tarjeta
 interface LogicCardProps {
-  icon: JSX.Element;
+  icon: React.JSX.Element;
   title: string;
   content: React.ReactNode; // Usamos React.ReactNode para permitir texto con subtítulos
 }
@@ -87,7 +88,7 @@ const logicData: LogicCardProps[] = [
   },
 ];
 
-export default function PlatformLogicSection(): JSX.Element {
+export default function PlatformLogicSection(): React.JSX.Element {
   return (
     <section className="bg-content1 py-20 sm:py-24">
       <div className="container max-w-5xl mx-auto px-4 lg:px-8">

@@ -1,17 +1,16 @@
-// src/app/blog/consultorio-para-psicologos-alquiler/page.tsx
-import React from "react";
-import { Metadata } from "next";
-import Link from "next/link";
 import { Button } from "@heroui/button";
+import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 import CtaSection from "@/components/homepage/CtaSection";
-import consultorio1 from "@/public/images/consultorio5-1.webp";
-import salaespera1 from "@/public/images/salaespera-1.webp";
-import consultorio3 from "@/public/images/consultorio3-1.webp";
 import appReservas from "@/public/images/aplicacion-web-reservas.webp";
+import consultorio3 from "@/public/images/consultorio3-1.webp";
+import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
+import salaespera1 from "@/public/images/salaespera-1.webp";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
@@ -43,7 +42,7 @@ const CtaBox = () => (
 );
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
-export default function ArticuloPsicologosPage(): JSX.Element {
+export default function ArticuloPsicologosPage(): React.JSX.Element {
   return (
     <>
       <main className="bg-content2 py-20">
@@ -71,8 +70,8 @@ export default function ArticuloPsicologosPage(): JSX.Element {
           </p>
           <p>
             He pasado por ese proceso. He lidiado con las frustraciones, las
-            incomodidades y las &quot;banderas rojas&quot; que muchos de nosotros
-            enfrentamos al empezar. Y en ese camino, entendí una verdad
+            incomodidades y las &quot;banderas rojas&quot; que muchos de
+            nosotros enfrentamos al empezar. Y en ese camino, entendí una verdad
             fundamental que quiero compartir contigo.
           </p>
 
@@ -82,8 +81,8 @@ export default function ArticuloPsicologosPage(): JSX.Element {
             Fijo&quot; de tu Terapia
           </h2>
           <p>
-            En nuestra jerga teórica, hablamos del &quot;encuadre&quot; como ese conjunto
-            de constantes que dan estabilidad al proceso terapéutico.
+            En nuestra jerga teórica, hablamos del &quot;encuadre&quot; como ese
+            conjunto de constantes que dan estabilidad al proceso terapéutico.
             Generalmente pensamos en el horario, los honorarios, nuestro rol.
             Pero, ¿qué pasa con el espacio? El consultorio es, quizás, el
             elemento más tangible de ese encuadre.
@@ -284,10 +283,10 @@ export default function ArticuloPsicologosPage(): JSX.Element {
           <p className="pb-8">
             Elegir un consultorio es una decisión estratégica para tu práctica.
             El lugar correcto no es el más barato ni el más lujoso. Es aquel que
-            funciona como un verdadero &quot;encuadre fijo&quot;: un pilar estable e
-            invisible que te da la tranquilidad y la confianza para dedicarte
-            por completo a tu paciente. Es un espacio donde puedes, simplemente,
-            ser psicólogo.
+            funciona como un verdadero &quot;encuadre fijo&quot;: un pilar
+            estable e invisible que te da la tranquilidad y la confianza para
+            dedicarte por completo a tu paciente. Es un espacio donde puedes,
+            simplemente, ser psicólogo.
           </p>
 
           {/* --- SECCIÓN 6: FAQ --- */}

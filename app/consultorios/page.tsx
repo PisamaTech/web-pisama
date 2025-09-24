@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 
-import OtrasAreasSection from "./OtrasAreasSection";
-import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
 
 import ConsultorioCard from "@/components/consultorios/ConsultorioCards";
-import { consultoriosData } from "@/src/consultoriosData";
 import ConsultorioTypes from "@/components/consultorios/ConsultorioTypes";
 import CtaSection from "@/components/homepage/CtaSection";
+import { consultoriosData } from "@/src/consultoriosData";
+
+import OtrasAreasSection from "./OtrasAreasSection";
+import ServiciosIncluidosSection from "./ServiciosIncluidosSection";
 
 export const metadata: Metadata = {
   title: "Consultorios Premium y Estándar en Parque Rodó | Espacio Pisama",

@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { FaBus, FaCar, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function LocationSection(): JSX.Element {
@@ -25,7 +26,7 @@ export default function LocationSection(): JSX.Element {
               Una <span className="text-secondary">Ubicación</span> que Eleva tu
               Práctica.
             </h2>
-            <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
+            <p className="mt-6 font-sans text-lg leading-relaxed text-primary/90">
               Nos encontramos en el corazón de <strong>Parque Rodó</strong>, una
               de las zonas más prestigiosas y accesibles de Montevideo. Atender
               aquí no solo mejora tu imagen profesional, sino que también ofrece
@@ -35,12 +36,12 @@ export default function LocationSection(): JSX.Element {
             <div className="mt-8 space-y-6">
               {/* Beneficio 1 */}
               <div className="flex items-center gap-4 text-left">
-                <FaBus className="h-8 w-8 flex-shrink-0 text-terracotta-suave" />
+                <FaBus className="h-8 w-8 flex-shrink-0 text-secondary" />
                 <div>
-                  <h3 className="font-display font-bold text-marron-cafe">
+                  <h3 className="font-display font-bold text-primary">
                     Conectividad Total
                   </h3>
-                  <p className="font-sans text-marron-cafe/80">
+                  <p className="font-sans text-primary/80">
                     A pasos de avenidas clave, garantizando un acceso fácil en
                     transporte público.
                   </p>
@@ -48,12 +49,12 @@ export default function LocationSection(): JSX.Element {
               </div>
               {/* Beneficio 2 */}
               <div className="flex items-center gap-4 text-left">
-                <FaCar className="h-8 w-8 flex-shrink-0 text-terracotta-suave" />
+                <FaCar className="h-8 w-8 flex-shrink-0 text-secondary" />
                 <div>
-                  <h3 className="font-display font-bold text-marron-cafe">
+                  <h3 className="font-display font-bold text-primary">
                     Estacionamiento Sencillo
                   </h3>
-                  <p className="font-sans text-marron-cafe/80">
+                  <p className="font-sans text-primary/80">
                     Amplias opciones de estacionamiento en las calles aledañas
                     para una llegada sin estrés.
                   </p>
@@ -61,8 +62,8 @@ export default function LocationSection(): JSX.Element {
               </div>
             </div>
 
-            <p className="mt-8 flex items-center justify-center lg:justify-start font-sans font-bold text-marron-cafe">
-              <FaMapMarkerAlt className="mr-3 h-8 w-8 text-terracotta-suave" />
+            <p className="mt-8 flex items-center justify-center lg:justify-start font-sans font-bold text-primary">
+              <FaMapMarkerAlt className="mr-3 h-8 w-8 text-secondary" />
               Juan Paullier 1192, Parque Rodó, Montevideo
             </p>
           </div>

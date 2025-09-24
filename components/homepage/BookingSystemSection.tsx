@@ -1,6 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@heroui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { JSX } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 import imagenAppReserva from "@/public/images/aplicacion-web-reservas.webp";
@@ -17,12 +18,12 @@ export default function BookingSystemSection(): JSX.Element {
               Una <span className="text-secondary">Gestión </span> de tus{" "}
               Reservas Sin Intermediarios.
             </h2>
-            <p className="mt-6 font-sans text-lg leading-relaxed text-marron-cafe/90">
+            <p className="mt-6 font-sans text-lg leading-relaxed text-primary/90">
               ¿Conoces esta situación? Consultas por un horario libre, contactas
               a tu paciente, te confirman y cuando vuelves... el consultorio ya
               no está disponible. Es una pérdida de tiempo y profesionalismo.
             </p>
-            <p className="mt-4 font-sans text-lg leading-relaxed text-marron-cafe/90">
+            <p className="mt-4 font-sans text-lg leading-relaxed text-primary/90">
               Diseñamos nuestra aplicación de reservas online para eliminar esa
               frustración para siempre. Accede a la{" "}
               <strong>disponibilidad en tiempo real, 24/7</strong>. Si ves un

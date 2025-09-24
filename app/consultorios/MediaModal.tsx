@@ -1,10 +1,11 @@
 "use client";
+import Image from "next/image";
 import { useEffect } from "react";
 import { FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 interface MediaModalProps {
   isOpen: boolean;
-  items: string[];
+  items: string[]; // puede contener imágenes o links de youtube
   currentIndex: number;
   onClose: () => void;
   onPrev: () => void;
@@ -19,10 +20,6 @@ export default function MediaModal({
   onPrev,
   onNext,
 }: MediaModalProps) {
-  if (!isOpen) return null;
-
-  const currentItem = items[currentIndex];
-
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -30,10 +27,38 @@ export default function MediaModal({
       if (e.key === "ArrowRight") onNext();
     };
 
-    window.addEventListener("keydown", handleKey);
+    if (isOpen) {
+      window.addEventListener("keydown", handleKey);
+    }
 
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [onClose, onPrev, onNext]);
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [isOpen, onClose, onPrev, onNext]);
+
+  if (!isOpen) return null;
+
+  const currentItem = items[currentIndex];
+
+  // detectar si es link de youtube
+  const isYouTube =
+    currentItem.includes("youtube.com") || currentItem.includes("youtu.be");
+
+  // transformar a formato embed
+  const getYouTubeEmbedUrl = (url: string) => {
+    if (url.includes("youtube.com/watch?v=")) {
+      const videoId = url.split("v=")[1].split("&")[0];
+
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    if (url.includes("youtu.be/")) {
+      const videoId = url.split("youtu.be/")[1].split("?")[0];
+
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    return url;
+  };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
@@ -49,17 +74,23 @@ export default function MediaModal({
       </button>
 
       <div className="max-w-5xl max-h-[80vh] flex justify-center items-center">
-        {currentItem.endsWith(".mp4") ? (
-          <video
-            src={currentItem}
-            controls
-            className="max-h-[80vh] rounded-lg"
+        {isYouTube ? (
+          <iframe
+            width="960"
+            height="540"
+            src={getYouTubeEmbedUrl(currentItem)}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-lg max-h-[80vh] w-full"
           />
         ) : (
-          <img
+          <Image
             src={currentItem}
             alt="media"
-            className="max-h-[80vh] rounded-lg"
+            width={1200}
+            height={800}
+            className="max-h-[80vh] w-auto rounded-lg"
           />
         )}
       </div>

@@ -4,8 +4,8 @@ import react from "eslint-plugin-react";
 import unusedImports from "eslint-plugin-unused-imports";
 import _import from "eslint-plugin-import";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import jsxA11Y from "eslint-plugin-jsx-a11y";
-import prettier from "eslint-plugin-prettier";
+// import jsxA11Y from "eslint-plugin-jsx-a11y";
+// import prettier from "eslint-plugin-prettier";
 import globals from "globals";
 import tsParser from "@typescript-eslint/parser";
 import path from "node:path";
@@ -44,31 +44,32 @@ export default defineConfig([
     "!**/react-shim.js",
     "!**/tsup.config.ts",
   ]),
+
+  // Configuración base de JavaScript/TypeScript
+  js.configs.recommended,
+
   {
     extends: fixupConfigRules(
       compat.extends(
         "plugin:react/recommended",
-        "plugin:prettier/recommended",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:@next/next/recommended"
+        // Removido "plugin:prettier/recommended" para evitar conflictos
       )
     ),
 
     plugins: {
       react: fixupPluginRules(react),
       "unused-imports": unusedImports,
-      import: fixupPluginRules(_import),
+      import: _import, // No necesita fixupPluginRules
       "@typescript-eslint": typescriptEslint,
-      "jsx-a11y": fixupPluginRules(jsxA11Y),
-      prettier: fixupPluginRules(prettier),
+      // prettier: prettier, // Solo si lo necesitas específicamente
     },
 
     languageOptions: {
       globals: {
-        ...Object.fromEntries(
-          Object.entries(globals.browser).map(([key]) => [key, "off"])
-        ),
+        ...globals.browser, // ✅ Mantiene las globales del navegador habilitadas
         ...globals.node,
       },
 
@@ -87,62 +88,82 @@ export default defineConfig([
       react: {
         version: "detect",
       },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
     },
 
     files: ["**/*.ts", "**/*.tsx"],
 
     rules: {
+      // Reglas generales
       "no-console": "warn",
+
+      // React
       "react/prop-types": "off",
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off",
-      "react-hooks/exhaustive-deps": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/self-closing-comp": "warn",
+      "react/jsx-sort-props": "off",
+
+      // Accesibilidad
       "jsx-a11y/click-events-have-key-events": "warn",
       "jsx-a11y/interactive-supports-focus": "warn",
-      "prettier/prettier": "off",
-      "no-unused-vars": "off",
-      "unused-imports/no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "warn",
 
+      // Prettier (si decides usarlo)
+      // "prettier/prettier": "error",
+
+      // Unused imports/vars - CONFIGURACIÓN SIMPLIFICADA
+      "no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "warn",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         {
           args: "after-used",
           ignoreRestSiblings: false,
           argsIgnorePattern: "^_.*?$",
+          varsIgnorePattern: "^_",
         },
       ],
 
+      // Orden de imports
       "import/order": [
         "warn",
         {
           groups: [
             "type",
             "builtin",
-            "object",
             "external",
             "internal",
             "parent",
             "sibling",
             "index",
+            "object",
           ],
-
           pathGroups: [
             {
               pattern: "~/**",
-              group: "external",
+              group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "@/**",
+              group: "internal",
               position: "after",
             },
           ],
-
           "newlines-between": "always",
+          alphabetize: {
+            order: "asc",
+            caseInsensitive: true,
+          },
         },
       ],
 
-      "react/self-closing-comp": "warn",
-
-      "react/jsx-sort-props": "off",
-
+      // Espaciado
       "padding-line-between-statements": [
         "warn",
         {

@@ -1,9 +1,9 @@
 // src/components/consultorios/ConsultorioTypes.tsx
-import React from "react";
-
-import TypesCard from "./TypesCard";
+import { JSX } from "react";
 
 import { pricingData } from "@/src/pricingData";
+
+import TypesCard from "./TypesCard";
 
 export default function ConsultorioTypes(): JSX.Element {
   return (

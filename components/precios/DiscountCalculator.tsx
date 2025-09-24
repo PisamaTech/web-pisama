@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useMemo } from "react";
 import { Slider } from "@heroui/slider";
+import React, { useState, useMemo } from "react";
 
 // Precios base actualizados con la nueva nomenclatura
 const PRECIO_PREMIUM = 250;

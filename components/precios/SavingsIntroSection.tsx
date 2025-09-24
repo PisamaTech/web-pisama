@@ -1,4 +1,5 @@
 import { Divider } from "@heroui/divider";
+import { JSX } from "react";
 import { FaHeart } from "react-icons/fa"; // Un icono que representa la confianza y la relación
 
 export default function SavingsIntroSection(): JSX.Element {

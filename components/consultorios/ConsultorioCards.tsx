@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { Card } from "@heroui/card";
-
-import GalleryModal from "./GalleryModal";
-import CardImageGallery from "./CardImageGallery";
-import CardInfo from "./CardInfo";
+import { useState } from "react";
 
 import { Espacio } from "@/src/consultoriosData";
+
+import CardImageGallery from "./CardImageGallery";
+import CardInfo from "./CardInfo";
+import GalleryModal from "./GalleryModal";
+
 
 export default function ConsultorioCard({ espacio }: { espacio: Espacio }) {
   const [open, setOpen] = useState(false);

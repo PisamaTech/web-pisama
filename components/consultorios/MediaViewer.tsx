@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect, FC } from "react";
-import Image from "next/image";
 import { Modal, ModalContent, ModalBody } from "@heroui/modal";
+import Image from "next/image";
+import React, { useState, useEffect, FC } from "react";
 import { FaPlayCircle, FaTimes } from "react-icons/fa";
 
 interface Space {

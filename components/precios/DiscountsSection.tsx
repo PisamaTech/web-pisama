@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   Table,
   TableHeader,
@@ -9,6 +8,7 @@ import {
   TableRow,
   TableCell,
 } from "@heroui/table";
+import React from "react";
 
 interface Discount {
   horas: string;

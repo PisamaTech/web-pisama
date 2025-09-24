@@ -1,17 +1,17 @@
 "use client";
 
-import { useState, FormEvent, ChangeEvent } from "react";
-import { Button } from "@heroui/button";
-import { Input, Textarea } from "@heroui/input";
 import { Alert } from "@heroui/alert";
+import { Button } from "@heroui/button";
+import { Divider } from "@heroui/divider";
+import { Input, Textarea } from "@heroui/input";
 import { Spinner } from "@heroui/spinner";
+import { useState, FormEvent, ChangeEvent } from "react";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import { Divider } from "@heroui/divider";
 
 export default function ContactInfoSection() {
   const [formData, setFormData] = useState({

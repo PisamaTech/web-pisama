@@ -1,7 +1,7 @@
 "use client";
 
-import { Divider } from "@heroui/divider";
 import { Accordion, AccordionItem } from "@heroui/accordion";
+import { Divider } from "@heroui/divider";
 
 // DATOS para la sección de FAQ
 const faqData = [

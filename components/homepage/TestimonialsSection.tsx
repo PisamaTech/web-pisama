@@ -1,5 +1,5 @@
-import { Card, CardHeader, CardBody } from "@heroui/card"; // Usamos los primitivos Card y Avatar
 import { Avatar } from "@heroui/avatar";
+import { Card, CardHeader, CardBody } from "@heroui/card"; // Usamos los primitivos Card y Avatar
 
 // Estructura de datos para los testimonios (esto no cambia)
 const testimonials = [
@@ -60,7 +60,7 @@ export default function TestimonialsSection() {
               {/* 3. En el CardBody, colocamos la cita del testimonio */}
               <CardBody className="flex-grow p-6 pt-0">
                 <blockquote className="border-l-4 border-gris-calido pl-4 font-sans italic text-marron-cafe/90">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
               </CardBody>
             </Card>

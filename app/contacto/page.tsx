@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { JSX } from "react";
 
 import ContactFaqSection from "@/components/contacto/ContactFaqSection";
 import ContactHeaderSection from "@/components/contacto/ContactHeaderSection";

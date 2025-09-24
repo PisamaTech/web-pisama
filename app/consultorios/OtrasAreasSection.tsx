@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { Card, CardBody, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
+import Image from "next/image";
+import { useState } from "react";
 import { FaCheckCircle, FaPlayCircle } from "react-icons/fa";
 
 import GalleryModal from "@/components/consultorios/GalleryModal";
@@ -33,7 +33,8 @@ export default function OtrasAreasSection() {
               className="bg-background shadow-lg rounded-xl overflow-hidden hover:scale-[1.03] transition-transform"
             >
               <CardBody className="p-0">
-                <div
+                <button
+                  type="button"
                   className="relative w-full h-70 cursor-pointer"
                   onClick={() => openModal(area.media, 0)}
                 >
@@ -45,11 +46,12 @@ export default function OtrasAreasSection() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority
                   />
-                </div>
+                </button>
                 <div className="grid grid-cols-3 gap-2 p-2">
                   {area.media.slice(1, 3).map((item, idx) => (
-                    <div
+                    <button
                       key={idx}
+                      type="button"
                       className="relative w-full h-20 cursor-pointer rounded overflow-hidden"
                       onClick={() => openModal(area.media, idx + 1)}
                     >
@@ -60,19 +62,20 @@ export default function OtrasAreasSection() {
                         fill
                         sizes="(max-width: 1024px) 33vw, 17vw"
                       />
-                    </div>
+                    </button>
                   ))}
-                  <div
+                  <button
+                    type="button"
                     className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
                     onClick={() =>
                       openModal(
                         area.media,
-                        area.media.findIndex((item) => item.type === "video"),
+                        area.media.findIndex((item) => item.type === "video")
                       )
                     }
                   >
                     <FaPlayCircle className="h-6 w-6 text-white/80" />
-                  </div>
+                  </button>
                 </div>
               </CardBody>
               <CardFooter className="flex flex-col items-start gap-3">

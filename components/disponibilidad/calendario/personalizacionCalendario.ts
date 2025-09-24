@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { DateLocalizer } from "react-big-calendar";
 
 export const calendarMessages = {
   date: "Fecha",
@@ -42,10 +43,13 @@ const capitalizeFirstLetter = (string: string) => {
 };
 
 const miFormatoEncabezadoDiaDayjs = (
-  date: any,
-  culture: any,
-  localizer: { format: (arg0: any, arg1: string, arg2: any) => any }
+  date: Date,
+  culture: string | undefined,
+  localizer: DateLocalizer | undefined
 ) => {
+  if (!localizer) {
+    return "";
+  }
   const formatoFecha = localizer.format(date, "dddd, D [de] MMMM", culture); // Formato base: "lunes, 20 de febrero"
   const partes = formatoFecha.split(", "); // Separar día de la semana y el resto: ["lunes", "20 de febrero"]
   const diaSemanaCapitalizado = capitalizeFirstLetter(partes[0]); // Capitalizar "lunes" -> "Lunes"

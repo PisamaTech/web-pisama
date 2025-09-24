@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { JSX } from "react";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
@@ -36,10 +37,11 @@ export default function TerminosYCondicionesPage(): JSX.Element {
           </p>
           <p>
             Bienvenido/a a Espacio Pisama. Al acceder a nuestro sitio web
-            ("pisama.uy"), utilizar nuestra plataforma de reservas online
-            ("reserva.pisama.uy") o hacer uso de nuestros espacios físicos,
-            usted ("el Usuario") acepta y se compromete a cumplir los siguientes
-            Términos y Condiciones. Por favor, léalos detenidamente.
+            (&quot;pisama.uy&quot;), utilizar nuestra plataforma de reservas
+            online (&quot;reserva.pisama.uy&quot;) o hacer uso de nuestros
+            espacios físicos, usted (&quot;el Usuario&quot;) acepta y se
+            compromete a cumplir los siguientes Términos y Condiciones. Por
+            favor, léalos detenidamente.
           </p>
 
           <h2>1. Definiciones</h2>
@@ -93,8 +95,8 @@ export default function TerminosYCondicionesPage(): JSX.Element {
             </li>
             <li>
               Una reserva se considera confirmada únicamente cuando ha sido
-              procesada con éxito por la Plataforma y aparece en la sección "Mis
-              Reservas" del perfil del Usuario.
+              procesada con éxito por la Plataforma y aparece en la sección
+              &quot;Mis Reservas&quot; del perfil del Usuario.
             </li>
             <li>
               Las Reservas Fijas tienen un período de vigencia inicial de 4
@@ -117,16 +119,16 @@ export default function TerminosYCondicionesPage(): JSX.Element {
             <li>
               <strong>Cancelación con Penalización:</strong> Si una reserva se
               cancela con **menos de 24 horas de antelación**, se considerará
-              "Penalizada". La tarifa correspondiente a dicha hora será incluida
-              en la facturación del Usuario.
+              &quot;Penalizada&quot;. La tarifa correspondiente a dicha hora
+              será incluida en la facturación del Usuario.
             </li>
             <li>
               <strong>Reagendamiento de Horas Penalizadas:</strong> Una reserva
-              "Penalizada" otorga al Usuario el derecho a reagendar esa misma
               reserva **sin costo adicional**. Este reagendamiento debe
-              realizarse dentro de un plazo de **6 (seis) días** a partir de la
-              fecha y hora de la reserva original cancelada. Pasado ese plazo,
-              el derecho a reagendamiento se pierde.
+              &quot;Penalizada&quot; otorga al Usuario el derecho a reagendar
+              esa misma realizarse dentro de un plazo de **6 (seis) días** a
+              partir de la fecha y hora de la reserva original cancelada. Pasado
+              ese plazo, el derecho a reagendamiento se pierde.
             </li>
           </ul>
 
@@ -251,7 +253,7 @@ export default function TerminosYCondicionesPage(): JSX.Element {
                 </li>
                 <li>
                   Tú siempre tienes el control para actualizar tus datos
-                  personales desde la sección "Perfil" de tu cuenta.
+                  personales desde la sección &quot;Perfil&quot; de tu cuenta.
                 </li>
               </ul>
             </li>

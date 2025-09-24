@@ -3,8 +3,8 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Divider } from "@heroui/divider";
 import Image from "next/image";
+import { JSX, useState } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import { useState } from "react";
 
 import LightboxModal from "@/components/LightboxModal";
 

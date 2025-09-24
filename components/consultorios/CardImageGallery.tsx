@@ -1,5 +1,6 @@
 import { CardBody } from "@heroui/card";
 import Image from "next/image";
+import { FaPlayCircle } from "react-icons/fa";
 
 import { Espacio } from "@/src/consultoriosData";
 
@@ -13,7 +14,8 @@ const CardImageGallery = ({
   onImageClick: (index: number) => void;
 }) => (
   <CardBody className="p-0">
-    <div
+    <button
+      type="button"
       className="relative w-full h-70 cursor-pointer"
       onClick={() => onImageClick(0)}
     >
@@ -25,10 +27,11 @@ const CardImageGallery = ({
         sizes="(max-width: 1024px) 100vw, 50vw"
         priority
       />
-    </div>
+    </button>
     <div className="grid grid-cols-3 gap-2 p-2">
       {media.slice(1, 3).map((item, idx) => (
-        <div
+        <button
+          type="button"
           key={idx}
           className="relative w-full h-20 cursor-pointer rounded overflow-hidden"
           onClick={() => onImageClick(idx + 1)}
@@ -40,14 +43,15 @@ const CardImageGallery = ({
             fill
             sizes="(max-width: 1024px) 33vw, 17vw"
           />
-        </div>
+        </button>
       ))}
-      <div
+      <button
+        type="button"
         className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
         onClick={() => onImageClick(media.length - 1)}
       >
-        🎥 Video
-      </div>
+        <FaPlayCircle className="h-6 w-6 text-white/80" />
+      </button>
     </div>
   </CardBody>
 );

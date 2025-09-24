@@ -1,8 +1,8 @@
 "use client";
 
+import { Card, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";
 import Link from "next/link";
-import { Card, CardFooter } from "@heroui/card";
 
 const espacios = [
   {

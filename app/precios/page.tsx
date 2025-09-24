@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
-import PricingCard from "@/components/precios/PricingCard";
-import FaqSection from "@/components/precios/FaqSection";
-import DiscountCalculator from "@/components/precios/DiscountCalculator"; // Importamos la nueva calculadora
-import SavingsIntroSection from "@/components/precios/SavingsIntroSection";
-import ComparisonTable from "@/components/precios/ComparisonTable";
-import DiscountsSection from "@/components/precios/DiscountsSection";
-import { pricingData } from "@/src/pricingData";
 import CtaSection from "@/components/homepage/CtaSection";
+import ComparisonTable from "@/components/precios/ComparisonTable";
+import DiscountCalculator from "@/components/precios/DiscountCalculator"; // Importamos la nueva calculadora
+import DiscountsSection from "@/components/precios/DiscountsSection";
+import FaqSection from "@/components/precios/FaqSection";
+import PricingCard from "@/components/precios/PricingCard";
+import SavingsIntroSection from "@/components/precios/SavingsIntroSection";
+import { pricingData } from "@/src/pricingData";
 
 export const metadata: Metadata = {
   title:

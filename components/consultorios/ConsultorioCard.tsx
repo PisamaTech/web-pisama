@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Card, CardBody } from "@heroui/card";
 import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import Image from "next/image";
+import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa"; // Un icono para la lista de características
 
 interface ConsultorioCardProps {

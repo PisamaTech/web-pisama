@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
-import HeroSection from "@/components/homepage/HeroSection";
-import FeaturesSection from "@/components/homepage/FeaturesSection";
-import CtaSection from "@/components/homepage/CtaSection";
-import PricingTeaser from "@/components/homepage/PricingTeaser";
-import GalleryCard from "@/components/homepage/GalleryCard";
-import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
 import BookingSystemSection from "@/components/homepage/BookingSystemSection";
+import CtaSection from "@/components/homepage/CtaSection";
+import FeaturesSection from "@/components/homepage/FeaturesSection";
+import GalleryCard from "@/components/homepage/GalleryCard";
+import HeroSection from "@/components/homepage/HeroSection";
 import LocationSection from "@/components/homepage/LocationSection";
+import PricingTeaser from "@/components/homepage/PricingTeaser";
+import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
 
 export const metadata: Metadata = {
   title:

@@ -1,15 +1,15 @@
 "use client";
 
 import { Modal, ModalContent } from "@heroui/modal";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
 import {
   FaArrowLeft,
   FaArrowRight,
   FaPlayCircle,
   FaTimes,
 } from "react-icons/fa";
-import { useState, useEffect, useCallback } from "react";
 
 export default function GalleryModal({
   open,
@@ -30,11 +30,11 @@ export default function GalleryModal({
 
   const prev = useCallback(
     () => setCurrent((current) => (current - 1 + media.length) % media.length),
-    [media.length],
+    [media.length]
   );
   const next = useCallback(
     () => setCurrent((current) => (current + 1) % media.length),
-    [media.length],
+    [media.length]
   );
 
   useEffect(() => {
@@ -103,10 +103,24 @@ export default function GalleryModal({
           {/* Preloading for next/prev images */}
           <div style={{ display: "none" }}>
             {open && media[nextIndex].type === "image" && (
-              <img src={media[nextIndex].src} alt="" />
+              <Image
+                src={media[nextIndex].src}
+                alt=""
+                width={1920}
+                height={1080}
+                className="h-auto w-auto"
+                sizes="90vw"
+              />
             )}
             {open && media[prevIndex].type === "image" && (
-              <img src={media[prevIndex].src} alt="" />
+              <Image
+                src={media[prevIndex].src}
+                alt=""
+                width={1920}
+                height={1080}
+                className="h-auto w-auto"
+                sizes="90vw"
+              />
             )}
           </div>
 
@@ -135,20 +149,6 @@ export default function GalleryModal({
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                       className="aspect-video w-full max-w-[90vw] max-h-[80vh] rounded-lg"
-                    />
-                  );
-                }
-                if (currentMedia.type === "video") {
-                  return (
-                    <video
-                      key={currentMedia.src}
-                      src={currentMedia.src}
-                      controls
-                      autoPlay
-                      loop
-                      playsInline
-                      preload="metadata"
-                      className="max-h-[80vh] max-w-[90vw] rounded-lg"
                     />
                   );
                 }

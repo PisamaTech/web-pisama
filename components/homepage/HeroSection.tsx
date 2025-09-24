@@ -1,10 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@heroui/button";
+import Image from "next/image";
+import Link from "next/link";
+
+import logoImagen from "@/public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 
 import heroImagen from "../../public/images/consultorio3-1.webp";
 
-import logoImagen from "@/public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 
 export default function HeroSection() {
   return (

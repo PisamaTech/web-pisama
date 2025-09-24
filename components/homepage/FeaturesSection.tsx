@@ -1,8 +1,8 @@
 import { Card, CardBody } from "@heroui/card";
 import { FaClock, FaMapMarkerAlt, FaCouch } from "react-icons/fa";
-import { RiMoneyDollarBoxFill } from "react-icons/ri";
 import { MdCancel } from "react-icons/md";
 import { MdAppShortcut } from "react-icons/md";
+import { RiMoneyDollarBoxFill } from "react-icons/ri";
 
 export default function BeneficiosClave() {
   const beneficios = [
@@ -58,7 +58,7 @@ export default function BeneficiosClave() {
             <Card
               key={index}
               shadow="sm"
-              className="transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-content1 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
               <CardBody className="flex flex-col items-center text-center p-8">
                 {beneficio.icono}

@@ -1,6 +1,6 @@
-import { Calendar, CalendarProps, dayjsLocalizer } from "react-big-calendar";
 import { Spinner } from "@heroui/spinner";
 import dayjs from "dayjs";
+import { Calendar, CalendarProps, dayjsLocalizer } from "react-big-calendar";
 
 import { CalendarEvent } from "@/src/lib/getReservas";
 

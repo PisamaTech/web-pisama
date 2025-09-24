@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Button } from "@heroui/button";
+import Link from "next/link";
 
 interface CtaSectionProps {
   title: string;

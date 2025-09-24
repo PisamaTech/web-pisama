@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
-
-import MediaModal from "./MediaModal";
+import { useState } from "react";
+import React from "react";
 
 import consultorios from "@/src/consultorios";
+
+import MediaModal from "./MediaModal";
 
 export default function ConsultoriosSection() {
   const [modalOpen, setModalOpen] = useState(false);

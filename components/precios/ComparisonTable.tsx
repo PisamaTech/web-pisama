@@ -1,8 +1,5 @@
-// src/components/precios/ComparisonTable.tsx
-"use client"; // 👈 importante si usas Next.js con RSC
+"use client";
 
-import React from "react";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import {
   Table,
   TableHeader,
@@ -11,6 +8,8 @@ import {
   TableRow,
   TableCell,
 } from "@heroui/table";
+import { JSX } from "react";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 // TIPADO
 interface ComparisonRow {

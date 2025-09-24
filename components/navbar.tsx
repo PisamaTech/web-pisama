@@ -1,3 +1,5 @@
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -7,8 +9,6 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
 import Image from "next/image";
 import { TbCalendarPlus } from "react-icons/tb";
 

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { CardFooter } from "@heroui/card";
-import { Divider } from "@heroui/divider";
-import { Chip } from "@heroui/chip";
 import { Button } from "@heroui/button";
+import { CardFooter } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Divider } from "@heroui/divider";
+import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa";
 
 import { Espacio } from "@/src/consultoriosData";

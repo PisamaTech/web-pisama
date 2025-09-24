@@ -1,8 +1,8 @@
 // src/components/sistema-de-reservas/BenefitsSection.tsx
 import { Card, CardBody, CardHeader } from "@heroui/card";
-import { MdOutlineEventAvailable } from "react-icons/md";
-import { FaPeopleArrows, FaRegRectangleList } from "react-icons/fa6";
 import { CgUnavailable } from "react-icons/cg";
+import { FaPeopleArrows, FaRegRectangleList } from "react-icons/fa6";
+import { MdOutlineEventAvailable } from "react-icons/md";
 
 const BenefitsSection = () => {
   const benefits = [

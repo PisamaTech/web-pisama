@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Button } from "@heroui/button";
-import { FaArrowRight } from "react-icons/fa";
 import { Divider } from "@heroui/divider";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function PricingTeaser() {
   return (

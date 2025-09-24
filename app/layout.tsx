@@ -1,14 +1,15 @@
 import "@/styles/globals.css";
-import { Viewport } from "next";
 import clsx from "clsx";
+import { Viewport } from "next";
+import React from "react";
+
+import SiteFooter from "@/components/Footer";
+import { Navbar } from "@/components/navbar";
+import ScrollIndicator from "@/components/ScrollIndicator";
+import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
 
 import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-import SiteFooter from "@/components/Footer";
-import ScrollIndicator from "@/components/ScrollIndicator";
 
 // export const metadata: Metadata = {
 //   title: {
@@ -63,7 +64,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>

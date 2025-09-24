@@ -1,28 +1,27 @@
 "use client";
 
-import { useState, useEffect, useMemo, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
-import { Views } from "react-big-calendar";
+import { Spinner } from "@heroui/spinner";
 import dayjs from "dayjs";
+import { useSearchParams } from "next/navigation";
+import { useState, useEffect, useMemo, Suspense } from "react";
+import React from "react";
+import { Views } from "react-big-calendar";
 import "dayjs/locale/es";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
-import { Spinner } from "@heroui/spinner";
+import { consultoriosData } from "@/src/data/consultoriosData";
+import { getReservas, CalendarEvent } from "@/src/lib/getReservas";
 
+import CustomToolbar from "./calendario/customToolbar";
 import {
   calendarMessages,
   formatosPersonalizadosDayjs,
 } from "./calendario/personalizacionCalendario";
-import CustomToolbar from "./calendario/customToolbar";
-
 // Importar los nuevos subcomponentes
-import AvailabilityHeader from "./subcomponents/AvailabilityHeader";
-import AvailabilityControls from "./subcomponents/AvailabilityControls";
-import NonAvailableAlert from "./subcomponents/NonAvailableAlert";
 import AvailabilityCalendar from "./subcomponents/AvailabilityCalendar";
-
-import { consultoriosData } from "@/src/data/consultoriosData";
-import { getReservas, CalendarEvent } from "@/src/lib/getReservas";
+import AvailabilityControls from "./subcomponents/AvailabilityControls";
+import AvailabilityHeader from "./subcomponents/AvailabilityHeader";
+import NonAvailableAlert from "./subcomponents/NonAvailableAlert";
 
 interface Resource {
   resourceId: number;
@@ -30,7 +29,11 @@ interface Resource {
   available: boolean;
 }
 
-const CustomEventComponent = ({ event }: { event: CalendarEvent }) => {
+interface CustomEventComponentProps {
+  event: CalendarEvent;
+}
+
+const CustomEventComponent = ({ event }: CustomEventComponentProps) => {
   const { title, start, end } = event;
   const startTime = dayjs(start).format("HH:mm");
   const endTime = dayjs(end).format("HH:mm");
@@ -79,7 +82,7 @@ function AvailabilityPageContent() {
           resourceTitle: c.title,
           available: c.available ?? true,
         })),
-    [],
+    []
   );
 
   const selectOptions = useMemo(
@@ -91,12 +94,12 @@ function AvailabilityPageContent() {
         disabled: !res.available,
       })),
     ],
-    [resources],
+    [resources]
   );
 
   const calendarViewResources = useMemo(
     () => resources.filter((res) => res.available),
-    [resources],
+    [resources]
   );
 
   useEffect(() => {
@@ -124,7 +127,7 @@ function AvailabilityPageContent() {
     const isMonthLoaded = loadedRanges.some(
       (range) =>
         dayjs(newDate).isAfter(dayjs(range.start).subtract(1, "day")) &&
-        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day")),
+        dayjs(newDate).isBefore(dayjs(range.end).add(1, "day"))
     );
 
     if (!isMonthLoaded) {
@@ -136,7 +139,7 @@ function AvailabilityPageContent() {
       const newEvents = await getReservas(newRange);
 
       const eventsMap = new Map(
-        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e]),
+        allEvents.map((e) => [`${e.start.toISOString()}-${e.resourceId}`, e])
       );
 
       newEvents.forEach((e) => {
@@ -155,7 +158,7 @@ function AvailabilityPageContent() {
     }
 
     return allEvents.filter(
-      (event) => event.resourceId?.toString() === selectedConsultorio,
+      (event) => event.resourceId?.toString() === selectedConsultorio
     );
   }, [allEvents, selectedConsultorio]);
 
@@ -167,6 +170,7 @@ function AvailabilityPageContent() {
     const calendarEvent = event as CalendarEvent;
     const azulFijo = "#5b9bd5";
     const verdeEventual = "#92d050";
+    // Define el color de fondo del evento según su tipo
     const backgroundColor =
       calendarEvent.type === "Fija" ? azulFijo : verdeEventual;
 
@@ -187,8 +191,8 @@ function AvailabilityPageContent() {
     step: 60,
     timeslots: 1,
     eventPropGetter: eventPropGetter,
-    startAccessor: "start",
-    endAccessor: "end",
+    startAccessor: (event: CalendarEvent) => event.start,
+    endAccessor: (event: CalendarEvent) => event.end,
     messages: calendarMessages,
     formats: {
       ...formatosPersonalizadosDayjs,

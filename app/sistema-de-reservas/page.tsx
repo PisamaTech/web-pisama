@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 import CtaSection from "@/components/homepage/CtaSection";
+import BeforeAfterSection from "@/components/sistema-de-reservas/BeforeAfterSection";
+import BenefitsSection from "@/components/sistema-de-reservas/BenefitsSection";
+import HeroSection from "@/components/sistema-de-reservas/HeroSection";
+import HowItWorksSection from "@/components/sistema-de-reservas/HowItWorksSection";
 import PlatformLogicSection from "@/components/sistema-de-reservas/PlataformLogicSection";
 import PlatformTourSection from "@/components/sistema-de-reservas/PlatformTourSection";
 
 // Import the newly created components
-import HeroSection from "@/components/sistema-de-reservas/HeroSection";
-import BeforeAfterSection from "@/components/sistema-de-reservas/BeforeAfterSection";
-import HowItWorksSection from "@/components/sistema-de-reservas/HowItWorksSection";
-import BenefitsSection from "@/components/sistema-de-reservas/BenefitsSection";
 
 export const metadata: Metadata = {
   title: "Plataforma de Reservas Online | Autonomía Total | Espacio Pisama",

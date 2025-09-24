@@ -1,11 +1,12 @@
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@heroui/button";
-import { Card, CardBody } from "@heroui/card";
+import { JSX } from "react";
 import { FaHandshake, FaUsers } from "react-icons/fa"; // Iconos para los pilares
-import { GrGrow } from "react-icons/gr";
 import { FaPersonRays } from "react-icons/fa6";
+import { GrGrow } from "react-icons/gr";
 
 import Gaston from "@/public/images/Gaston.webp";
 
@@ -41,9 +42,9 @@ const HeroSection = () => (
           <p className="mt-6 font-sans text-xl text-foreground/80">
             <strong>Espacio Pisama</strong> no es un simple negocio de alquiler.
             Es la respuesta a una pregunta que me hice durante años como
-            psicólogo: "¿Por qué nadie ha creado el lugar de trabajo que los
-            profesionales independientes realmente necesitamos?". Nació de esa
-            frustración y, sobre todo, del deseo de construirlo yo mismo.
+            psicólogo: &quot;¿Por qué nadie ha creado el lugar de trabajo que
+            los profesionales independientes realmente necesitamos?&quot;. Nació
+            de esa frustración y, sobre todo, del deseo de construirlo yo mismo.
           </p>
         </div>
       </div>
@@ -68,7 +69,7 @@ const StorySection = () => (
         </p>
 
         <blockquote className="py-3 border-l-4 border-secondary-500 pl-6 italic text-foreground/70">
-          "Soñaba con un lugar donde la gestión fuera invisible."
+          &quot;Soñaba con un lugar donde la gestión fuera invisible.&quot;
         </blockquote>
 
         <h2 className="text-2xl font-bold py-4">

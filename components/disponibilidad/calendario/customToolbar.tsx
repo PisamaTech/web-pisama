@@ -1,17 +1,17 @@
-import React from "react";
-import { Calendar } from "@heroui/calendar"; // Importa Calendar de shadcn/ui
 import { Button } from "@heroui/button"; // O tu componente Button
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { LuCalendarSync } from "react-icons/lu";
+import { Calendar } from "@heroui/calendar"; // Importa Calendar de shadcn/ui
 import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
-import dayjs from "dayjs";
-import { ToolbarProps } from "react-big-calendar";
 import {
   CalendarDate,
   fromDate,
   getLocalTimeZone,
   ZonedDateTime,
 } from "@internationalized/date";
+import dayjs from "dayjs";
+import React from "react";
+import { ToolbarProps } from "react-big-calendar";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { LuCalendarSync } from "react-icons/lu";
 
 import { CalendarEvent } from "@/src/lib/getReservas";
 

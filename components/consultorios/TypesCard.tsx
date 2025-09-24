@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { Card } from "@heroui/card";
 import { Button } from "@heroui/button";
+import { Card } from "@heroui/card";
 import { Chip } from "@heroui/chip";
-import { FaCheckCircle } from "react-icons/fa";
 import { Divider } from "@heroui/divider";
+import Link from "next/link";
+import { FaCheckCircle } from "react-icons/fa";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 // TIPADO: Definimos la interfaz para las props del componente

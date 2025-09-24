@@ -1,12 +1,12 @@
 // src/components/sistema-de-reservas/HowItWorksSection.tsx
 "use client";
-import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 
 import LightboxModal from "@/components/LightboxModal";
+import aplicacionConfirma from "@/public/images/aplicacion-confirma.webp";
 import aplicacionRegistro from "@/public/images/aplicacion-registro.webp";
 import aplicacionVisualiza from "@/public/images/aplicacion-visualiza.webp";
-import aplicacionConfirma from "@/public/images/aplicacion-confirma.webp";
 
 const HowItWorksSection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
