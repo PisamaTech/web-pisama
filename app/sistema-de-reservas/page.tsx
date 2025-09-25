@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { JSX } from "react";
 
 import CtaSection from "@/components/homepage/CtaSection";
 import BeforeAfterSection from "@/components/sistema-de-reservas/BeforeAfterSection";

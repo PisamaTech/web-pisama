@@ -103,24 +103,10 @@ export default function GalleryModal({
           {/* Preloading for next/prev images */}
           <div style={{ display: "none" }}>
             {open && media[nextIndex].type === "image" && (
-              <Image
-                src={media[nextIndex].src}
-                alt=""
-                width={1920}
-                height={1080}
-                className="h-auto w-auto"
-                sizes="90vw"
-              />
+              <Image src={media[nextIndex].src} alt="" fill sizes="1px" />
             )}
             {open && media[prevIndex].type === "image" && (
-              <Image
-                src={media[prevIndex].src}
-                alt=""
-                width={1920}
-                height={1080}
-                className="h-auto w-auto"
-                sizes="90vw"
-              />
+              <Image src={media[prevIndex].src} alt="" fill sizes="1px" />
             )}
           </div>
 

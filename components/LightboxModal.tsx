@@ -4,7 +4,6 @@ import Image, { StaticImageData } from "next/image";
 import { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
-// --- COMPONENTE LIGHTBOX ---
 interface LightboxModalProps {
   isOpen: boolean;
   image: StaticImageData | string | null;
@@ -17,35 +16,47 @@ const LightboxModal = ({ isOpen, image, onClose }: LightboxModalProps) => {
       if (e.key === "Escape") onClose();
     };
 
-    window.addEventListener("keydown", handleKey);
+    if (isOpen) {
+      window.addEventListener("keydown", handleKey);
+    }
 
     return () => window.removeEventListener("keydown", handleKey);
-  }, [onClose]);
+  }, [isOpen, onClose]);
 
   if (!isOpen || !image) return null;
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visor de imagen"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
     >
       <button
+        type="button"
+        aria-label="Cerrar visor"
+        className="absolute inset-0 w-full h-full cursor-default"
+        onClick={onClose}
+      />
+      {/* Botón de cierre */}
+      <button
+        type="button"
+        aria-label="Cerrar visor"
         className="absolute top-6 right-6 text-white text-3xl cursor-pointer"
         onClick={onClose}
       >
         <FaTimes />
       </button>
 
-      <div
-        className="max-w-3xl max-h-[90vh] flex justify-center items-center"
-        onClick={(e) => e.stopPropagation()} // Evita que el clic en la imagen cierre el modal
-      >
+      {/* Contenido del modal */}
+      <div className="max-w-3xl max-h-[90vh] flex justify-center items-center">
         <Image
           src={image}
-          alt="Vista ampliada"
+          alt="Imagen ampliada"
           className="max-h-[90vh] w-auto h-auto rounded-lg"
           width={800}
           height={1200}
+          priority
         />
       </div>
     </div>

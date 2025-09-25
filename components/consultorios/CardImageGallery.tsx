@@ -20,7 +20,7 @@ const CardImageGallery = ({
       onClick={() => onImageClick(0)}
     >
       <Image
-        src={media[0].src}
+        src={media.length > 0 ? media[0].src : "/images/placeholder.webp"}
         alt={`Imagen principal de ${nombre}`}
         className="object-cover"
         fill
@@ -49,6 +49,7 @@ const CardImageGallery = ({
         type="button"
         className="relative w-full h-20 bg-black text-white flex items-center justify-center cursor-pointer rounded"
         onClick={() => onImageClick(media.length - 1)}
+        disabled={media.length === 0}
       >
         <FaPlayCircle className="h-6 w-6 text-white/80" />
       </button>

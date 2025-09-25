@@ -22,7 +22,10 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/salaespera-1-2.webp" },
       { type: "image", src: "/images/salaespera-1-3.webp" },
       { type: "image", src: "/images/salaespera-1-4.webp" },
-      { type: "video", src: "/video/espera.mp4" },
+      {
+        type: "video",
+        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+      },
     ],
   },
   {
@@ -41,7 +44,10 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/saladescanso-1-2.webp" },
       { type: "image", src: "/images/saladescanso-1-3.webp" },
       { type: "image", src: "/images/saladescanso-1-4.webp" },
-      { type: "video", src: "/video/espera.mp4" },
+      {
+        type: "video",
+        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+      },
     ],
   },
   {
@@ -60,7 +66,10 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/banos1-3.webp" },
       { type: "image", src: "/images/banos1-4.webp" },
       { type: "image", src: "/images/banos1-5.webp" },
-      { type: "video", src: "/video/espera.mp4" },
+      {
+        type: "video",
+        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+      },
     ],
   },
   {
@@ -79,7 +88,10 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/fachada-1.3.webp" },
       { type: "image", src: "/images/fachada-1.4.webp" },
       { type: "image", src: "/images/fachada-1.5.webp" },
-      { type: "video", src: "/video/espera.mp4" },
+      {
+        type: "video",
+        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+      },
     ],
   },
 ];
