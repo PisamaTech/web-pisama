@@ -1,11 +1,12 @@
+"use client";
 import { Button } from "@heroui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 import logoImagen from "@/public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 
 import heroImagen from "../../public/images/consultorio3-1.webp";
-
 
 export default function HeroSection() {
   return (
@@ -28,13 +29,23 @@ export default function HeroSection() {
       {/* 4. Contenedor del contenido, centrado */}
       <div className="mx-auto max-w-4xl text-center px-6 z-25">
         {/* Logo */}
-        <Image
-          src={logoImagen}
-          alt="Logo Espacio Pisama"
-          width={220} // Ajusta el tamaño según sea necesario
-          height={220} // Ajusta el tamaño según sea necesario
-          className="mx-auto mb-8" // Centra el logo y añade margen inferior
-        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            scale: { type: "spring", visualDuration: 0.6, bounce: 0.6 },
+          }}
+          whileHover={{ scale: 1.1 }}
+          className="mx-auto mb-8 w-fit"
+        >
+          <Image
+            src={logoImagen}
+            alt="Logo Espacio Pisama"
+            width={220} // Ajusta el tamaño según sea necesario
+            height={220} // Ajusta el tamaño según sea necesario
+          />
+        </motion.div>
         {/* Título Principal (ahora en color blanco) */}
         <h1 className="font-semibold text-2xl tracking-tight text-white md:text-5xl">
           Alquiler de Consultorios por Hora en Montevideo: El espacio que
