@@ -216,10 +216,9 @@ export default function FaqSection() {
                 title={item.question}
                 classNames={{
                   base: "bg-content2 !shadow-lg border-1 border-gray-300",
-                  trigger: "p-6 font-display font-bold text-marron-cafe",
-                  title: "text-primary text-lg",
-                  indicator: "text-primary",
-                  content: "p-6 mb-3 pt-0 text-primary/90",
+                  trigger: "p-6 font-display font-bold text-primary",
+                  title: "text-primary text-lg font-semibold",
+                  content: "p-4 mb-3 pt-0 text-primary/90",
                 }}
               >
                 <Divider className="mb-4" />

@@ -29,7 +29,7 @@ export default function ContactInfoSection() {
   const [status, setStatus] = useState<FormStatus>({ type: "idle" });
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
 
@@ -69,7 +69,7 @@ export default function ContactInfoSection() {
         {/* Columna Izquierda: Datos y Formulario */}
         <div>
           <h2 className="font-display text-3xl font-bold text-primary">
-            Nuestros Datos
+            Si aún tenés alguna duda o consulta, contactanos...
           </h2>
           <div className="mt-6 space-y-4">
             <p className="flex items-center font-sans text-primary">
@@ -172,7 +172,7 @@ export default function ContactInfoSection() {
         </div>
 
         {/* Columna Derecha: Mapa */}
-        <div className="w-full h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
+        <div className="w-full mx-auto h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
           <iframe
             allowFullScreen={true}
             className="w-full h-full"

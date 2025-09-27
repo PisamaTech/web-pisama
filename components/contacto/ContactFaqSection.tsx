@@ -115,15 +115,19 @@ const faqData = [
     question:
       "¿Qué diferencia real hay entre un consultorio Estándar y uno Premium?",
     answer: (
-      <p>
-        <strong>El Consultorio Estándar</strong> es la solución más eficiente:
-        un espacio íntimo y perfectamente equipado, ideal para terapia
-        individual o coaching uno a uno.{" "}
-        <strong>Los Consultorios Premium</strong> ofrecen un extra de amplitud y
-        confort, con mobiliario de diseño y escritorio, lo que los hace
-        perfectos para terapia con niños, de pareja, familiar o para
-        profesionales que desean proyectar una imagen de mayor distinción.
-      </p>
+      <>
+        <p>
+          <strong>El Consultorio Estándar</strong> es la solución más eficiente:
+          un espacio íntimo y perfectamente equipado, ideal para terapia
+          individual o coaching uno a uno.{" "}
+        </p>
+        <p>
+          <strong>Los Consultorios Premium</strong> ofrecen un extra de amplitud
+          y confort, con sillones más amplios y escritorio, lo que los hace
+          perfectos para terapia con niños, de pareja, familiar o para
+          profesionales que desean proyectar una imagen de mayor distinción.
+        </p>
+      </>
     ),
   },
   {
@@ -202,9 +206,9 @@ export default function ContactFaqSection() {
               title={item.question}
               classNames={{
                 base: "bg-content1/70 shadow-xl",
-                title: "text-primary-400 text-lg font-bold",
+                title: "text-primary text-lg font-semibold",
                 trigger: "font-bold text-primary",
-                content: "text-primary/80 text-base/6 pb-6",
+                content: "text-primary/90 text-base/6 p-4 mb-3",
               }}
             >
               <Divider className="mb-4" />
