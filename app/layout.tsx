@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import clsx from "clsx";
-import { Viewport } from "next";
+import { Metadata, Viewport } from "next";
 import React from "react";
 
 import SiteFooter from "@/components/Footer";
@@ -11,16 +11,29 @@ import { siteConfig } from "@/config/site";
 
 import { Providers } from "./providers";
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s - ${siteConfig.name}`,
-//   },
-//   description: siteConfig.description,
-//   icons: {
-//     icon: "/EspacioPisama32.png",
-//   },
-// };
+export const metadata: Metadata = {
+  icons: {
+    icon: "/EspacioPisama32.png",
+  },
+  authors: [{ name: "Gastón Campo", url: siteConfig.url }],
+  creator: "Gastón Campo",
+  openGraph: {
+    type: "website",
+    locale: "es_UY",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `Logo e interior de ${siteConfig.name}`,
+      },
+    ],
+  },
+};
 
 export const viewport: Viewport = {
   themeColor: [
@@ -39,7 +52,7 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     name: "Espacio Pisama",
     url: siteConfig.url,
-    logo: `${siteConfig.url}/EspacioPisama80.png`,
+    logo: `${siteConfig.url}/images/Logo-Espacio-Pisama-Texturado-300px.png`,
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
@@ -49,8 +62,37 @@ export default function RootLayout({
       postalCode: "11200",
       addressCountry: "UY",
     },
-    // Agrega tu teléfono si lo tienes
     telephone: "+598-95-961-360",
+    email: "info@pisama.uy",
+
+    // --- NUEVAS PROPIEDADES SUGERIDAS ---
+
+    // 1. Horario de Apertura
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "07:00",
+        closes: "23:00",
+      },
+    ],
+
+    // 2. Rango de Precios
+    priceRange: "$$", // Indica un rango de precios moderado. Usa de "$" a "$$$$".
+
+    // 3. Conexión con Redes Sociales (¡Muy potente!)
+    sameAs: [
+      siteConfig.links.youtube,
+      siteConfig.links.instagram, // Añade las URLs completas en tu siteConfig
+    ],
   };
 
   return (

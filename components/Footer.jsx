@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LogoPisama from "../public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 import { Divider } from "@heroui/divider";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function SiteFooter() {
   return (
@@ -18,14 +18,14 @@ export default function SiteFooter() {
               className="block text-secondary-400 text-2xl font-bold text-center"
             >
               espacio PISAMA
+              <Image
+                src={LogoPisama}
+                alt="Logo de Pisama"
+                className="my-4 mx-auto"
+                width={120}
+                height={120}
+              />
             </Link>
-            <Image
-              src={LogoPisama}
-              alt="Logo de Pisama"
-              className="my-4 mx-auto"
-              width={120}
-              height={120}
-            />
             <p className="font-sans text-sm text-gris-calido ml-2">
               Un espacio cálido y profesional en Parque Rodó, diseñado para
               potenciar tu práctica con autonomía y flexibilidad.
@@ -89,15 +89,12 @@ export default function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/para/coaches" className="hover:text-secondary">
-                    Coaches
+                  <Link href="/blog" className="hover:text-secondary">
+                    Masajistas
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/para/terapeutas"
-                    className="hover:text-secondary"
-                  >
+                  <Link href="/blog" className="hover:text-secondary">
                     Terapeutas
                   </Link>
                 </li>
@@ -146,18 +143,22 @@ export default function SiteFooter() {
           </p>
           <div className="mt-4 flex space-x-6 sm:mt-0">
             <a
-              href="#"
-              aria-label="LinkedIn"
+              href="https://www.youtube.com/channel/UCsyM5U-6FftYfTd34PAgsew"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtube"
               className="text-gris-calido hover:text-crema-suave"
             >
-              <FaLinkedin size={20} />
+              <FaYoutube size={25} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/espacio.pisama/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-gris-calido hover:text-crema-suave"
             >
-              <FaInstagram size={20} />
+              <FaInstagram size={25} />
             </a>
           </div>
         </div>

@@ -1,71 +1,77 @@
+// TIPADO: Exportamos el tipo para poder usarlo en otros componentes si es necesario
 export type SiteConfig = typeof siteConfig;
 
+// El "single source of truth" (la fuente única de verdad) para toda la información de tu sitio.
 export const siteConfig = {
-  name: "Espacio PISAMA - Alquiler de consultorios por hora.",
-  url: "https://www.pisama.uy",
+  name: "Espacio Pisama",
   description:
-    "Alquiler de consultorios por hora en Montevideo. Sistema de reservas 24/7, precios flexibles desde $100/hora. Ubicación en Parque Rodó.",
-  navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
+    "Descubre el alquiler de consultorios por hora en Montevideo, diseñado por un psicólogo para colegas. Ofrecemos autonomía total con una plataforma de reservas online, precios flexibles y un entorno profesional que cuida cada detalle.",
+  url: "https://www.pisama.uy",
+  ogImage: "https://www.pisama.uy/images/og-image.png", // URL de la imagen para redes sociales (crear esta imagen)
+
+  // Enlaces principales y redes sociales
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    youtube: "https://www.youtube.com/channel/UCsyM5U-6FftYfTd34PAgsew", // Reemplaza con tu URL de YouTube
+    instagram: "https://www.instagram.com/espacio.pisama", // Reemplaza si lo creas
+    // linkedin: "https://www.linkedin.com/company/espacio-pisama", // Reemplaza si lo creas
+    reservasApp: "https://reservas.pisama.uy",
+  },
+
+  // Información de contacto y ubicación
+  contact: {
+    address: "Juan Paullier 1192, Parque Rodó, Montevideo, Uruguay",
+    email: "info@pisama.uy", // Reemplaza con tu email real
+    phone: "+598 95 961 360", // Reemplaza con tu teléfono real
+  },
+
+  // Palabras clave principales para SEO
+  keywords: [
+    "alquiler de consultorios",
+    "alquiler de consultorios en montevideo",
+    "consultorios por hora en montevideo",
+    "consultorios para psicólogos en montevideo",
+    "espacio para terapeutas en montevideo",
+    "alquier consultorios para terapias alternativas",
+    "alquier consultorios con camilla",
+    "alquier consultorios para masajes",
+    "Montevideo",
+    "Parque Rodó",
+    "alquiler flexible",
+    "reserva online de consultorios",
+  ],
+
+  // Elementos del menú de navegación principal
+  navItems: [
+    { label: "Consultorios", href: "/consultorios" },
+    { label: "Precios", href: "/precios" },
+    { label: "Disponibilidad", href: "/disponibilidad" },
+    { label: "Sobre Nosotros", href: "/sobre-nosotros" },
+    { label: "Reservas", href: "/plataforma-de-reservas" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contacto", href: "/contacto" },
+  ],
+
+  // Elementos de navegación del footer, organizados por columnas
+  footerNav: {
+    navegacion: [
+      { label: "Consultorios", href: "/consultorios" },
+      { label: "Precios", href: "/precios" },
+      { label: "Disponibilidad", href: "/disponibilidad" },
+      { label: "Reservas", href: "/plataforma-de-reservas" },
+      { label: "Blog", href: "/blog" },
+    ],
+    soluciones: [
+      {
+        label: "Para Psicólogos",
+        href: "/blog/consultorio-para-psicologos-alquiler",
+      },
+      { label: "Para Masajistas", href: "/blog" },
+      { label: "Para Terapeutas", href: "/blog" },
+    ],
+    empresa: [
+      { label: "Sobre Nosotros", href: "/sobre-nosotros" },
+      { label: "Contacto", href: "/contacto" },
+      { label: "Términos y Condiciones", href: "/terminos-y-condiciones" },
+    ],
   },
 };

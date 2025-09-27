@@ -14,6 +14,15 @@ export const metadata: Metadata = {
     "Alquiler de Consultorios por Hora en Montevideo | Flexibles y Autónomos | Espacio Pisama",
   description:
     "Encuentra consultorios por hora en Parque Rodó. Gestiona tus reservas 100% online y ahorra con nuestro sistema flexible. ¡Conoce Espacio Pisama!",
+  keywords: [
+    "alquiler de consultorios",
+    "alquiler de consultorios en montevideo",
+    "consultorios por hora en montevideo",
+    "Montevideo",
+    "Parque Rodó",
+    "alquiler flexible",
+    "reserva online de consultorios",
+  ],
   alternates: {
     canonical: "/", // URL canónica para la página de inicio
   },
