@@ -29,6 +29,20 @@ const faqData = [
     ),
   },
   {
+    question: "¿Existe un mínimo de horas a reservar por semana?",
+    answer: (
+      <p>
+        No, en Espacio Pisama no existe ningún mínimo de horas a reservar por
+        semana. Nuestra filosofía se basa en la flexibilidad total. Entendemos
+        que la agenda de un profesional independiente varía; hay semanas con más
+        pacientes y otras más tranquilas. Por eso, a diferencia de otros
+        sistemas que pueden exigirte comprar paquetes o cumplir con un mínimo de
+        horas, con nosotros tienes la libertad absoluta de reservar desde una
+        sola hora esporádica hasta todas las que necesites.
+      </p>
+    ),
+  },
+  {
     question: "¿Puedo visitar los consultorios antes de decidirme a alquilar?",
     answer: (
       <p>
