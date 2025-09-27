@@ -3,7 +3,8 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Espacio PISAMA - Alquiler de consultorios por hora.",
   url: "https://www.pisama.uy",
-  description: "Make beautiful websites regardless of your design experience.",
+  description:
+    "Alquiler de consultorios por hora en Montevideo. Sistema de reservas 24/7, precios flexibles desde $100/hora. Ubicación en Parque Rodó.",
   navItems: [
     {
       label: "Home",

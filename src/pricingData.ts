@@ -21,6 +21,7 @@ export const pricingData: PricingPlan[] = [
       "Dos cómodos sillones individuales",
       "Mesa de apoyo funcional",
       "Máxima privacidad",
+      "Aire acondicionado",
     ],
     isFeatured: false,
   },
@@ -36,6 +37,7 @@ export const pricingData: PricingPlan[] = [
       "Sillones de alta comodidad para 2 o 3 personas.",
       "Escritorio",
       "Diseño cálido y confortable ",
+      "Aire acondicionado",
     ],
     isFeatured: true, // Destacamos el plan Premium
   },

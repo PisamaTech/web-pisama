@@ -24,7 +24,7 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/salaespera-1-4.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/cfn-dw9C-is",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/saladescanso-1-4.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/W6VSkV82MZM",
       },
     ],
   },
@@ -68,7 +68,7 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/banos1-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/hIYLVhP3GiQ",
       },
     ],
   },
@@ -88,9 +88,10 @@ export const otrasAreas: OtraArea[] = [
       { type: "image", src: "/images/fachada-1.3.webp" },
       { type: "image", src: "/images/fachada-1.4.webp" },
       { type: "image", src: "/images/fachada-1.5.webp" },
+      { type: "image", src: "/images/fachada-1.6.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/cfn-dw9C-is",
       },
     ],
   },

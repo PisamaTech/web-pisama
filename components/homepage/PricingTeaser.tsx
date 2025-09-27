@@ -12,25 +12,25 @@ export default function PricingTeaser() {
             Una <span className="text-secondary">Tarifa</span> que Premia tu
             Crecimiento.
           </h2>
-          <p className="mt-6 font-sans text-lg text-marron-cafe/90">
-            Buscamos construir relaciones profesionales a largo plazo, no
-            simples transacciones. Por eso, diseñamos nuestro{" "}
-            <span className="font-bold">sistema de ahorro inteligente.</span> Es
-            una inversión en tu éxito y en nuestra estabilidad mutua. Cuanto más
-            creces con nosotros, más te beneficias. Es nuestra forma de decirte
-            que estamos comprometidos con tu desarrollo profesional, hoy y en el
-            futuro.
+          <p className="mt-6 font-sans text-lg text-primary/90">
+            Nos alejamos de las cuponeras rígidas y los compromisos fijos que no
+            entienden la realidad de nuestra profesión. En{" "}
+            <strong>Espacio Pisama</strong>, hemos creado un sistema de precios
+            simple y transparente: solo pagas por las horas que necesitas.
+            Además, diseñamos un modelo de descuentos automáticos que premia tu
+            fidelidad, haciendo que la hora te cueste menos mientras más usas el
+            espacio. Sin sorpresas, sin ataduras.
           </p>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Card para Consultorio Premium */}
           <div className="rounded-lg bg-crema-suave p-8 text-center shadow-lg">
-            <h3 className="font-display text-2xl font-bold text-marron-cafe">
+            <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Premium
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-xl text-marron-cafe/70 ">
+            <p className="my-4 font-sans text-xl text-primary/70 ">
               Precio base: $250 / hora
             </p>
             <p className="font-display font-bold text-terracotta-suave">
@@ -38,18 +38,18 @@ export default function PricingTeaser() {
               <span className="text-6xl">$150</span>
               <span className="text-3xl"> / hora</span>
             </p>
-            <p className="mt-4 font-sans text-sm text-marron-cafe">
-              con nuestro sistema de ahorro inteligente
+            <p className="mt-4 font-sans text-sm text-primary">
+              con nuestro modelo de ahorro inteligente
             </p>
           </div>
 
           {/* Card para Consultorio Estándar */}
           <div className="rounded-lg bg-crema-suave p-8 text-center shadow-lg">
-            <h3 className="font-display text-2xl font-bold text-marron-cafe">
+            <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Estándar
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-xl text-marron-cafe/70 ">
+            <p className="my-4 font-sans text-xl text-primary/70 ">
               Precio base: $200 / hora
             </p>
             <p className="font-display font-bold text-terracotta-suave">
@@ -57,8 +57,8 @@ export default function PricingTeaser() {
               <span className="text-6xl">$100</span>
               <span className="text-3xl"> / hora</span>
             </p>
-            <p className="mt-4 font-sans text-sm text-marron-cafe">
-              con nuestro sistema de ahorro inteligente
+            <p className="mt-4 font-sans text-sm text-primary">
+              con nuestro modelo de ahorro inteligente
             </p>
           </div>
         </div>

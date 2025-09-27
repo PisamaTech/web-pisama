@@ -28,7 +28,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio1-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/NsEZgmmHHHw",
       },
     ],
     tipo: "premium",
@@ -52,7 +52,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio2-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/-fPhLS04lz0",
       },
     ],
     tipo: "premium",
@@ -75,7 +75,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio3-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/JmvYekvJCxw",
       },
     ],
     tipo: "premium",
@@ -99,7 +99,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio4-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/3h-O9WlCuAU",
       },
     ],
     tipo: "premium",
@@ -123,7 +123,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio5-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/WYXnQEwMnOY",
       },
     ],
     tipo: "estandar",
@@ -147,7 +147,7 @@ export const consultoriosData: Espacio[] = [
       { type: "image", src: "/images/consultorio6-5.webp" },
       {
         type: "video",
-        src: "https://www.youtube.com/embed/r7IPPJnpSt8",
+        src: "https://www.youtube.com/embed/sTh2ywH2Y6Q",
       },
     ],
     tipo: "premium",
