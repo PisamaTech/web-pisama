@@ -85,8 +85,8 @@ const faqData = [
         </p>
         <p>
           Si cancelas con 24 horas o menos de antelación, la reserva se
-          considera <strong>"Penalizada"</strong>, lo que significa que deberás
-          pagarla y se incluirá en tu facturación.
+          considera <strong>&quot;Penalizada&quot;</strong>, lo que significa
+          que deberás pagarla y se incluirá en tu facturación.
         </p>
         <p>
           Sin embargo, no pierdes la hora, ya que tienes la opción de
