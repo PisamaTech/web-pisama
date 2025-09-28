@@ -2,12 +2,12 @@ import { Metadata } from "next";
 
 import ConsultorioCard from "@/components/consultorios/ConsultorioCards";
 import ConsultorioTypes from "@/components/consultorios/ConsultorioTypes";
+import VideoTour from "@/components/consultorios/VideoTour";
 import CtaSection from "@/components/homepage/CtaSection";
 import { consultoriosData } from "@/src/consultoriosData";
 
 import OtrasAreasSection from "../../components/consultorios/OtrasAreasSection";
 import ServiciosIncluidosSection from "../../components/consultorios/ServiciosIncluidosSection";
-import VideoTour from "@/components/consultorios/VideoTour";
 
 export const metadata: Metadata = {
   title: "Consultorios Premium y Estándar en Parque Rodó | Espacio Pisama",
@@ -21,10 +21,10 @@ export default function ConsultoriosPage() {
       {/* Sección 1: Tipos de Consultorio */}
       <section className="bg-content2 py-20 sm:py-24 ">
         <div className="container mx-auto max-w-5xl px-4 text-center lg:px-8">
-          <h1 className="font-display text-5xl font-bold text-marron-cafe">
+          <h1 className="font-display text-5xl font-bold text-primary">
             Nuestros Espacios: Ambientes que potencian tu práctica profesional
           </h1>
-          <p className="mx-auto max-w-3xl mt-6 font-sans text-lg text-marron-cafe/90">
+          <p className="mx-auto max-w-3xl mt-6 font-sans text-lg text-primary/90">
             Descubre las dos experiencias que tenemos disponibles y elige la que
             mejor se adapte a las necesidades de tu práctica profesional.
           </p>
@@ -38,10 +38,10 @@ export default function ConsultoriosPage() {
       <section className="bg-content1 py-20 sm:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-display text-4xl font-bold text-marron-cafe">
+            <h2 className="font-display text-4xl font-bold text-primary">
               Explora cada Consultorio
             </h2>
-            <p className="mt-4 font-sans text-lg text-marron-cafe/90">
+            <p className="mt-4 font-sans text-lg text-primary/90">
               Cada consultorio en <strong>Espacio Pisama</strong> fue diseñado
               conscientemente para ser una extensión de tu profesionalismo.
               Creamos entornos serenos, privados y funcionales donde tanto vos

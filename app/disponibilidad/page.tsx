@@ -18,7 +18,7 @@ export default function DisponibilidadPage(): JSX.Element {
 
       <CtaSection
         title="¿Encontraste el horarios que necesitabas?"
-        description="Registrate en nuestra aplicación y reserva en 3 minutos tu consultorios. Así de rápido y sencillo!"
+        description="Registrate en nuestra aplicación web y reserva en 3 minutos tu consultorios. Así de rápido y sencillo!"
         buttonText="Registrate ahora"
         buttonLink="https://reservas.pisama.uy/"
       />
