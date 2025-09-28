@@ -25,7 +25,7 @@ export default function PricingTeaser() {
 
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Card para Consultorio Premium */}
-          <div className="rounded-lg bg-crema-suave p-8 text-center shadow-lg">
+          <div className="rounded-lg bg-content1 border-1 border-content3 p-8 text-center shadow-lg hover:scale-104 transition-transform duration-200">
             <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Premium
             </h3>
@@ -33,7 +33,7 @@ export default function PricingTeaser() {
             <p className="my-4 font-sans text-xl text-primary/70 ">
               Precio base: $250 / hora
             </p>
-            <p className="font-display font-bold text-terracotta-suave">
+            <p className="font-display font-bold text-secondary">
               <span className="text-3xl">Hasta</span>{" "}
               <span className="text-6xl">$150</span>
               <span className="text-3xl"> / hora</span>
@@ -44,7 +44,7 @@ export default function PricingTeaser() {
           </div>
 
           {/* Card para Consultorio Estándar */}
-          <div className="rounded-lg bg-crema-suave p-8 text-center shadow-lg">
+          <div className="rounded-lg bg-content1 border-1 border-content3 p-8 text-center shadow-lg hover:scale-104 transition-transform duration-200">
             <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Estándar
             </h3>
@@ -52,7 +52,7 @@ export default function PricingTeaser() {
             <p className="my-4 font-sans text-xl text-primary/70 ">
               Precio base: $200 / hora
             </p>
-            <p className="font-display font-bold text-terracotta-suave">
+            <p className="font-display font-bold text-secondary">
               <span className="text-3xl">Hasta</span>{" "}
               <span className="text-6xl">$100</span>
               <span className="text-3xl"> / hora</span>
@@ -67,7 +67,7 @@ export default function PricingTeaser() {
           <Button
             as={Link}
             href="/precios"
-            className="bg-terracotta-suave font-display font-semibold text-white shadow-lg"
+            className="bg-secondary font-display font-semibold text-white shadow-lg"
             variant="solid"
             size="lg"
             endContent={<FaArrowRight />} // Añadimos un icono para mayor claridad
