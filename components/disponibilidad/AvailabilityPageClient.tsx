@@ -222,12 +222,12 @@ function AvailabilityPageContent() {
     <div className="container mx-auto px-4 lg:px-8">
       <div className="mx-auto mb-12 max-w-4xl text-center">
         <AvailabilityHeader />
+        <NonAvailableAlert />
         <AvailabilityControls
           selectedConsultorio={selectedConsultorio}
           handleViewChange={handleViewChange}
           selectOptions={selectOptions}
         />
-        <NonAvailableAlert />
       </div>
 
       <AvailabilityCalendar loading={loading} calendarProps={calendarProps} />
