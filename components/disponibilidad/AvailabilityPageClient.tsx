@@ -17,10 +17,11 @@ import {
   calendarMessages,
   formatosPersonalizadosDayjs,
 } from "./calendario/personalizacionCalendario";
-// Importar los nuevos subcomponentes
 import AvailabilityCalendar from "./subcomponents/AvailabilityCalendar";
 import AvailabilityControls from "./subcomponents/AvailabilityControls";
 import AvailabilityHeader from "./subcomponents/AvailabilityHeader";
+import HowToUseSection from "./subcomponents/HowToUseSection";
+import LegendSection from "./subcomponents/LegendSection";
 import NonAvailableAlert from "./subcomponents/NonAvailableAlert";
 
 interface Resource {
@@ -170,7 +171,6 @@ function AvailabilityPageContent() {
     const calendarEvent = event as CalendarEvent;
     const azulFijo = "#5b9bd5";
     const verdeEventual = "#92d050";
-    // Define el color de fondo del evento según su tipo
     const backgroundColor =
       calendarEvent.type === "Fija" ? azulFijo : verdeEventual;
 
@@ -219,19 +219,32 @@ function AvailabilityPageContent() {
   };
 
   return (
-    <div className="container mx-auto px-4 lg:px-8">
-      <div className="mx-auto mb-12 max-w-4xl text-center">
+    <>
+      <section className="bg-content2 py-16">
         <AvailabilityHeader />
-        <NonAvailableAlert />
-        <AvailabilityControls
-          selectedConsultorio={selectedConsultorio}
-          handleViewChange={handleViewChange}
-          selectOptions={selectOptions}
-        />
-      </div>
+      </section>
 
-      <AvailabilityCalendar loading={loading} calendarProps={calendarProps} />
-    </div>
+      <HowToUseSection />
+
+      <LegendSection />
+
+      <section className="bg-content1 py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl text-center">
+            <NonAvailableAlert />
+            <AvailabilityControls
+              selectedConsultorio={selectedConsultorio}
+              handleViewChange={handleViewChange}
+              selectOptions={selectOptions}
+            />
+          </div>
+          <AvailabilityCalendar
+            loading={loading}
+            calendarProps={calendarProps}
+          />
+        </div>
+      </section>
+    </>
   );
 }
 

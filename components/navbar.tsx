@@ -33,7 +33,7 @@ export const Navbar = () => {
         width={45}
         className="mr-2"
       />
-      <div className="flex flex-col items-center gap-0 text-primary/60">
+      <div className="flex flex-col items-center gap-0 text-primary/90">
         <p className="text-sm mb-[-4px]">espacio</p>
         <p>PISAMA</p>
       </div>
@@ -67,6 +67,7 @@ export const Navbar = () => {
             <Link
               color="secondary"
               href={link.href}
+              className="hover:text-primary/80 transition-colors duration-200"
               // aria-current={pathname === link.href ? "page" : undefined} // Para accesibilidad
             >
               {link.name}

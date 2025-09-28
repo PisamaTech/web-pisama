@@ -2,7 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import LogoPisama from "../public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 import { Divider } from "@heroui/divider";
-import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+  FaPhone,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function SiteFooter() {
   return (
@@ -21,7 +28,7 @@ export default function SiteFooter() {
               <Image
                 src={LogoPisama}
                 alt="Logo de Pisama"
-                className="my-4 mx-auto"
+                className="my-4 mx-auto hover:scale-105 ease-in-out transition-all duration-200"
                 width={120}
                 height={120}
               />
@@ -143,22 +150,40 @@ export default function SiteFooter() {
           </p>
           <div className="mt-4 flex space-x-6 sm:mt-0">
             <a
-              href="https://www.youtube.com/channel/UCsyM5U-6FftYfTd34PAgsew"
+              href="tel:+5985961360"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Youtube"
-              className="text-gris-calido hover:text-crema-suave"
+              aria-label="Phone"
+              className="text-gris-calido hover:text-secondary"
             >
-              <FaYoutube size={25} />
+              <FaPhoneAlt size={22} />
+            </a>
+            <a
+              href="https://wa.me/59895961360"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Whatsapp"
+              className="text-gris-calido hover:text-secondary"
+            >
+              <FaWhatsapp size={25} />
             </a>
             <a
               href="https://www.instagram.com/espacio.pisama/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-gris-calido hover:text-crema-suave"
+              className="text-gris-calido hover:text-secondary"
             >
               <FaInstagram size={25} />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCsyM5U-6FftYfTd34PAgsew"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtube"
+              className="text-gris-calido hover:text-secondary"
+            >
+              <FaYoutube size={25} />
             </a>
           </div>
         </div>

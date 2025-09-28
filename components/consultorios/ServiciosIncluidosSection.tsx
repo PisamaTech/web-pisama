@@ -53,7 +53,7 @@ export default function ServiciosIncluidosSection() {
         {servicios.map((servicio) => (
           <div
             key={servicio.title}
-            className="rounded-xl bg-gray-50 p-8 text-left shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-50 p-8 text-left shadow-lg transition-transform hover:scale-[1.04]"
           >
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto">
               <servicio.icon

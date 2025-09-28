@@ -140,7 +140,7 @@ const faqData = [
 
 export default function ContactFaqSection() {
   return (
-    <section className="bg-content2 pb-20 pt-10">
+    <section className="bg-content4 pb-20 pt-10">
       <div className="container mx-auto max-w-4xl px-6 lg:px-8">
         <h2 className="mb-12 text-center font-display text-4xl font-bold text-primary">
           Antes de escribir, quizás encuentres tu respuesta aquí
@@ -152,7 +152,7 @@ export default function ContactFaqSection() {
               aria-label={item.question}
               title={item.question}
               classNames={{
-                base: "bg-content1/70 shadow-xl",
+                base: "bg-content2 shadow-xl",
                 title: "text-primary text-lg font-semibold",
                 trigger: "font-bold text-primary",
                 content: "text-primary/90 text-base/6 p-4 mb-3",
