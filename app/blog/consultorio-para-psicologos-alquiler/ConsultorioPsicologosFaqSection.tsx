@@ -3,6 +3,8 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Divider } from "@heroui/divider";
 
+import FaqSchema from "@/components/seo/FaqSchema";
+
 // --- DATOS para la sección de FAQ ---
 const faqData = [
   {
@@ -70,6 +72,7 @@ export default function ConsultorioPsicologosFaqSection() {
           </AccordionItem>
         ))}
       </Accordion>
+      <FaqSchema items={faqData} />
     </div>
   );
 }
