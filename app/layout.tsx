@@ -62,31 +62,23 @@ export default function RootLayout({
       postalCode: "11200",
       addressCountry: "UY",
     },
+
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-34.906094",
+      longitude: "-56.167494",
+    },
     telephone: "+598-95-961-360",
     email: "info@pisama.uy",
 
     // --- NUEVAS PROPIEDADES SUGERIDAS ---
 
     // 1. Horario de Apertura
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "07:00",
-        closes: "23:00",
-      },
-    ],
+    openingHours: ["Mo-Su 07:00-23:00"],
 
     // 2. Rango de Precios
     priceRange: "$$", // Indica un rango de precios moderado. Usa de "$" a "$$$$".
+    areaServed: "Montevideo",
 
     // 3. Conexión con Redes Sociales (¡Muy potente!)
     sameAs: [

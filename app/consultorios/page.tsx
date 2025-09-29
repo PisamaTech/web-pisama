@@ -12,7 +12,16 @@ import ServiciosIncluidosSection from "../../components/consultorios/ServiciosIn
 export const metadata: Metadata = {
   title: "Consultorios Premium y Estándar en Parque Rodó | Espacio Pisama",
   description:
-    "Explora en detalle nuestros consultorios. Diseñados por psicólogos para garantizar confort, privacidad y profesionalismo.",
+    "Explora en detalle nuestros consultorios en Montevideo. Diseñados por psicólogos para garantizar confort, privacidad y profesionalismo.",
+  keywords: [
+    "consultorios para psicólogos montevideo",
+    "alquiler de consultorios en montevideo",
+    "consultorios por hora en montevideo",
+    "consultorios por hora Parque Rodó",
+    "Montevideo",
+    "Parque Rodó",
+    "reserva online de consultorios en montevideo",
+  ],
 };
 
 export default function ConsultoriosPage() {

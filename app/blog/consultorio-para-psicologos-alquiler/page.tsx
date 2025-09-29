@@ -18,6 +18,16 @@ export const metadata: Metadata = {
     "Alquiler de Consultorios para Psicólogos: La Guía Definitiva | Espacio Pisama",
   description:
     "Una guía completa para elegir el espacio correcto para tu práctica, escrita por un psicólogo. Analizamos todo lo que debes tener en cuenta.",
+  keywords: [
+    "consultorios para psicólogos montevideo",
+    "alquiler de consultorios en montevideo",
+    "consultorios por hora en montevideo",
+    "consultorios por hora Parque Rodó",
+    "Montevideo",
+    "Parque Rodó",
+    "espacios para terapias Montevideo",
+    "reserva online de consultorios",
+  ],
 };
 
 const CtaBox = () => (

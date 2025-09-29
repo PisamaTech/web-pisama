@@ -2,14 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LogoPisama from "../public/images/Logo-Espacio-Pisama-Texturado-300px.png";
 import { Divider } from "@heroui/divider";
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaYoutube,
-  FaWhatsapp,
-  FaPhone,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export default function SiteFooter() {
   return (
@@ -33,10 +26,26 @@ export default function SiteFooter() {
                 height={120}
               />
             </Link>
-            <p className="font-sans text-sm text-gris-calido ml-2">
-              Un espacio cálido y profesional en Parque Rodó, diseñado para
-              potenciar tu práctica con autonomía y flexibilidad.
-            </p>
+            {/* Local SEO */}
+            <div
+              itemScope
+              itemType="http://schema.org/LocalBusiness"
+              className="text-center text-sm text-gris-calido mb-4 font-sans"
+            >
+              <div
+                itemProp="address"
+                itemScope
+                itemType="http://schema.org/PostalAddress"
+              >
+                <span itemProp="streetAddress">Juan Paullier 1192</span>,{" "}
+                <span itemProp="addressLocality">Montevideo</span>,{" "}
+                <span itemProp="addressRegion">Montevideo</span>,{" "}
+                <span itemProp="postalCode">11200</span>.
+              </div>
+              <p>
+                Horario: <span itemProp="openingHours">Lun-Dom 7:00-23:00</span>
+              </p>
+            </div>
           </div>
 
           {/* Columnas de Enlaces */}
@@ -142,6 +151,7 @@ export default function SiteFooter() {
 
         {/* Separador Horizontal */}
         <Divider className="my-6" />
+
         {/* Barra Inferior: Copyright y Redes Sociales */}
         <div className="flex flex-col items-center sm:flex-row sm:justify-between">
           <p className="font-sans text-sm text-gris-calido">
@@ -152,6 +162,9 @@ export default function SiteFooter() {
             <a
               href="tel:+5985961360"
               target="_blank"
+              itemProp="telephone"
+              itemScope
+              itemType="http://schema.org/ContactPoint"
               rel="noopener noreferrer"
               aria-label="Phone"
               className="text-gris-calido hover:text-secondary"
