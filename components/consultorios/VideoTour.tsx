@@ -19,7 +19,6 @@ export default function VideoTour() {
           <iframe
             src="https://www.youtube.com/embed/_0-Eh-JvQys"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             className="h-full w-full"
