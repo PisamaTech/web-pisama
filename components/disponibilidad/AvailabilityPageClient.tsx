@@ -91,7 +91,7 @@ function AvailabilityPageContent() {
       { id: "all", title: "Vista General Diaria", disabled: false },
       ...resources.map((res) => ({
         id: res.resourceId.toString(),
-        title: `${res.resourceTitle} (Semanal)`,
+        title: `Consultorio ${res.resourceId} (Semanal)`,
         disabled: !res.available,
       })),
     ],

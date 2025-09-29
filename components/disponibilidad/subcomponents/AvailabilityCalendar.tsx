@@ -22,7 +22,7 @@ const AvailabilityCalendar = ({
   loading,
   calendarProps,
 }: AvailabilityCalendarProps) => (
-  <div className="h-[85vh] mx-auto max-w-4xl rounded-lg border-2 border-gris-calido bg-white p-2 text-marron-cafe shadow-lg sm:p-4 overflow-x-auto min-w-0">
+  <div className="h-max mx-auto max-w-4xl rounded-lg border-2 border-gris-calido bg-white p-2 text-marron-cafe shadow-lg sm:p-4 overflow-x-auto min-w-0">
     {loading ? (
       <div className="flex h-full w-full items-center justify-center">
         <Spinner label="Cargando disponibilidad..." color="default" size="lg" />
