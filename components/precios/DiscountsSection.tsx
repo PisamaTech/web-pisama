@@ -71,7 +71,7 @@ export default function DiscountsSection() {
       {/* Tabla */}
       <Table
         aria-label="Tabla de descuentos acumulativos"
-        className="max-w-3xl border border-gris-calido rounded-xl overflow-hidden"
+        className="max-w-3xl border border-gris-calido rounded-xl shadow-lg"
       >
         <TableHeader className="bg-marron-cafe">
           <TableColumn className="text-default text-center">

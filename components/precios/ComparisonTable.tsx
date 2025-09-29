@@ -63,23 +63,22 @@ export default function ComparisonTable(): JSX.Element {
       <Table
         aria-label="Tabla comparativa del modelo de precios de Espacio Pisama vs. Paquetes fijos (Cuponeras)"
         selectionMode="none"
-        className="shadow-xl rounded-xl"
+        className="shadow-xl rounded-xl overflow-x-auto"
         classNames={{
-          wrapper: "overflow-x-auto",
-          th: "bg-content1 p-4 font-display text-lg text-marron-cafe text-left ",
-          td: "p-4 align-top font-sans text-marron-cafe/90",
+          th: "bg-content1 p-4 font-display text-lg text-primary text-left ",
+          td: "p-4 align-top font-sans text-primary/90",
           tr: "border-b border-gris-calido/50",
           base: "bg-crema-suave",
         }}
       >
         <TableHeader>
-          <TableColumn className="w-[150px] sm:w-[200px] lg:w-[250px] p-4 font-display text-lg font-bold text-marron-cafe text-left">
+          <TableColumn className="w-[150px] sm:w-[200px] lg:w-[250px] p-4 font-display text-lg font-bold text-primary text-left">
             Característica
           </TableColumn>
-          <TableColumn className="border-l bg-terracotta-suave/10 border-gris-calido p-4 font-display text-lg font-bold text-marron-cafe text-left">
+          <TableColumn className="border-l bg-terracotta-suave/10 border-gris-calido p-4 font-display text-lg font-bold text-primary text-left">
             Nuestro Modelo Flexible
           </TableColumn>
-          <TableColumn className="border-l border-gris-calido p-4 font-display text-lg font-bold text-marron-cafe text-left">
+          <TableColumn className="border-l border-gris-calido p-4 font-display text-lg font-bold text-primary text-left">
             Paquetes Fijos (Cuponeras)
           </TableColumn>
         </TableHeader>
@@ -88,7 +87,7 @@ export default function ComparisonTable(): JSX.Element {
           {comparisonData.map((row) => (
             <TableRow key={row.feature}>
               {/* Columna de Característica */}
-              <TableCell className="p-4 align-top font-sans font-bold text-marron-cafe">
+              <TableCell className="p-4 align-top font-sans font-bold text-primary">
                 {row.feature}
               </TableCell>
 
@@ -96,7 +95,7 @@ export default function ComparisonTable(): JSX.Element {
               <TableCell className="border-l border-gris-calido bg-terracotta-suave/10 p-4 align-top">
                 <div className="flex items-start gap-3">
                   <FaCheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-success" />
-                  <span className="font-sans text-marron-cafe">
+                  <span className="font-sans text-primary">
                     {row.pisamaModel}
                   </span>
                 </div>
@@ -106,7 +105,7 @@ export default function ComparisonTable(): JSX.Element {
               <TableCell className="border-l border-gris-calido p-4 align-top">
                 <div className="flex items-start gap-3">
                   <FaTimesCircle className="mt-1 h-5 w-5 flex-shrink-0 text-danger/70" />
-                  <span className="font-sans text-marron-cafe/80">
+                  <span className="font-sans text-primary/80">
                     {row.cuponeraModel}
                   </span>
                 </div>
