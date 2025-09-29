@@ -26,14 +26,6 @@ export const calendarMessages = {
   showMore: (total: any) => `+${total} más`,
 };
 
-export const resources = [
-  { id: 1, title: "Consultorio 1" },
-  { id: 3, title: "Consultorio 3" },
-  { id: 4, title: "Consultorio 4" },
-  { id: 5, title: "Consultorio 5" },
-  { id: 6, title: "Consultorio 6" },
-];
-
 const capitalizeFirstLetter = (string: string) => {
   if (!string) {
     return string;

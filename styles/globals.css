@@ -26,12 +26,12 @@
 }
 
 .rbc-time-view-resources .rbc-day-slot {
-  min-width: 105px !important;
+  min-width: 35px !important;
   -webkit-box-flex: 1;
 }
 
 .rbc-time-header-content {
-  width: 105px !important;
+  min-width: 35px !important;
 }
 
 .rbc-time-view-resources .rbc-header,
