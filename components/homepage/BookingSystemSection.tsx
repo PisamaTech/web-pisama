@@ -26,9 +26,14 @@ export default function BookingSystemSection(): JSX.Element {
             <p className="mt-4 font-sans text-lg leading-relaxed text-primary/90">
               Diseñamos nuestra aplicación de reservas online para eliminar esa
               frustración para siempre. Accede a la{" "}
-              <strong>disponibilidad en tiempo real, 24/7</strong>. Si ves un
-              horario libre, es tuyo al instante. Sin intermediarios, sin
-              demoras.
+              <Link
+                href="/disponibilidad"
+                className="font-semibold text-primary underline"
+              >
+                disponibilidad en tiempo real
+              </Link>
+              , 24/7. Si ves un horario libre, es tuyo al instante. Sin
+              intermediarios, sin demoras.
             </p>
             <div className="mt-8">
               <Button
