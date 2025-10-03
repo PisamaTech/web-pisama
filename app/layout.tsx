@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
+import Script from "next/script";
 import React from "react";
 
 import SiteFooter from "@/components/Footer";
@@ -8,7 +9,6 @@ import { Navbar } from "@/components/navbar";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
-import Script from "next/script";
 
 import { Providers } from "./providers";
 
