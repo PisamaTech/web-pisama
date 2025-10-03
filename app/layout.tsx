@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
+import Script from "next/script";
 
 import { Providers } from "./providers";
 
@@ -77,7 +78,7 @@ export default function RootLayout({
     openingHours: ["Mo-Su 07:00-23:00"],
 
     // 2. Rango de Precios
-    priceRange: "$$", // Indica un rango de precios moderado. Usa de "$" a "$$$$".
+    priceRange: "$", // Indica un rango de precios moderado. Usa de "$" a "$$".
     areaServed: "Montevideo",
 
     // 3. Conexión con Redes Sociales (¡Muy potente!)
@@ -94,6 +95,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4C6SK93ENE"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4C6SK93ENE');
+          `}
+        </Script>
       </head>
       <body
         className={clsx(
