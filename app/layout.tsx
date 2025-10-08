@@ -11,6 +11,7 @@ import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 
 import { Providers } from "./providers";
+import { image } from "@heroui/theme";
 
 export const metadata: Metadata = {
   icons: {
@@ -54,6 +55,14 @@ export default function RootLayout({
     name: "Espacio Pisama",
     url: siteConfig.url,
     logo: `${siteConfig.url}/images/Logo-Espacio-Pisama-Texturado-300px.png`,
+    image: [
+      `${siteConfig.url}/images/consultorio1-1.webp`,
+      `${siteConfig.url}/images/consultorio2-1.webp`,
+      `${siteConfig.url}/images/consultorio3-1.webp`,
+      `${siteConfig.url}/images/consultorio4-1.webp`,
+      `${siteConfig.url}/images/consultorio5-1.webp`,
+      `${siteConfig.url}/images/consultorio6-1.webp`,
+    ],
     description: siteConfig.description,
     address: {
       "@type": "PostalAddress",
@@ -78,7 +87,7 @@ export default function RootLayout({
     openingHours: ["Mo-Su 07:00-23:00"],
 
     // 2. Rango de Precios
-    priceRange: "$", // Indica un rango de precios moderado. Usa de "$" a "$$".
+    priceRange: "$$", // Indica un rango de precios moderado. Usa de "$" a "$$".
     areaServed: "Montevideo",
 
     // 3. Conexión con Redes Sociales (¡Muy potente!)

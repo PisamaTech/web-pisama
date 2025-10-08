@@ -26,24 +26,13 @@ export default function SiteFooter() {
                 height={120}
               />
             </Link>
-            {/* Local SEO */}
-            <div
-              itemScope
-              itemType="http://schema.org/LocalBusiness"
-              className="text-center text-sm text-gris-calido mb-4 font-sans"
-            >
-              <div
-                itemProp="address"
-                itemScope
-                itemType="http://schema.org/PostalAddress"
-              >
-                <span itemProp="streetAddress">Juan Paullier 1192</span>,{" "}
-                <span itemProp="addressLocality">Montevideo</span>,{" "}
-                <span itemProp="addressRegion">Montevideo</span>,{" "}
-                <span itemProp="postalCode">11200</span>.
+            <div className="text-center text-sm text-gris-calido mb-4 font-sans">
+              <div>
+                <span>Juan Paullier 1192</span>, <span>Montevideo</span>,{" "}
+                <span>Montevideo</span>, <span>11200</span>.
               </div>
               <p>
-                Horario: <span itemProp="openingHours">Lun-Dom 7:00-23:00</span>
+                Horario: <span>Lun-Dom 7:00-23:00</span>
               </p>
             </div>
           </div>
