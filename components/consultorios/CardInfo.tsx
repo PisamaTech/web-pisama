@@ -31,7 +31,7 @@ const CardInfo = ({ espacio }: { espacio: Espacio }) => (
     </ul>
     <Button
       as={Link}
-      href={`/disponibilidad?id=${espacio.id}`}
+      href={`/disponibilidad?id=${espacio.id}#calendario-disponibilidad`}
       color="primary"
       className="w-full mt-4"
     >

@@ -228,7 +228,7 @@ function AvailabilityPageContent() {
 
       <LegendSection />
 
-      <section className="bg-content1 py-16">
+      <section id="calendario-disponibilidad" className="bg-content1 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
             <NonAvailableAlert />
