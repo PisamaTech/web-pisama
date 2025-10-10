@@ -11,7 +11,6 @@ import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 
 import { Providers } from "./providers";
-import { image } from "@heroui/theme";
 
 export const metadata: Metadata = {
   icons: {
