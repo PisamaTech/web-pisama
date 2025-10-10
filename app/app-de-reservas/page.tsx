@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { JSX } from "react";
 
+import BeforeAfterSection from "@/components/app-de-reservas/BeforeAfterSection";
+import BenefitsSection from "@/components/app-de-reservas/BenefitsSection";
+import HeroSection from "@/components/app-de-reservas/HeroSection";
+import HowItWorksSection from "@/components/app-de-reservas/HowItWorksSection";
+import PlatformLogicSection from "@/components/app-de-reservas/PlataformLogicSection";
+import PlatformTourSection from "@/components/app-de-reservas/PlatformTourSection";
 import CtaSection from "@/components/homepage/CtaSection";
-import BeforeAfterSection from "@/components/sistema-de-reservas/BeforeAfterSection";
-import BenefitsSection from "@/components/sistema-de-reservas/BenefitsSection";
-import HeroSection from "@/components/sistema-de-reservas/HeroSection";
-import HowItWorksSection from "@/components/sistema-de-reservas/HowItWorksSection";
-import PlatformLogicSection from "@/components/sistema-de-reservas/PlataformLogicSection";
-import PlatformTourSection from "@/components/sistema-de-reservas/PlatformTourSection";
 
 // Import the newly created components
 

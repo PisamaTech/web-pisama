@@ -18,7 +18,7 @@ export default function HeroSection() {
         alt="Consultorio profesional moderno y luminoso, listo para ser alquilado"
         fill // 'fill' hace que la imagen llene el contenedor padre
         className="object-cover z-20" // 'object-cover' evita que la imagen se deforme
-        quality={80} // Calidad de la imagen (opcional, bueno para performance)
+        quality={60} // Calidad de la imagen (opcional, bueno para performance)
         priority // Carga esta imagen primero, ya que es "Above the Fold"
       />
 

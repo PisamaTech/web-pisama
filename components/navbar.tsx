@@ -1,4 +1,12 @@
+"use client";
+
 import { Button } from "@heroui/button";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@heroui/dropdown";
 import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
@@ -10,20 +18,15 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 import Image from "next/image";
-import { TbCalendarPlus } from "react-icons/tb";
+import { useRouter } from "next/navigation";
+import { TbCalendarPlus, TbChevronDown } from "react-icons/tb";
+
+import { siteConfig } from "@/config/site";
 
 import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";
 
 export const Navbar = () => {
-  const navLinks = [
-    { name: "Consultorios", href: "/consultorios" },
-    { name: "Precios", href: "/precios" },
-    { name: "Disponibilidad", href: "/disponibilidad" },
-    { name: "Reservas", href: "/sistema-de-reservas" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contacto", href: "/contacto" },
-  ];
-
+  const router = useRouter();
   const brandContent = (
     <NavbarBrand as={Link} href="/">
       <Image
@@ -45,35 +48,60 @@ export const Navbar = () => {
       isBordered
       className="bg-content1 text-secondary font-semibold"
     >
-      <NavbarContent className="md:hidden" justify="start">
+      <NavbarContent className="lg:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="md:hidden pr-3" justify="center">
+      <NavbarContent className="lg:hidden pr-3" justify="center">
         {brandContent}
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex gap-4" justify="start">
+      <NavbarContent className="hidden lg:flex gap-4" justify="start">
         {brandContent}
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex gap-4" justify="center">
-        {/* 2. Mapeamos tus enlaces para el menú de escritorio */}
-        {navLinks.map((link) => (
-          <NavbarItem
-            key={link.href}
-            // isActive={pathname === link.href} // Descomenta esto si usas un hook para la ruta activa
-          >
-            <Link
-              color="secondary"
-              href={link.href}
-              className="hover:text-primary/80 transition-colors duration-200"
-              // aria-current={pathname === link.href ? "page" : undefined} // Para accesibilidad
-            >
-              {link.name}
-            </Link>
-          </NavbarItem>
-        ))}
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
+        {siteConfig.navItems.map((item) =>
+          item.dropdown ? (
+            <Dropdown key={item.label}>
+              <NavbarItem>
+                <DropdownTrigger>
+                  <Button
+                    disableRipple
+                    className="p-0 bg-transparent data-[hover=true]:bg-transparent text-secondary font-semibold text-base"
+                    endContent={<TbChevronDown size={16} />}
+                    radius="sm"
+                    variant="light"
+                  >
+                    {item.label}
+                  </Button>
+                </DropdownTrigger>
+              </NavbarItem>
+              <DropdownMenu
+                aria-label={`Acciones para ${item.label}`}
+                className="w-full text-center text-default"
+                itemClasses={{ base: "gap-4" }}
+                onAction={(key) => router.push(key as string)}
+              >
+                {item.dropdown.map((subItem) => (
+                  <DropdownItem key={subItem.href}>
+                    {subItem.label}
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </Dropdown>
+          ) : (
+            <NavbarItem key={item.href}>
+              <Link
+                color="secondary"
+                href={item.href}
+                className="hover:text-primary/80 transition-colors duration-200"
+              >
+                {item.label}
+              </Link>
+            </NavbarItem>
+          )
+        )}
       </NavbarContent>
 
       {/* --- Botones de Acción --- */}
@@ -82,7 +110,7 @@ export const Navbar = () => {
           <Button
             as={Link}
             color="warning"
-            href="https://reservas.pisama.uy"
+            href={siteConfig.links.reservasApp}
             variant="solid"
             startContent={<TbCalendarPlus size={18} />}
             className="px-2 hover: transition-transform duration-200 hover:scale-105"
@@ -94,19 +122,23 @@ export const Navbar = () => {
 
       {/* --- Contenido del Menú Móvil --- */}
       <NavbarMenu>
-        {/* 3. Mapeamos tus mismos enlaces para el menú móvil */}
-        {navLinks.map((item, index) => (
-          <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link
-              className="w-full"
-              color="primary" // Simplificamos el color, puedes personalizarlo
-              href={item.href}
-              size="lg"
-            >
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        {siteConfig.navItems.flatMap((item) =>
+          item.dropdown
+            ? item.dropdown.map((subItem) => (
+                <NavbarMenuItem key={subItem.href}>
+                  <Link className="w-full" href={subItem.href} size="lg">
+                    {subItem.label}
+                  </Link>
+                </NavbarMenuItem>
+              ))
+            : [
+                <NavbarMenuItem key={item.href}>
+                  <Link className="w-full" href={item.href} size="lg">
+                    {item.label}
+                  </Link>
+                </NavbarMenuItem>,
+              ]
+        )}
       </NavbarMenu>
     </HeroUINavbar>
   );

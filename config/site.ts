@@ -1,4 +1,5 @@
 // TIPADO: Exportamos el tipo para poder usarlo en otros componentes si es necesario
+
 export type SiteConfig = typeof siteConfig;
 
 // El "single source of truth" (la fuente única de verdad) para toda la información de tu sitio.
@@ -43,12 +44,24 @@ export const siteConfig = {
   // Elementos del menú de navegación principal
   navItems: [
     { label: "Consultorios", href: "/consultorios" },
-    { label: "Precios", href: "/precios" },
     { label: "Disponibilidad", href: "/disponibilidad" },
-    { label: "Sobre Nosotros", href: "/sobre-nosotros" },
-    { label: "Reservas", href: "/plataforma-de-reservas" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contacto", href: "/contacto" },
+
+    { label: "Precios", href: "/precios" },
+    {
+      label: "App de Reservas",
+      dropdown: [
+        { label: "Conoce la App", href: "/app-de-reservas" },
+        { label: "Guía de Uso", href: "/guia-de-uso" },
+      ],
+    },
+    {
+      label: "Nosotros",
+      dropdown: [
+        { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
+        { label: "Blog de Artículos", href: "/blog" },
+        { label: "Contacto", href: "/contacto" },
+      ],
+    },
   ],
 
   // Elementos de navegación del footer, organizados por columnas
@@ -57,7 +70,7 @@ export const siteConfig = {
       { label: "Consultorios", href: "/consultorios" },
       { label: "Precios", href: "/precios" },
       { label: "Disponibilidad", href: "/disponibilidad" },
-      { label: "Reservas", href: "/plataforma-de-reservas" },
+      { label: "App de Reservas", href: "/app-de-reservas" },
       { label: "Blog", href: "/blog" },
     ],
     soluciones: [

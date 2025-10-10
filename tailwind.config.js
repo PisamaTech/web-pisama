@@ -21,6 +21,9 @@ const config = {
         mono: ["var(--font-mono)"],
       },
     },
+    screens: {
+      lg: "940px",
+    },
   },
   darkMode: "class",
   plugins: [heroui(themeHeroUI), require("@tailwindcss/typography")],
