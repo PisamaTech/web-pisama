@@ -99,7 +99,7 @@ export default function GuiaReagendamientoPageConLeo(): JSX.Element {
                     />
                   </li>
                 </ul>
-                <div className="not-prose mt-12 rounded-lg border-l-4 border-warning-500 bg-warning-50/50 p-4">
+                <div className="not-prose mt-12 rounded-lg border-l-4 border-warning-500 bg-warning-100/70 p-4">
                   <p className="flex items-start gap-3">
                     <FaInfoCircle className="mt-1 h-5 w-5 flex-shrink-0 text-warning-600" />
                     <span>
