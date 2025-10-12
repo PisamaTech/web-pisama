@@ -99,8 +99,8 @@ export default function GuiaFacturacionPage(): JSX.Element {
           <p>
             Aquí está la mejor parte, y lo que nos diferencia de los paquetes
             fijos. Nuestro sistema inteligente analiza cuántas horas utilizaste
-            en una semana (de lunes a domingo) y aplica un descuento a **cada
-            una de esas horas**. No tienes que hacer nada.
+            en una semana (de lunes a domingo) y aplica un descuento a{" "}
+            <strong>cada una de esas horas</strong>. No tienes que hacer nada.
           </p>
           <div className="not-prose my-8 overflow-hidden rounded-lg border border-gris-calido">
             <table className="w-full text-left">
@@ -128,9 +128,13 @@ export default function GuiaFacturacionPage(): JSX.Element {
                   <td className="p-4 font-bold text-success-600">-$60</td>
                 </tr>
                 <tr className="bg-success-50/50">
-                  <td className="p-4">16+ horas</td>
+                  <td className="p-4">16 a 19 horas</td>
+                  <td className="p-4 font-bold text-success-700">-$80</td>
+                </tr>
+                <tr className="bg-success-50/50">
+                  <td className="p-4">20+ horas</td>
                   <td className="p-4 font-bold text-success-700">
-                    -$80 (¡Ahorro Máximo!)
+                    -$100 (¡Ahorro Máximo!)
                   </td>
                 </tr>
               </tbody>
@@ -139,7 +143,7 @@ export default function GuiaFacturacionPage(): JSX.Element {
 
           {/* --- SECCIÓN 4: TU CENTRO FINANCIERO --- */}
           <h2 className="mt-16">Tu Centro Financiero en la App</h2>
-          <div className="not-prose grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <div className="not-prose grid grid-cols-1 items-center gap-8 ">
             <div>
               <p>
                 Dentro de la aplicación, la sección{" "}
@@ -162,7 +166,7 @@ export default function GuiaFacturacionPage(): JSX.Element {
               alt="Vista de la sección de facturación en la aplicación de Espacio Pisama"
               width={500}
               height={400}
-              className="rounded-lg shadow-xl"
+              className="rounded-2xl mx-auto border-2 border-default/30 shadow-2xl"
             />
           </div>
 
