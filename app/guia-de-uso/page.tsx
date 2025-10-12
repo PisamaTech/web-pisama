@@ -2,8 +2,8 @@
 import { Button } from "@heroui/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { JSX } from "react";
 import {
   FaRegStar,
@@ -12,7 +12,6 @@ import {
   FaRedoAlt,
   FaFileInvoiceDollar,
   FaArrowRight,
-  FaLightbulb,
 } from "react-icons/fa";
 
 // --- SEO: Metadatos de la Página ---

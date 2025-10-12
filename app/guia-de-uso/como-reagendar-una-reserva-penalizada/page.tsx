@@ -69,16 +69,17 @@ export default function GuiaReagendamientoPageConLeo(): JSX.Element {
                 <h3>Paso 1: Encuentra tu Reserva a Reagendar</h3>
                 <p>
                   Para empezar, tienes dos caminos muy sencillos para localizar
-                  tu "crédito":
+                  tu &quot;crédito&quot;:
                 </p>
                 <ul>
                   <li>
                     <strong>En tu Dashboard:</strong> Al iniciar sesión, busca
-                    la tarjeta "Disponibles para Reagendar".
+                    la tarjeta &quot;Disponibles para Reagendar&quot;.
                   </li>
                   <li>
-                    <strong>En "Mis Reservas":</strong> Filtra por el estado
-                    "Penalizada". Verás el botón de reagendamiento activo.
+                    <strong>En &quot;Mis Reservas&quot;:</strong> Filtra por el
+                    estado &quot;Penalizada&quot;. Verás el botón de
+                    reagendamiento activo.
                   </li>
                 </ul>
                 <div className="not-prose mt-6 rounded-lg border-l-4 border-warning-500 bg-warning-50/50 p-4">
@@ -93,12 +94,12 @@ export default function GuiaReagendamientoPageConLeo(): JSX.Element {
                 </div>
               </div>
               <div>
-                <h3>Paso 2: Activa el "Modo Reagendamiento"</h3>
+                <h3>Paso 2: Activa el &quot;Modo Reagendamiento&quot;</h3>
                 <p>
-                  Una vez que hagas clic en "Reagendar", fíjate cómo la
-                  plataforma te lleva al Calendario y aparece un banner naranja.
-                  ¡Esa es la señal! Te confirma que estás en modo reagendamiento
-                  y que tu próxima reserva será sin costo.
+                  Una vez que hagas clic en &quot;Reagendar&quot;, fíjate cómo
+                  la plataforma te lleva al Calendario y aparece un banner
+                  naranja. ¡Esa es la señal! Te confirma que estás en modo
+                  reagendamiento y que tu próxima reserva será sin costo.
                 </p>
               </div>
               <div>
