@@ -75,7 +75,7 @@ export default function ContactInfoSection() {
             <p className="flex items-center font-sans text-primary">
               <FaMapMarkerAlt className="mr-3 h-5 w-5 text-terracotta-suave" />{" "}
               <a
-                href="https://maps.app.goo.gl/vCc3HGvZGsQsjuTf9"
+                href="https://maps.app.goo.gl/osFf8ENybVemWYwv8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-terracotta-suave"
@@ -174,13 +174,14 @@ export default function ContactInfoSection() {
         {/* Columna Derecha: Mapa */}
         <div className="w-full mx-auto h-[500px] max-w-[500px] overflow-hidden rounded-xl shadow-2xl">
           <iframe
+            title="Ubicación de Espacio Pisama en Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f813b9c05e583%3A0x2388d5c4fcb52b9f!2sEspacio%20Pisama%20%7C%20Alquiler%20de%20Consultorios!5e0!3m2!1ses!2suy!4v1760237327228!5m2!1ses!2suy"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
             allowFullScreen={true}
-            className="w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.0134501297057!2d-56.169923123518814!3d-34.90611197353255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81afa8928cc1%3A0x8bd901040c3bfb91!2sJuan%20Paullier%201192%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1758164896331!5m2!1ses!2suy"
-            style={{ border: 0 }}
-            title="Ubicación de Espacio Pisama en Google Maps"
           />
         </div>
       </div>
