@@ -3,6 +3,7 @@ import { Button } from "@heroui/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { JSX } from "react";
 import {
   FaRegStar,
@@ -11,6 +12,7 @@ import {
   FaRedoAlt,
   FaFileInvoiceDollar,
   FaArrowRight,
+  FaLightbulb,
 } from "react-icons/fa";
 
 // --- SEO: Metadatos de la Página ---
@@ -72,22 +74,42 @@ const guideData: GuideCardProps[] = [
   },
 ];
 
+// --- NUEVA SECCIÓN DE BIENVENIDA DE LEO ---
+const WelcomeSection = () => (
+  <section className="bg-background py-20">
+    <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-3">
+      {/* Ilustración de Leo */}
+      <div className="flex justify-center md:col-span-1">
+        <Image
+          src="/images/leo/leo-saludando.webp" // <-- ¡IMPORTANTE! Reemplaza con la ruta a tu imagen de Leo
+          alt="Leo, el asistente virtual de Espacio Pisama"
+          width={400}
+          height={400}
+          // className="rounded-full"
+        />
+      </div>
+      {/* Texto de Bienvenida */}
+      <div className="text-center md:col-span-2 md:text-left">
+        <h1 className="font-display text-5xl font-bold text-primary-500">
+          ¡Hola, soy Leo! Tu guía en Espacio Pisama.
+        </h1>
+        <p className="mt-6 font-sans text-lg text-foreground/80">
+          Mi misión es ayudarte a que aproveches al máximo cada herramienta que
+          hemos creado para ti. Sé que empezar en una nueva plataforma puede
+          generar preguntas, ¡y para eso estoy aquí! A continuación, he
+          preparado una serie de guías detalladas y videos paso a paso para
+          resolver todas tus dudas.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
 export default function GuiaDeUsoPage(): JSX.Element {
   return (
     <>
       {/* --- Encabezado de la Página --- */}
-      <section className="bg-content2 py-20 text-center">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h1 className="font-display text-5xl font-bold text-primary-500">
-            Guía de Uso de la Plataforma
-          </h1>
-          <p className="mx-auto mt-6 max-w-3xl font-sans text-lg text-foreground/80">
-            Bienvenido/a a nuestro centro de ayuda. Aquí encontrarás guías
-            detalladas y tutoriales en video para sacar el máximo provecho de
-            cada herramienta que hemos creado para ti.
-          </p>
-        </div>
-      </section>
+      <WelcomeSection />
 
       {/* --- Grilla de Guías --- */}
       <section className="bg-content1 py-20">
