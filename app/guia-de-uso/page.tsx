@@ -80,8 +80,9 @@ const WelcomeSection = () => (
       {/* Ilustración de Leo */}
       <div className="flex justify-center md:col-span-1">
         <Image
-          src="/images/leo/leo-saludando.webp" // <-- ¡IMPORTANTE! Reemplaza con la ruta a tu imagen de Leo
-          alt="Leo, el asistente virtual de Espacio Pisama"
+          src="/images/leo/leo-saludando-animado.webp"
+          alt="Leo, el asistente virtual de Espacio Pisama saludando"
+          className="border border-content3 rounded-[20px] shadow-2xl"
           width={400}
           height={400}
           // className="rounded-full"
@@ -90,14 +91,14 @@ const WelcomeSection = () => (
       {/* Texto de Bienvenida */}
       <div className="text-center md:col-span-2 md:text-left">
         <h1 className="font-display text-5xl font-bold text-primary-500">
-          ¡Hola, soy Leo! Tu guía en Espacio Pisama.
+          Hola, soy Leo! Tu asistente virtual en Espacio Pisama.
         </h1>
         <p className="mt-6 font-sans text-lg text-foreground/80">
           Mi misión es ayudarte a que aproveches al máximo cada herramienta que
-          hemos creado para ti. Sé que empezar en una nueva plataforma puede
-          generar preguntas, ¡y para eso estoy aquí! A continuación, he
-          preparado una serie de guías detalladas y videos paso a paso para
-          resolver todas tus dudas.
+          hemos creado para vos. Sé que empezar en una nueva plataforma puede
+          generar preguntas, y para eso estoy aquí! A continuación, he preparado
+          una serie de guías detalladas y videos paso a paso para resolver todas
+          tus dudas.
         </p>
       </div>
     </div>
@@ -148,14 +149,14 @@ export default function GuiaDeUsoPage(): JSX.Element {
       </section>
 
       {/* --- CTA de Contacto --- */}
-      <section className="py-20 bg-content2 text-center">
+      <section className="py-20 bg-content4 text-center">
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="font-display text-4xl font-bold text-primary-500">
             ¿No encuentras lo que buscas?
           </h2>
           <p className="mx-auto mt-6 max-w-2xl font-sans text-lg text-foreground/80">
-            Si tienes una duda que no está cubierta en nuestras guías, nuestro
-            equipo está siempre disponible para ayudarte personalmente.
+            Si tienes una duda que no está cubierta en nuestras guías, ponte en
+            contacto con nosotros para ayudarte personalmente.
           </p>
           <div className="mt-8">
             <Button

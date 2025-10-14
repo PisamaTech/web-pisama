@@ -17,19 +17,19 @@ export default function SiteFooter() {
               href="/"
               className="block text-secondary-400 text-2xl font-bold text-center"
             >
-              espacio PISAMA
               <Image
                 src={LogoPisama}
                 alt="Logo de Pisama"
-                className="my-4 mx-auto hover:scale-105 ease-in-out transition-all duration-200"
+                className="mb-4 mt-[-10px] mx-auto hover:scale-105 ease-in-out transition-all duration-200"
                 width={120}
                 height={120}
               />
             </Link>
             <div className="text-center text-sm text-gris-calido mb-4 font-sans">
               <div>
-                <span>Juan Paullier 1192</span>, <span>Montevideo</span>,{" "}
-                <span>Montevideo</span>, <span>11200</span>.
+                <span>Juan Paullier 1192</span>, <span>11200</span>{" "}
+                <span>Montevideo</span>, <span>Departamento de Montevideo</span>
+                .
               </div>
               <p>
                 Horario: <span>Lun-Dom 7:00-23:00</span>
@@ -62,10 +62,15 @@ export default function SiteFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/sistema-de-reservas"
+                    href="/app-de-reservas"
                     className="hover:text-secondary"
                   >
-                    Reservas
+                    Conoce la App
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/guia-de-uso" className="hover:text-secondary">
+                    Guía de Uso
                   </Link>
                 </li>
                 <li>

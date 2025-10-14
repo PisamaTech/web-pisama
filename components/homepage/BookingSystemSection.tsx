@@ -38,7 +38,7 @@ export default function BookingSystemSection(): JSX.Element {
             <div className="mt-8">
               <Button
                 as={Link}
-                href="/sistema-de-reservas"
+                href="/app-de-reservas"
                 className="bg-secondary font-display font-semibold text-white shadow-lg"
                 variant="solid"
                 size="lg"
