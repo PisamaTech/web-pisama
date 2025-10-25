@@ -98,8 +98,13 @@ const ImageGallery = () => {
                   {({ ref, open }) => (
                     <div
                       ref={ref}
-                      onClick={(e) => open(e)}
-                      onKeyDown={(e) => e.key === "Enter" && open()}
+                      onClick={open}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault(); // evita el scroll al presionar espacio
+                          (open as any)();
+                        }
+                      }}
                       role="button"
                       tabIndex={0}
                       className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
