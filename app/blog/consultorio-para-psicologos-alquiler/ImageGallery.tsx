@@ -99,7 +99,7 @@ const ImageGallery = () => {
                     <div
                       ref={ref}
                       onClick={open}
-                      onKeyDown={(e) => e.key === "Ente   r" && open()}
+                      onKeyDown={(e) => e.key === "Enter" && open()}
                       role="button"
                       tabIndex={0}
                       className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]"
@@ -117,7 +117,7 @@ const ImageGallery = () => {
 
                       {/* Icono de zoom en hover */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="bg-white/40 bg-opacity-90 rounded-full p-3">
+                        <div className="bg-white/50 bg-opacity-90 rounded-full p-3">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-8 w-8 text-gray-800"

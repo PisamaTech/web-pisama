@@ -1,10 +1,10 @@
 "use client";
-import type { JSX } from "react";
 
 import { Button } from "@heroui/button";
 import { Divider } from "@heroui/divider";
 import Image from "next/image";
 import Link from "next/link";
+import React, { JSX } from "react";
 import { FaCheckCircle, FaInfoCircle, FaTimesCircle } from "react-icons/fa";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
@@ -17,9 +17,9 @@ import reagendamientoRevertido from "@/public/images/reagendamiento/reagendamien
 
 export default function GuiaReagendamientoClient(): JSX.Element {
   return (
-    <main className="bg-background py-20 sm:py-24">
+    <main className="bg-background pt-20 sm:pt-24">
       <Gallery>
-        <div className="container mx-auto max-w-4xl px-4 lg:px-8">
+        <div className="container mx-auto max-w-4xl px-4 lg:px-8 mb-10">
           {/* --- SECCIÓN 1: BIENVENIDA DE LEO --- */}
           <header className="mb-16 grid grid-cols-1 items-center gap-8 md:grid-cols-4">
             <div className="flex justify-center md:col-span-1">
@@ -82,7 +82,9 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                     >
                       {({ ref, open }) => (
                         <Image
-                          ref={ref as React.MutableRefObject<HTMLImageElement>}
+                          ref={
+                            ref as unknown as React.MutableRefObject<HTMLImageElement>
+                          }
                           onClick={open}
                           src={reagendamientoDashboard}
                           alt="Vista del dashboard con la opción para reagendar"
@@ -102,7 +104,9 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                     >
                       {({ ref, open }) => (
                         <Image
-                          ref={ref as React.MutableRefObject<HTMLImageElement>}
+                          ref={
+                            ref as unknown as React.MutableRefObject<HTMLImageElement>
+                          }
                           onClick={open}
                           src={reagendamientoReservas}
                           alt="Vista de la sección de reservas con la opción para reagendar"
@@ -138,7 +142,9 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                 >
                   {({ ref, open }) => (
                     <Image
-                      ref={ref as React.MutableRefObject<HTMLImageElement>}
+                      ref={
+                        ref as unknown as React.MutableRefObject<HTMLImageElement>
+                      }
                       onClick={open}
                       src={reagendamientoModo}
                       alt="Modo de reagendamiento activado"
@@ -162,7 +168,9 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                 >
                   {({ ref, open }) => (
                     <Image
-                      ref={ref as React.MutableRefObject<HTMLImageElement>}
+                      ref={
+                        ref as unknown as React.MutableRefObject<HTMLImageElement>
+                      }
                       onClick={open}
                       src={reagendamientoConfirmar}
                       alt="Confirmación del reagendamiento"
@@ -199,11 +207,13 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                 >
                   {({ ref, open }) => (
                     <Image
-                      ref={ref as React.MutableRefObject<HTMLImageElement>}
+                      ref={
+                        ref as unknown as React.MutableRefObject<HTMLImageElement>
+                      }
                       onClick={open}
                       src={reagendamientoRevertido}
                       alt="Reversión de un reagendamiento"
-                      className="cursor-pointer m-4 border-2 border-default/50 rounded-3xl shadow-xl"
+                      className="cursor-pointer"
                     />
                   )}
                 </Item>
@@ -224,11 +234,13 @@ export default function GuiaReagendamientoClient(): JSX.Element {
                 >
                   {({ ref, open }) => (
                     <Image
-                      ref={ref as React.MutableRefObject<HTMLImageElement>}
+                      ref={
+                        ref as unknown as React.MutableRefObject<HTMLImageElement>
+                      }
                       onClick={open}
                       src={reagendamientoPenalizado}
                       alt="Detalle de una reserva penalizada"
-                      className="cursor-pointer m-4 border-2 border-default/50 rounded-3xl shadow-xl"
+                      className="cursor-pointer"
                     />
                   )}
                 </Item>
@@ -238,7 +250,7 @@ export default function GuiaReagendamientoClient(): JSX.Element {
         </div>
       </Gallery>
       {/* --- CTA FINAL --- */}
-      <section className="bg-content4 py-20 text-center">
+      <section className="bg-content1 py-20 text-center">
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="font-display text-4xl font-bold text-primary-500">
             Espero haberte ayudado.
