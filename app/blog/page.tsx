@@ -7,10 +7,10 @@ const blogPosts = [
   {
     slug: "consultorio-para-psicologos-alquiler",
     title:
-      "Alquiler de Consultorios para Psicólogos: La Guía Definitiva para Elegir el Espacio Correcto",
+      "Alquiler de Consultorios para Psicólogos en Montevideo: La Solución para Trabajar Tranquilo",
     description:
-      "Una guía completa para elegir el espacio correcto para tu práctica, escrita por un psicólogo. Analizamos todo lo que debes tener en cuenta.",
-    date: "Setiembre 21, 2025",
+      'Consultorios por hora para psicólogos en Parque Rodó. Reserva online "sin intermediarios", privacidad acústica y ambiente profesional.',
+    date: "Octubre 25, 2025",
   },
   // ... more posts here
 ];
