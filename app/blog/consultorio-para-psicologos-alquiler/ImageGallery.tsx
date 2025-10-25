@@ -98,7 +98,7 @@ const ImageGallery = () => {
                   {({ ref, open }) => (
                     <div
                       ref={ref}
-                      onClick={open}
+                      onClick={(e) => open(e)}
                       onKeyDown={(e) => e.key === "Enter" && open()}
                       role="button"
                       tabIndex={0}

@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import React from "react";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
 import aplicacionConfirma from "@/public/images/aplicacion-confirma.webp";
@@ -28,7 +29,9 @@ const HowItWorksSection = () => {
               >
                 {({ ref, open }) => (
                   <Image
-                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    ref={
+                      ref as unknown as React.MutableRefObject<HTMLImageElement>
+                    }
                     onClick={open}
                     src={aplicacionRegistro}
                     alt="Captura del registro en la plataforma"
@@ -53,7 +56,9 @@ const HowItWorksSection = () => {
               >
                 {({ ref, open }) => (
                   <Image
-                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    ref={
+                      ref as unknown as React.MutableRefObject<HTMLImageElement>
+                    }
                     onClick={open}
                     src={aplicacionVisualiza}
                     alt="Captura del calendario de la plataforma"
@@ -78,7 +83,9 @@ const HowItWorksSection = () => {
               >
                 {({ ref, open }) => (
                   <Image
-                    ref={ref as React.MutableRefObject<HTMLImageElement>}
+                    ref={
+                      ref as unknown as React.MutableRefObject<HTMLImageElement>
+                    }
                     onClick={open}
                     src={aplicacionConfirma}
                     alt="Captura de la confirmación de reserva"
