@@ -58,7 +58,7 @@ export const siteConfig = {
       label: "Nosotros",
       dropdown: [
         { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
-        { label: "Blog de Artículos", href: "/blog" },
+        { label: "Blog", href: "/blog" },
         { label: "Contacto", href: "/contacto" },
       ],
     },

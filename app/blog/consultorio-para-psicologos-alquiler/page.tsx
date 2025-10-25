@@ -7,6 +7,7 @@ import React from "react";
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 import CtaSection from "@/components/homepage/CtaSection";
 import appReservas from "@/public/images/aplicacion-web-reservas.webp";
+import psicologo from "@/public/images/blog/consultorio1-psicologo-tranquilo.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
@@ -15,15 +16,15 @@ import salaespera1 from "@/public/images/salaespera-1.webp";
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title:
-    "Alquiler de Consultorios para Psicólogos: La Guía Definitiva | Espacio Pisama",
-  description:
-    "Una guía completa para elegir el espacio correcto para tu práctica, escrita por un psicólogo. Analizamos todo lo que debes tener en cuenta.",
+    "Alquiler de Consultorios para Psicólogos: La Solución para Trabajar Tranquilo | PISAMA",
+  description: `Consultorios por hora para psicólogos en Parque Rodó. Reserva online "sin intermediarios", privacidad acústica y ambiente profesional. Conocé PISAMA.`,
   keywords: [
     "consultorios para psicólogos montevideo",
-    "alquiler de consultorios en montevideo",
+    "alquiler de consultorios psicológico en montevideo",
     "consultorios por hora en montevideo",
     "consultorios por hora Parque Rodó",
-    "Montevideo",
+    "alquiler en Montevideo",
+    "consultorio en parque rodó",
     "Parque Rodó",
     "espacios para terapias Montevideo",
     "reserva online de consultorios",
@@ -36,17 +37,17 @@ const CtaBox = () => (
       ¿Listo/a para encontrar tu encuadre perfecto?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Si esta filosofía resuena contigo, te invito a conocer el espacio que
-      hemos creado pensando exactamente en estas necesidades.
+      Te ofrecemos lo que realmente necesitás para trabajar tranquilo. Un
+      espacio diseñado por psicólogos, para psicólogos.
     </p>
     <Button
       as={Link}
-      href="/consultorios"
+      href="/"
       className="mb-4 bg-secondary-500 font-display font-semibold text-white! no-underline"
       size="lg"
       variant="flat"
     >
-      Explora Nuestros Espacios
+      Conocé Nuestro Espacio
     </Button>
   </div>
 );
@@ -67,162 +68,164 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
           <h1>
-            Alquiler de Consultorios para Psicólogos: La Guía Definitiva para
-            Elegir el Espacio Correcto
+            Alquiler de Consultorios para Psicólogos en Montevideo: La Solución
+            para Trabajar Tranquilo
           </h1>
-          <p>
-            Como psicólogos, invertimos años en nuestra formación para poder
-            ofrecer el mejor cuidado a nuestros pacientes. Sin embargo, hay un
-            aspecto fundamental de nuestra práctica que a menudo subestimamos:
-            el espacio físico donde trabajamos. La búsqueda de un consultorio en
-            alquiler no es solo encontrar cuatro paredes; es encontrar el
-            entorno adecuado para que la terapia pueda florecer.
-          </p>
-          <p>
-            He pasado por ese proceso. He lidiado con las frustraciones, las
-            incomodidades y las &quot;banderas rojas&quot; que muchos de
-            nosotros enfrentamos al empezar. Y en ese camino, entendí una verdad
-            fundamental que quiero compartir contigo.
-          </p>
-
-          {/* --- SECCIÓN 1: EL ENCUADRE --- */}
-          <h2>
-            Más Allá de las Cuatro Paredes: El Consultorio como &quot;Encuadre
-            Fijo&quot; de tu Terapia
-          </h2>
-          <p>
-            En nuestra jerga teórica, hablamos del &quot;encuadre&quot; como ese
-            conjunto de constantes que dan estabilidad al proceso terapéutico.
-            Generalmente pensamos en el horario, los honorarios, nuestro rol.
-            Pero, ¿qué pasa con el espacio? El consultorio es, quizás, el
-            elemento más tangible de ese encuadre.
-          </p>
           <div className="my-8 flex justify-center">
             <Image
-              src={consultorio1}
-              alt="Consultorio de psicología profesional y acogedor"
+              src={psicologo}
+              alt="Psicólogo con paciente en consultorio 1 de Espacio PISAMA"
               className="rounded-lg shadow-xl h-auto"
               width={500}
             />
           </div>
-          <blockquote>
-            Por qué la estabilidad del espacio es tan crucial para vos como para
-            tus pacientes
-          </blockquote>
           <p>
-            Un consultorio que funciona, que es predecible y profesional, no
-            solo le da seguridad al paciente; te la da a vos. Te permite liberar
-            tu mente de preocupaciones logísticas para enfocarte en lo único que
-            importa: la persona que tienes delante. Cuando el encuadre es
-            inestable, tu atención se desvía, y eso, inevitablemente, impacta en
-            tu trabajo.
+            Mi nombre es Gastón y soy psicólogo, sé exactamente lo que significa
+            buscar un consultorio en alquiler en Montevideo. He pasado por las
+            frustraciones, las incomodidades y todas esas &quot;banderas
+            rojas&quot; que te hacen perder tiempo y afectan tu práctica
+            profesional.
           </p>
-
-          {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
+          <p>
+            Por eso creé <strong>Espacio PISAMA</strong>: un espacio de alquiler
+            de oficinas por hora en Parque Rodó diseñado específicamente para
+            eliminar todos esos problemas. No es solo un lugar más para
+            alquilar. Es la solución que yo hubiese querido tener cuando empecé
+            a trabajar como psicólogo, y que ahora pongo a disposición de
+            colegas que buscan trabajar con tranquilidad.
+          </p>
+          {/* --- SECCIÓN 1: EL ENCUADRE --- */}
           <h2>
-            Los 3 Pilares No Negociables de un Buen Consultorio Psicológico
+            El Consultorio como Encuadre: La Filosofía Detrás de Espacio PISAMA
           </h2>
           <p>
-            Basado en mi experiencia, hay tres factores que nunca deberías
-            sacrificar al elegir un lugar.
+            Cuando hablamos del &quot;encuadre&quot; terapéutico, pensamos en el
+            horario, los honorarios, nuestro rol. Pero el espacio físico es el
+            elemento más tangible de ese encuadre, y en Espacio PISAMA lo
+            tomamos muy en serio.
           </p>
-          <h3>
-            La Privacidad Acústica: El pilar fundamental de la confianza
-            terapéutica
-          </h3>
+          <div className="my-8 flex justify-center">
+            <Image
+              src={consultorio1}
+              alt="Consultorio PISAMA - Espacio profesional para psicólogos"
+              className="rounded-lg shadow-xl h-auto"
+              width={800}
+            />
+          </div>
+          <blockquote>
+            Un consultorio predecible y profesional no solo le da seguridad al
+            paciente; te la da a vos.
+          </blockquote>
           <p>
-            Esto es, para mí, el punto más crítico. He trabajado en lugares
-            donde la aislación sonora era tan deficiente que se podían escuchar
-            fragmentos de otras sesiones en la sala de espera. Es una situación
-            desagradable que rompe por completo la confidencialidad y la
-            sensación de seguridad del paciente. En{" "}
-            <Link href="/">Espacio Pisama</Link>, fue mi obsesión desde el
-            inicio. No solo busqué aislar acústicamente los consultorios, sino
-            que añadí un detalle simple pero efectivo: música ambiental en la
-            sala de espera para enmascarar cualquier sonido y garantizar una
-            privacidad total.
+            En Espacio PISAMA diseñamos cada detalle para que vos puedas
+            liberarte de preocupaciones logísticas y enfocarte exclusivamente en
+            el paciente que tenés adelante. Cuando el encuadre es estable, tu
+            atención no se desvía, y eso potencia tu trabajo.
+          </p>
+          {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
+          <h2>Los 3 Pilares que Hacen de Espacio PISAMA tu Mejor Opción</h2>
+          <p>
+            Hay tres factores que priorice al diseñar este espacio, porque sé
+            que son esenciales para nuestra práctica:
+          </p>
+          <h3>1. Privacidad Acústica: Nuestra Obsesión Principal</h3>
+          <p>
+            He trabajado en lugares donde se escuchaban fragmentos de otras
+            sesiones en la sala de espera. Eso es inaceptable.{" "}
+            <strong>
+              En Espacio PISAMA, la privacidad acústica fue mi obsesión desde el
+              inicio.
+            </strong>{" "}
+            No solo aislamos acústicamente cada consultorio, sino que instalamos
+            música ambiental en la sala de espera para enmascarar cualquier
+            sonido residual.
+          </p>
+          <p>
+            <strong>Resultado:</strong> Confidencialidad absoluta. Tus pacientes
+            pueden hablar con total libertad, sabiendo que nadie más los
+            escuchará.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={salaespera1}
-              alt="Sala de espera confortable y profesional"
+              alt="Sala de espera PISAMA con música ambiental"
               className="rounded-lg shadow-xl h-auto"
               width={400}
             />
           </div>
           <h3>
-            El Ambiente: Cómo una decoración y limpieza impecables impactan la
-            sesión
+            2. Ambiente Profesional: Diseñado por Psicólogos, para Psicólogos
           </h3>
           <p>
-            La primera impresión cuenta. He tenido que alquilar consultorios con
-            sillones viejos y rotos, o peor, llegar y tener que barrer antes de
-            que llegara mi paciente. Eso te saca de tu rol inmediatamente. El
-            espacio debe reflejar profesionalismo. Mi esposa también es
-            psicóloga, y juntos diseñamos cada detalle de nuestros espacios.
-            Buscamos una ambientación minimalista pero cálida, profesional y
-            acogedora. Un lugar que invite a la calma, no que genere
-            distracciones.
+            He tenido que alquilar consultorios con sillones rotos o llegar a
+            barrer antes de que llegara mi paciente. Eso te saca completamente
+            de tu rol profesional.{" "}
+            <strong>
+              Mi esposa también es psicóloga, y juntos diseñamos cada rincón de
+              Espacio PISAMA.
+            </strong>
+          </p>
+          <p>
+            Buscamos un estilo minimalista pero cálido, profesional y acogedor.
+            Un lugar que invite a la calma desde que cruzás la puerta. Los
+            muebles, la iluminación, los colores: todo está pensado para generar
+            el ambiente terapéutico ideal.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={consultorio3}
-              alt="Detalle de la decoración de un consultorio"
+              alt="Decoración minimalista de consultorios PISAMA"
               className="rounded-lg shadow-xl h-auto"
-              width={500}
+              width={800}
             />
           </div>
-          <h3>
-            La Funcionalidad: Esos pequeños detalles (pañuelos, iluminación) que
-            lo cambian todo
-          </h3>
+          <h3>3. Funcionalidad: Cada Detalle Cubierto, Siempre</h3>
           <p>
-            El encuadre fijo también significa que todo está como debe estar,
-            siempre. ¿Hay una caja de pañuelos a mano? ¿La iluminación es
-            adecuada? ¿La temperatura es agradable? Cuando estos detalles están
-            cubiertos, no tenés que pensar en ellos. El espacio trabaja para
-            vos, no al revés.
+            <strong>
+              En Espacio PISAMA, todo está como debe estar, siempre.
+            </strong>{" "}
+            Hay pañuelos a mano, la iluminación es perfecta y la limpieza es
+            impecable. La temperatura es agradable todo el año, ya que todos los
+            consultorios cuentan con aire acondicionado. No tenés que pensar en
+            nada de esto. El espacio trabaja para vos, no al revés.
           </p>
-
           <CtaBox />
-
           {/* --- SECCIÓN 3: LA LOGÍSTICA OCULTA --- */}
           <h2>
-            La Logística Oculta: Lo que Nadie te Cuenta sobre el Alquiler por
-            Horas
+            La Logística que Resolvimos (Para Facilitar la Gestión de tu Agenda)
           </h2>
           <p>
-            Más allá del espacio físico, está la gestión del día a día, que
-            puede convertirse en una fuente constante de estrés.
+            Más allá del espacio físico, la gestión del día a día puede
+            convertirse en una fuente constante de estrés. Por eso desarrollamos
+            soluciones específicas:
           </p>
-          <h3>
-            El Sistema de Reservas: Cómo evitar el caos que daña tu imagen
-            profesional
-          </h3>
+          <h3>Sistema de Reservas Online en Tiempo Real: Adiós al Caos</h3>
           <p>
             Al principio de mi carrera, viví la pesadilla de la coordinación por
             mensaje. Consultar disponibilidad, esperar respuesta, confirmar con
             el paciente y, a veces, al volver a contactar, descubrir que la hora
             ya no estaba disponible. Tener que cambiar un horario ya confirmado
             proyecta una imagen poco profesional y desorganizada. Es un desgaste
-            innecesario que resolvimos con{" "}
-            <Link href="/sistema-de-reservas">
-              nuestra plataforma de reservas en tiempo real
+            innecesario que resolvimos con nuestra{" "}
+            <Link href="/app-de-reservas">
+              plataforma online de reservas en tiempo real
             </Link>
             .
+          </p>
+          <p>
+            Ves la disponibilidad en tiempo real, reservás al instante, y
+            confirmás con tu paciente sin riesgo de sorpresas. Es simple, rápido
+            y profesional.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={appReservas}
-              alt="Aplicación de reservas de Espacio Pisama"
+              alt="Plataforma de reservas online de PISAMA"
               className="rounded-lg shadow-xl h-auto"
               width={250}
             />
           </div>
-          <h3>
-            La Comunidad de Colegas: Por qué la baja rotación y el respeto son
-            clave
-          </h3>
+          <h3>Comunidad de Colegas Respetuosos: Baja Rotación, Alta Calidad</h3>
           <p>
             Otro factor de estrés son los colegas impuntuales. He tenido que
             golpear puertas para que un profesional saliera porque ya era mi
@@ -230,82 +233,99 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             paciente que esperaba. Por eso, en Espacio Pisama, fomento una
             comunidad de profesionales estable y respetuosa. Nuestro{" "}
             <Link href="/precios">
-              {" "}
-              sistema de descuentos por cantidad de horas{" "}
+              sistema de descuentos por cantidad de horas utilizadas por semana
             </Link>
-            utilizadas por semana, es una busqueda de fidelizar a colegas
-            comprometidos que valoren tanto su tiempo como el de los demás.
-            Prefiero tener una baja rotación y un ambiente de trabajo armónico,
-            como explico en{" "}
+            , es una busqueda de fidelizar a colegas comprometidos que valoren
+            tanto su tiempo como el de los demás. Prefiero tener una baja
+            rotación y un ambiente de trabajo armónico, como explico en{" "}
             <Link href="/sobre-nosotros">nuestra filosofía</Link>.
           </p>
-          <h3>
-            La Accesibilidad: Un factor decisivo para la adherencia de tus
-            pacientes
-          </h3>
+          <h3>Ubicación Estratégica: Parque Rodó, Sin Complicaciones</h3>
           <p>
-            Un consultorio bien ubicado facilita la vida. Que esté cerca de
-            avenidas principales con buen acceso a ómnibus es clave. Otro
-            detalle, especialmente en Montevideo, es el estacionamiento. Estar
-            en una zona como Parque Rodó, sin estacionamiento tarifado y donde
-            siempre se encuentra lugar, elimina una barrera importante para
-            nuestros pacientes.
+            Espacio PISAMA está en <strong>Parque Rodó</strong>, cerca de
+            avenidas principales (Blvr. Artigas, Blvr. España, Rivera, 18 de
+            Julio) con excelente acceso en ómnibus. Estamos ubicados en el
+            corazón de Montevideo, muy cercano a barrios como Pocitos, Cordón,
+            Parque Battle, Punta Carretas y Centro.
+          </p>
+          <p>
+            Y algo clave en Montevideo: estamos en una zona de estacionamiento
+            no tarifado, donde siempre se encuentra lugar. Eliminamos una
+            barrera importante para la adherencia de tus pacientes.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={fachada1}
-              alt="Fachada de Espacio Pisama"
+              alt="Fachada de PISAMA en Parque Rodó, Montevideo"
               className="rounded-lg shadow-xl h-auto"
               width={350}
             />
           </div>
-
           {/* --- SECCIÓN 4: BANDERAS ROJAS --- */}
           <h2>
-            Banderas Rojas: Señales de Alerta para Descartar un Consultorio
-            Inmediatamente
+            En Espacio PISAMA Eliminamos todas las{" "}
+            <span className="text-red-400">Banderas Rojas </span>
+            al momento de Alquilar un Consultorio Psicológico
           </h2>
           <p>
-            Si tuviera que resumir cuándo dar media vuelta y seguir buscando,
-            sería en estas situaciones:
+            Si alguna vez te preocupaste por alguno de estos problemas, Espacio
+            PISAMA los resuelve todos:
           </p>
           <ul>
             <li>
-              Cuando tienes que preocuparte por algo más que tu paciente. Si
-              tienes que pensar en la limpieza, en si habrá pañuelos, en si el
-              sillón está roto, ese no es tu lugar.
+              <strong>¿Privacidad dudosa?</strong> En Espacio PISAMA es
+              absoluta, garantizada por aislación acústica profesional y música
+              ambiental.
             </li>
             <li>
-              Si la privacidad no es una garantía absoluta. Si escuchas
-              conversaciones o sientes que pueden escucharte, descártalo.
+              <strong>¿Ambiente desprolijo?</strong> Cada consultorio está
+              impecable, siempre. Decoración cuidada, limpieza garantizada.
             </li>
             <li>
-              Si percibes un ambiente de impuntualidad o falta de respeto entre
-              los colegas que allí trabajan.
+              <strong>¿Colegas impuntuales?</strong> Fomentamos una comunidad
+              respetuosa y estable. La impuntualidad no es tolerada.
+            </li>
+            <li>
+              <strong>¿Reservas caóticas?</strong> Sistema online en tiempo
+              real. Reservás en segundos, sin intermediarios.
+            </li>
+            <li>
+              <strong>¿Mala ubicación?</strong> Parque Rodó, acceso fácil en
+              ómnibus, estacionamiento sin problemas.
             </li>
           </ul>
-
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
-          <h2>
-            Conclusión: Tu Consultorio Ideal es Aquel Donde Vuelves a lo
-            Esencial
-          </h2>
-          <p className="pb-8">
-            Elegir un consultorio es una decisión estratégica para tu práctica.
-            El lugar correcto no es el más barato ni el más lujoso. Es aquel que
-            funciona como un verdadero &quot;encuadre fijo&quot;: un pilar
-            estable e invisible que te da la tranquilidad y la confianza para
-            dedicarte por completo a tu paciente. Es un espacio donde puedes,
-            simplemente, ser psicólogo.
+          <h2>Espacio PISAMA: El Consultorio Donde Volvés a lo Esencial</h2>
+          <p>
+            Al crear Espacio PISAMA intenté resolver todos los problemas que
+            viví cuando tuve que alquilar un consultorio como psicólogo.{" "}
+            <strong>
+              No es el espacio más barato ni el más lujoso. Es el que funciona.
+            </strong>{" "}
+            Es un &quot;encuadre fijo&quot; real: un pilar estable que te da
+            tranquilidad y confianza para dedicarte por completo a tu paciente.
           </p>
-
+          <p className="pb-8">
+            Si buscás un lugar donde simplemente puedas ser psicólogo, sin
+            preocupaciones logísticas ni sorpresas desagradables,{" "}
+            <strong>Espacio PISAMA es tu lugar</strong>. Te invito a conocerlo.
+          </p>
+          <div className="aspect-video my-8">
+            <iframe
+              className="rounded-lg shadow-xl w-full h-full"
+              src="https://www.youtube.com/embed/_0-Eh-JvQys"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioPsicologosFaqSection />
         </article>
       </main>
       <CtaSection
-        title="Tu Práctica Merece el Mejor Entorno"
-        description="Has visto lo que importa: privacidad, ambiente y una logística que te libere. Descubre un espacio donde todo esto está resuelto para que puedas enfocarte en lo esencial: tus pacientes."
+        title="Reservá tu Hora en Espacio PISAMA Hoy"
+        description="Privacidad acústica total, ambiente profesional y reservas en tiempo real. Todo lo que necesitás para trabajar tranquilo está resuelto. Busca tu horario y comenza a reservar hoy mismo."
         buttonText="Ver Disponibilidad en Tiempo Real"
         buttonLink="/disponibilidad"
       />

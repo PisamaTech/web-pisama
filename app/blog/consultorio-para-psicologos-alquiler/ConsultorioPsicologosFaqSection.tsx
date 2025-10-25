@@ -52,7 +52,8 @@ export default function ConsultorioPsicologosFaqSection() {
   return (
     <div className="border-t-1 border-primary pt-2">
       <h2 className="text-3xl font-bold pb-8 text-primary-500">
-        Preguntas Frecuentes sobre el Alquiler de Espacios para Terapia
+        Preguntas Frecuentes sobre el Alquiler de Oficinas para Terapia
+        Psicológica
       </h2>
       <Accordion selectionMode="multiple" variant="splitted" className="mt-8">
         {faqData.map((item) => (
