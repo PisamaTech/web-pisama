@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 const CtaBox = () => (
-  <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400">
+  <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400 hover:scale-103 transition-transform duration-300">
     <h3 className="font-display text-3xl font-bold text-primary-500 mt-8!">
       ¿Listo/a para encontrar tu encuadre perfecto?
     </h3>
