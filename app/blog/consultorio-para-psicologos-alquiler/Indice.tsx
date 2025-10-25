@@ -15,7 +15,7 @@ const sections = [
     title: "Los 3 Pilares de Espacio PISAMA",
     id: "pilares",
     subsections: [
-      { title: "1. Ambiente Profesional", id: "ambiente-profesional" },
+      { title: "1. Ambientación Profesional", id: "ambiente-profesional" },
       { title: "2. Privacidad Acústica", id: "privacidad-acustica" },
       { title: "3. Funcionalidad", id: "funcionalidad" },
     ],
@@ -54,12 +54,12 @@ const Indice = () => {
   };
 
   return (
-    <Card className="bg-content1/50 mx-auto max-w-[450px] text-base">
+    <Card className="bg-content1/50 mx-auto max-w-[450px] text-sm">
       <CardHeader className="flex-col">
         <div className="flex flex-row gap-4 text-primary-500 mt-4 items-center">
           <FaIndent size={20} />
           <h2 className="font-bold mt-0 mb-0" id="indice">
-            Contenido del Artículo
+            Indice de Contenido
           </h2>
         </div>
         <Divider className="mb-1 mt-5" />

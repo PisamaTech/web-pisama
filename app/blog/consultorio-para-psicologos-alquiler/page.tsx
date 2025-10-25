@@ -79,7 +79,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           <p className="mt-12">
             Mi nombre es Gastón y soy psicólogo, sé exactamente lo que significa
             buscar un consultorio en alquiler en Montevideo. He pasado por las
-            frustraciones, las incomodidades y todas esas{" "}
+            frustraciones, las incomodidades y todas esas 🚩{" "}
             <span className="text-red-400">banderas rojas</span> que te hacen
             perder tiempo y afectan tu práctica profesional.
           </p>
@@ -128,7 +128,8 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             que son esenciales para nuestra práctica psicológica:
           </p>
           <h3 id="ambiente-profesional">
-            1. Ambiente Profesional: Diseñado por Psicólogos, para Psicólogos
+            1. Ambientación Profesional: Diseñado por Psicólogos, para
+            Psicólogos
           </h3>
           <p>
             He tenido que alquilar consultorios con sillones rotos o llegar a
@@ -274,9 +275,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           </p>
           {/* --- SECCIÓN 4: BANDERAS ROJAS --- */}
           <h2 id="banderas-rojas">
-            En Espacio PISAMA Eliminamos todas las{" "}
+            En Espacio PISAMA Eliminamos todas las ⚠️{" "}
             <span className="text-red-400">Banderas Rojas </span>
-            al momento de Alquilar un Consultorio Psicológico
+            🚩 al momento de Alquilar un Consultorio Psicológico
           </h2>
           <p>
             Si alguna vez te preocupaste por alguno de estos problemas, Espacio
