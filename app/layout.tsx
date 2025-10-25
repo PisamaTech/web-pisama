@@ -127,7 +127,7 @@ export default function RootLayout({
           <ScrollIndicator />
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main>{children}</main>
+            <main className="pt-[65px]">{children}</main>
             <SiteFooter />
           </div>
         </Providers>

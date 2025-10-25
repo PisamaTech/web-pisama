@@ -46,7 +46,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       isBordered
-      className="bg-content1 text-secondary font-semibold"
+      className="fixed top-0 left-0 w-full z-50 bg-content1 text-secondary font-semibold "
     >
       <NavbarContent className="lg:hidden" justify="start">
         <NavbarMenuToggle />
