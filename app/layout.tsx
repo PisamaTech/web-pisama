@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "photoswipe/dist/photoswipe.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 import Script from "next/script";

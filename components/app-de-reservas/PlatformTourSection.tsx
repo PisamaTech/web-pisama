@@ -3,10 +3,16 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Divider } from "@heroui/divider";
 import Image from "next/image";
-import { JSX, useState } from "react";
+import React, { JSX } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { Gallery, Item } from "react-photoswipe-gallery";
 
-import LightboxModal from "@/components/LightboxModal";
+import appConfiguracionCuenta from "@/public/images/app/app_configuracion_cuenta.webp";
+import appDisponibilidadDiaria from "@/public/images/app/app_disponibilidad_diaria.webp";
+import appDisponibilidadSemanal from "@/public/images/app/app_disponibilidad_semanal.webp";
+import appFacturacion from "@/public/images/app/app_facturacion.webp";
+import appInicio from "@/public/images/app/app_inicio.webp";
+import appReservas from "@/public/images/app/app_reservas.webp";
 
 // TIPADO Y DATOS
 interface TourItem {
@@ -15,7 +21,7 @@ interface TourItem {
   subtitle: string;
   description: string;
   features: string[];
-  imageSrc: string;
+  imageSrc: any;
   imageAlt: string;
 }
 
@@ -33,7 +39,7 @@ const tourData: TourItem[] = [
       "Resumen de Facturación",
       "Alertas de Renovaciones",
     ],
-    imageSrc: "/images/app/app_inicio.webp",
+    imageSrc: appInicio,
     imageAlt: "Captura de la sección Inicio de la aplicación",
   },
   {
@@ -48,7 +54,7 @@ const tourData: TourItem[] = [
       "Visualización de Lunes a Domingo",
       "Agenda con un par de clics",
     ],
-    imageSrc: "/images/app/app_disponibilidad_semanal.webp",
+    imageSrc: appDisponibilidadSemanal,
     imageAlt: "Captura de la sección Calendario Semanal",
   },
   {
@@ -62,7 +68,7 @@ const tourData: TourItem[] = [
       "Comparación rápida de todos los consultorios en un día específico",
       "Agendamiento inmediato",
     ],
-    imageSrc: "/images/app/app_disponibilidad_diaria.webp",
+    imageSrc: appDisponibilidadDiaria,
     imageAlt: "Captura de la sección Calendario Diario",
   },
   {
@@ -77,7 +83,7 @@ const tourData: TourItem[] = [
       "Navegación por historial",
       "Acciones directas para cancelar o reagendar",
     ],
-    imageSrc: "/images/app/app_reservas.webp",
+    imageSrc: appReservas,
     imageAlt: "Captura de la sección Mis Reservas",
   },
   {
@@ -92,7 +98,7 @@ const tourData: TourItem[] = [
       "Detalle de consumo por factura",
       "Vista de facturación en curso",
     ],
-    imageSrc: "/images/app/app_facturacion.webp",
+    imageSrc: appFacturacion,
     imageAlt: "Captura de la sección Facturación",
   },
   {
@@ -105,25 +111,12 @@ const tourData: TourItem[] = [
       "Actualización de datos personales",
       "Cambio de contraseña seguro",
     ],
-    imageSrc: "/images/app/app_configuracion_cuenta.webp",
+    imageSrc: appConfiguracionCuenta,
     imageAlt: "Captura de la sección Perfil",
   },
 ];
 
 export default function PlatformTourSection(): JSX.Element {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const openLightbox = (image: string) => {
-    setSelectedImage(image);
-    setLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
     <section className="py-20 bg-content4">
       <div className="container mx-auto px-4 lg:px-8">
@@ -138,68 +131,74 @@ export default function PlatformTourSection(): JSX.Element {
           </p>
         </div>
         <div className="mx-auto max-w-4xl">
-          <Accordion selectionMode="multiple" variant="splitted">
-            {tourData.map((item) => (
-              <AccordionItem
-                key={item.key}
-                aria-label={item.title}
-                title={
-                  <span className="font-display text-xl font-bold text-primary">
-                    {item.title}
-                  </span>
-                }
-                subtitle={
-                  <span className="font-sans text-primary/80">
-                    {item.subtitle}
-                  </span>
-                }
-                classNames={{
-                  base: "bg-content1/50 !shadow-lg",
-                  trigger: "p-6",
-                  content: "p-6 pt-0",
-                }}
-              >
-                <Divider />
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 pt-8">
-                  {/* Columna de Texto */}
-                  <div>
-                    <h4 className="font-display font-bold text-primary">
-                      Funciones Principales:
-                    </h4>
-                    <ul className="mt-4 space-y-2">
-                      {item.features.map((feature, index) => (
-                        <li
-                          key={index}
-                          className="flex items-start gap-2 font-sans text-primary/90"
-                        >
-                          <FaRegArrowAltCircleRight className="mt-1 h-4 w-4 flex-shrink-0 text-terracotta-suave" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+          <Gallery>
+            <Accordion selectionMode="multiple" variant="splitted">
+              {tourData.map((item) => (
+                <AccordionItem
+                  key={item.key}
+                  aria-label={item.title}
+                  title={
+                    <span className="font-display text-xl font-bold text-primary">
+                      {item.title}
+                    </span>
+                  }
+                  subtitle={
+                    <span className="font-sans text-primary/80">
+                      {item.subtitle}
+                    </span>
+                  }
+                  classNames={{
+                    base: "bg-content1/50 !shadow-lg",
+                    trigger: "p-6",
+                    content: "p-6 pt-0",
+                  }}
+                >
+                  <Divider />
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 pt-8">
+                    {/* Columna de Texto */}
+                    <div>
+                      <h4 className="font-display font-bold text-primary">
+                        Funciones Principales:
+                      </h4>
+                      <ul className="mt-4 space-y-2">
+                        {item.features.map((feature, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start gap-2 font-sans text-primary/90"
+                          >
+                            <FaRegArrowAltCircleRight className="mt-1 h-4 w-4 flex-shrink-0 text-terracotta-suave" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    {/* Columna de Imagen */}
+                    <div className="flex items-center justify-center">
+                      <Item
+                        original={item.imageSrc.src}
+                        width={item.imageSrc.width}
+                        height={item.imageSrc.height}
+                      >
+                        {({ ref, open }) => (
+                          <Image
+                            ref={
+                              ref as unknown as React.MutableRefObject<HTMLImageElement>
+                            }
+                            onClick={open}
+                            src={item.imageSrc}
+                            alt={item.imageAlt}
+                            className="rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:scale-105"
+                          />
+                        )}
+                      </Item>
+                    </div>
                   </div>
-                  {/* Columna de Imagen */}
-                  <div className="flex items-center justify-center">
-                    <Image
-                      src={item.imageSrc}
-                      alt={item.imageAlt}
-                      width={400}
-                      height={300}
-                      className="rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:scale-105"
-                      onClick={() => openLightbox(item.imageSrc)}
-                    />
-                  </div>
-                </div>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Gallery>
         </div>
       </div>
-      <LightboxModal
-        isOpen={lightboxOpen}
-        image={selectedImage}
-        onClose={closeLightbox}
-      />
     </section>
   );
 }
