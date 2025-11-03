@@ -750,8 +750,8 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                     </p>
                     <p className="mt-4">
                       Cuando una factura se marca como <strong>PAGADA</strong>{" "}
-                      te llegará una notificación por la aplicaciónPuedes seguir
-                      el estado de tus facturas en la{" "}
+                      te llegará una notificación por la aplicación. Puedes
+                      seguir el estado de tus facturas en la{" "}
                       <Link
                         href="https://reservas.pisama.uy/facturas"
                         target="_blank"
