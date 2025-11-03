@@ -36,7 +36,7 @@ const guideData: GuideCardProps[] = [
     title: "Primeros Pasos y Primera Reserva",
     description:
       "Una guía de inicio rápido para crear tu cuenta y agendar tu primer consultorio en menos de 5 minutos.",
-    href: "/guia-de-uso/primera-reserva", // Ruta de la guía específica
+    href: "/guia-de-uso/agendar-primera-reserva", // Ruta de la guía específica
     icon: <FaRegStar className="h-8 w-8 text-secondary-500" />,
   },
   {

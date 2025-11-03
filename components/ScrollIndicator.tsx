@@ -22,7 +22,7 @@ const ScrollIndicator = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+    <div className="fixed top-0 left-0 w-full h-1 bg-transparent z-150">
       <div
         className="h-1 bg-gradient-to-r from-rose-400 to-amber-800"
         style={{ width: `${scroll}%` }}

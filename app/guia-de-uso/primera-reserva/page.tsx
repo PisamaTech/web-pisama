@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
 import {
-  FaUniversity,
   FaWhatsapp,
   FaInfoCircle,
   FaQuestionCircle,
@@ -28,6 +27,10 @@ export const metadata: Metadata = {
   title: "Guía para tu Primera Visita | Espacio Pisama",
   description:
     "Leo te guía paso a paso sobre cómo funciona todo en tu primera reserva: acceso, pago, cómo recibir a tus pacientes y más.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function GuiaPrimeraVisitaPage(): JSX.Element {
@@ -440,18 +443,18 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                   <p className="mt-1 text-foreground/80">
                     Debes dejar el consultorio en las mismas condiciones en que
                     lo encontraste.
-                    <ul className="list-disc pl-8">
-                      <li>Si mueves muebles, vuelve a dejarlos en su lugar.</li>{" "}
-                      <li>
-                        Si usaste vasos o cualquier material, retíralo al
-                        finalizar.
-                      </li>{" "}
-                      <li>
-                        Si prendes luces o el aire acondicionado apágalos al
-                        salir.
-                      </li>
-                    </ul>
                   </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-8 text-foreground/80">
+                    <li>Si mueves muebles, vuelve a dejarlos en su lugar.</li>
+                    <li>
+                      Si usaste vasos o cualquier material, retíralo al
+                      finalizar.
+                    </li>
+                    <li>
+                      Si prendes luces o el aire acondicionado apágalos al
+                      salir.
+                    </li>
+                  </ul>
                 </div>
               </div>
 
