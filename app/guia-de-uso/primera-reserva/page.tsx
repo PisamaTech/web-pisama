@@ -20,6 +20,7 @@ import {
   FaVolumeMute,
   FaUsers,
 } from "react-icons/fa";
+import { HiUserPlus, HiUsers, HiMiniUserGroup } from "react-icons/hi2";
 import { PiPowerFill } from "react-icons/pi";
 
 // --- SEO: Metadatos de la Página ---
@@ -633,7 +634,10 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
 
               <div className="mt-12 grid gap-8 md:grid-cols-3">
                 <Card className="bg-content1">
-                  <CardBody className="p-6">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiUserPlus size={40} className="text-secondary-400" />
+                    </div>
                     <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
                       Nuevos Usuarios
                     </h3>
@@ -646,7 +650,10 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                   </CardBody>
                 </Card>
                 <Card className="bg-content1">
-                  <CardBody className="p-6">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiUsers size={40} className="text-secondary-500" />
+                    </div>
                     <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
                       Usuarios Regulares
                     </h3>
@@ -659,7 +666,13 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                   </CardBody>
                 </Card>
                 <Card className="bg-content1">
-                  <CardBody className="p-6">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiMiniUserGroup
+                        size={40}
+                        className="text-secondary-500"
+                      />
+                    </div>
                     <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
                       Usuarios de Alto Volumen
                     </h3>

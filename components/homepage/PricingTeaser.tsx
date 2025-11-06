@@ -2,6 +2,8 @@ import { Button } from "@heroui/button";
 import { Divider } from "@heroui/divider";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { MdWorkspacePremium } from "react-icons/md";
+import { RiSofaFill } from "react-icons/ri";
 
 export default function PricingTeaser() {
   return (
@@ -25,7 +27,10 @@ export default function PricingTeaser() {
 
         <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Card para Consultorio Premium */}
-          <div className="rounded-2xl bg-content1 border-1 border-content3 p-8 text-center shadow-xl hover:scale-105 transition-transform duration-200">
+          <div className="rounded-2xl bg-content1 border-1 border-content3 p-4 shadow-xl hover:scale-105 transition-transform duration-200 flex flex-col items-center text-center mb-4">
+            <div className="mb-2 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+              <MdWorkspacePremium size={48} className="text-secondary" />
+            </div>
             <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Premium
             </h3>
@@ -44,7 +49,10 @@ export default function PricingTeaser() {
           </div>
 
           {/* Card para Consultorio Estándar */}
-          <div className="rounded-2xl bg-content1 border-1 border-content3 p-8 text-center shadow-xl hover:scale-105 transition-transform duration-200">
+          <div className="rounded-2xl bg-content1 border-1 border-content3 p-4 shadow-xl hover:scale-105 transition-transform duration-200 flex flex-col items-center text-center mb-4">
+            <div className="mb-2 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+              <RiSofaFill size={44} className="text-secondary" />
+            </div>
             <h3 className="font-display text-2xl font-bold text-primary">
               Consultorio Estándar
             </h3>
