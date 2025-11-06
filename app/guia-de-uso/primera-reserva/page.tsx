@@ -150,7 +150,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                 <iframe
                   width="315"
                   height="560"
-                  src="https://www.youtube.com/embed/URL_VIDEO_PACIENTES"
+                  src="https://www.youtube.com/embed/4zTTdGXzOQQ"
                   title="Cómo recibir a tus pacientes"
                 />
               </div>
@@ -238,11 +238,11 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
               <div className="not-prose my-8 mx-auto w-full max-w-lg overflow-hidden rounded-xl shadow-2xl">
                 <Image
-                  src="/images/salaespera-1-3.webp"
+                  src="/images/blog/reproductor-de-musica2.webp"
                   alt="Sala de espera de Espacio Pisama"
-                  width={800}
-                  height={600}
-                  className="aspect-[4/3] w-full object-cover"
+                  width={512}
+                  height={768}
+                  className="w-full object-cover"
                 />
               </div>
               <div>
@@ -261,17 +261,6 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                   Su funcionamiento tiene un par de trucos, y como es una
                   pregunta frecuente, queremos aclarártela.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* --- PASO 3: Parte 2 --- */}
-        <section className="bg-content4 pb-16">
-          <div className="prose prose-lg container mx-auto max-w-6xl px-4 prose-headings:font-display prose-headings:text-primary-500">
-            <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-              <div>
-                {/* Aviso importante sobre el volumen */}
                 <Alert
                   className="mt-8 text-base leading-8 pt-0"
                   color="secondary"
@@ -288,6 +277,17 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                     inicial esté alto.
                   </p>
                 </Alert>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* --- PASO 3: Parte 2 --- */}
+        <section className="bg-content4 pb-16">
+          <div className="prose prose-lg container mx-auto max-w-6xl px-4 prose-headings:font-display prose-headings:text-primary-500">
+            <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+              <div>
+                {/* Aviso importante sobre el volumen */}
 
                 <h3 className="text-2xl text-foreground/90">
                   Cómo controlar el volumen (lo más importante):

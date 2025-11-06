@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
-import Indice from "@/app/blog/consultorio-para-psicologos-alquiler/Indice";
+import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
@@ -13,7 +13,7 @@ import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaespera1 from "@/public/images/salaespera-1.webp";
 
-import ImageGallery from "./ImageGallery";
+
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
@@ -56,6 +56,57 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloPsicologosPage(): React.JSX.Element {
+  const sections = [
+    {
+      title: "El Consultorio como Encuadre",
+      id: "encuadre",
+    },
+    {
+      title: "Los 3 Pilares de Espacio PISAMA",
+      id: "pilares",
+      subsections: [
+        {
+          title: "1. Ambientación Profesional",
+          id: "ambiente-profesional",
+        },
+        {
+          title: "2. Privacidad Acústica",
+          id: "privacidad-acustica",
+        },
+        {
+          title: "3. Funcionalidad",
+          id: "funcionalidad",
+        },
+      ],
+    },
+    {
+      title: "La Logística que Resolvimos",
+      id: "logistica",
+      subsections: [
+        {
+          title: "Sistema de Reservas Online",
+          id: "sistema-reservas",
+        },
+        {
+          title: "Ubicación Estratégica",
+          id: "ubicacion",
+        },
+        {
+          title: "Comunidad de Colegas",
+          id: "comunidad-colegas",
+        },
+      ],
+    },
+    {
+      title: "Eliminamos las Banderas Rojas",
+      id: "banderas-rojas",
+    },
+    {
+      title: "Conclusión",
+      id: "conclusion",
+    },
+  ];
+
   return (
     <>
       <main className="bg-content2 py-20">
@@ -74,7 +125,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             Alquiler de Consultorios para Psicólogos en Montevideo: La Solución
             para Trabajar Tranquilo
           </h1>
-          <Indice />
+          <Indice sections={sections} />
 
           <p className="mt-12">
             Mi nombre es Gastón y soy psicólogo, sé exactamente lo que significa
@@ -146,7 +197,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             muebles, la iluminación, los colores: todo está pensado para generar
             el ambiente terapéutico ideal.
           </p>
-          <ImageGallery />
+          
           <h3 id="privacidad-acustica">
             2. Privacidad Acústica: Nuestra Obsesión Principal
           </h3>

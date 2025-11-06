@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import Indice from "@/app/blog/alquiler-consultorios-terapias-alternativas/Indice";
+import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 
 import ImageGallery from "./ImageGallery";
@@ -23,6 +23,53 @@ export const metadata: Metadata = {
     "alquiler de consultorios montevideo",
   ],
 };
+
+const sections = [
+  {
+    title: "Introducción: una extensión de tu energía",
+    id: "introduccion",
+  },
+  {
+    title: "¿Por qué elegir bien el espacio terapéutico?",
+    id: "porque-elegir-bien-espacio",
+  },
+  {
+    title: "1. Ubicación estratégica: Parque Rodó",
+    id: "ubicacion",
+  },
+  {
+    title: "2. Energía y ambiente",
+    id: "energia-ambiente",
+  },
+  {
+    title: "3. Flexibilidad horaria",
+    id: "flexibilidad-horaria",
+  },
+  {
+    title: "4. Reservas online y equipamiento",
+    id: "reservas-equipamiento",
+  },
+  {
+    title: "5. Precios justos y descuentos progresivos",
+    id: "precios-descuentos",
+  },
+  {
+    title: "6. Comunidad y acompañamiento",
+    id: "comunidad",
+  },
+  {
+    title: "7. Diseño profesional",
+    id: "diseno-profesional",
+  },
+  {
+    title: "8. ¿Qué sienten los terapeutas?",
+    id: "que-sienten-terapeutas",
+  },
+  {
+    title: "Conclusión: un espacio que vibra contigo",
+    id: "conclusion",
+  },
+];
 
 const CtaBox = () => (
   <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400 hover:scale-103 transition-transform duration-300">
@@ -65,7 +112,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             🪷 Alquiler de Consultorios para Terapias Alternativas en
             Montevideo: Encuentra el Espacio que Vibra Contigo
           </h1>
-          <Indice />
+          <Indice sections={sections} />
 
           <p className="mt-12" id="introduccion">
             <strong>
