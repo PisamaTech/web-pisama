@@ -2,7 +2,7 @@
 
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Divider } from "@heroui/divider";
-import Link from "next/link";
+import { Listbox, ListboxItem } from "@heroui/listbox";
 import React from "react";
 import { FaIndent } from "react-icons/fa6";
 
@@ -17,8 +17,8 @@ interface IndiceProps {
 }
 
 const Indice: React.FC<IndiceProps> = ({ sections }) => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
+  const handleAction = (key: React.Key) => {
+    const id = key.toString();
     const element = document.getElementById(id);
 
     if (element) {
@@ -26,46 +26,58 @@ const Indice: React.FC<IndiceProps> = ({ sections }) => {
     }
   };
 
+  const items = sections.flatMap((section) => {
+    const sectionItem = {
+      id: section.id,
+      title: section.title,
+      isSubsection: false,
+    };
+
+    if (section.subsections && section.subsections.length > 0) {
+      const subsectionItems = section.subsections.map((subsection) => ({
+        id: subsection.id,
+        title: subsection.title,
+        isSubsection: true,
+      }));
+
+      return [sectionItem, ...subsectionItems];
+    }
+
+    return sectionItem;
+  });
+
   return (
-    <Card className="bg-content1/50 mx-auto my-10 max-w-[450px] text-sm">
+    <Card className="not-prose bg-content1/50 mx-auto my-10 max-w-[450px] text-sm">
       <CardHeader className="flex-col">
         <div className="flex flex-row gap-4 text-primary-500 mt-4 items-center">
           <FaIndent size={20} />
-          <h2 className="font-bold mt-0 mb-0" id="indice">
+          <h2 className="font-bold text-base" id="indice">
             Indice de Contenido
           </h2>
         </div>
         <Divider className="mb-1 mt-5" />
       </CardHeader>
       <CardBody>
-        <ul className="list-none pl-0 mt-0 ml-2 space-y-2">
-          {sections.map((section) => (
-            <li key={section.id}>
-              <Link
-                href={`#${section.id}`}
-                onClick={(e) => handleScroll(e, section.id)}
-                className="text-secondary-500 hover:text-secondary-400 font-semibold text-base"
-              >
-                {section.title}
-              </Link>
-              {section.subsections && (
-                <ul className="list-none pl-4 mt-2 space-y-1">
-                  {section.subsections.map((subsection) => (
-                    <li key={subsection.id}>
-                      <Link
-                        href={`#${subsection.id}`}
-                        onClick={(e) => handleScroll(e, subsection.id)}
-                        className="text-foreground/80 hover:text-foreground font-medium"
-                      >
-                        {subsection.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <Listbox
+          aria-label="Índice de contenido"
+          onAction={handleAction}
+          variant="shadow"
+          className="p-0"
+          items={items}
+        >
+          {(item) => (
+            <ListboxItem
+              key={item.id}
+              className={
+                item.isSubsection
+                  ? "text-foreground/80 data-[hover=true]:text-slate-50 pl-8 data-[hover=true]:bg-default/80"
+                  : "text-secondary-500 data-[hover=true]:text-secondary-50 data-[hover=true]:bg-default/80"
+              }
+            >
+              {item.title}
+            </ListboxItem>
+          )}
+        </Listbox>
       </CardBody>
     </Card>
   );

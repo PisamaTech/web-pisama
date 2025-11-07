@@ -12,6 +12,13 @@ const blogPosts = [
       'Consultorios por hora para psicólogos en Parque Rodó. Reserva online "sin intermediarios", privacidad acústica y ambiente profesional.',
     date: "Octubre 25, 2025",
   },
+  {
+    slug: "alquiler-consultorios-terapias-alternativas",
+    title: "Consultorios para Terapias Alternativas en Montevideo",
+    description:
+      "Descubre cómo encontrar el alquiler de consultorios para terapias alternativas ideal en Montevideo. Energía, flexibilidad y diseño terapéutico.",
+    date: "Noviembre 06, 2025",
+  },
   // ... more posts here
 ];
 
