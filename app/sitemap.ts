@@ -14,6 +14,11 @@ async function getPublishedBlogArticles() {
       // Idealmente, aquí usarías la fecha de última actualización del artículo
       lastModified: new Date(),
     },
+    {
+      slug: "alquiler-consultorios-terapias-alternativas",
+      // Idealmente, aquí usarías la fecha de última actualización del artículo
+      lastModified: new Date(),
+    },
     // Cuando añadas más artículos, los añadirás aquí o los obtendrás dinámicamente
   ];
 }
@@ -30,7 +35,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/precios",
     "/disponibilidad",
     "/app-de-reservas",
-    "guia-de-uso",
+    "/guia-de-uso",
+    "/guia-de-uso/agendar-primera-reserva",
+    "/guia-de-uso/como-reagendar-una-reserva-penalizada",
+    "/guia-de-uso/facturacion-y-descuentos",
+    "/guia-de-uso/politica-de-cancelacion",
+    "/guia-de-uso/tipos-de-reserva",
     "/sobre-nosotros",
     "/contacto",
     "/terminos-y-condiciones",

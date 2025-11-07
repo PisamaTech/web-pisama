@@ -44,3 +44,7 @@
   -ms-flex-preferred-size: 0 px;
   flex-basis: 0 px;
 }
+
+[id] {
+  scroll-margin-top: 80px;
+}
