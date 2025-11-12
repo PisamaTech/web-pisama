@@ -85,6 +85,7 @@ const WelcomeSection = () => (
           className="border border-content3 rounded-[20px] shadow-2xl"
           width={400}
           height={400}
+          unoptimized
           // className="rounded-full"
         />
       </div>

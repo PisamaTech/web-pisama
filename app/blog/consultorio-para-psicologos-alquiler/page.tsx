@@ -13,7 +13,7 @@ import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaespera1 from "@/public/images/salaespera-1.webp";
 
-
+import ImageGallery from "./ImageGallery";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
@@ -191,13 +191,14 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               Espacio PISAMA.
             </strong>
           </p>
+          <ImageGallery />
           <p>
             Buscamos un estilo minimalista pero cálido, profesional y acogedor.
             Un lugar que invite a la calma desde que cruzás la puerta. Los
             muebles, la iluminación, los colores: todo está pensado para generar
             el ambiente terapéutico ideal.
           </p>
-          
+
           <h3 id="privacidad-acustica">
             2. Privacidad Acústica: Nuestra Obsesión Principal
           </h3>
