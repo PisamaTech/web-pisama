@@ -34,6 +34,9 @@ export default function SiteFooter() {
               <p>
                 Horario: <span>Lun-Dom 7:00-23:00</span>
               </p>
+              <p>
+                Tel: <span>+598 95 961 360</span>
+              </p>
             </div>
           </div>
 

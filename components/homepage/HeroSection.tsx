@@ -23,11 +23,10 @@ export default function HeroSection() {
       />
 
       {/* 3. Capa de degradado oscuro superpuesta sobre la imagen */}
-      <div className="absolute inset-0 bg-black/50 z-21" />
-      {/* Puedes ajustar la opacidad cambiando el valor /60 (ej. /50, /70) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-21" />
 
       {/* 4. Contenedor del contenido, centrado */}
-      <div className="mx-auto max-w-4xl text-center px-6 z-25">
+      <div className="mx-auto max-w-4xl text-center px-6 z-25 relative">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -47,13 +46,13 @@ export default function HeroSection() {
           />
         </motion.div>
         {/* Título Principal (ahora en color blanco) */}
-        <h1 className="font-semibold text-2xl tracking-tight text-white md:text-5xl">
+        <h1 className="font-bold text-3xl tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-sm">
           Alquiler de Consultorios por Hora en Montevideo: El espacio que
           Impulsa tu Crecimiento
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
-        <p className="mt-6 text-sm leading-8 text-gray-200 sm:text-xl">
+        <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-xl max-w-2xl mx-auto font-light">
           Espacios diseñados para psicólogos, terapeutas, coaches y
           profesionales independientes. Gestiona tu agenda online, olvídate de
           las cuponeras y recibe a tus pacientes en un ambiente de calma y

@@ -10,38 +10,38 @@ export default function BeneficiosClave() {
       titulo: "Reservas Online 24/7",
       descripcion:
         "Gestiona tus consultas desde tu celular o computadora, en tiempo real y sin intermediarios, con nuestro sistema de reservas online.",
-      icono: <MdAppShortcut className="text-primary text-4xl mb-3" />,
+      icono: <MdAppShortcut className="text-primary text-4xl" />,
     },
     {
       titulo: "Ahorro Inteligente",
       descripcion:
         "Nuestro sistema de tarifas es superior a las cuponeras. Cuantas más horas usas, más barato se vuelve el costo. Impulsamos tu crecimiento, sin pagos por adelantado.",
-      icono: <RiMoneyDollarBoxFill className="text-secondary text-4xl mb-3" />,
+      icono: <RiMoneyDollarBoxFill className="text-secondary text-4xl" />,
     },
 
     {
       titulo: "Cancelaciones Sin Estrés",
       descripcion:
         "Sabemos que surgen imprevistos. Cancela sin costo hasta 24 horas antes. Si es con menos tiempo, puedes reagendar esa hora sin perder tu inversión.",
-      icono: <MdCancel className="text-primary text-4xl mb-3" />,
+      icono: <MdCancel className="text-primary text-4xl" />,
     },
     {
       titulo: "Ubicación estratégica",
       descripcion:
         "Parque Rodó, en el corazón de Montevideo. Una zona que realza tu imagen profesional y es de fácil acceso para vos y tus pacientes. ",
-      icono: <FaMapMarkerAlt className="text-secondary text-4xl mb-3" />,
+      icono: <FaMapMarkerAlt className="text-secondary text-4xl" />,
     },
     {
       titulo: "Comodidad y profesionalismo",
       descripcion:
         "Cada detalle, desde la acústica hasta la decoración, fueron pensado por dos psicólogos para el bienestar de profesionales y pacientes. Un espacio creado desde la experiencia.",
-      icono: <FaCouch className="text-primary text-4xl mb-3" />,
+      icono: <FaCouch className="text-primary text-4xl" />,
     },
     {
       titulo: "Flexibilidad horaria",
       descripcion:
         "Abierto todos los días de 7:00 a 23:00 hs, incluso domingos y feriados. Los 365 días del año a tu disposición.",
-      icono: <FaClock className="text-secondary text-4xl mb-3" />,
+      icono: <FaClock className="text-secondary text-4xl" />,
     },
   ];
 
@@ -58,14 +58,18 @@ export default function BeneficiosClave() {
             <Card
               key={index}
               shadow="sm"
-              className="bg-content1 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-content1 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/10"
             >
               <CardBody className="flex flex-col items-center text-center p-8">
-                {beneficio.icono}
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                <div className="mb-6 w-20 h-20 flex items-center justify-center rounded-full bg-white/50 shadow-sm">
+                  {beneficio.icono}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800">
                   {beneficio.titulo}
                 </h3>
-                <p className="text-default">{beneficio.descripcion}</p>
+                <p className="text-default-600 leading-relaxed">
+                  {beneficio.descripcion}
+                </p>
               </CardBody>
             </Card>
           ))}
