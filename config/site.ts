@@ -45,8 +45,19 @@ export const siteConfig = {
   navItems: [
     { label: "Consultorios", href: "/consultorios" },
     { label: "Disponibilidad", href: "/disponibilidad" },
-
     { label: "Precios", href: "/precios" },
+    {
+      label: "Soluciones",
+      dropdown: [
+        { label: "Para Psicólogos", href: "/soluciones/psicologos" },
+        { label: "Para Nutricionistas", href: "/soluciones/nutricionistas" },
+        {
+          label: "Para Terapeutas Alternativos",
+          href: "/soluciones/terapeutas-alternativos",
+        },
+        { label: "Ver Todas", href: "/soluciones" },
+      ],
+    },
     {
       label: "App de Reservas",
       dropdown: [
@@ -76,10 +87,17 @@ export const siteConfig = {
     soluciones: [
       {
         label: "Para Psicólogos",
-        href: "/blog/consultorio-para-psicologos-alquiler",
+        href: "/soluciones/psicologos",
       },
-      { label: "Para Masajistas", href: "/blog" },
-      { label: "Para Terapeutas", href: "/blog" },
+      {
+        label: "Para Nutricionistas",
+        href: "/soluciones/nutricionistas",
+      },
+      {
+        label: "Para Terapeutas Alternativos",
+        href: "/soluciones/terapeutas-alternativos",
+      },
+      { label: "Ver Todas las Soluciones", href: "/soluciones" },
     ],
     empresa: [
       { label: "Sobre Nosotros", href: "/sobre-nosotros" },
