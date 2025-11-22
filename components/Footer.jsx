@@ -27,15 +27,18 @@ export default function SiteFooter() {
             </Link>
             <div className="text-center text-sm text-gris-calido mb-4 font-sans">
               <div>
-                <span>Juan Paullier 1192</span>, <span>11200</span>{" "}
-                <span>Montevideo</span>, <span>Departamento de Montevideo</span>
-                .
+                <p className="text-secondary-300">Dirección:</p>
+                <p>Juan Paullier 1192</p>
+                <p>Montevideo</p>
               </div>
-              <p>
-                Horario: <span>Lun-Dom 7:00-23:00</span>
+              <p className="text-secondary-300">Horario:</p>
+              <p> 
+               Lunes a Domingos <br/>de 7:00 a 23:00
               </p>
+<p className="text-secondary-300">Teléfono:</p>
               <p>
-                Tel: <span>+598 95 961 360</span>
+                
+                095 961 360
               </p>
             </div>
           </div>
@@ -95,20 +98,26 @@ export default function SiteFooter() {
               <ul className="space-y-3 font-sans">
                 <li>
                   <Link
-                    href="/blog/consultorio-para-psicologos-alquiler"
+                    href="/soluciones/psicologos"
                     className="hover:text-secondary"
                   >
                     Psicólogos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-secondary">
-                    Masajistas
+                  <Link
+                    href="/soluciones/nutricionistas"
+                    className="hover:text-secondary"
+                  >
+                    Nutricionistas
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-secondary">
-                    Terapeutas
+                  <Link
+                    href="/soluciones/terapeutas-alternativos"
+                    className="hover:text-secondary"
+                  >
+                    Terapeutas Alternativos
                   </Link>
                 </li>
               </ul>
