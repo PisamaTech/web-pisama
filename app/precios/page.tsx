@@ -14,11 +14,41 @@ export const metadata: Metadata = {
     "Precios y Ahorros Flexibles | Alquiler de Consultorios | Espacio Pisama",
   description:
     "Descubre nuestras tarifas. Ahorra hasta $100/hora con nuestro sistema de descuentos por volumen. ¡Sin contratos ni paquetes fijos!",
+  alternates: {
+    canonical: "/precios",
+  },
 };
 
 export default function PreciosPage() {
+  // Schema.org Offer para SEO
+  const offerJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "Alquiler de Consultorios por Hora",
+    description:
+      "Alquiler flexible de consultorios profesionales en Montevideo",
+    price: "200",
+    priceCurrency: "UYU",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "200",
+      priceCurrency: "UYU",
+      unitText: "hora",
+    },
+    availability: "https://schema.org/InStock",
+    url: "https://www.pisama.uy/precios",
+    seller: {
+      "@type": "LocalBusiness",
+      name: "Espacio PISAMA",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerJsonLd) }}
+      />
       {/* Sección 1: Tarjetas de Precios Base */}
       <section className="bg-content2/50 py-20 sm:py-24">
         <div className="container mx-auto px-4 lg:px-8">

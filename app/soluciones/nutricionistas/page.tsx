@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio2 from "@/public/images/consultorio2-1.webp";
@@ -37,6 +37,27 @@ export const metadata: Metadata = {
     "oficina nutricionista montevideo",
     "espacio consulta nutricional",
   ],
+  alternates: {
+    canonical: "/soluciones/nutricionistas",
+  },
+  openGraph: {
+    title:
+      "Alquiler de Consultorios para Nutricionistas en Montevideo | PISAMA",
+    description:
+      "Consultorio nutricional por hora en Parque Rodó. Ambiente profesional, privacidad total y reservas online desde $200/hora.",
+    url: "https://www.pisama.uy/soluciones/nutricionistas",
+    siteName: "Espacio Pisama",
+    locale: "es_UY",
+    type: "article",
+    images: [
+      {
+        url: "https://www.pisama.uy/images/consultorio2-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Consultorio para nutricionistas en Montevideo con espacio funcional completo",
+      },
+    ],
+  },
 };
 
 const CtaBox = () => (
@@ -134,9 +155,38 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
     },
   ];
 
+  // Schema.org Article para SEO
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Alquiler de Consultorios para Nutricionistas en Montevideo",
+    description:
+      "Consultorio nutricional profesional por hora en Parque Rodó. Todo lo que necesitás saber para encontrar tu espacio ideal.",
+    image: ["https://www.pisama.uy/images/consultorio2-1.webp"],
+    datePublished: "2024-10-15",
+    dateModified: new Date().toISOString().split("T")[0],
+    author: {
+      "@type": "Person",
+      name: "Gastón Campo",
+      url: "https://www.pisama.uy/sobre-nosotros",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Espacio PISAMA",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.pisama.uy/images/Logo-Espacio-Pisama-Texturado-300px.png",
+      },
+    },
+  };
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4

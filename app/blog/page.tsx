@@ -3,7 +3,14 @@ import Link from "next/link";
 
 import { title, subtitle } from "@/components/primitives";
 
-const blogPosts = [
+interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+}
+
+const blogPosts: BlogPost[] = [
   // Aquí puedes agregar futuros artículos de blog educativos
   // Ejemplo:
   // {
@@ -19,6 +26,9 @@ export const metadata: Metadata = {
     "Blog para Profesionales | Marketing, Gestión y Terapia | Espacio Pisama",
   description:
     "Artículos y guías prácticas para psicólogos y terapeutas independientes en Uruguay. Aprende sobre gestión de consultorios, marketing y crecimiento profesional.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogPage() {

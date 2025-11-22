@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "Ver Disponibilidad en Tiempo Real | Calendario Online | Espacio Pisama",
   description:
     "Consulta la disponibilidad de todos nuestros consultorios por hora en nuestro calendario online. Mira en tiempo real qué horarios están libres y planifica tu semana.",
+  alternates: {
+    canonical: "/disponibilidad",
+  },
 };
 
 export default function DisponibilidadPage(): JSX.Element {

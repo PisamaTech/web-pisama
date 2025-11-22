@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { siteConfig } from "@/config/site";
 
 import ImageGallery from "./ImageGallery";
@@ -31,6 +31,27 @@ export const metadata: Metadata = {
     "sala para quiropráctico",
     "espacio reflexología montevideo",
   ],
+  alternates: {
+    canonical: "/soluciones/terapeutas-alternativos",
+  },
+  openGraph: {
+    title:
+      "Alquiler de Consultorios para Terapias Alternativas en Montevideo | PISAMA",
+    description:
+      "Consultorio con camilla disponible para terapeutas alternativos en Parque Rodó. Ambiente armónico y reservas online desde $200/hora.",
+    url: "https://www.pisama.uy/soluciones/terapeutas-alternativos",
+    siteName: "Espacio Pisama",
+    locale: "es_UY",
+    type: "article",
+    images: [
+      {
+        url: "https://www.pisama.uy/images/consultorio3-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Consultorio para terapias alternativas con camilla en Montevideo",
+      },
+    ],
+  },
 };
 
 const sections = [
@@ -119,9 +140,39 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
     },
   ];
 
+  // Schema.org Article para SEO
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Alquiler de Consultorios para Terapias Alternativas en Montevideo",
+    description:
+      "Espacio para terapeutas holísticos en Parque Rodó. Camilla disponible, ambiente armónico y flexibilidad total.",
+    image: ["https://www.pisama.uy/images/consultorio3-1.webp"],
+    datePublished: "2024-10-20",
+    dateModified: new Date().toISOString().split("T")[0],
+    author: {
+      "@type": "Person",
+      name: "Gastón Campo",
+      url: "https://www.pisama.uy/sobre-nosotros",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Espacio PISAMA",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.pisama.uy/images/Logo-Espacio-Pisama-Texturado-300px.png",
+      },
+    },
+  };
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 

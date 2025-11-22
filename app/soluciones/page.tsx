@@ -8,14 +8,20 @@ export const metadata: Metadata = {
   title:
     "Consultorios por Profesión | Encuentra tu Espacio Ideal | Espacio PISAMA",
   description:
-    "Descubre cómo Espacio PISAMA se adapta a las necesidades específicas de tu profesión. Consultorios para psicólogos, terapeutas alternativos, nutricionistas y más en Montevideo.",
+    "Descubre cómo Espacio PISAMA se adapta a las necesidades específicas de tu profesión. Consultorios para psicólogos, coaches, nutricionistas, fisioterapeutas con camilla y más en Montevideo.",
   keywords: [
     "consultorios para psicólogos montevideo",
+    "consultorios para coaches montevideo",
+    "consultorios con camilla montevideo",
+    "consultorios para fisioterapeutas",
     "consultorios para terapeutas alternativos",
     "alquiler consultorios por profesión",
     "espacios terapéuticos montevideo",
     "consultorios por hora montevideo",
   ],
+  alternates: {
+    canonical: "/soluciones",
+  },
 };
 
 const profesiones = [
@@ -29,6 +35,18 @@ const profesiones = [
       "Aislación acústica profesional",
       "Ambiente diseñado por psicólogos",
       "Reservas en tiempo real",
+    ],
+  },
+  {
+    slug: "coaches",
+    emoji: "🎯",
+    title: "Coaches",
+    description:
+      "Espacio profesional para coaching ontológico, ejecutivo y personal. Privacidad acústica garantizada y ambiente que facilita la transformación.",
+    highlights: [
+      "Confidencialidad absoluta",
+      "Ambiente diseñado para reflexión profunda",
+      "Flexibilidad total de horarios",
     ],
   },
   {
@@ -53,6 +71,30 @@ const profesiones = [
       "Camilla disponible",
       "Ambiente cálido y armónico",
       "Horarios 7:00 a 23:00",
+    ],
+  },
+  {
+    slug: "con-camilla",
+    emoji: "🛏️",
+    title: "Con Camilla",
+    description:
+      "Camilla profesional incluida y 5 espacios Premium amplios. Sistema de reserva online que garantiza tu equipamiento sin conflictos. Ideal para fisioterapeutas, masajistas y osteópatas.",
+    highlights: [
+      "Camilla profesional incluida gratis",
+      "Sistema anti-conflictos en tiempo real",
+      "5 consultorios Premium amplios",
+    ],
+  },
+  {
+    slug: "psiquiatras",
+    emoji: "⚕️",
+    title: "Psiquiatras",
+    description:
+      "Privacidad acústica absoluta y entorno seguro para tu práctica médica. Consultorios habilitados y ambiente profesional.",
+    highlights: [
+      "Aislación acústica certificada",
+      "Entorno seguro y controlado",
+      "Imagen médica profesional",
     ],
   },
 ];

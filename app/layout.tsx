@@ -15,7 +15,12 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/EspacioPisama32.png",
+    icon: [
+      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: "/favicon/apple-touch-icon.png",
+    shortcut: "/favicon/favicon.ico",
   },
   authors: [{ name: "Gastón Campo", url: siteConfig.url }],
   creator: "Gastón Campo",
@@ -31,9 +36,16 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `Logo e interior de ${siteConfig.name}`,
+        alt: "Logo de Espacio PISAMA con vista interior de consultorios profesionales para psicólogos, nutricionistas y terapeutas en Parque Rodó, Montevideo",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    creator: "@espacio_pisama",
+    images: [siteConfig.ogImage],
   },
 };
 

@@ -106,6 +106,14 @@ export default function SiteFooter() {
                 </li>
                 <li>
                   <Link
+                    href="/soluciones/coaches"
+                    className="hover:text-secondary"
+                  >
+                    Coaches
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/soluciones/nutricionistas"
                     className="hover:text-secondary"
                   >
@@ -118,6 +126,22 @@ export default function SiteFooter() {
                     className="hover:text-secondary"
                   >
                     Terapeutas Alternativos
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/soluciones/psiquiatras"
+                    className="hover:text-secondary"
+                  >
+                    Psiquiatras
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/soluciones/con-camilla"
+                    className="hover:text-secondary"
+                  >
+                    Con Camilla
                   </Link>
                 </li>
               </ul>

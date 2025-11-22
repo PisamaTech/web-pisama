@@ -61,47 +61,35 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="hidden lg:flex gap-4" justify="center">
-        {siteConfig.navItems.map((item) =>
-          item.dropdown ? (
-            <Dropdown key={item.label}>
-              <NavbarItem>
-                <DropdownTrigger>
-                  <Button
-                    disableRipple
-                    className="p-0 bg-transparent data-[hover=true]:bg-transparent text-secondary font-semibold text-base"
-                    endContent={<TbChevronDown size={16} />}
-                    radius="sm"
-                    variant="light"
-                  >
-                    {item.label}
-                  </Button>
-                </DropdownTrigger>
-              </NavbarItem>
-              <DropdownMenu
-                aria-label={`Acciones para ${item.label}`}
-                className="w-full text-center text-default"
-                itemClasses={{ base: "gap-4" }}
-                onAction={(key) => router.push(key as string)}
-              >
-                {item.dropdown.map((subItem) => (
-                  <DropdownItem key={subItem.href}>
-                    {subItem.label}
-                  </DropdownItem>
-                ))}
-              </DropdownMenu>
-            </Dropdown>
-          ) : (
-            <NavbarItem key={item.href}>
-              <Link
-                color="secondary"
-                href={item.href}
-                className="hover:text-primary/80 transition-colors duration-200"
-              >
-                {item.label}
-              </Link>
+        {siteConfig.navItems.map((item) => (
+          <Dropdown key={item.label}>
+            <NavbarItem>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent text-secondary font-semibold text-base"
+                  endContent={<TbChevronDown size={16} />}
+                  radius="sm"
+                  variant="light"
+                >
+                  {item.label}
+                </Button>
+              </DropdownTrigger>
             </NavbarItem>
-          )
-        )}
+            <DropdownMenu
+              aria-label={`Acciones para ${item.label}`}
+              className="w-full text-center text-default"
+              itemClasses={{ base: "gap-4" }}
+              onAction={(key) => router.push(key as string)}
+            >
+              {item.dropdown.map((subItem) => (
+                <DropdownItem key={subItem.href}>
+                  {subItem.label}
+                </DropdownItem>
+              ))}
+            </DropdownMenu>
+          </Dropdown>
+        ))}
       </NavbarContent>
 
       {/* --- Botones de Acción --- */}
@@ -122,7 +110,7 @@ export const Navbar = () => {
 
       {/* --- Contenido del Menú Móvil --- */}
       <NavbarMenu>
-        {siteConfig.navItems.flatMap((item) =>
+        {siteConfig.mobileNavItems.flatMap((item) =>
           item.dropdown
             ? item.dropdown.map((subItem) => (
                 <NavbarMenuItem key={subItem.href}>

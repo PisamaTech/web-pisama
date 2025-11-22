@@ -41,21 +41,14 @@ export const siteConfig = {
     "reserva online de consultorios",
   ],
 
-  // Elementos del menú de navegación principal
+  // Elementos del menú de navegación principal (pantallas grandes)
   navItems: [
-    { label: "Consultorios", href: "/consultorios" },
-    { label: "Disponibilidad", href: "/disponibilidad" },
-    { label: "Precios", href: "/precios" },
     {
-      label: "Soluciones",
+      label: "Consultorios",
       dropdown: [
-        { label: "Para Psicólogos", href: "/soluciones/psicologos" },
-        { label: "Para Nutricionistas", href: "/soluciones/nutricionistas" },
-        {
-          label: "Para Terapeutas Alternativos",
-          href: "/soluciones/terapeutas-alternativos",
-        },
-        { label: "Ver Todas", href: "/soluciones" },
+        { label: "Explorar Consultorios", href: "/consultorios" },
+        { label: "Disponibilidad", href: "/disponibilidad" },
+        { label: "Precios", href: "/precios" },
       ],
     },
     {
@@ -66,6 +59,20 @@ export const siteConfig = {
       ],
     },
     {
+      label: "Soluciones",
+      dropdown: [
+        { label: "Para Psicólogos", href: "/soluciones/psicologos" },
+        { label: "Para Coaches", href: "/soluciones/coaches" },
+        { label: "Para Nutricionistas", href: "/soluciones/nutricionistas" },
+        {
+          label: "Para Terapeutas Alternativos",
+          href: "/soluciones/terapeutas-alternativos",
+        },
+        { label: "Con Camilla", href: "/soluciones/con-camilla" },
+        { label: "Ver Todas", href: "/soluciones" },
+      ],
+    },
+    {
       label: "Nosotros",
       dropdown: [
         { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
@@ -73,6 +80,32 @@ export const siteConfig = {
         { label: "Contacto", href: "/contacto" },
       ],
     },
+  ],
+
+  // Elementos del menú móvil (pantallas pequeñas) - versión simplificada
+  mobileNavItems: [
+    { label: "Consultorios", href: "/consultorios" },
+    { label: "Disponibilidad", href: "/disponibilidad" },
+    { label: "Precios", href: "/precios" },
+    { label: "Conoce la App", href: "/app-de-reservas" },
+    { label: "Guía de Uso", href: "/guia-de-uso" },
+    {
+      label: "Soluciones Para",
+      dropdown: [
+        { label: "Para Psicólogos", href: "/soluciones/psicologos" },
+        { label: "Para Coaches", href: "/soluciones/coaches" },
+        { label: "Para Nutricionistas", href: "/soluciones/nutricionistas" },
+        {
+          label: "Para Terapeutas Alternativos",
+          href: "/soluciones/terapeutas-alternativos",
+        },
+        { label: "Con Camilla", href: "/soluciones/con-camilla" },
+        { label: "Ver Todas", href: "/soluciones" },
+      ],
+    },
+    { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contacto", href: "/contacto" },
   ],
 
   // Elementos de navegación del footer, organizados por columnas
@@ -90,12 +123,20 @@ export const siteConfig = {
         href: "/soluciones/psicologos",
       },
       {
+        label: "Para Coaches",
+        href: "/soluciones/coaches",
+      },
+      {
         label: "Para Nutricionistas",
         href: "/soluciones/nutricionistas",
       },
       {
         label: "Para Terapeutas Alternativos",
         href: "/soluciones/terapeutas-alternativos",
+      },
+      {
+        label: "Con Camilla",
+        href: "/soluciones/con-camilla",
       },
       { label: "Ver Todas las Soluciones", href: "/soluciones" },
     ],

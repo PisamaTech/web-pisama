@@ -14,37 +14,37 @@ import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaespera1 from "@/public/images/salaespera-1.webp";
 
-import ConsultorioPsicologosFaqSection from "./ConsultorioPsicologosFaqSection";
+import ConsultorioCoachesFaqSection from "./ConsultorioCoachesFaqSection";
 import ImageGallery from "./ImageGallery";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title:
-    "Alquiler de Consultorios para Psicólogos por Hora en Parque Rodó, Montevideo | PISAMA",
+    "Alquiler de Consultorio para Coaches por Hora en Parque Rodó, Montevideo | PISAMA",
   description:
-    "Consultorio psicológico por hora en Parque Rodó desde $200. Privacidad acústica absoluta, reservas online en tiempo real y ambiente diseñado por psicólogos. Sin compromiso mensual.",
+    "Consultorio para coaches por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente profesional y reservas online. Ideal para coaching ontológico, ejecutivo y personal. Sin compromiso mensual.",
   keywords: [
-    "alquiler consultorios psicólogos montevideo",
-    "consultorio psicológico parque rodó",
-    "consultorios por hora montevideo psicología",
-    "alquiler consultorio psicólogo por hora",
-    "consultorio privacidad acústica montevideo",
-    "alquiler consultorio terapia montevideo",
-    "consultorio psicología parque rodó",
-    "espacio terapéutico montevideo",
-    "reserva online consultorios psicología",
-    "alquiler sala terapia montevideo",
-    "consultorio psicólogo sin compromiso",
-    "consultorio profesional psicólogos montevideo",
+    "alquiler consultorio coaches montevideo",
+    "consultorio coaching parque rodó",
+    "alquiler consultorio por hora coaching",
+    "espacio profesional coaching montevideo",
+    "consultorio coaching ontológico montevideo",
+    "sala coaching ejecutivo parque rodó",
+    "alquiler espacio life coaching montevideo",
+    "consultorio privacidad coaching",
+    "reserva online consultorio coaching",
+    "alquiler sala coaching montevideo",
+    "consultorio coach sin compromiso",
+    "espacio profesional coaches montevideo",
   ],
   alternates: {
-    canonical: "/soluciones/psicologos",
+    canonical: "/soluciones/coaches",
   },
   openGraph: {
-    title: "Alquiler de Consultorios para Psicólogos en Montevideo | PISAMA",
+    title: "Alquiler de Consultorio para Coaches en Montevideo | PISAMA",
     description:
-      "Consultorio psicológico por hora con privacidad acústica absoluta en Parque Rodó. Desde $200/hora sin compromiso mensual.",
-    url: "https://www.pisama.uy/soluciones/psicologos",
+      "Consultorio para coaching por hora con privacidad acústica absoluta en Parque Rodó. Desde $200/hora sin compromiso mensual.",
+    url: "https://www.pisama.uy/soluciones/coaches",
     siteName: "Espacio Pisama",
     locale: "es_UY",
     type: "article",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://www.pisama.uy/images/consultorio1-1.webp",
         width: 1200,
         height: 630,
-        alt: "Consultorio profesional para psicólogos en Parque Rodó, Montevideo",
+        alt: "Consultorio profesional para coaches en Parque Rodó, Montevideo",
       },
     ],
   },
@@ -62,12 +62,12 @@ export const metadata: Metadata = {
 const CtaBox = () => (
   <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400 hover:scale-103 transition-transform duration-300">
     <h3 className="font-display text-3xl font-bold text-primary-500 mt-8!">
-      ¿Listo para reservar tu consultorio psicológico en Parque Rodó?
+      ¿Listo para reservar tu consultorio para coaching en Parque Rodó?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
       Alquiler por hora desde $200 en Montevideo. Privacidad acústica absoluta,
-      reservas online en tiempo real y ambiente diseñado por psicólogos. Sin
-      compromiso mensual.
+      reservas online en tiempo real y ambiente diseñado para sesiones de coaching
+      profesional. Sin compromiso mensual.
     </p>
     <Button
       as={Link}
@@ -82,7 +82,7 @@ const CtaBox = () => (
 );
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
-export default function ArticuloPsicologosPage(): React.JSX.Element {
+export default function ArticuloCoachesPage(): React.JSX.Element {
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -94,36 +94,36 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
       url: `${siteConfig.url}/soluciones`,
     },
     {
-      name: "Para Psicólogos",
-      url: `${siteConfig.url}/soluciones/psicologos`,
+      name: "Para Coaches",
+      url: `${siteConfig.url}/soluciones/coaches`,
     },
   ];
 
   const sections = [
     {
-      title: "El Consultorio como Encuadre",
-      id: "encuadre",
+      title: "El Espacio como Contenedor del Proceso",
+      id: "contenedor",
     },
     {
-      title: "Los 3 Pilares de Espacio PISAMA",
+      title: "Los 3 Pilares de Espacio PISAMA para Coaches",
       id: "pilares",
       subsections: [
         {
-          title: "1. Ambientación Profesional",
+          title: "1. Ambiente Profesional",
           id: "ambiente-profesional",
         },
         {
-          title: "2. Privacidad Acústica",
+          title: "2. Privacidad Acústica Absoluta",
           id: "privacidad-acustica",
         },
         {
-          title: "3. Funcionalidad",
+          title: "3. Funcionalidad Sin Preocupaciones",
           id: "funcionalidad",
         },
       ],
     },
     {
-      title: "La Logística que Resolvimos",
+      title: "La Logística que Resolvimos para Coaches",
       id: "logistica",
       subsections: [
         {
@@ -135,14 +135,14 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           id: "ubicacion",
         },
         {
-          title: "Comunidad de Colegas",
-          id: "comunidad-colegas",
+          title: "Comunidad Profesional",
+          id: "comunidad-profesional",
         },
       ],
     },
     {
-      title: "Eliminamos las Banderas Rojas",
-      id: "banderas-rojas",
+      title: "Eliminamos las Barreras del Coaching Presencial",
+      id: "barreras",
     },
     {
       title: "Conclusión",
@@ -150,67 +150,35 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
     },
   ];
 
-  // Schema.org Article para SEO
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline:
-      "Alquiler de Consultorios para Psicólogos por Hora en Montevideo",
-    description:
-      "Guía completa sobre alquiler de consultorios psicológicos en Parque Rodó. Privacidad acústica, reservas online y precios flexibles.",
-    image: [
-      "https://www.pisama.uy/images/consultorio1-1.webp",
-      "https://www.pisama.uy/images/salaespera-1.webp",
-    ],
-    datePublished: "2024-09-15",
-    dateModified: new Date().toISOString().split("T")[0],
-    author: {
-      "@type": "Person",
-      name: "Gastón Campo",
-      url: "https://www.pisama.uy/sobre-nosotros",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Espacio PISAMA",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.pisama.uy/images/Logo-Espacio-Pisama-Texturado-300px.png",
-      },
-    },
-  };
-
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
       <main className="bg-content2 py-20">
         <article
-          className="prose prose-lg mx-auto max-w-4xl px-4 
+          className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
-                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400 
+                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
                      prose-blockquote:border-secondary-500 prose-blockquote:text-foreground/70
                      prose-li:font-sans prose-li:text-foreground/90
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
           <h1>
-            Alquiler de Consultorios para Psicólogos por Hora en Montevideo: La
-            Solución para Trabajar Tranquilo
+            Alquiler de Consultorio para Coaches por Hora en Montevideo: El
+            Espacio que Tu Práctica Necesita
           </h1>
           <Indice sections={sections} />
 
           <p className="mt-12">
-            Mi nombre es Gastón y soy psicólogo, sé exactamente lo que significa
-            buscar un consultorio psicológico en alquiler por hora en
-            Montevideo. He pasado por las frustraciones, las incomodidades y
-            todas esas 🚩 <span className="text-red-400">banderas rojas</span>{" "}
-            que te hacen perder tiempo y afectan tu práctica privada
-            profesional.
+            Como coach profesional, sé que el espacio donde trabajas no es solo
+            un detalle logístico: es parte integral del proceso de
+            transformación que facilitas. He vivido la frustración de intentar
+            dar sesiones de coaching en espacios inadecuados, donde la falta de
+            privacidad, el ambiente poco profesional o la coordinación caótica
+            de reservas afectan directamente la calidad de tu trabajo y la
+            confianza de tus coachees.
           </p>
           <p>
             Por eso creé{" "}
@@ -227,34 +195,36 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             >
               espacio de alquiler de consultorios
             </Link>{" "}
-            por hora en Parque Rodó diseñado específicamente para eliminar todos
-            esos problemas. No es solo un lugar más para alquilar. Es la
-            solución que yo hubiese querido tener cuando empecé a trabajar como
-            psicólogo, y que ahora pongo a disposición de colegas que buscan
-            trabajar con tranquilidad y profesionalismo.
+            por hora en Parque Rodó, Montevideo, diseñado específicamente para
+            profesionales del coaching que buscan un lugar donde puedan
+            concentrarse exclusivamente en lo que mejor hacen: acompañar
+            procesos de transformación personal y profesional.
           </p>
-          {/* --- SECCIÓN 1: EL ENCUADRE --- */}
-          <h2 id="encuadre">
-            El Consultorio Psicológico como Encuadre Terapéutico en Montevideo
+
+          {/* --- SECCIÓN 1: EL CONTENEDOR --- */}
+          <h2 id="contenedor">
+            El Espacio como Contenedor del Proceso de Coaching en Montevideo
           </h2>
           <p>
-            En la psicología clínica, cuando hablamos del &quot;encuadre
-            terapéutico&quot;, pensamos en el horario, los honorarios, nuestro
-            rol. Pero el espacio físico del consultorio psicológico es el
-            elemento más tangible de ese encuadre, y en Espacio PISAMA lo
-            tomamos muy en serio para cada profesional de la salud mental.
+            En el coaching ontológico, ejecutivo o personal, hablamos del
+            &quot;espacio seguro&quot; como condición fundamental para que el
+            coachee se permita explorar, cuestionar y transformar. Pero ese
+            espacio seguro no es solo simbólico: el consultorio físico donde
+            das tus sesiones de coaching es el contenedor tangible de ese
+            proceso.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={consultorio1}
-              alt="Consultorio PISAMA - Espacio profesional para psicólogos"
+              alt="Consultorio PISAMA - Espacio profesional para coaches"
               className="rounded-xl shadow-2xl h-auto"
               width={650}
             />
           </div>
           <blockquote>
-            Un consultorio predecible y profesional no solo le da seguridad al
-            paciente; te la da a vos.
+            Un consultorio profesional, predecible y confidencial no solo le da
+            seguridad al coachee; te permite a vos estar presente al 100% en el
+            proceso.
           </blockquote>
           <p>
             En Espacio PISAMA diseñamos{" "}
@@ -264,62 +234,70 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             >
               cada consultorio
             </Link>{" "}
-            para que vos puedas liberarte de preocupaciones logísticas y
-            enfocarte exclusivamente en el paciente que tenés adelante. Cuando
-            el encuadre es estable, tu atención no se desvía, y eso potencia tu
-            trabajo.
+            para que puedas liberarte de preocupaciones logísticas y enfocarte
+            exclusivamente en tu coachee. Cuando el espacio funciona, tu
+            atención no se desvía, y eso potencia cada sesión de coaching que
+            facilitas.
           </p>
+
           {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
           <h2 id="pilares">
-            Los 3 Pilares del Alquiler de Consultorios para Psicólogos en Parque
+            Los 3 Pilares del Alquiler de Consultorios para Coaches en Parque
             Rodó
           </h2>
           <p>
             Hay tres factores que prioricé al diseñar este espacio de alquiler
-            de consultorios para psicólogos en Parque Rodó, porque sé que son
-            esenciales para nuestra práctica psicológica privada:
+            de consultorios para coaches en Parque Rodó, porque sé que son
+            esenciales para cualquier práctica de coaching profesional:
           </p>
+
           <h3 id="ambiente-profesional">
-            1. Ambientación Profesional: Diseñado por Psicólogos, para
-            Psicólogos
+            1. Ambiente Profesional: Diseñado para la Reflexión y la
+            Transformación
           </h3>
           <p>
-            He tenido que alquilar consultorios psicológicos con sillones rotos
-            o llegar a barrer antes de que llegara mi paciente. Eso te saca
-            completamente de tu rol como profesional de la salud mental.{" "}
+            He dado sesiones de coaching en cafeterías ruidosas, espacios
+            compartidos improvisados, y consultorios desprolijos que proyectaban
+            todo menos profesionalismo. Eso mina la credibilidad de tu trabajo
+            como coach y dificulta que el coachee se tome el proceso en serio.{" "}
             <strong>
-              Mi esposa también es psicóloga, y juntos diseñamos cada rincón de
-              nuestro espacio terapéutico en Espacio PISAMA.
+              En Espacio PISAMA, cada detalle está pensado para facilitar
+              conversaciones profundas y reflexión genuina.
             </strong>
           </p>
           <ImageGallery />
           <p>
             Buscamos un estilo minimalista pero cálido, profesional y acogedor.
-            Un lugar que invite a la calma desde que cruzás la puerta. Los
-            muebles, la iluminación, los colores: todo está pensado para generar
-            el ambiente terapéutico ideal.
+            Un lugar que invite a la introspección desde que cruzas la puerta.
+            Los muebles, la iluminación, los colores: todo está diseñado para
+            generar el ambiente ideal para sesiones de coaching ontológico,
+            coaching ejecutivo o life coaching.
           </p>
 
           <h3 id="privacidad-acustica">
-            2. Privacidad Acústica Absoluta en Consultorios Psicológicos
+            2. Privacidad Acústica Absoluta: La Base de la Confidencialidad
           </h3>
           <p>
-            He trabajado en consultorios para psicólogos donde se escuchaban
-            fragmentos de otras sesiones terapéuticas en la sala de espera. Eso
-            es inaceptable para cualquier profesional de la psicología.{" "}
+            En el coaching, los coachees comparten metas profesionales,
+            desafíos personales, vulnerabilidades y procesos de transformación
+            profundos. He trabajado en espacios donde se escuchaban fragmentos
+            de otras conversaciones desde la sala de espera. Eso es inaceptable
+            para cualquier coach profesional.{" "}
             <strong>
               En nuestro consultorio en Parque Rodó, la privacidad acústica fue
-              mi obsesión desde el inicio.
+              una obsesión desde el diseño.
             </strong>{" "}
-            No solo aislamos acústicamente cada consultorio psicológico, sino
-            que instalamos música ambiental en la sala de espera para enmascarar
+            No solo aislamos acústicamente cada consultorio, sino que
+            instalamos música ambiental en la sala de espera para enmascarar
             cualquier sonido residual.
           </p>
           <p>
             <strong>Resultado:</strong> Confidencialidad absoluta en tu
-            consultorio psicológico. Tus pacientes pueden hablar con total
-            libertad durante las sesiones de psicoterapia, sabiendo que nadie
-            más los escuchará.
+            consultorio de coaching. Tus coachees pueden hablar con total
+            libertad, explorar temas sensibles y trabajar en profundidad,
+            sabiendo que nadie más los escuchará. Esto es crítico para coaching
+            ejecutivo, donde se discuten estrategias de carrera, conflictos
+            organizacionales o decisiones de liderazgo.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -331,49 +309,53 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           </div>
 
           <h3 id="funcionalidad">
-            3. Funcionalidad: Cada Detalle Cubierto, Siempre
+            3. Funcionalidad Sin Preocupaciones: Cada Detalle Cubierto
           </h3>
           <p>
             <strong>
               En Espacio PISAMA, todo está como debe estar, siempre.
             </strong>{" "}
-            Hay pañuelos a mano, la iluminación es perfecta y la limpieza es
-            impecable. La temperatura es agradable todo el año, ya que todos los
-            consultorios cuentan con aire acondicionado. No tenés que pensar en
-            nada de esto. El espacio trabaja para vos, no al revés.
+            La iluminación es perfecta para sesiones largas, la limpieza es
+            impecable, la conexión a internet es rápida y estable (ideal si
+            necesitas compartir pantalla o acceder a herramientas digitales de
+            coaching), y la temperatura es agradable todo el año gracias al
+            aire acondicionado. No tenés que pensar en nada de esto. El espacio
+            trabaja para vos, no al revés.
           </p>
           <div className="my-8 flex justify-center">
             <Image
               src={consultorio3}
-              alt="Consultorio psicológico en impecables condiciones"
+              alt="Consultorio para coaches en impecables condiciones"
               className="rounded-xl shadow-2xl h-auto"
               width={650}
             />
           </div>
           <CtaBox />
+
           {/* --- SECCIÓN 3: LA LOGÍSTICA OCULTA --- */}
           <h2 id="logistica">
             Sistema de Reservas y Logística para Alquiler por Hora de
-            Consultorios
+            Consultorios de Coaching
           </h2>
           <p>
             Más allá del espacio físico del consultorio, la gestión del día a
-            día en tu práctica privada puede convertirse en una fuente constante
-            de estrés. Por eso desarrollamos soluciones específicas para
-            psicólogos que alquilan por hora:
+            día en tu práctica de coaching puede convertirse en una fuente
+            constante de estrés. Por eso desarrollamos soluciones específicas
+            para coaches que alquilan por hora:
           </p>
+
           <h3 id="sistema-reservas">
             Sistema de Reservas Online en Tiempo Real: Adiós al Caos
           </h3>
           <p>
-            Al principio de mi carrera como psicólogo, viví la pesadilla de la
-            coordinación por mensaje para reservar consultorios. Consultar
-            disponibilidad, esperar respuesta, confirmar con el paciente y, a
-            veces, al volver a contactar, descubrir que la hora ya no estaba
-            disponible en el consultorio psicológico. Tener que cambiar un
-            horario ya confirmado proyecta una imagen poco profesional y
-            desorganizada. Es un desgaste innecesario que resolvimos con nuestra
-            plataforma de alquiler por hora online en tiempo real.
+            Al inicio de mi carrera profesional, viví la pesadilla de la
+            coordinación por WhatsApp para reservar espacios. Consultar
+            disponibilidad, esperar respuesta, confirmar con el coachee, y al
+            volver a contactar descubrir que la hora ya no estaba disponible.
+            Tener que cambiar un horario ya confirmado proyecta una imagen poco
+            profesional y desorganizada. Es un desgaste innecesario que
+            resolvimos con nuestra plataforma de alquiler por hora online en
+            tiempo real.
           </p>
           <p>
             <Link
@@ -382,7 +364,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             >
               Ves la disponibilidad en tiempo real
             </Link>
-            , reservás al instante, y confirmás con tu paciente sin riesgo de
+            , reservas al instante, y confirmas con tu coachee sin riesgo de
             sorpresas. Es simple, rápido y profesional. Este mismo{" "}
             <Link
               href="/app-de-reservas"
@@ -391,6 +373,13 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               sistema de reservas online
             </Link>{" "}
             lo utilizan también{" "}
+            <Link
+              href="/soluciones/psicologos"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
+              psicólogos
+            </Link>
+            ,{" "}
             <Link
               href="/soluciones/nutricionistas"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
@@ -414,23 +403,25 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               width={650}
             />
           </div>
+
           <h3 id="ubicacion">
             Ubicación Estratégica del Consultorio: Parque Rodó, Montevideo
           </h3>
           <p>
-            Nuestro consultorio para psicólogos está en{" "}
+            Nuestro consultorio para coaches está en{" "}
             <strong>Parque Rodó, Montevideo</strong>, cerca de avenidas
             principales (Blvr. Artigas, Blvr. España, Rivera, 18 de Julio) con
             excelente acceso en ómnibus. Estamos ubicados en el corazón de
             Montevideo, muy cercano a barrios como Pocitos, Cordón, Parque
-            Battle, Punta Carretas y Centro. Una ubicación ideal para
-            profesionales que buscan un espacio terapéutico accesible.
+            Battle, Punta Carretas y Centro. Una ubicación ideal para coaches
+            que buscan un espacio profesional accesible para sus coachees.
           </p>
           <p>
             Y algo clave en Montevideo: estamos en una zona de estacionamiento
             no tarifado, donde siempre se encuentra lugar para estacionar.
-            Eliminamos una barrera importante para la adherencia de tus
-            pacientes.
+            Eliminamos una barrera importante para la puntualidad y asistencia
+            de tus coachees, especialmente en coaching ejecutivo donde muchos
+            clientes vienen en auto.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -440,24 +431,26 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               width={350}
             />
           </div>
-          <h3 id="comunidad-colegas">
-            Comunidad de Colegas Respetuosos: Baja Rotación, Alta Calidad
+
+          <h3 id="comunidad-profesional">
+            Comunidad Profesional Respetuosa: Baja Rotación, Alta Calidad
           </h3>
           <p>
-            Otro factor de estrés son los colegas impuntuales. He tenido que
-            golpear puertas para que un profesional saliera porque ya era mi
-            hora, generando una situación de incomodidad terrible frente a mi
-            paciente que esperaba. Por eso, en Espacio Pisama, fomento una
-            comunidad de profesionales estable y respetuosa. Nuestro{" "}
+            Otro factor de estrés son los colegas impuntuales que se pasan de
+            horario. He tenido que interrumpir procesos delicados porque el
+            profesional anterior no salía a tiempo, generando una situación
+            incómoda frente a mi coachee que esperaba. Por eso, en Espacio
+            Pisama, fomento una comunidad de profesionales estable y
+            respetuosa. Nuestro{" "}
             <Link
               href="/precios"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
             >
               sistema de descuentos por cantidad de horas utilizadas por semana
-            </Link>
-            , es una búsqueda de fidelizar a colegas comprometidos que valoren
-            tanto su tiempo como el de los demás. Prefiero tener una baja
-            rotación y un ambiente de trabajo armónico, como explico en{" "}
+            </Link>{" "}
+            busca fidelizar a colegas comprometidos que valoren tanto su tiempo
+            como el de los demás. Prefiero tener una baja rotación y un
+            ambiente de trabajo armónico, como explico en{" "}
             <Link
               href="/sobre-nosotros"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
@@ -466,17 +459,22 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             </Link>
             .
           </p>
-          {/* --- SECCIÓN 4: BANDERAS ROJAS --- */}
-          <h2 id="banderas-rojas">
-            En Espacio PISAMA Eliminamos todas las ⚠️{" "}
-            <span className="text-red-400">Banderas Rojas </span>
-            🚩 al momento de Alquilar un Consultorio Psicológico
+
+          {/* --- SECCIÓN 4: BARRERAS --- */}
+          <h2 id="barreras">
+            En Espacio PISAMA Eliminamos todas las Barreras del Coaching
+            Presencial
           </h2>
           <p>
             Si alguna vez te preocupaste por alguno de estos problemas, Espacio
             PISAMA los resuelve todos:
           </p>
           <ul>
+            <li>
+              <strong>¿Costos fijos prohibitivos?</strong> Con el alquiler por
+              hora solo pagas lo que usas. Sin gastos comunes, sin servicios,
+              sin contratos anuales.
+            </li>
             <li>
               <strong>¿Privacidad dudosa?</strong> En Espacio PISAMA es
               absoluta, garantizada por aislación acústica profesional y música
@@ -490,44 +488,47 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               >
                 sistema de reservas online en tiempo real
               </Link>
-              , reservás en segundos, sin intermediarios.
+              , reservas en segundos, sin intermediarios ni mensajes de WhatsApp.
             </li>
             <li>
-              <strong>¿Ambiente desprolijo?</strong>{" "}
+              <strong>¿Ambiente poco profesional?</strong>{" "}
               <Link
                 href="/consultorios"
                 className="text-secondary-500 font-semibold hover:text-secondary-400"
               >
                 Cada consultorio
               </Link>{" "}
-              está impecable, siempre. Decoración cuidada, limpieza garantizada.
+              está impecable, siempre. Decoración cuidada, limpieza
+              garantizada, mobiliario profesional.
             </li>
             <li>
-              <strong>¿Colegas impuntuales?</strong> Fomentamos una comunidad
-              respetuosa y estable. La impuntualidad no es tolerada.
+              <strong>¿Falta de flexibilidad?</strong> Reservas por hora, día o
+              semana. Te adaptas a tu agenda real, no al revés.
             </li>
-
             <li>
               <strong>¿Mala ubicación?</strong> Parque Rodó, acceso fácil en
               ómnibus, estacionamiento sin problemas.
             </li>
           </ul>
+
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
           <h2 id="conclusion">
-            Encontrá tu Consultorio Ideal para Psicólogos en Montevideo
+            Encontrá tu Consultorio Ideal para Coaching en Montevideo
           </h2>
           <p>
             Al crear Espacio PISAMA intenté resolver todos los problemas que
-            viví cuando tuve que alquilar un consultorio como psicólogo.{" "}
+            viví al buscar espacios profesionales para coaching.{" "}
             <strong>
               No es el espacio más barato ni el más lujoso. Es el que funciona.
             </strong>{" "}
-            Es un &quot;encuadre fijo&quot; real: un pilar estable que te da
-            tranquilidad y confianza para dedicarte por completo a tu paciente.
+            Es un contenedor profesional real: un pilar estable que te da
+            tranquilidad y confianza para dedicarte por completo a acompañar el
+            proceso de transformación de tus coachees.
           </p>
           <p className="pb-8">
-            Si buscás un lugar donde simplemente puedas ser psicólogo, sin
-            preocupaciones logísticas ni sorpresas desagradables,{" "}
+            Si buscas un lugar donde simplemente puedas ser coach, sin
+            preocupaciones logísticas ni sorpresas desagradables, ya sea que
+            hagas coaching ontológico, coaching ejecutivo o life coaching,{" "}
             <strong>Espacio PISAMA es tu lugar</strong>. Te invito a{" "}
             <Link
               href="/contacto"
@@ -546,13 +547,14 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               allowFullScreen
             />
           </div>
+
           {/* --- SECCIÓN 6: FAQ --- */}
-          <ConsultorioPsicologosFaqSection />
+          <ConsultorioCoachesFaqSection />
         </article>
       </main>
       <CtaSection
-        title="Reservá tu Consultorio para Psicólogos en Montevideo Hoy"
-        description="Alquiler por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente diseñado por psicólogos y sistema de reservas online en tiempo real. Todo lo que necesitás para tu práctica privada sin compromiso mensual. Encontrá tu horario ideal ahora."
+        title="Reservá tu Consultorio para Coaching en Montevideo Hoy"
+        description="Alquiler por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente diseñado para coaching profesional y sistema de reservas online en tiempo real. Todo lo que necesitas para tu práctica de coaching ontológico, ejecutivo o personal sin compromiso mensual. Encontrá tu horario ideal ahora."
         buttonText="Ver Disponibilidad y Precios Ahora"
         buttonLink="/disponibilidad"
       />
