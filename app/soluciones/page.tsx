@@ -36,11 +36,11 @@ const profesiones = [
     emoji: "🥗",
     title: "Nutricionistas",
     description:
-      "Consultorio con balanza profesional disponible, ambiente que inspira cambio y privacidad para temas sensibles. Alquiler flexible por hora.",
+      "Consultorio completamente equipado, ambiente que inspira cambio y privacidad para temas sensibles. Alquiler flexible por hora sin compromiso mensual.",
     highlights: [
-      "Balanza profesional disponible",
+      "Espacio completamente equipado",
       "Ambiente motivador y profesional",
-      "Alquiler por hora sin compromiso",
+      "Privacidad total para temas sensibles",
     ],
   },
   {

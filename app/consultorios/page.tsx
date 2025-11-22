@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "Parque Rodó",
     "reserva online de consultorios en montevideo",
   ],
+  alternates: {
+    canonical: "/consultorios",
+  },
 };
 
 export default function ConsultoriosPage() {

@@ -2,24 +2,16 @@ import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site"; // Importamos nuestra configuración para la URL base
 
-// --- FUNCIÓN SIMULADA PARA OBTENER ARTÍCULOS DEL BLOG ---
-// En un futuro, esta función se conectaría a tu CMS o base de datos
-// para obtener una lista de todos los artículos publicados.
-// Por ahora, incluiremos manualmente el que ya creamos.
+// --- FUNCIÓN PARA OBTENER ARTÍCULOS DEL BLOG ---
+// Las antiguas URLs de blog ahora hacen redirect 301 a /soluciones/
+// Por lo tanto, no deben estar en el sitemap para evitar confusión a los crawlers.
+// En el futuro, cuando tengas artículos de blog educativos nuevos, añádelos aquí.
 async function getPublishedBlogArticles() {
   // TODO: Reemplaza esto con una llamada real a tu CMS o base de datos
+  // cuando tengas artículos de blog educativos (no comerciales)
   return [
-    {
-      slug: "consultorio-para-psicologos-alquiler",
-      // Idealmente, aquí usarías la fecha de última actualización del artículo
-      lastModified: new Date(),
-    },
-    {
-      slug: "alquiler-consultorios-terapias-alternativas",
-      // Idealmente, aquí usarías la fecha de última actualización del artículo
-      lastModified: new Date(),
-    },
-    // Cuando añadas más artículos, los añadirás aquí o los obtendrás dinámicamente
+    // Las páginas que antes estaban aquí ahora están en /soluciones/
+    // y ya están incluidas en staticRoutes arriba
   ];
 }
 
@@ -45,6 +37,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/contacto",
     "/terminos-y-condiciones",
     "/blog", // La página principal del blog
+    "/soluciones", // Hub de soluciones por profesión
+    "/soluciones/psicologos", // Landing page para psicólogos
+    "/soluciones/nutricionistas", // Landing page para nutricionistas
+    "/soluciones/terapeutas-alternativos", // Landing page para terapeutas alternativos
   ];
 
   const staticUrls = staticRoutes.map((route) => ({

@@ -10,9 +10,9 @@ const faqData = [
   {
     key: "1",
     question:
-      "¿Qué equipamiento necesito para comenzar a trabajar como nutricionista en un consultorio?",
+      "¿Qué necesito para comenzar a trabajar como nutricionista en Espacio PISAMA?",
     answer:
-      "Lo ideal es contar con una balanza profesional con adipómetro, plicómetro, cinta métrica y un espacio cómodo para la consulta. En Espacio PISAMA ponemos a disposición una balanza profesional sin costo adicional, lo que te permite comenzar con mínima inversión inicial y crecer gradualmente.",
+      "El consultorio ya viene completamente equipado con escritorio profesional, sillas cómodas, iluminación adecuada y climatización. Solo necesitás traer tu equipamiento nutricional personal (balanza, plicómetro, cinta métrica, material educativo) y podés comenzar a trabajar de inmediato. El espacio está listo para que te enfoques en tus pacientes desde el primer día.",
   },
   {
     key: "2",
@@ -38,9 +38,9 @@ const faqData = [
   {
     key: "5",
     question:
-      "¿Puedo traer mi propio equipamiento o debo usar el del consultorio?",
+      "¿Puedo personalizar el consultorio con mis materiales y equipamiento?",
     answer:
-      "Podés traer tu propio equipamiento si preferís (balanza, plicómetro, material educativo). También tenés disponible una balanza profesional sin costo adicional. El consultorio te ofrece flexibilidad total para personalizar tu práctica según tus necesidades y metodología de trabajo.",
+      "Absolutamente. El consultorio está equipado con los elementos básicos (mobiliario, climatización, iluminación), pero tenés total libertad para traer tu equipamiento nutricional (balanza, plicómetro, material educativo, afiches) y personalizar el espacio según tu metodología de trabajo. Muchos profesionales traen sus propios materiales didácticos para enriquecer las consultas.",
   },
   {
     key: "6",
@@ -52,9 +52,9 @@ const faqData = [
   {
     key: "7",
     question:
-      "¿Realmente vale la pena invertir en un consultorio profesional cuando recién empiezo?",
+      "¿Vale la pena alquilar un consultorio profesional cuando recién empiezo mi práctica nutricional?",
     answer:
-      "La respuesta es sí, pero con flexibilidad. Atender en espacios improvisados (tu casa, cafeterías) puede afectar tu imagen profesional y la confianza del paciente. Con el modelo de alquiler por horas, accedés a un consultorio profesional sin inversión prohibitiva. Esto te permite proyectar seriedad desde el inicio, lo cual es fundamental para construir tu reputación y captar pacientes.",
+      "La respuesta es sí, absolutamente. Atender en espacios improvisados (tu casa, cafeterías) puede afectar seriamente tu imagen profesional y la confianza del paciente. Los temas que se tratan en nutrición (peso, imagen corporal, hábitos alimentarios) requieren un ambiente privado y profesional. Con el modelo de alquiler por horas de Espacio PISAMA, accedés a un consultorio de primer nivel sin inversión inicial prohibitiva, pagando solo por las horas que usás. Esto te permite proyectar profesionalismo desde el inicio.",
   },
   {
     key: "8",

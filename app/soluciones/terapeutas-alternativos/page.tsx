@@ -4,23 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import { siteConfig } from "@/config/site";
 
 import ImageGallery from "./ImageGallery";
 
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
-  title: "Consultorios para Terapias Alternativas en Montevideo",
+  title:
+    "Alquiler de Consultorios para Terapias Alternativas en Montevideo | Por Hora en Parque Rodó | PISAMA",
   description:
-    "Descubre cómo encontrar el alquiler de consultorios para terapias alternativas ideal en Montevideo. Energía, flexibilidad y diseño terapéutico.",
+    "Consultorio para terapeutas alternativos en Parque Rodó, Montevideo. Camilla disponible, ambiente armónico y reservas online. Alquiler flexible desde $200/hora para terapias holísticas.",
   keywords: [
-    "alquiler consultorios para terapias alternativas",
-    "consultorios con camilla",
-    "alquiler de salas para terapeutas holísticos",
-    "consultorios por hora Montevideo",
-    "espacios para terapeutas alternativos",
-    "alquiler de consultorios montevideo",
+    "alquiler consultorios terapias alternativas montevideo",
+    "consultorio terapeutas alternativos parque rodó",
+    "consultorios con camilla montevideo",
+    "alquiler salas terapeutas holísticos",
+    "consultorio reiki montevideo",
+    "espacio masajes terapéuticos",
+    "consultorio acupuntura montevideo",
+    "alquiler consultorio por hora montevideo",
+    "espacio terapias holísticas",
+    "consultorio medicina alternativa",
+    "sala para quiropráctico",
+    "espacio reflexología montevideo",
   ],
 };
 
@@ -74,28 +83,45 @@ const sections = [
 const CtaBox = () => (
   <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400 hover:scale-103 transition-transform duration-300">
     <h3 className="font-display text-3xl font-bold text-primary-500 mt-8!">
-      ¿Buscás un espacio que vibre con vos?
+      ¿Listo para encontrar tu consultorio ideal para terapias holísticas?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Encontrá un entorno profesional, cálido y flexible, diseñado para
-      potenciar tus terapias y el bienestar de tus pacientes.
+      Alquiler por hora desde $200 en Parque Rodó. Con camilla disponible,
+      ambiente armónico y sistema de reservas online. Sin compromiso mensual.
     </p>
     <Button
       as={Link}
-      href="/contacto"
+      href="/disponibilidad"
       className="mb-4 bg-secondary-500 font-display font-semibold text-white! no-underline"
       size="lg"
       variant="flat"
     >
-      Conocé Espacio Pisama
+      Ver Disponibilidad y Precios
     </Button>
   </div>
 );
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
+  // Breadcrumb para SEO
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Soluciones",
+      url: `${siteConfig.url}/soluciones`,
+    },
+    {
+      name: "Para Terapeutas Alternativos",
+      url: `${siteConfig.url}/soluciones/terapeutas-alternativos`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
@@ -120,39 +146,50 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             </strong>
           </p>
           <p>
-            Cuando empecé a dedicarme al alquiler de consultorios para terapias
-            alternativas, entendí algo fundamental: los terapeutas no buscan
+            Cuando empecé a dedicarme al{" "}
+            <Link href="/soluciones" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              alquiler de consultorios
+            </Link>{" "}
+            para terapias alternativas, entendí algo fundamental: los terapeutas no buscan
             solo cuatro paredes. Buscan un espacio que refleje su energía, su
             propósito y su manera de sanar.
           </p>
           <p>
-            En Espacio Pisama, hemos trabajado con muchos terapeutas
+            En{" "}
+            <Link href="/" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              Espacio Pisama
+            </Link>
+            , hemos trabajado con muchos terapeutas
             alternativos, y todos coinciden en algo: la buena energía que se
             siente en el lugar. Cada detalle, desde la acústica hasta la
-            decoración, fue pensado por nosotros —dos psicólogos que somos los
-            dueños— para crear un entorno cálido, sereno y profesional, ideal
+            decoración, fue pensado por nosotros —dos{" "}
+            <Link href="/soluciones/psicologos" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              psicólogos
+            </Link>{" "}
+            que somos los dueños— para crear un entorno cálido, sereno y profesional, ideal
             para terapias holísticas.
           </p>
 
           {/* --- SECCIÓN 1: POR QUÉ ELEGIR BIEN --- */}
           <h2 id="por-que-elegir-bien">
-            🌿 ¿Por qué es tan importante elegir bien el espacio terapéutico?
+            🌿 ¿Por qué es tan importante elegir bien el consultorio para terapias alternativas?
           </h2>
           <p>
-            El lugar donde un terapeuta atiende impacta directamente en la
-            experiencia del paciente. Un consultorio no es solo un ambiente
-            físico; es parte del proceso de sanación.
+            El lugar donde un terapeuta alternativo atiende impacta directamente en la
+            experiencia del paciente. Un consultorio para terapias holísticas no es solo un ambiente
+            físico; es parte del proceso de sanación y transformación energética.
           </p>
           <p>
-            He visto cómo muchos terapeutas llegan contando que probaron en
+            He visto cómo muchos terapeutas holísticos llegan contando que probaron en
             otros lugares, pero no se sentían cómodos o no lograban conectar con
             la energía del espacio. Esa sensación cambia cuando encuentran un
-            lugar que vibra con su propósito.
+            consultorio para terapias alternativas que vibra con su propósito y práctica terapéutica.
           </p>
           <p>
-            Por eso, el entorno es clave: debe tener armonía, privacidad, buena
+            Por eso, el espacio terapéutico es clave para profesionales de reiki, acupuntura,
+            masajes terapéuticos o cualquier terapia alternativa: debe tener armonía, privacidad, buena
             luz, decoración equilibrada y un ambiente que invite al silencio
-            interior.
+            interior y la conexión profunda.
           </p>
 
           <Image
@@ -169,16 +206,18 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: CLAVES PARA ALQUILAR --- */}
-          <h2 id="claves-alquiler">8 Claves para Encontrar tu Espacio Ideal</h2>
+          <h2 id="claves-alquiler">8 Claves para el Alquiler de Consultorios para Terapias Alternativas en Montevideo</h2>
 
           <h3 id="ubicacion">
-            🏙️ 1. Ubicación estratégica: Parque Rodó, un punto con alma y
-            prestigio
+            🏙️ 1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
           </h3>
           <p>
             La ubicación no solo influye en la accesibilidad, sino también en la
-            percepción profesional del terapeuta. En nuestro caso, el espacio
-            está en Parque Rodó, una zona céntrica, tranquila y valorada de
+            percepción profesional del terapeuta. En nuestro caso,{" "}
+            <Link href="/consultorios" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              nuestros consultorios
+            </Link>{" "}
+            están en Parque Rodó, una zona céntrica, tranquila y valorada de
             Montevideo.
           </p>
           <p>
@@ -199,8 +238,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             terapéutico
           </h3>
           <p>
-            Uno de los mayores dolores del terapeuta alternativo es no encontrar
-            un lugar con la energía adecuada.
+            Uno de los mayores desafíos al buscar alquiler de consultorio por hora en Montevideo
+            para un terapeuta alternativo es no encontrar un espacio con la energía adecuada
+            y el ambiente armónico necesario para las terapias holísticas.
           </p>
           <p>
             En Espacio Pisama cuidamos cada detalle: la iluminación, los tonos
@@ -226,8 +266,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             necesites
           </h3>
           <p>
-            Uno de los grandes desafíos de los terapeutas es encontrar un
-            espacio que se adapte a sus horarios. Algunos atienden temprano,
+            Uno de los grandes desafíos de los terapeutas holísticos es encontrar un
+            consultorio con alquiler por hora que se adapte a sus horarios variables.
+            Algunos profesionales de terapias alternativas atienden temprano,
             otros por la noche o los fines de semana.
           </p>
           <p>
@@ -242,12 +283,15 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <p>Esa libertad genera algo muy valioso: autonomía profesional.</p>
 
           <h3 id="reservas-online">
-            💻 4. Reservas online y equipamiento pensado para vos
+            💻 4. Sistema de reservas online y camilla para terapeutas alternativos
           </h3>
           <p>
             La tecnología debe estar al servicio del bienestar. Por eso
-            implementamos un sistema de reservas online que permite ver
-            disponibilidad en tiempo real y reservar fácilmente el consultorio.
+            implementamos un{" "}
+            <Link href="/disponibilidad" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              sistema de reservas online
+            </Link>{" "}
+            que permite ver disponibilidad en tiempo real y reservar fácilmente el consultorio.
           </p>
           <blockquote>
             “Tenemos un sistema de reservas online en el cual se pueden agendar
@@ -256,23 +300,27 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             disponible la camilla a la hora que ellos necesiten.”
           </blockquote>
           <p>
-            Además, contamos con una camilla disponible que puede usarse en
+            Además, contamos con una camilla profesional disponible para terapeutas que puede usarse en
             cualquiera de los seis consultorios. Solo hay que indicar su
-            necesidad al momento de reservar, y el sistema se encarga del resto.
-            Esa comodidad tecnológica elimina el clásico dolor de cabeza de
-            coordinar horarios por teléfono o esperar confirmaciones manuales.
+            necesidad al momento de reservar tu consultorio para terapias alternativas,
+            y el sistema se encarga del resto. Esa comodidad tecnológica elimina el clásico
+            dolor de cabeza de coordinar horarios por teléfono o esperar confirmaciones manuales.
           </p>
 
           <CtaBox />
 
           <h3 id="precios-justos">
-            💰 5. Precios justos y descuentos progresivos
+            💰 5. Alquiler por hora con precios justos y descuentos progresivos
           </h3>
           <p>
             Otro punto de dolor frecuente: los costos altos o alquileres
             mensuales inflexibles. Muchos terapeutas recién comienzan y
             necesitan una opción que no los obligue a comprometerse a largo
-            plazo.
+            plazo. Por eso ofrecemos{" "}
+            <Link href="/precios" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              alquiler por hora sin compromiso mensual
+            </Link>
+            .
           </p>
           <p>
             Por eso, en Espacio Pisama, implementamos un sistema de descuentos
@@ -290,17 +338,22 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           <h3 id="comunidad">
-            🧘‍♀️ 6. Comunidad y acompañamiento entre terapeutas
+            🧘‍♀️ 6. Comunidad de terapeutas holísticos en Montevideo
           </h3>
           <p>
-            Trabajar solo puede ser un desafío emocional. Muchos profesionales
-            buscan un entorno donde haya una sensación de comunidad, aunque cada
-            uno mantenga su independencia.
+            Trabajar solo como terapeuta holístico puede ser un desafío emocional.
+            Muchos profesionales de terapias alternativas buscan un consultorio compartido
+            donde haya una sensación de comunidad terapéutica, aunque cada
+            uno mantenga su independencia y privacidad en las sesiones.
           </p>
           <p>
             En Espacio Pisama promovemos esa conexión: los terapeutas comparten
             valores similares, se recomiendan mutuamente y muchas veces surgen
-            colaboraciones o intercambios. No se trata solo de alquilar un
+            colaboraciones o intercambios. Al igual que nuestros{" "}
+            <Link href="/soluciones/nutricionistas" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              nutricionistas
+            </Link>{" "}
+            y otros profesionales de la salud, no se trata solo de alquilar un
             consultorio, sino de pertenecer a un espacio donde todos vibran en
             la misma frecuencia.
           </p>
@@ -309,10 +362,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             🌺 7. Diseño profesional para potenciar la experiencia terapéutica
           </h3>
           <p>
-            Cuando los consultorios son pensados por terapeutas, la diferencia
-            se nota. Nosotros diseñamos cada sala con la mirada de quien
-            entiende las necesidades del trabajo terapéutico: privacidad,
-            comodidad y armonía.
+            Cuando los consultorios para terapias holísticas son pensados por terapeutas,
+            la diferencia se nota. Nosotros diseñamos cada sala de terapias alternativas
+            con la mirada de quien entiende las necesidades del trabajo terapéutico:
+            privacidad absoluta, comodidad para el paciente y armonía energética del espacio.
           </p>
           <p>
             Cada rincón fue concebido para que el terapeuta pueda enfocarse en
@@ -339,7 +392,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           {/* --- CONCLUSIÓN --- */}
           <h2 id="conclusion">
-            🌿 Conclusión: un espacio que vibra con tu propósito
+            🌿 Conclusión: encontrá tu consultorio ideal para terapias holísticas
           </h2>
           <p>
             El alquiler de consultorios para terapias alternativas no debería
@@ -354,15 +407,18 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
           <p className="pb-8">
             Si buscás un espacio cálido, flexible y con buena energía para tus
-            terapias, te invito a conocer Espacio Pisama. Porque cuando el
-            espacio vibra contigo, el trabajo fluye de verdad.
+            terapias, te invito a{" "}
+            <Link href="/contacto" className="text-secondary-500 font-semibold hover:text-secondary-400">
+              conocer Espacio Pisama
+            </Link>
+            . Porque cuando el espacio vibra contigo, el trabajo fluye de verdad.
           </p>
         </article>
       </main>
       <CtaSection
-        title="Reservá tu Consultorio para Terapia Alternativa"
-        description="Encontrá un espacio con la energía que buscás. Privacidad, camilla disponible y un sistema de reservas que te da total libertad. ¡Conocé nuestros consultorios!"
-        buttonText="Ver Disponibilidad y Precios"
+        title="Reservá tu Consultorio para Terapias Alternativas en Montevideo"
+        description="Alquiler por hora en Parque Rodó desde $200. Camilla profesional disponible, ambiente con excelente energía y reservas online. Ideal para reiki, acupuntura, masajes terapéuticos y todas las terapias holísticas. Sin compromiso mensual, total flexibilidad."
+        buttonText="Ver Disponibilidad Ahora"
         buttonLink="/disponibilidad"
       />
     </>

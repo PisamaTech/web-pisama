@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio2 from "@/public/images/consultorio2-1.webp";
 import consultorio4 from "@/public/images/consultorio4-1.webp";
@@ -18,20 +20,22 @@ import ImageGallery from "./ImageGallery";
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title:
-    "Alquiler de Consultorio para Nutricionistas en Montevideo | Espacio Profesional por Hora",
+    "Alquiler de Consultorio para Nutricionistas en Montevideo | Por Hora y Sin Compromiso | PISAMA",
   description:
-    "Consultorio nutricional por hora en Parque Rodó. Balanza profesional disponible, ambiente motivador y reservas online. El espacio ideal para nutricionistas en Montevideo.",
+    "Consultorio nutricional por hora en Parque Rodó, Montevideo. Privacidad total, ambiente profesional y reservas online. Alquiler flexible para nutricionistas desde $200/hora.",
   keywords: [
     "alquiler consultorio nutricionista montevideo",
     "consultorio nutricional montevideo",
     "consultorio nutrición por hora",
     "espacio para nutricionistas montevideo",
     "alquiler consultorio nutrición parque rodó",
-    "consultorio con balanza profesional",
     "sala consulta nutricionista",
     "consultorio nutricional alquiler",
     "espacio profesional nutrición montevideo",
     "consultorio flexible nutricionistas",
+    "consultorio nutricionista parque rodó",
+    "oficina nutricionista montevideo",
+    "espacio consulta nutricional",
   ],
 };
 
@@ -59,6 +63,22 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloNutricionistasPage(): React.JSX.Element {
+  // Breadcrumb para SEO
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Soluciones",
+      url: `${siteConfig.url}/soluciones`,
+    },
+    {
+      name: "Para Nutricionistas",
+      url: `${siteConfig.url}/soluciones/nutricionistas`,
+    },
+  ];
+
   const sections = [
     {
       title: "El Consultorio como Herramienta de Cambio",
@@ -95,8 +115,8 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           id: "ubicacion",
         },
         {
-          title: "Equipamiento Disponible",
-          id: "equipamiento",
+          title: "Espacio Funcional",
+          id: "espacio-funcional",
         },
         {
           title: "Comunidad Profesional",
@@ -116,6 +136,7 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
 
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
@@ -135,37 +156,43 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           <Indice sections={sections} />
 
           <p className="mt-12">
-            Como psicólogo y dueño de Espacio PISAMA, he trabajado de cerca con
-            muchos nutricionistas que alquilan nuestros consultorios. A través
-            de sus experiencias y necesidades, entendí algo fundamental:{" "}
+            Como psicólogo y dueño de{" "}
+            <Link href="/">Espacio PISAMA</Link>, he trabajado de cerca con
+            muchos nutricionistas que{" "}
+            <strong>alquilan consultorios por hora en Montevideo</strong>. A
+            través de sus experiencias y necesidades, entendí algo fundamental:{" "}
             <strong>
               el consultorio nutricional no es solo un lugar de trabajo, es
               parte del proceso de transformación que acompaña a tus pacientes.
             </strong>
           </p>
           <p>
-            He visto las frustraciones que enfrentan los nutricionistas al
-            buscar un espacio para atender: consultorios improvisados, costos
-            elevados de alquiler mensual cuando recién empiezan, falta de
-            privacidad para tratar temas sensibles como el peso y la imagen
-            corporal, y la necesidad de invertir en equipamiento profesional
-            que a veces no pueden costear al inicio.
+            He visto las frustraciones que enfrentan los{" "}
+            <strong>nutricionistas al buscar un espacio profesional</strong>
+            para atender: consultorios improvisados, costos elevados de alquiler
+            mensual cuando recién empiezan, falta de privacidad para tratar
+            temas sensibles como el peso y la imagen corporal, y la necesidad de
+            invertir en equipamiento profesional que a veces no pueden costear
+            al inicio.
           </p>
           <p>
-            Por eso, en <strong>Espacio PISAMA</strong> creamos un consultorio
-            nutricional por hora en Parque Rodó que resuelve estos problemas.
-            No es solo un lugar más para alquilar. Es un espacio diseñado para
-            que puedas enfocarte en lo que realmente importa: acompañar a tus
-            pacientes en su transformación hacia una vida más saludable.
+            Por eso, en <strong>Espacio PISAMA</strong> creamos un{" "}
+            <strong>consultorio nutricional por hora en Parque Rodó</strong> que
+            resuelve estos problemas. No es solo un lugar más para alquilar. Es
+            un <Link href="/consultorios">espacio profesional</Link> diseñado
+            para que puedas enfocarte en lo que realmente importa: acompañar a
+            tus pacientes en su transformación hacia una vida más saludable.
           </p>
 
           {/* --- SECCIÓN 1: EL CONSULTORIO COMO HERRAMIENTA --- */}
           <h2 id="herramienta-cambio">
-            El Consultorio como Herramienta de Cambio: Por Qué el Espacio
-            Importa en Nutrición
+            El Consultorio Nutricional como Herramienta de Cambio: Por Qué el
+            Espacio Importa en Nutrición
           </h2>
           <p>
-            En nutrición, el consultorio es mucho más que cuatro paredes.{" "}
+            En la práctica nutricional, el{" "}
+            <strong>consultorio para nutricionistas</strong> es mucho más que
+            cuatro paredes.{" "}
             <strong>
               Es el lugar donde tus pacientes toman la decisión de cambiar, es
               donde se pesan por primera vez en meses, es donde comparten sus
@@ -312,11 +339,14 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           <h3 id="sistema-reservas">
-            Sistema de Reservas Online Flexible: Pagá Solo por lo que Usás
+            Alquiler de Consultorio por Hora: Pagá Solo por lo que Usás
           </h3>
           <p>
-            Uno de los mayores obstáculos para nutricionistas que recién
-            comienzan es el costo de alquilar un consultorio mensual.{" "}
+            Uno de los mayores obstáculos para{" "}
+            <strong>
+              nutricionistas que recién comienzan su práctica privada
+            </strong>{" "}
+            es el costo de alquilar un consultorio mensual.{" "}
             <strong>
               Cuando estás empezando, quizás tenés solo 5-10 pacientes por
               semana. Pagar un alquiler mensual completo no tiene sentido
@@ -348,16 +378,17 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           <h3 id="ubicacion">
-            Ubicación Estratégica: Parque Rodó, Accesible para Tus Pacientes
+            Consultorio en Parque Rodó: Ubicación Estratégica para Nutricionistas
+            en Montevideo
           </h3>
           <p>
-            La adherencia del paciente a las consultas nutricionales es clave
+            La <strong>adherencia del paciente a las consultas nutricionales</strong> es clave
             para lograr resultados. Una de las principales razones por las que
             los pacientes abandonan es la dificultad para llegar al
             consultorio.
           </p>
           <p>
-            Espacio PISAMA está en <strong>Parque Rodó</strong>, una zona
+            Nuestro <strong>consultorio nutricional en Parque Rodó</strong> está ubicado en una zona
             céntrica y accesible de Montevideo, cerca de avenidas principales
             (Blvr. Artigas, Blvr. España, Rivera, 18 de Julio) con excelente
             conexión en ómnibus.
@@ -377,31 +408,32 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="equipamiento">
-            Equipamiento Disponible: Balanza Profesional y Más
+          <h3 id="espacio-funcional">
+            Espacio Funcional: Todo Lo Que Necesitás para Trabajar
           </h3>
           <p>
-            Uno de los mayores gastos iniciales para un nutricionista es la
-            inversión en equipamiento profesional: balanza con adipómetro,
-            plicómetro, cinta métrica, etc.{" "}
+            Uno de los desafíos más grandes para nutricionistas que recién
+            comienzan es encontrar un espacio que les permita trabajar
+            profesionalmente sin grandes inversiones.{" "}
             <strong>
-              El costo de una balanza profesional puede rondar los USD 200-500.
+              Montar un consultorio propio implica costos de mobiliario,
+              decoración, limpieza y mantenimiento que pueden ser prohibitivos.
             </strong>
           </p>
           <p>
-            Si recién estás empezando, esa inversión puede ser prohibitiva. Por
-            eso, en Espacio PISAMA{" "}
+            En Espacio PISAMA cada consultorio ya está completamente equipado y
+            listo para usar:{" "}
             <strong>
-              ponemos a disposición una balanza profesional que podés usar sin
-              costo adicional.
+              escritorio profesional, sillas cómodas, iluminación adecuada,
+              climatización y un ambiente impecable.
             </strong>{" "}
-            Solo tenés que indicarlo al momento de reservar tu horario, y el
-            sistema se encarga de coordinar su disponibilidad.
+            Podés traer tu propio equipamiento nutricional (balanza, plicómetro,
+            material educativo) y comenzar a trabajar de inmediato.
           </p>
           <p>
-            Esto te permite comenzar tu práctica con mínima inversión inicial,
-            y a medida que creces, podés adquirir tu propio equipamiento si lo
-            deseás.
+            Esto te permite enfocarte en lo que realmente importa: atender a tus
+            pacientes con excelencia, sin preocuparte por la logística del
+            espacio.
           </p>
 
           <h3 id="comunidad">
@@ -440,8 +472,8 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           <ul>
             <li>
               <strong>¿Inversión inicial muy alta?</strong> Con nuestro sistema
-              de alquiler por hora, empezás sin compromiso mensual. Y la
-              balanza profesional está disponible sin costo adicional.
+              de alquiler por hora, empezás sin compromiso mensual ni costos de
+              mobiliario. El consultorio ya está completamente equipado.
             </li>
             <li>
               <strong>¿Privacidad dudosa para temas sensibles?</strong> En
@@ -466,8 +498,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
               excelente conexión en ómnibus y estacionamiento sin problemas.
             </li>
             <li>
-              <strong>¿Equipamiento costoso que no podés adquirir?</strong>{" "}
-              Balanza profesional disponible para usar sin costo adicional.
+              <strong>¿Espacio sin equipar o inadecuado?</strong> Consultorio
+              completamente equipado: escritorio, sillas, climatización e
+              iluminación profesional. Traé tu equipamiento nutricional y
+              comenzá a trabajar.
             </li>
           </ul>
 
@@ -508,7 +542,7 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
       </main>
       <CtaSection
         title="Reservá tu Consultorio Nutricional en Montevideo"
-        description="Balanza profesional disponible, privacidad total y ambiente que inspira cambio. Todo lo que necesitás para comenzar o expandir tu práctica nutricional."
+        description="Privacidad total, ambiente profesional que inspira cambio y sistema de reservas flexible. Todo lo que necesitás para comenzar o expandir tu práctica nutricional."
         buttonText="Ver Disponibilidad en Tiempo Real"
         buttonLink="/disponibilidad"
       />
