@@ -130,18 +130,26 @@ export default function SiteFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/soluciones/psiquiatras"
+                    href="/soluciones/fisioterapeutas"
                     className="hover:text-secondary"
                   >
-                    Psiquiatras
+                    Fisioterapeutas
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/soluciones/con-camilla"
+                    href="/soluciones/masajistas"
                     className="hover:text-secondary"
                   >
-                    Con Camilla
+                    Masajistas
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/soluciones/psiquiatras"
+                    className="hover:text-secondary"
+                  >
+                    Psiquiatras
                   </Link>
                 </li>
               </ul>

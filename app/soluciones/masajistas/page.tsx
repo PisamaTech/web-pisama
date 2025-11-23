@@ -20,31 +20,31 @@ import ImageGallery from "./ImageGallery";
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title:
-    "Alquiler de Consultorio con Camilla por Hora en Parque Rodó, Montevideo | PISAMA",
+    "Alquiler de Consultorio para Masajistas por Hora en Parque Rodó, Montevideo | PISAMA",
   description:
-    "Consultorio con camilla profesional incluida desde $250/hora en Parque Rodó. Reserva online en tiempo real sin conflictos. Ideal para fisioterapeutas, masajistas, osteópatas y quiroprácticos. 5 espacios Premium amplios.",
+    "Consultorio para masajistas con camilla profesional incluida desde $250/hora en Parque Rodó. Reserva online en tiempo real. Espacios amplios para masajes terapéuticos, deportivos y relajantes. Sin compromiso mensual.",
   keywords: [
-    "alquiler consultorio con camilla montevideo",
-    "consultorio fisioterapia montevideo",
-    "consultorio masajes parque rodó",
-    "alquiler consultorio osteopatía montevideo",
-    "consultorio quiropráctico montevideo",
-    "consultorio acupuntura con camilla",
-    "alquiler consultorio fisioterapeuta",
-    "espacio terapia con camilla",
-    "consultorio masajista montevideo",
-    "alquiler consultorio kinesiología",
+    "alquiler consultorio para masajistas montevideo",
+    "consultorio masajes montevideo",
+    "alquiler consultorio masajista parque rodó",
+    "consultorio con camilla montevideo",
+    "espacio masajes terapéuticos montevideo",
+    "consultorio masajes deportivos",
+    "alquiler consultorio con camilla",
+    "consultorio masajista profesional",
+    "sala masajes montevideo",
+    "alquiler consultorio masajes por hora",
     "consultorio equipado camilla profesional",
-    "consultorio terapias manuales montevideo",
+    "espacio masajes parque rodó",
   ],
   alternates: {
-    canonical: "/soluciones/con-camilla",
+    canonical: "/soluciones/masajistas",
   },
   openGraph: {
-    title: "Alquiler de Consultorio con Camilla en Montevideo | PISAMA",
+    title: "Alquiler de Consultorio para Masajistas en Montevideo | PISAMA",
     description:
-      "Consultorio con camilla profesional incluida desde $250/hora. Reserva online sin conflictos en Parque Rodó, Montevideo.",
-    url: "https://www.pisama.uy/soluciones/con-camilla",
+      "Consultorio para masajistas con camilla profesional incluida desde $250/hora. Reserva online en tiempo real en Parque Rodó, Montevideo.",
+    url: "https://www.pisama.uy/soluciones/masajistas",
     siteName: "Espacio Pisama",
     locale: "es_UY",
     type: "article",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://www.pisama.uy/images/consultorio1-1.webp",
         width: 1200,
         height: 630,
-        alt: "Consultorio Premium con camilla profesional en Parque Rodó, Montevideo",
+        alt: "Consultorio Premium para masajistas con camilla en Parque Rodó, Montevideo",
       },
     ],
   },
@@ -62,12 +62,12 @@ export const metadata: Metadata = {
 const CtaBox = () => (
   <div className="my-10 rounded-2xl bg-content3/80 shadow-xl p-4 text-center border-1 border-yellow-400 hover:scale-103 transition-transform duration-300">
     <h3 className="font-display text-3xl font-bold text-primary-500 mt-8!">
-      ¿Listo para reservar tu consultorio con camilla en Parque Rodó?
+      ¿Listo para reservar tu consultorio para masajes en Parque Rodó?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
       Alquiler por hora desde $250 en Montevideo. Camilla profesional incluida,
-      5 espacios Premium amplios y reserva online que garantiza tu equipamiento.
-      Sin compromiso mensual.
+      5 espacios Premium amplios para masajes terapéuticos y deportivos. Reserva
+      online que garantiza tu equipamiento. Sin compromiso mensual.
     </p>
     <Button
       as={Link}
@@ -82,7 +82,7 @@ const CtaBox = () => (
 );
 
 // --- PÁGINA PRINCIPAL ---
-export default function ArticuloCamillaPage(): React.JSX.Element {
+export default function ArticuloMasajistasPage(): React.JSX.Element {
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -94,8 +94,8 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
       url: `${siteConfig.url}/soluciones`,
     },
     {
-      name: "Con Camilla",
-      url: `${siteConfig.url}/soluciones/con-camilla`,
+      name: "Para Masajistas",
+      url: `${siteConfig.url}/soluciones/masajistas`,
     },
   ];
 
@@ -162,18 +162,22 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
           <h1>
-            Alquiler de Consultorio con Camilla por Hora en Montevideo: Reserva
-            Online y Sin Conflictos
+            Alquiler de Consultorio para Masajistas por Hora en Montevideo: Con
+            Camilla Profesional y Reserva Online
           </h1>
           <Indice sections={sections} />
 
           <p className="mt-12">
-            Si eres fisioterapeuta, masajista, osteópata, quiropráctico o
-            profesional de terapias manuales, sabes que tu trabajo requiere dos
-            cosas esenciales:{" "}
-            <strong>espacio para moverte y una camilla disponible</strong>. En
-            Espacio PISAMA, resolvemos esa necesidad con un sistema flexible,
-            económico y tecnológicamente seguro.
+            Si eres masajista terapéutico, masajista deportivo o profesional de
+            masajes relajantes, sabes que tu trabajo requiere dos cosas
+            esenciales:{" "}
+            <strong>
+              un espacio amplio para trabajar y una camilla profesional
+              disponible
+            </strong>
+            . En Espacio PISAMA, resolvemos esa necesidad con un sistema
+            flexible, económico y tecnológicamente seguro diseñado
+            específicamente para masajistas en Montevideo.
           </p>
           <p>
             Olvídate de competir por &quot;el único consultorio con
@@ -185,19 +189,20 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
               5 Consultorios Premium
             </Link>{" "}
             a tu disposición y un sistema de reserva inteligente que te
-            garantiza tu equipamiento al instante.
+            garantiza tu camilla de masajes al instante.
           </p>
 
           {/* --- SECCIÓN 1: EL PROBLEMA --- */}
           <h2 id="problema">
-            El Problema de la Camilla Compartida en Consultorios de Alquiler
+            El Problema de la Camilla Compartida en Consultorios de Masajes
           </h2>
           <p>
-            He visto fisioterapeutas llegar a un consultorio alquilado para
+            He visto masajistas llegar a un consultorio alquilado para
             descubrir que la camilla &quot;estaba reservada&quot; por otro
             colega. O peor: que simplemente no estaba disponible porque nadie
             coordinó su uso. <strong>Eso es inaceptable</strong> para
-            profesionales serios que tienen pacientes esperando tratamiento.
+            masajistas profesionales que tienen clientes esperando su sesión de
+            masajes terapéuticos o deportivos.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -422,41 +427,46 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
 
           {/* --- SECCIÓN 5: PARA QUIÉN --- */}
           <h2 id="profesionales">
-            ¿Para Quién es este Servicio de Alquiler de Consultorio con Camilla?
+            ¿Para Quién es este Servicio de Alquiler de Consultorio para
+            Masajistas?
           </h2>
           <p>
-            Nuestros consultorios con camilla profesional están equipados para
-            recibir a:
+            Nuestros consultorios con camilla profesional están diseñados
+            especialmente para masajistas y profesionales de terapias manuales:
           </p>
           <ul>
             <li>
+              <strong>Masajistas Terapéuticos:</strong> Espacio amplio y
+              ambiente profesional con climatización ideal para masajes
+              descontracturantes, masajes de tejido profundo y terapias de
+              relajación. Privacidad acústica garantizada para que tus clientes
+              se relajen completamente.
+            </li>
+            <li>
+              <strong>Masajistas Deportivos:</strong> Consultorios Premium con
+              espacio suficiente para tratamientos pre y post-competencia,
+              masajes de recuperación muscular y técnicas deportivas avanzadas.
+            </li>
+            <li>
+              <strong>Masajistas de Spa y Relajación:</strong> Ambiente cálido
+              y tranquilo perfecto para masajes relajantes, aromáticos y de
+              bienestar general. La climatización y música ambiental crean el
+              entorno ideal.
+            </li>
+            <li>
               <strong>Fisioterapeutas y Kinesiólogos:</strong> Espacio amplio
               para evaluaciones, movilizaciones y tratamientos de
-              rehabilitación.
+              rehabilitación con camilla profesional.
             </li>
             <li>
-              <strong>Masajistas Terapéuticos y Deportivos:</strong> Ambiente
-              profesional con climatización y privacidad para masajes relajantes
-              o descontracturantes.
-            </li>
-            <li>
-              <strong>Osteópatas y Quiroprácticos:</strong> Consultorios Premium
-              con espacio suficiente para técnicas de manipulación y ajustes
-              vertebrales.
-            </li>
-            <li>
-              <strong>Acupuntores:</strong> Ambiente tranquilo y privado ideal
-              para tratamientos de acupuntura y medicina tradicional china.
-            </li>
-            <li>
-              <strong>Médicos y Nutricionistas:</strong> Para examen físico,
-              evaluación corporal y consultas que requieran camilla.
+              <strong>Otros Profesionales:</strong> También ideal para
+              osteópatas, quiroprácticos, acupuntores y cualquier profesional
+              que requiera camilla y espacio para terapias manuales.
             </li>
           </ul>
           <p>
-            Si tu trabajo requiere espacio para moverte y una camilla
-            profesional disponible,{" "}
-            <strong>Espacio PISAMA es tu lugar</strong>.
+            Si eres masajista profesional y buscas un consultorio con camilla
+            en Montevideo, <strong>Espacio PISAMA es tu lugar</strong>.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -469,12 +479,14 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
 
           {/* --- SECCIÓN 6: CONCLUSIÓN --- */}
           <h2 id="conclusion">
-            Empieza a Atender con Camilla Profesional Hoy Mismo en Montevideo
+            Empieza a Dar Masajes Profesionales Hoy Mismo en Montevideo
           </h2>
           <p>
-            No pierdas pacientes por falta de lugar o por problemas de
-            coordinación de equipamiento.{" "}
-            <strong>Toma el control de tu práctica profesional ahora</strong>{" "}
+            No pierdas clientes por falta de lugar o por problemas de
+            coordinación de la camilla de masajes.{" "}
+            <strong>
+              Toma el control de tu práctica como masajista ahora
+            </strong>{" "}
             con un sistema que realmente funciona:
           </p>
           <ol>
@@ -490,14 +502,14 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
             </li>
             <li>Consulta la disponibilidad en tiempo real 24/7.</li>
             <li>
-              Reserva tu Consultorio Premium + Camilla con un clic. El sistema
-              garantiza tu equipamiento.
+              Reserva tu Consultorio Premium + Camilla para masajes con un
+              clic. El sistema garantiza tu equipamiento.
             </li>
           </ol>
           <p className="pb-8">
             Al crear Espacio PISAMA intenté resolver todos los problemas
-            logísticos que los profesionales de terapias manuales enfrentan al
-            buscar un consultorio con camilla en Montevideo.{" "}
+            logísticos que los masajistas enfrentan al buscar un consultorio
+            con camilla en Montevideo.{" "}
             <strong>
               No es el espacio más barato ni el más lujoso. Es el que funciona.
             </strong>{" "}
@@ -525,8 +537,8 @@ export default function ArticuloCamillaPage(): React.JSX.Element {
         </article>
       </main>
       <CtaSection
-        title="Reservá tu Consultorio con Camilla en Montevideo Hoy"
-        description="Alquiler por hora desde $250 en Parque Rodó. Camilla profesional incluida, 5 espacios Premium amplios y sistema de reserva online que garantiza tu equipamiento en tiempo real. Sin compromiso mensual. Ideal para fisioterapeutas, masajistas, osteópatas y quiroprácticos."
+        title="Reservá tu Consultorio para Masajes en Montevideo Hoy"
+        description="Alquiler por hora desde $250 en Parque Rodó. Camilla profesional incluida, 5 espacios Premium amplios diseñados para masajistas. Sistema de reserva online que garantiza tu camilla en tiempo real. Sin compromiso mensual. Ideal para masajes terapéuticos, deportivos y relajantes."
         buttonText="Ver Disponibilidad y Reservar Ahora"
         buttonLink="/disponibilidad"
       />

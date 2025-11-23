@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   title:
     "Consultorios por Profesión | Encuentra tu Espacio Ideal | Espacio PISAMA",
   description:
-    "Descubre cómo Espacio PISAMA se adapta a las necesidades específicas de tu profesión. Consultorios para psicólogos, coaches, nutricionistas, fisioterapeutas con camilla y más en Montevideo.",
+    "Descubre cómo Espacio PISAMA se adapta a las necesidades específicas de tu profesión. Consultorios para psicólogos, coaches, nutricionistas, fisioterapeutas, masajistas con camilla y más en Montevideo.",
   keywords: [
     "consultorios para psicólogos montevideo",
     "consultorios para coaches montevideo",
+    "consultorios para fisioterapeutas montevideo",
+    "consultorios para masajistas montevideo",
     "consultorios con camilla montevideo",
-    "consultorios para fisioterapeutas",
     "consultorios para terapeutas alternativos",
     "alquiler consultorios por profesión",
     "espacios terapéuticos montevideo",
@@ -74,15 +75,27 @@ const profesiones = [
     ],
   },
   {
-    slug: "con-camilla",
-    emoji: "🛏️",
-    title: "Con Camilla",
+    slug: "fisioterapeutas",
+    emoji: "🦴",
+    title: "Fisioterapeutas",
     description:
-      "Camilla profesional incluida y 5 espacios Premium amplios. Sistema de reserva online que garantiza tu equipamiento sin conflictos. Ideal para fisioterapeutas, masajistas y osteópatas.",
+      "Consultorios Premium amplios con ergonomía garantizada. Camilla profesional incluida, almacenamiento seguro para tu equipo y espacio para moverte 360° alrededor del paciente.",
+    highlights: [
+      "Consultorios Premium amplios",
+      "Camilla profesional bonificada",
+      "Almacenamiento seguro para tu equipo",
+    ],
+  },
+  {
+    slug: "masajistas",
+    emoji: "💆",
+    title: "Masajistas",
+    description:
+      "Consultorio para masajistas con camilla profesional incluida y espacios Premium amplios. Sistema de reserva online que garantiza tu camilla. Ideal para masajes terapéuticos, deportivos y relajantes.",
     highlights: [
       "Camilla profesional incluida gratis",
+      "Espacios amplios para masajes",
       "Sistema anti-conflictos en tiempo real",
-      "5 consultorios Premium amplios",
     ],
   },
   {

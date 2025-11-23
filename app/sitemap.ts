@@ -47,7 +47,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/soluciones/coaches", // Landing page para coaches
     "/soluciones/nutricionistas", // Landing page para nutricionistas
     "/soluciones/terapeutas-alternativos", // Landing page para terapeutas alternativos
-    "/soluciones/con-camilla", // Landing page para consultorio con camilla
+    "/soluciones/fisioterapeutas", // Landing page para fisioterapeutas
+    "/soluciones/masajistas", // Landing page para masajistas
+    "/soluciones/psiquiatras", // Landing page para psiquiatras
   ];
 
   const staticUrls = staticRoutes.map((route) => {
