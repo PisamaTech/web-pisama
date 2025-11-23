@@ -111,7 +111,7 @@ export const Navbar = () => {
       {/* --- Contenido del Menú Móvil --- */}
       <NavbarMenu>
         {siteConfig.mobileNavItems.flatMap((item) =>
-          item.dropdown
+          "dropdown" in item
             ? item.dropdown.map((subItem) => (
                 <NavbarMenuItem key={subItem.href}>
                   <Link className="w-full" href={subItem.href} size="lg">

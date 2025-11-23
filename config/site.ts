@@ -1,5 +1,18 @@
 // TIPADO: Exportamos el tipo para poder usarlo en otros componentes si es necesario
 
+// Tipos para los elementos de navegación
+export interface NavItemWithDropdown {
+  label: string;
+  dropdown: Array<{ label: string; href: string }>;
+}
+
+export interface NavItemFlat {
+  label: string;
+  href: string;
+}
+
+export type NavItem = NavItemWithDropdown | NavItemFlat;
+
 export type SiteConfig = typeof siteConfig;
 
 // El "single source of truth" (la fuente única de verdad) para toda la información de tu sitio.
@@ -83,7 +96,7 @@ export const siteConfig = {
         { label: "Contacto", href: "/contacto" },
       ],
     },
-  ],
+  ] as NavItemWithDropdown[],
 
   // Elementos del menú móvil (pantallas pequeñas) - versión simplificada
   mobileNavItems: [
@@ -96,7 +109,7 @@ export const siteConfig = {
     { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
     { label: "Blog", href: "/blog" },
     { label: "Contacto", href: "/contacto" },
-  ],
+  ] as NavItem[],
 
   // Elementos de navegación del footer, organizados por columnas
   footerNav: {
