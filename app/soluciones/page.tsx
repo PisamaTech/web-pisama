@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { TbPhysotherapist, TbMassage } from "react-icons/tb";
 
-import { subtitle, title } from "@/components/primitives";
+import { subtitle } from "@/components/primitives";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
