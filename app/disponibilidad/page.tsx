@@ -3,6 +3,9 @@ import { JSX } from "react";
 
 import AvailabilityPageClient from "@/components/disponibilidad/AvailabilityPageClient";
 import CtaSection from "@/components/homepage/CtaSection"; // Reutilizamos el CTA
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title:
@@ -15,8 +18,25 @@ export const metadata: Metadata = {
 };
 
 export default function DisponibilidadPage(): JSX.Element {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Disponibilidad",
+      url: `${siteConfig.url}/disponibilidad`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <AvailabilityPageClient />
 
       <CtaSection

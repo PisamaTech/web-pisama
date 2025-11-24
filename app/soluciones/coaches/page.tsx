@@ -198,10 +198,12 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           "Sala de espera privada",
         ]}
       />
-      <main className="bg-content2 pt-10">
-        <div className="container mx-auto max-w-4xl px-4">
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
+      </section>
+      <main className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500

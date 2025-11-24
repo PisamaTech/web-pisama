@@ -7,7 +7,7 @@ export default function SavingsIntroSection(): JSX.Element {
     <section className="sm:py-16 py-14">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center mb-8 overflow-hidden">
             <Divider className="flex-grow" />
             <FaHeart className="h-8 w-8 text-terracotta-suave mx-4 flex-shrink-0" />
             <Divider className="flex-grow" />

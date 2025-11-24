@@ -7,6 +7,9 @@ import DiscountsSection from "@/components/precios/DiscountsSection";
 import FaqSection from "@/components/precios/FaqSection";
 import PricingCard from "@/components/precios/PricingCard";
 import SavingsIntroSection from "@/components/precios/SavingsIntroSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 import { pricingData } from "@/src/pricingData";
 
 export const metadata: Metadata = {
@@ -43,12 +46,29 @@ export default function PreciosPage() {
     },
   };
 
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Precios",
+      url: `${siteConfig.url}/precios`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerJsonLd) }}
       />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       {/* Sección 1: Tarjetas de Precios Base */}
       <section className="bg-content2/50 py-20 sm:py-24">
         <div className="container mx-auto px-4 lg:px-8">

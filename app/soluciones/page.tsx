@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { subtitle, title } from "@/components/primitives";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title:
@@ -113,89 +116,108 @@ const profesiones = [
 ];
 
 export default function SolucionesPage() {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Soluciones",
+      url: `${siteConfig.url}/soluciones`,
+    },
+  ];
+
   return (
-    <section className="py-20">
-      <div className="container max-w-6xl mx-auto px-4">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className={title({ class: "text-primary" })}>
-            Encuentra el Consultorio Perfecto
-            <br />
-            <span className={title({ class: "text-secondary", size: "lg" })}>
-              para tu Profesión
-            </span>
-          </h1>
-          <p className={subtitle({ class: "mt-6 text-foreground/80" })}>
-            En Espacio PISAMA entendemos que cada profesión tiene necesidades
-            únicas. Descubre cómo nuestros consultorios se adaptan a tu práctica
-            terapéutica en Parque Rodó, Montevideo.
-          </p>
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
         </div>
+      </section>
+      <section className="py-20">
+        <div className="container max-w-6xl mx-auto px-4">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className={title({ class: "text-primary" })}>
+              Encuentra el Consultorio Perfecto
+              <br />
+              <span className={title({ class: "text-secondary", size: "lg" })}>
+                para tu Profesión
+              </span>
+            </h1>
+            <p className={subtitle({ class: "mt-6 text-foreground/80" })}>
+              En Espacio PISAMA entendemos que cada profesión tiene necesidades
+              únicas. Descubre cómo nuestros consultorios se adaptan a tu
+              práctica terapéutica en Parque Rodó, Montevideo.
+            </p>
+          </div>
 
-        {/* Cards Grid */}
-        <div className="grid gap-8 md:grid-cols-2 mb-16">
-          {profesiones.map((profesion) => (
-            <Link
-              key={profesion.slug}
-              href={`/soluciones/${profesion.slug}`}
-              className="block group"
-            >
-              <Card className="p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border-2 border-transparent hover:border-secondary-300 h-full">
-                <div className="flex flex-col h-full">
-                  {/* Icon */}
-                  <div className="text-6xl mb-4">{profesion.emoji}</div>
+          {/* Cards Grid */}
+          <div className="grid gap-8 md:grid-cols-2 mb-16">
+            {profesiones.map((profesion) => (
+              <Link
+                key={profesion.slug}
+                href={`/soluciones/${profesion.slug}`}
+                className="block group"
+              >
+                <Card className="p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border-2 border-transparent hover:border-secondary-300 h-full">
+                  <div className="flex flex-col h-full">
+                    {/* Icon */}
+                    <div className="text-6xl mb-4">{profesion.emoji}</div>
 
-                  {/* Title */}
-                  <h2 className="text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
-                    {profesion.title}
-                  </h2>
+                    {/* Title */}
+                    <h2 className="text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
+                      {profesion.title}
+                    </h2>
 
-                  {/* Description */}
-                  <p className="text-foreground/80 mb-6 flex-grow">
-                    {profesion.description}
-                  </p>
+                    {/* Description */}
+                    <p className="text-foreground/80 mb-6 flex-grow">
+                      {profesion.description}
+                    </p>
 
-                  {/* Highlights */}
-                  <ul className="space-y-2 mb-6">
-                    {profesion.highlights.map((highlight, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start text-foreground/70"
-                      >
-                        <span className="text-secondary-500 mr-2">✓</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    {/* Highlights */}
+                    <ul className="space-y-2 mb-6">
+                      {profesion.highlights.map((highlight, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start text-foreground/70"
+                        >
+                          <span className="text-secondary-500 mr-2">✓</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  {/* CTA */}
-                  <div className="font-semibold text-secondary-500 group-hover:text-secondary-400 transition-colors">
-                    Conocer más →
+                    {/* CTA */}
+                    <div className="font-semibold text-secondary-500 group-hover:text-secondary-400 transition-colors">
+                      Conocer más →
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </Link>
-          ))}
-        </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center bg-content1 rounded-2xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-primary mb-4">
-            ¿No encuentras tu profesión?
-          </h2>
-          <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Nuestros consultorios están diseñados para adaptarse a diversas
-            prácticas terapéuticas. Contactanos para conocer cómo podemos
-            ayudarte.
-          </p>
-          <Link
-            href="/contacto"
-            className="inline-block bg-secondary-500 hover:bg-secondary-400 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-          >
-            Contactar
-          </Link>
+          {/* Bottom CTA */}
+          <div className="text-center bg-content1 rounded-2xl p-8 shadow-lg">
+            <h2 className="text-2xl font-bold text-primary mb-4">
+              ¿No encuentras tu profesión?
+            </h2>
+            <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
+              Nuestros consultorios están diseñados para adaptarse a diversas
+              prácticas terapéuticas. Contactanos para conocer cómo podemos
+              ayudarte.
+            </p>
+            <Link
+              href="/contacto"
+              className="inline-block bg-secondary-500 hover:bg-secondary-400 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Contactar
+            </Link>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

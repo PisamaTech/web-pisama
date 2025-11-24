@@ -7,6 +7,9 @@ import React from "react";
 import ConsultorioPsicologosFaqSection from "@/app/blog/consultorio-para-psicologos-alquiler/ConsultorioPsicologosFaqSection";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -107,8 +110,29 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
     },
   ];
 
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Blog",
+      url: `${siteConfig.url}/blog`,
+    },
+    {
+      name: "Alquiler de Consultorios para Psicólogos",
+      url: `${siteConfig.url}/blog/consultorio-para-psicologos-alquiler`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <main className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 

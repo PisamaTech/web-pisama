@@ -8,6 +8,10 @@ import Link from "next/link";
 import { JSX } from "react";
 import { FaRocket, FaLightbulb } from "react-icons/fa";
 
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
+
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title: "Guía de Inicio: Tu Primera Reserva en Espacio Pisama | con Leo",
@@ -16,8 +20,29 @@ export const metadata: Metadata = {
 };
 
 export default function GuiaPrimeraReservaPage(): JSX.Element {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Guía de Uso",
+      url: `${siteConfig.url}/guia-de-uso`,
+    },
+    {
+      name: "Tu Primera Reserva",
+      url: `${siteConfig.url}/guia-de-uso/agendar-primera-reserva`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <main className="bg-background">
         {/* --- SECCIÓN 1: BIENVENIDA DE LEO --- */}
         <section className="py-20">

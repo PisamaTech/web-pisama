@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { title, subtitle } from "@/components/primitives";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 
 interface BlogPost {
   slug: string;
@@ -32,36 +35,55 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return (
-    <section className="py-12">
-      <div className="container max-w-4xl mx-auto px-4">
-        <h1 className={title({ class: "text-primary" })}>Blog</h1>
-        <p className={subtitle({ class: "mt-4 text-primary-400" })}>
-          Aquí encontrarás artículos sobre psicología, gestión de la práctica
-          privada y consejos para profesionales.
-        </p>
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Blog",
+      url: `${siteConfig.url}/blog`,
+    },
+  ];
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <Link
-              href={`/blog/${post.slug}`}
-              key={post.slug}
-              className="block group"
-            >
-              <div className="p-6 bg-content1 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
-                <p className="text-sm text-foreground/60">{post.date}</p>
-                <h2 className="text-2xl font-bold mt-2 text-primary group-hover:text-secondary transition-colors duration-300">
-                  {post.title}
-                </h2>
-                <p className="mt-4 text-foreground/80">{post.description}</p>
-                <div className="mt-4 font-semibold text-secondary">
-                  Leer más &rarr;
-                </div>
-              </div>
-            </Link>
-          ))}
+  return (
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="py-12">
+        <div className="container max-w-4xl mx-auto px-4">
+          <h1 className={title({ class: "text-primary" })}>Blog</h1>
+          <p className={subtitle({ class: "mt-4 text-primary-400" })}>
+            Aquí encontrarás artículos sobre psicología, gestión de la práctica
+            privada y consejos para profesionales.
+          </p>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.map((post) => (
+              <Link
+                href={`/blog/${post.slug}`}
+                key={post.slug}
+                className="block group"
+              >
+                <div className="p-6 bg-content1 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <p className="text-sm text-foreground/60">{post.date}</p>
+                  <h2 className="text-2xl font-bold mt-2 text-primary group-hover:text-secondary transition-colors duration-300">
+                    {post.title}
+                  </h2>
+                  <p className="mt-4 text-foreground/80">{post.description}</p>
+                  <div className="mt-4 font-semibold text-secondary">
+                    Leer más &rarr;
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

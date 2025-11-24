@@ -6,6 +6,9 @@ import React from "react";
 
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 
 import ImageGallery from "./ImageGallery";
 
@@ -94,8 +97,29 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Blog",
+      url: `${siteConfig.url}/blog`,
+    },
+    {
+      name: "Consultorios para Terapias Alternativas",
+      url: `${siteConfig.url}/blog/alquiler-consultorios-terapias-alternativas`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <main className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 

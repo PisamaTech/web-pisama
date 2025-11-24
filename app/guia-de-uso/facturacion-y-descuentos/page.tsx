@@ -8,6 +8,10 @@ import Link from "next/link";
 import { JSX } from "react";
 import { FaLightbulb } from "react-icons/fa";
 
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
+
 // --- SEO: Metadatos de la Página ---
 export const metadata: Metadata = {
   title: "Guía: Facturación y Descuentos Automáticos | Espacio Pisama",
@@ -16,8 +20,29 @@ export const metadata: Metadata = {
 };
 
 export default function GuiaFacturacionPage(): JSX.Element {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Guía de Uso",
+      url: `${siteConfig.url}/guia-de-uso`,
+    },
+    {
+      name: "Facturación y Descuentos",
+      url: `${siteConfig.url}/guia-de-uso/facturacion-y-descuentos`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <main className="bg-background">
         {/* --- SECCIÓN 1: BIENVENIDA DE LEO --- */}
         <section className="py-20">

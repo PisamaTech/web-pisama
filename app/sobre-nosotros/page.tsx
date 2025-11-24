@@ -8,6 +8,9 @@ import { FaHandshake, FaUsers } from "react-icons/fa"; // Iconos para los pilare
 import { FaPersonRays } from "react-icons/fa6";
 import { GrGrow } from "react-icons/gr";
 
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { siteConfig } from "@/config/site";
 import Gaston from "@/public/images/Gaston.webp";
 
 export const metadata: Metadata = {
@@ -196,8 +199,25 @@ const CtaSection = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function NuestraFilosofiaPage(): JSX.Element {
+  const breadcrumbItems = [
+    {
+      name: "Inicio",
+      url: siteConfig.url,
+    },
+    {
+      name: "Sobre Nosotros",
+      url: `${siteConfig.url}/sobre-nosotros`,
+    },
+  ];
+
   return (
     <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <section className="bg-content4/60 w-full border-b-1 border-content4">
+        <div className="container mx-auto max-w-7xl px-4 py-3">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </section>
       <HeroSection />
       <StorySection />
       <PillarsSection />
