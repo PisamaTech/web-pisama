@@ -118,7 +118,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script
-          async
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-4C6SK93ENE"
         />
         <Script id="google-analytics">

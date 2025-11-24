@@ -109,7 +109,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
 
   return (
     <>
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
                      prose-headings:font-display prose-headings:text-primary-500

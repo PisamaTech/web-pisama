@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
@@ -138,13 +140,15 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
         offers={[
           {
             name: "Consultorio Estándar",
-            description: "Consultorio profesional para práctica psiquiátrica por hora",
+            description:
+              "Consultorio profesional para práctica psiquiátrica por hora",
             price: "200",
             priceCurrency: "UYU",
           },
           {
             name: "Consultorio Premium",
-            description: "Consultorio amplio Premium para práctica psiquiátrica por hora",
+            description:
+              "Consultorio amplio Premium para práctica psiquiátrica por hora",
             price: "250",
             priceCurrency: "UYU",
           },
@@ -159,7 +163,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           "Sala de espera privada con música ambiental",
         ]}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -213,10 +217,10 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </h2>
           <p>
             Sabemos que el acto médico en psiquiatría es sagrado. Necesitas un
-            lugar donde puedas realizar entrevistas, evaluaciones y
-            tratamientos farmacológicos con total tranquilidad. Un espacio donde
-            el ruido de la calle o de la sala de espera no interfiera en la
-            delicada relación médico-paciente.
+            lugar donde puedas realizar entrevistas, evaluaciones y tratamientos
+            farmacológicos con total tranquilidad. Un espacio donde el ruido de
+            la calle o de la sala de espera no interfiera en la delicada
+            relación médico-paciente.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -236,9 +240,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             Los 3 Pilares de un Consultorio Psiquiátrico Ideal
           </h2>
 
-          <h3 id="privacidad">
-            1. Privacidad y Hermetismo Acústico
-          </h3>
+          <h3 id="privacidad">1. Privacidad y Hermetismo Acústico</h3>
           <p>
             La confidencialidad es la base de la confianza. En Espacio PISAMA,
             la <strong>aislación acústica</strong> es una prioridad. Paredes
@@ -248,9 +250,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             privacidad extra a quienes aguardan.
           </p>
 
-          <h3 id="seguridad">
-            2. Seguridad y Contención
-          </h3>
+          <h3 id="seguridad">2. Seguridad y Contención</h3>
           <p>
             Atender pacientes, a veces en situaciones de crisis, requiere un
             entorno seguro. Nuestro espacio cuenta con acceso controlado y
@@ -275,9 +275,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="imagen-profesional">
-            3. Imagen Médica Profesional
-          </h3>
+          <h3 id="imagen-profesional">3. Imagen Médica Profesional</h3>
           <p>
             Tu consultorio habla de ti antes de que digas una palabra. Nuestros
             espacios están decorados con un estilo sobrio, moderno y cálido,
@@ -290,13 +288,9 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 3: GESTIÓN --- */}
-          <h2 id="gestion">
-            Gestión Eficiente de tu Práctica Privada
-          </h2>
+          <h2 id="gestion">Gestión Eficiente de tu Práctica Privada</h2>
 
-          <h3 id="agenda">
-            Agenda Flexible y Sistema Online
-          </h3>
+          <h3 id="agenda">Agenda Flexible y Sistema Online</h3>
           <p>
             Olvídate de los costos fijos de un alquiler mensual si recién
             empiezas o si solo atiendes algunos días a la semana. Con nuestro{" "}
@@ -319,22 +313,21 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="ubicacion">
-            Ubicación Estratégica y Accesibilidad
-          </h3>
-          
+          <h3 id="ubicacion">Ubicación Estratégica y Accesibilidad</h3>
+
           {/* Row 1: Text Left, Image Right */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
             <div>
               <p className="mt-0">
                 Estamos en <strong>Parque Rodó</strong>, un punto neurálgico de
-                Montevideo con excelente conectividad. La ubicación permite que tus 
-                pacientes lleguen fácilmente desde cualquier punto de la ciudad, 
-                ya sea en transporte público o vehículo propio. Al estar situados 
-                cerca de avenidas principales como Bulevar Artigas y Bulevar España, 
-                el acceso es rápido y directo desde barrios como Pocitos, Cordón y 
-                el Centro. Además, el entorno de Parque Rodó ofrece una atmósfera de 
-                tranquilidad que predispone positivamente antes de la sesión.
+                Montevideo con excelente conectividad. La ubicación permite que
+                tus pacientes lleguen fácilmente desde cualquier punto de la
+                ciudad, ya sea en transporte público o vehículo propio. Al estar
+                situados cerca de avenidas principales como Bulevar Artigas y
+                Bulevar España, el acceso es rápido y directo desde barrios como
+                Pocitos, Cordón y el Centro. Además, el entorno de Parque Rodó
+                ofrece una atmósfera de tranquilidad que predispone
+                positivamente antes de la sesión.
               </p>
             </div>
             <div className="flex justify-center">
@@ -356,25 +349,23 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
-                title="Mapa de ubicación de Espacio PISAMA en Parque Rodó, Montevideo" 
-                loading="lazy" 
+                title="Mapa de ubicación de Espacio PISAMA en Parque Rodó, Montevideo"
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-               />
+              />
             </div>
             <div>
               <p className="mt-0">
-                Además, contamos con la gran ventaja de estar en una zona de {" "}
-                <strong>estacionamiento gratuito y seguro</strong>. Esto elimina 
-                una barrera importante para la asistencia a consulta, brindando 
+                Además, contamos con la gran ventaja de estar en una zona de{" "}
+                <strong>estacionamiento gratuito y seguro</strong>. Esto elimina
+                una barrera importante para la asistencia a consulta, brindando
                 comodidad tanto para ti como para tus pacientes.
               </p>
             </div>
           </div>
 
           {/* --- SECCIÓN 4: RIESGOS --- */}
-          <h2 id="riesgos">
-            Eliminando Riesgos y Costos Fijos
-          </h2>
+          <h2 id="riesgos">Eliminando Riesgos y Costos Fijos</h2>
           <p>
             Alquilar un consultorio propio implica contratos a dos años,
             garantías, gastos comunes, luz, internet, limpieza y mantenimiento.
@@ -412,6 +403,10 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioPsiquiatrasFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="psiquiatras"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Consultorios para Psiquiatras en Montevideo"

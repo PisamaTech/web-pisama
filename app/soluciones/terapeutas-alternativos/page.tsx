@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 
 import ImageGallery from "./ImageGallery";
 
@@ -190,7 +192,8 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           },
           {
             name: "Consultorio Premium con Camilla",
-            description: "Consultorio amplio con camilla para terapias holísticas",
+            description:
+              "Consultorio amplio con camilla para terapias holísticas",
             price: "250",
             priceCurrency: "UYU",
           },
@@ -209,7 +212,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -237,49 +240,62 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
           <p>
             Cuando empecé a dedicarme al{" "}
-            <Link href="/soluciones" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/soluciones"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               alquiler de consultorios
             </Link>{" "}
-            para terapias alternativas, entendí algo fundamental: los terapeutas no buscan
-            solo cuatro paredes. Buscan un espacio que refleje su energía, su
-            propósito y su manera de sanar.
+            para terapias alternativas, entendí algo fundamental: los terapeutas
+            no buscan solo cuatro paredes. Buscan un espacio que refleje su
+            energía, su propósito y su manera de sanar.
           </p>
           <p>
             En{" "}
-            <Link href="/" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               Espacio Pisama
             </Link>
-            , hemos trabajado con muchos terapeutas
-            alternativos, y todos coinciden en algo: la buena energía que se
-            siente en el lugar. Cada detalle, desde la acústica hasta la
-            decoración, fue pensado por nosotros —dos{" "}
-            <Link href="/soluciones/psicologos" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            , hemos trabajado con muchos terapeutas alternativos, y todos
+            coinciden en algo: la buena energía que se siente en el lugar. Cada
+            detalle, desde la acústica hasta la decoración, fue pensado por
+            nosotros —dos{" "}
+            <Link
+              href="/soluciones/psicologos"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               psicólogos
             </Link>{" "}
-            que somos los dueños— para crear un entorno cálido, sereno y profesional, ideal
-            para terapias holísticas.
+            que somos los dueños— para crear un entorno cálido, sereno y
+            profesional, ideal para terapias holísticas.
           </p>
 
           {/* --- SECCIÓN 1: POR QUÉ ELEGIR BIEN --- */}
           <h2 id="por-que-elegir-bien">
-            🌿 ¿Por qué es tan importante elegir bien el consultorio para terapias alternativas?
+            🌿 ¿Por qué es tan importante elegir bien el consultorio para
+            terapias alternativas?
           </h2>
           <p>
-            El lugar donde un terapeuta alternativo atiende impacta directamente en la
-            experiencia del paciente. Un consultorio para terapias holísticas no es solo un ambiente
-            físico; es parte del proceso de sanación y transformación energética.
+            El lugar donde un terapeuta alternativo atiende impacta directamente
+            en la experiencia del paciente. Un consultorio para terapias
+            holísticas no es solo un ambiente físico; es parte del proceso de
+            sanación y transformación energética.
           </p>
           <p>
-            He visto cómo muchos terapeutas holísticos llegan contando que probaron en
-            otros lugares, pero no se sentían cómodos o no lograban conectar con
-            la energía del espacio. Esa sensación cambia cuando encuentran un
-            consultorio para terapias alternativas que vibra con su propósito y práctica terapéutica.
+            He visto cómo muchos terapeutas holísticos llegan contando que
+            probaron en otros lugares, pero no se sentían cómodos o no lograban
+            conectar con la energía del espacio. Esa sensación cambia cuando
+            encuentran un consultorio para terapias alternativas que vibra con
+            su propósito y práctica terapéutica.
           </p>
           <p>
-            Por eso, el espacio terapéutico es clave para profesionales de reiki, acupuntura,
-            masajes terapéuticos o cualquier terapia alternativa: debe tener armonía, privacidad, buena
-            luz, decoración equilibrada y un ambiente que invite al silencio
-            interior y la conexión profunda.
+            Por eso, el espacio terapéutico es clave para profesionales de
+            reiki, acupuntura, masajes terapéuticos o cualquier terapia
+            alternativa: debe tener armonía, privacidad, buena luz, decoración
+            equilibrada y un ambiente que invite al silencio interior y la
+            conexión profunda.
           </p>
 
           <Image
@@ -296,7 +312,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: CLAVES PARA ALQUILAR --- */}
-          <h2 id="claves-alquiler">8 Claves para el Alquiler de Consultorios para Terapias Alternativas en Montevideo</h2>
+          <h2 id="claves-alquiler">
+            8 Claves para el Alquiler de Consultorios para Terapias Alternativas
+            en Montevideo
+          </h2>
 
           <h3 id="ubicacion">
             🏙️ 1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
@@ -304,7 +323,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <p>
             La ubicación no solo influye en la accesibilidad, sino también en la
             percepción profesional del terapeuta. En nuestro caso,{" "}
-            <Link href="/consultorios" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/consultorios"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               nuestros consultorios
             </Link>{" "}
             están en Parque Rodó, una zona céntrica, tranquila y valorada de
@@ -328,9 +350,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             terapéutico
           </h3>
           <p>
-            Uno de los mayores desafíos al buscar alquiler de consultorio por hora en Montevideo
-            para un terapeuta alternativo es no encontrar un espacio con la energía adecuada
-            y el ambiente armónico necesario para las terapias holísticas.
+            Uno de los mayores desafíos al buscar alquiler de consultorio por
+            hora en Montevideo para un terapeuta alternativo es no encontrar un
+            espacio con la energía adecuada y el ambiente armónico necesario
+            para las terapias holísticas.
           </p>
           <p>
             En Espacio Pisama cuidamos cada detalle: la iluminación, los tonos
@@ -356,10 +379,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             necesites
           </h3>
           <p>
-            Uno de los grandes desafíos de los terapeutas holísticos es encontrar un
-            consultorio con alquiler por hora que se adapte a sus horarios variables.
-            Algunos profesionales de terapias alternativas atienden temprano,
-            otros por la noche o los fines de semana.
+            Uno de los grandes desafíos de los terapeutas holísticos es
+            encontrar un consultorio con alquiler por hora que se adapte a sus
+            horarios variables. Algunos profesionales de terapias alternativas
+            atienden temprano, otros por la noche o los fines de semana.
           </p>
           <p>
             Por eso, en nuestro caso, abrimos de 7:00 a 23:00 todos los días del
@@ -373,15 +396,20 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <p>Esa libertad genera algo muy valioso: autonomía profesional.</p>
 
           <h3 id="reservas-online">
-            💻 4. Sistema de reservas online y camilla para terapeutas alternativos
+            💻 4. Sistema de reservas online y camilla para terapeutas
+            alternativos
           </h3>
           <p>
             La tecnología debe estar al servicio del bienestar. Por eso
             implementamos un{" "}
-            <Link href="/disponibilidad" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/disponibilidad"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               sistema de reservas online
             </Link>{" "}
-            que permite ver disponibilidad en tiempo real y reservar fácilmente el consultorio.
+            que permite ver disponibilidad en tiempo real y reservar fácilmente
+            el consultorio.
           </p>
           <blockquote>
             “Tenemos un sistema de reservas online en el cual se pueden agendar
@@ -390,11 +418,13 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             disponible la camilla a la hora que ellos necesiten.”
           </blockquote>
           <p>
-            Además, contamos con una camilla profesional disponible para terapeutas que puede usarse en
-            cualquiera de los seis consultorios. Solo hay que indicar su
-            necesidad al momento de reservar tu consultorio para terapias alternativas,
-            y el sistema se encarga del resto. Esa comodidad tecnológica elimina el clásico
-            dolor de cabeza de coordinar horarios por teléfono o esperar confirmaciones manuales.
+            Además, contamos con una camilla profesional disponible para
+            terapeutas que puede usarse en cualquiera de los seis consultorios.
+            Solo hay que indicar su necesidad al momento de reservar tu
+            consultorio para terapias alternativas, y el sistema se encarga del
+            resto. Esa comodidad tecnológica elimina el clásico dolor de cabeza
+            de coordinar horarios por teléfono o esperar confirmaciones
+            manuales.
           </p>
 
           <CtaBox />
@@ -407,7 +437,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             mensuales inflexibles. Muchos terapeutas recién comienzan y
             necesitan una opción que no los obligue a comprometerse a largo
             plazo. Por eso ofrecemos{" "}
-            <Link href="/precios" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/precios"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               alquiler por hora sin compromiso mensual
             </Link>
             .
@@ -431,16 +464,20 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             🧘‍♀️ 6. Comunidad de terapeutas holísticos en Montevideo
           </h3>
           <p>
-            Trabajar solo como terapeuta holístico puede ser un desafío emocional.
-            Muchos profesionales de terapias alternativas buscan un consultorio compartido
-            donde haya una sensación de comunidad terapéutica, aunque cada
-            uno mantenga su independencia y privacidad en las sesiones.
+            Trabajar solo como terapeuta holístico puede ser un desafío
+            emocional. Muchos profesionales de terapias alternativas buscan un
+            consultorio compartido donde haya una sensación de comunidad
+            terapéutica, aunque cada uno mantenga su independencia y privacidad
+            en las sesiones.
           </p>
           <p>
             En Espacio Pisama promovemos esa conexión: los terapeutas comparten
             valores similares, se recomiendan mutuamente y muchas veces surgen
             colaboraciones o intercambios. Al igual que nuestros{" "}
-            <Link href="/soluciones/nutricionistas" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/soluciones/nutricionistas"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               nutricionistas
             </Link>{" "}
             y otros profesionales de la salud, no se trata solo de alquilar un
@@ -452,10 +489,11 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             🌺 7. Diseño profesional para potenciar la experiencia terapéutica
           </h3>
           <p>
-            Cuando los consultorios para terapias holísticas son pensados por terapeutas,
-            la diferencia se nota. Nosotros diseñamos cada sala de terapias alternativas
-            con la mirada de quien entiende las necesidades del trabajo terapéutico:
-            privacidad absoluta, comodidad para el paciente y armonía energética del espacio.
+            Cuando los consultorios para terapias holísticas son pensados por
+            terapeutas, la diferencia se nota. Nosotros diseñamos cada sala de
+            terapias alternativas con la mirada de quien entiende las
+            necesidades del trabajo terapéutico: privacidad absoluta, comodidad
+            para el paciente y armonía energética del espacio.
           </p>
           <p>
             Cada rincón fue concebido para que el terapeuta pueda enfocarse en
@@ -482,7 +520,8 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           {/* --- CONCLUSIÓN --- */}
           <h2 id="conclusion">
-            🌿 Conclusión: encontrá tu consultorio ideal para terapias holísticas
+            🌿 Conclusión: encontrá tu consultorio ideal para terapias
+            holísticas
           </h2>
           <p>
             El alquiler de consultorios para terapias alternativas no debería
@@ -498,12 +537,20 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <p className="pb-8">
             Si buscás un espacio cálido, flexible y con buena energía para tus
             terapias, te invito a{" "}
-            <Link href="/contacto" className="text-secondary-500 font-semibold hover:text-secondary-400">
+            <Link
+              href="/contacto"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+            >
               conocer Espacio Pisama
             </Link>
-            . Porque cuando el espacio vibra contigo, el trabajo fluye de verdad.
+            . Porque cuando el espacio vibra contigo, el trabajo fluye de
+            verdad.
           </p>
         </article>
+        <RelatedSolutions
+          currentProfession="terapeutas-alternativos"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Terapias Alternativas en Montevideo"

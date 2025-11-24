@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio2 from "@/public/images/consultorio2-1.webp";
 import consultorio4 from "@/public/images/consultorio4-1.webp";
@@ -224,7 +226,7 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -246,9 +248,8 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           <Indice sections={sections} />
 
           <p className="mt-12">
-            Como psicólogo y dueño de{" "}
-            <Link href="/">Espacio PISAMA</Link>, he trabajado de cerca con
-            muchos nutricionistas que{" "}
+            Como psicólogo y dueño de <Link href="/">Espacio PISAMA</Link>, he
+            trabajado de cerca con muchos nutricionistas que{" "}
             <strong>alquilan consultorios por hora en Montevideo</strong>. A
             través de sus experiencias y necesidades, entendí algo fundamental:{" "}
             <strong>
@@ -365,15 +366,15 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             paciente se abra.
           </p>
           <blockquote>
-            En Espacio PISAMA, la privacidad acústica fue nuestra obsesión
-            desde el inicio. Cada consultorio está aislado acústicamente y la
-            sala de espera tiene música ambiental para enmascarar cualquier
-            sonido residual.
+            En Espacio PISAMA, la privacidad acústica fue nuestra obsesión desde
+            el inicio. Cada consultorio está aislado acústicamente y la sala de
+            espera tiene música ambiental para enmascarar cualquier sonido
+            residual.
           </blockquote>
           <p>
             <strong>Resultado:</strong> Tus pacientes pueden hablar con total
-            libertad sobre sus desafíos alimentarios, sabiendo que nadie más
-            los escuchará.
+            libertad sobre sus desafíos alimentarios, sabiendo que nadie más los
+            escuchará.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -411,9 +412,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             />
           </div>
           <p>
-            No tenés que preocuparte por barrer antes de que llegue el
-            paciente, ni por si la temperatura es adecuada, ni por si hay
-            suficiente luz. El espacio trabaja para vos, no al revés.
+            No tenés que preocuparte por barrer antes de que llegue el paciente,
+            ni por si la temperatura es adecuada, ni por si hay suficiente luz.
+            El espacio trabaja para vos, no al revés.
           </p>
 
           <CtaBox />
@@ -445,8 +446,8 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
           <p>
             Por eso, en Espacio PISAMA implementamos un{" "}
-            <strong>sistema de alquiler por hora</strong> con reservas online
-            en tiempo real. Ves la{" "}
+            <strong>sistema de alquiler por hora</strong> con reservas online en
+            tiempo real. Ves la{" "}
             <Link href="/disponibilidad">disponibilidad al instante</Link>,
             reservás el horario que necesitás, y solo pagás por esas horas.
           </p>
@@ -468,26 +469,29 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           <h3 id="ubicacion">
-            Consultorio en Parque Rodó: Ubicación Estratégica para Nutricionistas
-            en Montevideo
+            Consultorio en Parque Rodó: Ubicación Estratégica para
+            Nutricionistas en Montevideo
           </h3>
           <p>
-            La <strong>adherencia del paciente a las consultas nutricionales</strong> es clave
-            para lograr resultados. Una de las principales razones por las que
-            los pacientes abandonan es la dificultad para llegar al
+            La{" "}
+            <strong>
+              adherencia del paciente a las consultas nutricionales
+            </strong>{" "}
+            es clave para lograr resultados. Una de las principales razones por
+            las que los pacientes abandonan es la dificultad para llegar al
             consultorio.
           </p>
           <p>
-            Nuestro <strong>consultorio nutricional en Parque Rodó</strong> está ubicado en una zona
-            céntrica y accesible de Montevideo, cerca de avenidas principales
-            (Blvr. Artigas, Blvr. España, Rivera, 18 de Julio) con excelente
-            conexión en ómnibus.
+            Nuestro <strong>consultorio nutricional en Parque Rodó</strong> está
+            ubicado en una zona céntrica y accesible de Montevideo, cerca de
+            avenidas principales (Blvr. Artigas, Blvr. España, Rivera, 18 de
+            Julio) con excelente conexión en ómnibus.
           </p>
           <blockquote>
             Y algo fundamental en Montevideo: estamos en una zona de
             estacionamiento no tarifado, donde siempre hay lugar para
-            estacionar. Eliminamos una barrera importante para que tus
-            pacientes lleguen puntualmente.
+            estacionar. Eliminamos una barrera importante para que tus pacientes
+            lleguen puntualmente.
           </blockquote>
           <div className="my-8 flex justify-center">
             <Image
@@ -531,10 +535,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </h3>
           <p>
             Trabajar como profesional independiente puede ser solitario. En
-            Espacio PISAMA promovemos una comunidad de profesionales de la
-            salud (psicólogos, nutricionistas, terapeutas) que comparten
-            valores similares: puntualidad, respeto y compromiso con la
-            excelencia.
+            Espacio PISAMA promovemos una comunidad de profesionales de la salud
+            (psicólogos, nutricionistas, terapeutas) que comparten valores
+            similares: puntualidad, respeto y compromiso con la excelencia.
           </p>
           <p>
             Nuestro{" "}
@@ -605,8 +608,8 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             <strong>
               No es el espacio más barato ni el más lujoso. Es el que funciona.
             </strong>{" "}
-            Es un consultorio profesional, flexible y diseñado para acompañar
-            tu crecimiento profesional.
+            Es un consultorio profesional, flexible y diseñado para acompañar tu
+            crecimiento profesional.
           </p>
           <p className="pb-8">
             Si buscás un lugar donde simplemente puedas ser nutricionista, sin
@@ -629,6 +632,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioNutricionistasFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="nutricionistas"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio Nutricional en Montevideo"

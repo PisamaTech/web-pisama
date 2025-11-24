@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -165,7 +167,8 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
         offers={[
           {
             name: "Consultorio Premium con Camilla",
-            description: "Consultorio amplio para masajistas con camilla profesional incluida",
+            description:
+              "Consultorio amplio para masajistas con camilla profesional incluida",
             price: "250",
             priceCurrency: "UYU",
           },
@@ -180,7 +183,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           "Aire acondicionado",
         ]}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -231,12 +234,12 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             El Problema de la Camilla Compartida en Consultorios de Masajes
           </h2>
           <p>
-            He visto masajistas llegar a un consultorio alquilado para
-            descubrir que la camilla &quot;estaba reservada&quot; por otro
-            colega. O peor: que simplemente no estaba disponible porque nadie
-            coordinó su uso. <strong>Eso es inaceptable</strong> para
-            masajistas profesionales que tienen clientes esperando su sesión de
-            masajes terapéuticos o deportivos.
+            He visto masajistas llegar a un consultorio alquilado para descubrir
+            que la camilla &quot;estaba reservada&quot; por otro colega. O peor:
+            que simplemente no estaba disponible porque nadie coordinó su uso.{" "}
+            <strong>Eso es inaceptable</strong> para masajistas profesionales
+            que tienen clientes esperando su sesión de masajes terapéuticos o
+            deportivos.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -385,10 +388,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             salud profesional y la calidad de atención a tus pacientes.
           </p>
           <blockquote>
-            Nota: Contamos con un Consultorio Estándar a $200/hora, pero por
-            sus dimensiones reducidas, no lo recomendamos para terapias con
-            camilla. Prioriza tu comodidad y la de tu paciente eligiendo
-            Premium.
+            Nota: Contamos con un Consultorio Estándar a $200/hora, pero por sus
+            dimensiones reducidas, no lo recomendamos para terapias con camilla.
+            Prioriza tu comodidad y la de tu paciente eligiendo Premium.
           </blockquote>
 
           <h3 id="descuentos">
@@ -482,15 +484,15 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
               masajes de recuperación muscular y técnicas deportivas avanzadas.
             </li>
             <li>
-              <strong>Masajistas de Spa y Relajación:</strong> Ambiente cálido
-              y tranquilo perfecto para masajes relajantes, aromáticos y de
+              <strong>Masajistas de Spa y Relajación:</strong> Ambiente cálido y
+              tranquilo perfecto para masajes relajantes, aromáticos y de
               bienestar general. La climatización y música ambiental crean el
               entorno ideal.
             </li>
             <li>
               <strong>Fisioterapeutas y Kinesiólogos:</strong> Espacio amplio
-              para evaluaciones, movilizaciones y tratamientos de
-              rehabilitación con camilla profesional.
+              para evaluaciones, movilizaciones y tratamientos de rehabilitación
+              con camilla profesional.
             </li>
             <li>
               <strong>Otros Profesionales:</strong> También ideal para
@@ -499,8 +501,8 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             </li>
           </ul>
           <p>
-            Si eres masajista profesional y buscas un consultorio con camilla
-            en Montevideo, <strong>Espacio PISAMA es tu lugar</strong>.
+            Si eres masajista profesional y buscas un consultorio con camilla en
+            Montevideo, <strong>Espacio PISAMA es tu lugar</strong>.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -518,9 +520,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           <p>
             No pierdas clientes por falta de lugar o por problemas de
             coordinación de la camilla de masajes.{" "}
-            <strong>
-              Toma el control de tu práctica como masajista ahora
-            </strong>{" "}
+            <strong>Toma el control de tu práctica como masajista ahora</strong>{" "}
             con un sistema que realmente funciona:
           </p>
           <ol>
@@ -536,14 +536,14 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             </li>
             <li>Consulta la disponibilidad en tiempo real 24/7.</li>
             <li>
-              Reserva tu Consultorio Premium + Camilla para masajes con un
-              clic. El sistema garantiza tu equipamiento.
+              Reserva tu Consultorio Premium + Camilla para masajes con un clic.
+              El sistema garantiza tu equipamiento.
             </li>
           </ol>
           <p className="pb-8">
             Al crear Espacio PISAMA intenté resolver todos los problemas
-            logísticos que los masajistas enfrentan al buscar un consultorio
-            con camilla en Montevideo.{" "}
+            logísticos que los masajistas enfrentan al buscar un consultorio con
+            camilla en Montevideo.{" "}
             <strong>
               No es el espacio más barato ni el más lujoso. Es el que funciona.
             </strong>{" "}
@@ -569,6 +569,10 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           {/* --- SECCIÓN 7: FAQ --- */}
           <ConsultorioCamillaFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="masajistas"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Masajes en Montevideo Hoy"

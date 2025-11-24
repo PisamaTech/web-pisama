@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -78,7 +80,7 @@ const CtaBox = () => (
       size="lg"
       variant="flat"
     >
-      Ver Disponibilidad y Precios
+      Ver Disponibilidad
     </Button>
   </div>
 );
@@ -156,8 +158,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Alquiler de Consultorios para Psicólogos por Hora en Montevideo",
+    headline: "Alquiler de Consultorios para Psicólogos por Hora en Montevideo",
     description:
       "Guía completa sobre alquiler de consultorios psicológicos en Parque Rodó. Privacidad acústica, reservas online y precios flexibles.",
     image: [
@@ -224,7 +225,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -590,11 +591,15 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioPsicologosFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="psicologos"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Psicólogos en Montevideo Hoy"
         description="Alquiler por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente diseñado por psicólogos y sistema de reservas online en tiempo real. Todo lo que necesitás para tu práctica privada sin compromiso mensual. Encontrá tu horario ideal ahora."
-        buttonText="Ver Disponibilidad y Precios Ahora"
+        buttonText="Ver Disponibilidad Ahora"
         buttonLink="/disponibilidad"
       />
     </>

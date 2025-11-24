@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import consultorio5 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaDescanso from "@/public/images/saladescanso-1.webp";
@@ -68,8 +70,8 @@ const CtaBox = () => (
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
       Alquiler de consultorio para fisioterapeutas desde $250/hora en Parque
-      Rodó, Montevideo. Espacios Premium amplios, camilla profesional incluida
-      y almacenamiento seguro. Sin compromiso mensual.
+      Rodó, Montevideo. Espacios Premium amplios, camilla profesional incluida y
+      almacenamiento seguro. Sin compromiso mensual.
     </p>
     <Button
       as={Link}
@@ -184,7 +186,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
         offers={[
           {
             name: "Consultorio Premium con Camilla",
-            description: "Consultorio amplio para fisioterapeutas con camilla profesional bonificada",
+            description:
+              "Consultorio amplio para fisioterapeutas con camilla profesional bonificada",
             price: "250",
             priceCurrency: "UYU",
           },
@@ -204,7 +207,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -239,8 +242,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               consultorios por hora en el mercado
             </Link>{" "}
             están diseñados exclusivamente para psicólogos: habitaciones
-            pequeñas donde no entra una camilla y mucho menos puedes moverte
-            con comodidad. Además, cargar con tu equipo de un lado a otro es
+            pequeñas donde no entra una camilla y mucho menos puedes moverte con
+            comodidad. Además, cargar con tu equipo de un lado a otro es
             agotador y poco profesional.
           </p>
           <p>
@@ -262,7 +265,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
 
           {/* --- SECCIÓN 1: FIN DE CONSULTORIOS APRETADOS --- */}
           <h2 id="consultorios-amplios">
-            El Fin de los &quot;Consultorios Apretados&quot;: Priorizamos tu Ergonomía
+            El Fin de los &quot;Consultorios Apretados&quot;: Priorizamos tu
+            Ergonomía
           </h2>
           <p>
             Sabemos que para realizar una buena evaluación postural, una
@@ -314,9 +318,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               costados sin restricciones.
             </li>
             <li>
-              <strong>Mobiliario Minimalista:</strong> Diseñamos el espacio
-              para que esté despejado. Nada interrumpe tu flujo de trabajo
-              como fisioterapeuta.
+              <strong>Mobiliario Minimalista:</strong> Diseñamos el espacio para
+              que esté despejado. Nada interrumpe tu flujo de trabajo como
+              fisioterapeuta.
             </li>
             <li>
               <strong>Suelo Libre:</strong> Sin alfombras pesadas ni obstáculos
@@ -344,9 +348,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
                 Consultorio Estándar
               </Link>{" "}
               más económico, pero <strong>no lo recomendamos</strong> para
-              Fisioterapia. Sus dimensiones limitarían tu ergonomía y
-              capacidad de movimiento. Para garantizar tu comodidad y la
-              calidad de tu trabajo, elige siempre la opción Premium.
+              Fisioterapia. Sus dimensiones limitarían tu ergonomía y capacidad
+              de movimiento. Para garantizar tu comodidad y la calidad de tu
+              trabajo, elige siempre la opción Premium.
             </p>
           </div>
 
@@ -396,8 +400,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </h3>
           <p>
             ¿Prefieres tu propia camilla portátil o tienes materiales
-            específicos (equipos de electroterapia, bandas elásticas, pelotas
-            de Pilates, insumos)?
+            específicos (equipos de electroterapia, bandas elásticas, pelotas de
+            Pilates, insumos)?
           </p>
 
           <div className="my-8 flex justify-center">
@@ -419,9 +423,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               entre sesión y sesión.
             </li>
             <li>
-              <strong>Deja de Cargar Peso:</strong> Llegas, retiras tu equipo
-              de la sala, trabajas en el consultorio que reservaste y lo
-              vuelves a guardar al finalizar. Así de simple.
+              <strong>Deja de Cargar Peso:</strong> Llegas, retiras tu equipo de
+              la sala, trabajas en el consultorio que reservaste y lo vuelves a
+              guardar al finalizar. Así de simple.
             </li>
             <li>
               <strong>Seguridad y Confianza:</strong> Aclaración importante: No
@@ -451,10 +455,10 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             <li>
               <strong>Estacionamiento Gratuito:</strong> Estamos en una zona
               tranquila donde es posible estacionar en la calle{" "}
-              <strong>sin tarifa de estacionamiento tarifado</strong>. Un
-              alivio enorme para el paciente que llega en auto, especialmente
-              quienes tienen movilidad reducida o dolor que les dificulta
-              caminar largas distancias.
+              <strong>sin tarifa de estacionamiento tarifado</strong>. Un alivio
+              enorme para el paciente que llega en auto, especialmente quienes
+              tienen movilidad reducida o dolor que les dificulta caminar largas
+              distancias.
             </li>
             <li>
               <strong>Conectividad:</strong> A pasos de Bv. España, Bv. Artigas
@@ -510,9 +514,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             </p>
             <p className="text-foreground/80 mb-0">
               <strong>Incluye:</strong> Consultorio Premium amplio, uso de
-              camilla o almacenamiento de tu equipo, limpieza profesional,
-              Wi-Fi de alta velocidad, climatización individual y todos los
-              servicios.
+              camilla o almacenamiento de tu equipo, limpieza profesional, Wi-Fi
+              de alta velocidad, climatización individual y todos los servicios.
             </p>
           </div>
 
@@ -608,8 +611,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               (es gratis y toma 2 minutos).
             </li>
             <li>
-              <strong>Filtra por Consultorios Premium</strong> para ver solo
-              los espacios amplios recomendados para fisioterapia.
+              <strong>Filtra por Consultorios Premium</strong> para ver solo los
+              espacios amplios recomendados para fisioterapia.
             </li>
             <li>
               <strong>Selecciona si requieres camilla</strong> al momento de
@@ -647,9 +650,8 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               >
                 agendar una visita
               </Link>{" "}
-              sin compromiso. Podés venir a conocer los consultorios, la sala
-              de espera, la sala de descanso y resolver todas tus dudas en
-              persona.
+              sin compromiso. Podés venir a conocer los consultorios, la sala de
+              espera, la sala de descanso y resolver todas tus dudas en persona.
             </p>
             <Button
               as={Link}
@@ -665,6 +667,10 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           {/* --- SECCIÓN 7: FAQ --- */}
           <ConsultorioFisioterapeutasFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="fisioterapeutas"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Fisioterapeutas en Montevideo Hoy"

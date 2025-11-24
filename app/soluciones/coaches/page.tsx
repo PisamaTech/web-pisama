@@ -8,8 +8,10 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
+import { allSolutions } from "@/src/solucionesData";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -68,8 +70,8 @@ const CtaBox = () => (
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
       Alquiler por hora desde $200 en Montevideo. Privacidad acústica absoluta,
-      reservas online en tiempo real y ambiente diseñado para sesiones de coaching
-      profesional. Sin compromiso mensual.
+      reservas online en tiempo real y ambiente diseñado para sesiones de
+      coaching profesional. Sin compromiso mensual.
     </p>
     <Button
       as={Link}
@@ -190,7 +192,7 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           "Sala de espera privada",
         ]}
       />
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <div className="container mx-auto max-w-4xl px-4">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
@@ -249,9 +251,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             En el coaching ontológico, ejecutivo o personal, hablamos del
             &quot;espacio seguro&quot; como condición fundamental para que el
             coachee se permita explorar, cuestionar y transformar. Pero ese
-            espacio seguro no es solo simbólico: el consultorio físico donde
-            das tus sesiones de coaching es el contenedor tangible de ese
-            proceso.
+            espacio seguro no es solo simbólico: el consultorio físico donde das
+            tus sesiones de coaching es el contenedor tangible de ese proceso.
           </p>
           <div className="my-8 flex justify-center">
             <Image
@@ -318,18 +319,18 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             2. Privacidad Acústica Absoluta: La Base de la Confidencialidad
           </h3>
           <p>
-            En el coaching, los coachees comparten metas profesionales,
-            desafíos personales, vulnerabilidades y procesos de transformación
-            profundos. He trabajado en espacios donde se escuchaban fragmentos
-            de otras conversaciones desde la sala de espera. Eso es inaceptable
-            para cualquier coach profesional.{" "}
+            En el coaching, los coachees comparten metas profesionales, desafíos
+            personales, vulnerabilidades y procesos de transformación profundos.
+            He trabajado en espacios donde se escuchaban fragmentos de otras
+            conversaciones desde la sala de espera. Eso es inaceptable para
+            cualquier coach profesional.{" "}
             <strong>
               En nuestro consultorio en Parque Rodó, la privacidad acústica fue
               una obsesión desde el diseño.
             </strong>{" "}
-            No solo aislamos acústicamente cada consultorio, sino que
-            instalamos música ambiental en la sala de espera para enmascarar
-            cualquier sonido residual.
+            No solo aislamos acústicamente cada consultorio, sino que instalamos
+            música ambiental en la sala de espera para enmascarar cualquier
+            sonido residual.
           </p>
           <p>
             <strong>Resultado:</strong> Confidencialidad absoluta en tu
@@ -358,8 +359,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             La iluminación es perfecta para sesiones largas, la limpieza es
             impecable, la conexión a internet es rápida y estable (ideal si
             necesitas compartir pantalla o acceder a herramientas digitales de
-            coaching), y la temperatura es agradable todo el año gracias al
-            aire acondicionado. No tenés que pensar en nada de esto. El espacio
+            coaching), y la temperatura es agradable todo el año gracias al aire
+            acondicionado. No tenés que pensar en nada de esto. El espacio
             trabaja para vos, no al revés.
           </p>
           <div className="my-8 flex justify-center">
@@ -480,8 +481,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             horario. He tenido que interrumpir procesos delicados porque el
             profesional anterior no salía a tiempo, generando una situación
             incómoda frente a mi coachee que esperaba. Por eso, en Espacio
-            Pisama, fomento una comunidad de profesionales estable y
-            respetuosa. Nuestro{" "}
+            Pisama, fomento una comunidad de profesionales estable y respetuosa.
+            Nuestro{" "}
             <Link
               href="/precios"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
@@ -489,8 +490,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
               sistema de descuentos por cantidad de horas utilizadas por semana
             </Link>{" "}
             busca fidelizar a colegas comprometidos que valoren tanto su tiempo
-            como el de los demás. Prefiero tener una baja rotación y un
-            ambiente de trabajo armónico, como explico en{" "}
+            como el de los demás. Prefiero tener una baja rotación y un ambiente
+            de trabajo armónico, como explico en{" "}
             <Link
               href="/sobre-nosotros"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
@@ -528,7 +529,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
               >
                 sistema de reservas online en tiempo real
               </Link>
-              , reservas en segundos, sin intermediarios ni mensajes de WhatsApp.
+              , reservas en segundos, sin intermediarios ni mensajes de
+              WhatsApp.
             </li>
             <li>
               <strong>¿Ambiente poco profesional?</strong>{" "}
@@ -538,8 +540,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
               >
                 Cada consultorio
               </Link>{" "}
-              está impecable, siempre. Decoración cuidada, limpieza
-              garantizada, mobiliario profesional.
+              está impecable, siempre. Decoración cuidada, limpieza garantizada,
+              mobiliario profesional.
             </li>
             <li>
               <strong>¿Falta de flexibilidad?</strong> Reservas por hora, día o
@@ -591,11 +593,15 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioCoachesFaqSection />
         </article>
+        <RelatedSolutions
+          currentProfession="coaches"
+          solutions={allSolutions}
+        />
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Coaching en Montevideo Hoy"
         description="Alquiler por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente diseñado para coaching profesional y sistema de reservas online en tiempo real. Todo lo que necesitas para tu práctica de coaching ontológico, ejecutivo o personal sin compromiso mensual. Encontrá tu horario ideal ahora."
-        buttonText="Ver Disponibilidad y Precios Ahora"
+        buttonText="Ver Disponibilidad Ahora"
         buttonLink="/disponibilidad"
       />
     </>

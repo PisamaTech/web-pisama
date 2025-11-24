@@ -96,7 +96,7 @@ const CtaBox = () => (
 export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
   return (
     <>
-      <main className="bg-content2 py-20">
+      <main className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
                      prose-headings:font-display prose-headings:text-primary-500
@@ -362,7 +362,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
       <CtaSection
         title="Reservá tu Consultorio para Terapia Alternativa"
         description="Encontrá un espacio con la energía que buscás. Privacidad, camilla disponible y un sistema de reservas que te da total libertad. ¡Conocé nuestros consultorios!"
-        buttonText="Ver Disponibilidad y Precios"
+        buttonText="Ver Disponibilidad"
         buttonLink="/disponibilidad"
       />
     </>
