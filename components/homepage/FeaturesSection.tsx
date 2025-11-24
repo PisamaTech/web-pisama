@@ -61,7 +61,7 @@ export default function BeneficiosClave() {
               className="bg-content1 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/10"
             >
               <CardBody className="flex flex-col items-center text-center p-8">
-                <div className="mb-6 w-20 h-20 flex items-center justify-center rounded-full bg-white/50 shadow-sm">
+                <div className="mb-6 w-20 h-20 flex items-center justify-center rounded-full bg-white/60 shadow-xl border-1 border-primary/10">
                   {beneficio.icono}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800">

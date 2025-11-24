@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
@@ -149,6 +150,35 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Masajistas"
+        serviceDescription="Consultorio Premium amplio para masajistas en Parque Rodó, Montevideo. Camilla profesional incluida gratis, sistema anti-conflictos de reservas y espacios amplios para trabajar 360°."
+        serviceType="Alquiler de Consultorios para Masajistas"
+        url={`${siteConfig.url}/soluciones/masajistas`}
+        image={[
+          "https://www.pisama.uy/images/consultorio5-1.webp",
+          "https://www.pisama.uy/images/consultorio3-1.webp",
+          "https://www.pisama.uy/images/salaespera-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Premium con Camilla",
+            description: "Consultorio amplio para masajistas con camilla profesional incluida",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Camilla profesional incluida gratis",
+          "5 Consultorios Premium amplios",
+          "Sistema anti-conflictos de reservas",
+          "Espacio para moverte 360° alrededor del paciente",
+          "Reservas online en tiempo real",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+        ]}
+      />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4

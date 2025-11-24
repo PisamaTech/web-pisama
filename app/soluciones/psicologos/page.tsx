@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
@@ -182,6 +183,42 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Psicólogos"
+        serviceDescription="Consultorio psicológico por hora en Parque Rodó, Montevideo. Privacidad acústica absoluta, ambiente diseñado por psicólogos y reservas online en tiempo real para tu práctica privada."
+        serviceType="Alquiler de Consultorios para Psicólogos"
+        url={`${siteConfig.url}/soluciones/psicologos`}
+        image={[
+          "https://www.pisama.uy/images/consultorio1-1.webp",
+          "https://www.pisama.uy/images/consultorio3-1.webp",
+          "https://www.pisama.uy/images/salaespera-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Estándar",
+            description: "Consultorio profesional para psicología por hora",
+            price: "200",
+            priceCurrency: "UYU",
+          },
+          {
+            name: "Consultorio Premium",
+            description: "Consultorio amplio Premium para psicología por hora",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Privacidad acústica absoluta",
+          "Ambiente diseñado por psicólogos",
+          "Reservas online en tiempo real",
+          "Encuadre terapéutico estable",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+          "Sala de espera con música ambiental",
+          "Limpieza impecable garantizada",
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

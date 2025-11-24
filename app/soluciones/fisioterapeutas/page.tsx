@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import consultorio5 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
@@ -168,6 +169,36 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Fisioterapeutas"
+        serviceDescription="Consultorio Premium amplio para fisioterapeutas en Parque Rodó, Montevideo. Camilla profesional bonificada, espacio para moverte 360°, almacenamiento seguro y ergonomía garantizada."
+        serviceType="Alquiler de Consultorios para Fisioterapeutas"
+        url={`${siteConfig.url}/soluciones/fisioterapeutas`}
+        image={[
+          "https://www.pisama.uy/images/consultorio3-1.webp",
+          "https://www.pisama.uy/images/consultorio5-1.webp",
+          "https://www.pisama.uy/images/saladescanso-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Premium con Camilla",
+            description: "Consultorio amplio para fisioterapeutas con camilla profesional bonificada",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Consultorios Premium amplios",
+          "Camilla profesional bonificada",
+          "Espacio para moverte 360° alrededor del paciente",
+          "Almacenamiento seguro para tu equipo",
+          "Ergonomía garantizada",
+          "Reservas online en tiempo real",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

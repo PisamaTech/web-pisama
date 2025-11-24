@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio2 from "@/public/images/consultorio2-1.webp";
@@ -183,6 +184,41 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Nutricionistas"
+        serviceDescription="Consultorio profesional por hora para nutricionistas en Parque Rodó, Montevideo. Privacidad total para temas sensibles, ambiente que inspira cambio y reservas online flexibles."
+        serviceType="Alquiler de Consultorios para Nutricionistas"
+        url={`${siteConfig.url}/soluciones/nutricionistas`}
+        image={[
+          "https://www.pisama.uy/images/consultorio2-1.webp",
+          "https://www.pisama.uy/images/consultorio4-1.webp",
+          "https://www.pisama.uy/images/salaespera-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Estándar",
+            description: "Consultorio profesional para nutrición por hora",
+            price: "200",
+            priceCurrency: "UYU",
+          },
+          {
+            name: "Consultorio Premium",
+            description: "Consultorio amplio Premium para nutrición por hora",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Privacidad acústica absoluta",
+          "Ambiente que inspira bienestar",
+          "Reservas online en tiempo real",
+          "Consultorio completamente equipado",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+          "Sala de espera privada",
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

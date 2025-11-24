@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 
 import ImageGallery from "./ImageGallery";
@@ -169,6 +170,40 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Terapeutas Alternativos"
+        serviceDescription="Consultorio con camilla para terapeutas alternativos en Parque Rodó, Montevideo. Ambiente armónico y cálido, flexibilidad total de horarios y reservas online para terapias holísticas."
+        serviceType="Alquiler de Consultorios para Terapias Alternativas"
+        url={`${siteConfig.url}/soluciones/terapeutas-alternativos`}
+        image={[
+          "https://www.pisama.uy/images/consultorio3-1.webp",
+          "https://www.pisama.uy/images/consultorio5-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Estándar",
+            description: "Consultorio para terapias alternativas por hora",
+            price: "200",
+            priceCurrency: "UYU",
+          },
+          {
+            name: "Consultorio Premium con Camilla",
+            description: "Consultorio amplio con camilla para terapias holísticas",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Camilla profesional disponible",
+          "Ambiente armónico y cálido",
+          "Horarios flexibles (7:00 a 23:00)",
+          "Excelente energía del espacio",
+          "Reservas online en tiempo real",
+          "Ubicación en Parque Rodó",
+          "Iluminación natural",
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}

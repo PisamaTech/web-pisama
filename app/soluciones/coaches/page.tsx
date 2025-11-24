@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
@@ -153,6 +154,41 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Coaches"
+        serviceDescription="Consultorio profesional por hora para coaches en Parque Rodó, Montevideo. Privacidad acústica absoluta, ambiente diseñado para sesiones de coaching y reservas online en tiempo real."
+        serviceType="Alquiler de Consultorios para Coaching"
+        url={`${siteConfig.url}/soluciones/coaches`}
+        image={[
+          "https://www.pisama.uy/images/consultorio1-1.webp",
+          "https://www.pisama.uy/images/consultorio3-1.webp",
+          "https://www.pisama.uy/images/salaespera-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Estándar",
+            description: "Consultorio profesional para coaching por hora",
+            price: "200",
+            priceCurrency: "UYU",
+          },
+          {
+            name: "Consultorio Premium",
+            description: "Consultorio amplio Premium para coaching por hora",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Privacidad acústica absoluta",
+          "Reservas online en tiempo real",
+          "Ambiente profesional y cálido",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+          "WiFi de alta velocidad",
+          "Sala de espera privada",
+        ]}
+      />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4

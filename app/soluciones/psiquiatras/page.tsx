@@ -7,6 +7,7 @@ import React from "react";
 import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import ServiceSchema from "@/components/seo/ServiceSchema";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -123,6 +124,40 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      <ServiceSchema
+        serviceName="Alquiler de Consultorio para Psiquiatras"
+        serviceDescription="Consultorio profesional por hora para psiquiatras en Parque Rodó, Montevideo. Privacidad acústica absoluta, entorno seguro y controlado para práctica médica psiquiátrica."
+        serviceType="Alquiler de Consultorios para Psiquiatras"
+        url={`${siteConfig.url}/soluciones/psiquiatras`}
+        image={[
+          "https://www.pisama.uy/images/consultorio5-1.webp",
+          "https://www.pisama.uy/images/salaespera-1.webp",
+        ]}
+        areaServed="Montevideo, Uruguay"
+        offers={[
+          {
+            name: "Consultorio Estándar",
+            description: "Consultorio profesional para práctica psiquiátrica por hora",
+            price: "200",
+            priceCurrency: "UYU",
+          },
+          {
+            name: "Consultorio Premium",
+            description: "Consultorio amplio Premium para práctica psiquiátrica por hora",
+            price: "250",
+            priceCurrency: "UYU",
+          },
+        ]}
+        availableFeatures={[
+          "Privacidad acústica certificada",
+          "Entorno médico-profesional seguro",
+          "Reservas online en tiempo real",
+          "Ambiente controlado y predecible",
+          "Ubicación estratégica en Parque Rodó",
+          "Aire acondicionado",
+          "Sala de espera privada con música ambiental",
+        ]}
+      />
       <main className="bg-content2 py-20">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
