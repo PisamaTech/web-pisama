@@ -12,6 +12,10 @@ import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import { allSolutions } from "@/src/solucionesData";
+import {
+  locationKeywords,
+  professionKeywordVariants,
+} from "@/src/extendedKeywords";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
@@ -40,6 +44,8 @@ export const metadata: Metadata = {
     "alquiler sala coaching montevideo",
     "consultorio coach sin compromiso",
     "espacio profesional coaches montevideo",
+    ...locationKeywords,
+    ...professionKeywordVariants.coaches,
   ],
   alternates: {
     canonical: "/soluciones/coaches",

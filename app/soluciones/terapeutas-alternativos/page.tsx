@@ -12,6 +12,10 @@ import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import { allSolutions } from "@/src/solucionesData";
+import {
+  locationKeywords,
+  professionKeywordVariants,
+} from "@/src/extendedKeywords";
 
 import ImageGallery from "./ImageGallery";
 
@@ -34,6 +38,8 @@ export const metadata: Metadata = {
     "consultorio medicina alternativa",
     "sala para quiropráctico",
     "espacio reflexología montevideo",
+    ...locationKeywords,
+    ...professionKeywordVariants["terapeutas-alternativos"],
   ],
   alternates: {
     canonical: "/soluciones/terapeutas-alternativos",

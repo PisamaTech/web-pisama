@@ -35,7 +35,7 @@ export default function PricingTeaser() {
               Consultorio Premium
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-xl text-primary/70 ">
+            <p className="my-4 font-sans text-lg text-primary/70 ">
               Precio base: $250 / hora
             </p>
             <p className="font-display font-bold text-secondary">
@@ -57,7 +57,7 @@ export default function PricingTeaser() {
               Consultorio Estándar
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-xl text-primary/70 ">
+            <p className="my-4 font-sans text-lg text-primary/70 ">
               Precio base: $200 / hora
             </p>
             <p className="font-display font-bold text-secondary">

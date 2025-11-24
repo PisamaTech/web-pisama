@@ -12,6 +12,10 @@ import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import { allSolutions } from "@/src/solucionesData";
+import {
+  locationKeywords,
+  professionKeywordVariants,
+} from "@/src/extendedKeywords";
 import consultorio5 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaDescanso from "@/public/images/saladescanso-1.webp";
@@ -39,6 +43,8 @@ export const metadata: Metadata = {
     "camilla fisioterapia montevideo",
     "almacenamiento equipo fisioterapia",
     "consultorio ergonómico fisioterapeutas",
+    ...locationKeywords,
+    ...professionKeywordVariants.fisioterapeutas,
   ],
   alternates: {
     canonical: "/soluciones/fisioterapeutas",

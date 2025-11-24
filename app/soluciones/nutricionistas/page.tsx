@@ -12,6 +12,10 @@ import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import { allSolutions } from "@/src/solucionesData";
+import {
+  locationKeywords,
+  professionKeywordVariants,
+} from "@/src/extendedKeywords";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio2 from "@/public/images/consultorio2-1.webp";
 import consultorio4 from "@/public/images/consultorio4-1.webp";
@@ -40,6 +44,8 @@ export const metadata: Metadata = {
     "consultorio nutricionista parque rodó",
     "oficina nutricionista montevideo",
     "espacio consulta nutricional",
+    ...locationKeywords,
+    ...professionKeywordVariants.nutricionistas,
   ],
   alternates: {
     canonical: "/soluciones/nutricionistas",
