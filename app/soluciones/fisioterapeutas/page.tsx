@@ -11,14 +11,14 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
-import { allSolutions } from "@/src/solucionesData";
+import consultorio5 from "@/public/images/consultorio5-1.webp";
+import fachada1 from "@/public/images/fachada-1.1.webp";
+import salaDescanso from "@/public/images/saladescanso-1.webp";
 import {
   locationKeywords,
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
-import consultorio5 from "@/public/images/consultorio5-1.webp";
-import fachada1 from "@/public/images/fachada-1.1.webp";
-import salaDescanso from "@/public/images/saladescanso-1.webp";
+import { allSolutions } from "@/src/solucionesData";
 
 import ConsultorioFisioterapeutasFaqSection from "./ConsultorioFisioterapeutasFaqSection";
 import ImageGallery from "./ImageGallery";

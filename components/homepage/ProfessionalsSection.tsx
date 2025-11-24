@@ -2,7 +2,7 @@ import { Card, CardBody } from "@heroui/card";
 import Link from "next/link";
 import { JSX } from "react";
 import { FaBrain, FaSpa, FaAppleAlt } from "react-icons/fa"; // Iconos representativos
-import { FaCaretRight, FaChevronRight } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
 
 // TIPADO: Definimos la interfaz para los datos de cada tarjeta
 interface ProfessionalCard {

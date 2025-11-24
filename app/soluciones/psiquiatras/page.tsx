@@ -11,15 +11,15 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
-import { allSolutions } from "@/src/solucionesData";
-import {
-  locationKeywords,
-  professionKeywordVariants,
-} from "@/src/extendedKeywords";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
 import consultorio1 from "@/public/images/consultorio5-1.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
 import salaespera1 from "@/public/images/salaespera-1.webp";
+import {
+  locationKeywords,
+  professionKeywordVariants,
+} from "@/src/extendedKeywords";
+import { allSolutions } from "@/src/solucionesData";
 
 import ImageGallery from "../psicologos/ImageGallery"; // Reusing gallery from psychologists
 

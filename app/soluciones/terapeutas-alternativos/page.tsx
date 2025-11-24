@@ -11,11 +11,11 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
-import { allSolutions } from "@/src/solucionesData";
 import {
   locationKeywords,
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
+import { allSolutions } from "@/src/solucionesData";
 
 import ImageGallery from "./ImageGallery";
 
