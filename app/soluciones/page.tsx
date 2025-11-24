@@ -1,6 +1,15 @@
+import { Button } from "@heroui/button";
 import { Card } from "@heroui/card";
 import { Metadata } from "next";
 import Link from "next/link";
+import {
+  FaBrain,
+  FaBullseye,
+  FaAppleAlt,
+  FaSpa,
+  FaUserMd,
+} from "react-icons/fa";
+import { TbPhysotherapist, TbMassage } from "react-icons/tb";
 
 import { subtitle, title } from "@/components/primitives";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
@@ -31,7 +40,7 @@ export const metadata: Metadata = {
 const profesiones = [
   {
     slug: "psicologos",
-    emoji: "🧠",
+    icon: FaBrain,
     title: "Psicólogos",
     description:
       "Privacidad acústica absoluta, ambiente profesional y sistema de reservas online. El encuadre perfecto para tu práctica.",
@@ -43,7 +52,7 @@ const profesiones = [
   },
   {
     slug: "coaches",
-    emoji: "🎯",
+    icon: FaBullseye,
     title: "Coaches",
     description:
       "Espacio profesional para coaching ontológico, ejecutivo y personal. Privacidad acústica garantizada y ambiente que facilita la transformación.",
@@ -55,7 +64,7 @@ const profesiones = [
   },
   {
     slug: "nutricionistas",
-    emoji: "🥗",
+    icon: FaAppleAlt,
     title: "Nutricionistas",
     description:
       "Consultorio completamente equipado, ambiente que inspira cambio y privacidad para temas sensibles. Alquiler flexible por hora sin compromiso mensual.",
@@ -67,7 +76,7 @@ const profesiones = [
   },
   {
     slug: "terapeutas-alternativos",
-    emoji: "🌿",
+    icon: FaSpa,
     title: "Terapeutas Alternativos",
     description:
       "Espacios con excelente energía, camilla disponible y flexibilidad total. El entorno que vibra con tu práctica holística.",
@@ -79,7 +88,7 @@ const profesiones = [
   },
   {
     slug: "fisioterapeutas",
-    emoji: "🦴",
+    icon: TbPhysotherapist,
     title: "Fisioterapeutas",
     description:
       "Consultorios Premium amplios con ergonomía garantizada. Camilla profesional incluida, almacenamiento seguro para tu equipo y espacio para moverte 360° alrededor del paciente.",
@@ -91,7 +100,7 @@ const profesiones = [
   },
   {
     slug: "masajistas",
-    emoji: "💆",
+    icon: TbMassage,
     title: "Masajistas",
     description:
       "Consultorio para masajistas con camilla profesional incluida y espacios Premium amplios. Sistema de reserva online que garantiza tu camilla. Ideal para masajes terapéuticos, deportivos y relajantes.",
@@ -103,7 +112,7 @@ const profesiones = [
   },
   {
     slug: "psiquiatras",
-    emoji: "⚕️",
+    icon: FaUserMd,
     title: "Psiquiatras",
     description:
       "Privacidad acústica absoluta y entorno seguro para tu práctica médica. Consultorios habilitados y ambiente profesional.",
@@ -136,17 +145,17 @@ export default function SolucionesPage() {
         </div>
       </section>
       <section className="py-20">
-        <div className="container max-w-6xl mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className={title({ class: "text-primary" })}>
+            <h1 className="text-primary text-4xl font-bold">
               Encuentra el Consultorio Perfecto
               <br />
-              <span className={title({ class: "text-secondary", size: "lg" })}>
+              <span className="text-secondary text-6xl font-bold">
                 para tu Profesión
               </span>
             </h1>
-            <p className={subtitle({ class: "mt-6 text-foreground/80" })}>
+            <p className={subtitle({ class: "mt-10 text-foreground/80" })}>
               En Espacio PISAMA entendemos que cada profesión tiene necesidades
               únicas. Descubre cómo nuestros consultorios se adaptan a tu
               práctica terapéutica en Parque Rodó, Montevideo.
@@ -161,13 +170,15 @@ export default function SolucionesPage() {
                 href={`/soluciones/${profesion.slug}`}
                 className="block group"
               >
-                <Card className="p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border-2 border-transparent hover:border-secondary-300 h-full">
-                  <div className="flex flex-col h-full">
+                <Card className="p-8 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border-1.5 border-transparent hover:border-secondary-300 h-full">
+                  <div className="flex flex-col h-full items-center">
                     {/* Icon */}
-                    <div className="text-6xl mb-4">{profesion.emoji}</div>
+                    <div className="mb-2 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                      <profesion.icon className="text-4xl text-secondary/80" />
+                    </div>
 
                     {/* Title */}
-                    <h2 className="text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
+                    <h2 className="text-3xl font-bold text-primary mb-4 group-hover:text-primary/70 transition-colors text-center">
                       {profesion.title}
                     </h2>
 
@@ -190,9 +201,13 @@ export default function SolucionesPage() {
                     </ul>
 
                     {/* CTA */}
-                    <div className="font-semibold text-secondary-500 group-hover:text-secondary-400 transition-colors">
+                    <Button
+                      variant="ghost"
+                      color="secondary"
+                      className="font-semibold"
+                    >
                       Conocer más →
-                    </div>
+                    </Button>
                   </div>
                 </Card>
               </Link>

@@ -110,7 +110,7 @@ export default function ConsultoriosPage() {
       <CtaSection
         title="¿Ya sabes cuál es el espacio ideal para vos?"
         description="Gestiona tu agenda con total libertad y ofrece a tus pacientes la experiencia que merecen."
-        buttonText="Ver Disponibilidad y Reservar"
+        buttonText="Ver Disponibilidad en Tiempo Real"
         buttonLink="/disponibilidad"
       />
     </>

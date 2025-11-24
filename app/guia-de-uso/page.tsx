@@ -157,8 +157,8 @@ export default function GuiaDeUsoPage(): JSX.Element {
                   <Button
                     as={Link}
                     href={guide.href}
-                    variant="bordered"
-                    className="border-secondary-500 font-display font-semibold text-secondary-500 mx-auto"
+                    variant="ghost"
+                    className="font-semibold mx-auto bg-secondary-500 text-primary-foreground"
                     endContent={<FaArrowRight />}
                   >
                     Leer Guía

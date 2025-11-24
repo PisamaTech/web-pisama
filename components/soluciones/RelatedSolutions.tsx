@@ -1,12 +1,13 @@
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
 import Link from "next/link";
+import { IconType } from "react-icons";
 
 interface RelatedSolution {
   title: string;
   description: string;
   href: string;
-  emoji: string;
+  icon: IconType;
 }
 
 interface RelatedSolutionsProps {
@@ -32,24 +33,30 @@ export default function RelatedSolutions({
         Espacio PISAMA también ofrece consultorios especializados para:
       </p>
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
-        {relatedSolutions.map((solution) => (
-          <Link key={solution.href} href={solution.href}>
-            <Card
-              isPressable
-              className="hover:scale-105 transition-transform h-full bg-content2/80"
-            >
-              <CardBody className="text-center">
-                <div className="text-5xl mb-3">{solution.emoji}</div>
-                <h3 className="text-xl font-bold text-primary mb-2">
-                  {solution.title}
-                </h3>
-                <p className="text-sm text-foreground/70">
-                  {solution.description}
-                </p>
-              </CardBody>
-            </Card>
-          </Link>
-        ))}
+        {relatedSolutions.map((solution) => {
+          const Icon = solution.icon;
+
+          return (
+            <Link key={solution.href} href={solution.href}>
+              <Card
+                isPressable
+                className="hover:scale-105 transition-transform h-full bg-content2/80"
+              >
+                <CardBody className="text-center flex flex-col items-center">
+                  <div className="mb-2 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                    <Icon className="text-4xl text-secondary/60" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-2">
+                    {solution.title}
+                  </h3>
+                  <p className="text-sm text-foreground/70 pb-4">
+                    {solution.description}
+                  </p>
+                </CardBody>
+              </Card>
+            </Link>
+          );
+        })}
       </div>
       <div className="text-center mt-12">
         <Button

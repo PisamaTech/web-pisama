@@ -127,7 +127,7 @@ const CtaBox = () => (
       size="lg"
       variant="flat"
     >
-      Ver Disponibilidad y Precios
+      Ver Disponibilidad
     </Button>
   </div>
 );
@@ -236,8 +236,8 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
           <h1>
-            🪷 Alquiler de Consultorios para Terapias Alternativas en
-            Montevideo: Encuentra el Espacio que Vibra Contigo
+            Alquiler de Consultorios para Terapias Alternativas en Montevideo:
+            Encuentra el Espacio que Vibra Contigo
           </h1>
           <Indice sections={sections} />
 
@@ -282,8 +282,8 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           {/* --- SECCIÓN 1: POR QUÉ ELEGIR BIEN --- */}
           <h2 id="por-que-elegir-bien">
-            🌿 ¿Por qué es tan importante elegir bien el consultorio para
-            terapias alternativas?
+            ¿Por qué es tan importante elegir bien el consultorio para terapias
+            alternativas?
           </h2>
           <p>
             El lugar donde un terapeuta alternativo atiende impacta directamente
@@ -326,7 +326,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </h2>
 
           <h3 id="ubicacion">
-            🏙️ 1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
+            1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
           </h3>
           <p>
             La ubicación no solo influye en la accesibilidad, sino también en la
@@ -354,7 +354,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </blockquote>
 
           <h3 id="energia-ambiente">
-            💫 2. Energía y ambiente: el poder del espacio en el proceso
+            2. Energía y ambiente: el poder del espacio en el proceso
             terapéutico
           </h3>
           <p>
@@ -383,8 +383,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <ImageGallery />
 
           <h3 id="flexibilidad-horaria">
-            🕰️ 3. Flexibilidad horaria: libertad para atender cuando lo
-            necesites
+            3. Flexibilidad horaria: libertad para atender cuando lo necesites
           </h3>
           <p>
             Uno de los grandes desafíos de los terapeutas holísticos es
@@ -404,8 +403,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <p>Esa libertad genera algo muy valioso: autonomía profesional.</p>
 
           <h3 id="reservas-online">
-            💻 4. Sistema de reservas online y camilla para terapeutas
-            alternativos
+            4. Sistema de reservas online y camilla para terapeutas alternativos
           </h3>
           <p>
             La tecnología debe estar al servicio del bienestar. Por eso
@@ -438,7 +436,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           <CtaBox />
 
           <h3 id="precios-justos">
-            💰 5. Alquiler por hora con precios justos y descuentos progresivos
+            5. Alquiler por hora con precios justos y descuentos progresivos
           </h3>
           <p>
             Otro punto de dolor frecuente: los costos altos o alquileres
@@ -469,7 +467,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           <h3 id="comunidad">
-            🧘‍♀️ 6. Comunidad de terapeutas holísticos en Montevideo
+            6. Comunidad de terapeutas holísticos en Montevideo
           </h3>
           <p>
             Trabajar solo como terapeuta holístico puede ser un desafío
@@ -494,7 +492,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           <h3 id="diseno-profesional">
-            🌺 7. Diseño profesional para potenciar la experiencia terapéutica
+            7. Diseño profesional para potenciar la experiencia terapéutica
           </h3>
           <p>
             Cuando los consultorios para terapias holísticas son pensados por
@@ -509,7 +507,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           <h3 id="feedback-terapeutas">
-            💬 8. Qué sienten los terapeutas cuando encuentran su espacio ideal
+            8. Qué sienten los terapeutas cuando encuentran su espacio ideal
           </h3>
           <p>He escuchado muchas veces frases como:</p>
           <ul>
@@ -528,8 +526,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           {/* --- CONCLUSIÓN --- */}
           <h2 id="conclusion">
-            🌿 Conclusión: encontrá tu consultorio ideal para terapias
-            holísticas
+            Conclusión: encontrá tu consultorio ideal para terapias holísticas
           </h2>
           <p>
             El alquiler de consultorios para terapias alternativas no debería

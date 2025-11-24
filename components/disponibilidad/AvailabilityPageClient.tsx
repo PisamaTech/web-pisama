@@ -226,8 +226,6 @@ function AvailabilityPageContent() {
 
       <HowToUseSection />
 
-      <LegendSection />
-
       <section id="calendario-disponibilidad" className="bg-content1 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
@@ -244,6 +242,7 @@ function AvailabilityPageContent() {
           />
         </div>
       </section>
+      <LegendSection />
     </>
   );
 }

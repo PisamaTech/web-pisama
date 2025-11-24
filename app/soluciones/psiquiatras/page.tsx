@@ -60,7 +60,7 @@ const CtaBox = () => (
       size="lg"
       variant="flat"
     >
-      Ver Disponibilidad y Precios
+      Ver Disponibilidad
     </Button>
   </div>
 );
