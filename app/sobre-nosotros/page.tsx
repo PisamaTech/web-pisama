@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "Nuestra Filosofía: Creado por un Psicólogo, para Colegas | Espacio Pisama",
   description:
     "Conoce la historia detrás de Espacio Pisama. Un espacio fundado desde la experiencia para ofrecer autonomía, flexibilidad y una comunidad profesional estable.",
+  alternates: {
+    canonical: "/sobre-nosotros",
+  },
 };
 
 // --- COMPONENTES DE LA PÁGINA ---

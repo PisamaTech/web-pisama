@@ -8,6 +8,7 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 
 import ImageGallery from "./ImageGallery";
@@ -209,6 +210,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <main className="bg-content2 py-20">
+        <div className="container mx-auto max-w-4xl px-4">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
                      prose-headings:font-display prose-headings:text-primary-500
