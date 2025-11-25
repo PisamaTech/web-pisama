@@ -14,14 +14,34 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  // Aquí puedes agregar futuros artículos de blog educativos
-  // Ejemplo:
-  // {
-  //   slug: "como-gestionar-tu-agenda",
-  //   title: "Cómo Gestionar tu Agenda de Pacientes Eficientemente",
-  //   description: "Tips y estrategias para organizar tu práctica privada...",
-  //   date: "Fecha",
-  // },
+  {
+    slug: "10-estrategias-conseguir-primeros-pacientes",
+    title: "10 Estrategias Efectivas para Conseguir tus Primeros Pacientes",
+    description:
+      "Guía completa con estrategias probadas de marketing y networking para psicólogos y terapeutas que inician su práctica privada en Uruguay. Incluye ejemplos prácticos y herramientas digitales.",
+    date: "26 de noviembre, 2024",
+  },
+  {
+    slug: "como-fijar-tarifas-psicologo-uruguay",
+    title: "Cómo Fijar tus Tarifas como Psicólogo Independiente en Uruguay",
+    description:
+      "Guía definitiva para establecer honorarios justos y rentables. Incluye arancel CPU 2025, fórmulas de cálculo, estrategias de pricing y cómo superar el miedo a cobrar.",
+    date: "12 de noviembre, 2024",
+  },
+  {
+    slug: "consultorio-propio-vs-alquiler-por-hora",
+    title: "Consultorio Propio vs. Alquiler por Hora: ¿Qué Conviene en 2025?",
+    description:
+      "Comparativa completa de costos, ventajas y desventajas entre las tres opciones principales. Incluye calculadora de punto de equilibrio y casos reales.",
+    date: "29 de octubre, 2024",
+  },
+  {
+    slug: "como-empezar-consultorio-privado-montevideo",
+    title: "Guía Completa: Cómo Empezar tu Consultorio Privado en Montevideo",
+    description:
+      "Todo lo que necesitas saber para iniciar tu práctica privada exitosamente: requisitos legales, costos reales, decisiones clave y estrategias probadas para 2025.",
+    date: "15 de octubre, 2024",
+  },
 ];
 
 export const metadata: Metadata = {

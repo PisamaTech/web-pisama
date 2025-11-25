@@ -8,15 +8,26 @@ interface BlogArticle {
 }
 
 // --- FUNCIÓN PARA OBTENER ARTÍCULOS DEL BLOG ---
-// Las antiguas URLs de blog ahora hacen redirect 301 a /soluciones/
-// Por lo tanto, no deben estar en el sitemap para evitar confusión a los crawlers.
-// En el futuro, cuando tengas artículos de blog educativos nuevos, añádelos aquí.
+// Artículos educativos del blog (no comerciales, enfocados en contenido de valor)
 async function getPublishedBlogArticles(): Promise<BlogArticle[]> {
-  // TODO: Reemplaza esto con una llamada real a tu CMS o base de datos
-  // cuando tengas artículos de blog educativos (no comerciales)
   return [
-    // Las páginas que antes estaban aquí ahora están en /soluciones/
-    // y ya están incluidas en staticRoutes arriba
+    {
+      slug: "como-empezar-consultorio-privado-montevideo",
+      lastModified: new Date("2025-10-15"),
+    },
+    {
+      slug: "consultorio-propio-vs-alquiler-por-hora",
+      lastModified: new Date("2025-10-29"),
+    },
+    {
+      slug: "como-fijar-tarifas-psicologo-uruguay",
+      lastModified: new Date("2025-11-12"),
+    },
+    {
+      slug: "10-estrategias-conseguir-primeros-pacientes",
+      lastModified: new Date("2025-11-26"),
+    },
+    // Futuros artículos se agregarán aquí
   ];
 }
 
@@ -60,9 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     else if (route.startsWith("/soluciones/") && route !== "/soluciones")
       priority = 0.9;
     else if (route === "/soluciones") priority = 0.9;
-    else if (
-      ["/consultorios", "/precios", "/disponibilidad"].includes(route)
-    )
+    else if (["/consultorios", "/precios", "/disponibilidad"].includes(route))
       priority = 0.8;
     else if (route.startsWith("/guia-de-uso")) priority = 0.6;
     else if (route === "/terminos-y-condiciones") priority = 0.3;
