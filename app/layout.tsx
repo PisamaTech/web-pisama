@@ -8,6 +8,7 @@ import React from "react";
 import SiteFooter from "@/components/Footer";
 import { Navbar } from "@/components/navbar";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 
@@ -142,6 +143,7 @@ export default function RootLayout({
             <Navbar />
             <main className="pt-[65px]">{children}</main>
             <SiteFooter />
+            <WhatsAppButton />
           </div>
         </Providers>
       </body>
