@@ -241,6 +241,7 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
+                     prose-h1:text-4xl md:prose-h1:text-5xl 
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400

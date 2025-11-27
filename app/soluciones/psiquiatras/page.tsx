@@ -178,6 +178,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4 
                      prose-headings:font-display prose-headings:text-primary-500
+                     prose-h1:text-4xl md:prose-h1:text-5xl 
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400 
@@ -205,16 +206,16 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
               href="/"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
             >
-              <strong>Espacio PISAMA</strong>
+              Espacio PISAMA
             </Link>
-            , hemos diseñado nuestros consultorios pensando en las exigencias de
-            los profesionales de la salud mental. Ofrecemos una solución de{" "}
+            , hemos diseñado nuestros consultorios pensando en las exigencias de {" "}
             <Link
               href="/soluciones"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
-            >
+            >los profesionales de la salud mental.</Link> Ofrecemos una solución de{" "}
+            
               alquiler de consultorios por hora
-            </Link>{" "}
+            {" "}
             en Parque Rodó que combina la flexibilidad que necesitas con la
             rigurosidad que tu práctica demanda.
           </p>
@@ -398,10 +399,12 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </p>
           <p className="pb-8">
             Únete a nuestra comunidad de profesionales de la salud y lleva tu
-            práctica privada al siguiente nivel, sin ataduras ni complicaciones.
-            <Link
-              href="/contacto"
-              className="text-secondary-500 font-semibold hover:text-secondary-400 ml-1"
+            práctica privada al siguiente nivel, sin ataduras ni complicaciones.{" "}
+           <Link
+              href="https://wa.me/59895961360"
+              className="text-secondary-500 font-semibold hover:text-secondary-400"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Agenda una visita hoy mismo
             </Link>

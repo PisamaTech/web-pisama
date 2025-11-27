@@ -186,11 +186,16 @@ export const SearchIcon = (props: IconSvgProps) => (
   </svg>
 );
 
-export const WhatsappIcon = (props: IconSvgProps) => (
+export const WhatsappIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
   <svg
-    height="2em"
+    height={size || height}
     viewBox="0 0 24 24"
-    width="2em"
+    width={size || width}
     {...props}
   >
     <path
