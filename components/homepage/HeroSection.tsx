@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-21" />
 
       {/* 4. Contenedor del contenido, centrado */}
-      <div className="mx-auto max-w-4xl text-center px-6 z-25 relative">
+      <div className="mx-auto max-w-4xl text-center z-25 relative">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -36,30 +36,29 @@ export default function HeroSection() {
             scale: { type: "spring", visualDuration: 0.6, bounce: 0.6 },
           }}
           whileHover={{ scale: 1.1 }}
-          className="mx-auto mb-8 w-fit"
+          className="mx-auto my-5 w-fit"
         >
           <Image
             src={logoImagen}
             alt="Logo Espacio Pisama"
-            width={220} // Ajusta el tamaño según sea necesario
-            height={220} // Ajusta el tamaño según sea necesario
+            width={180} // Ajusta el tamaño según sea necesario
+            height={180} // Ajusta el tamaño según sea necesario
           />
         </motion.div>
         {/* Título Principal (ahora en color blanco) */}
-        <h1 className="font-bold text-3xl tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-sm">
-          Alquiler de Consultorios por Hora en Montevideo: El espacio que
-          Impulsa tu Crecimiento
+        <h1 className="font-bold text-3xl tracking-tight text-white md:text-4xl lg:text-5xl drop-shadow-xl/50">
+          Alquiler de Consultorios por Hora en Montevideo:<br /> <span className="text-2xl md:text-3xl lg:text-4xl">Somos el espacio que</span> <span className="text-secondary-300 text-3xl md:text-4xl lg:text-5xl drop-shadow-xl/80">Impulsa tu Crecimiento</span>
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
-        <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-xl max-w-2xl mx-auto font-light">
-          Espacios diseñados para psicólogos, terapeutas, coaches y
-          profesionales independientes. Gestiona tus reservas online, paga menos, cuanto más horas uses y recibí a tus pacientes en un ambiente de calma y
+        <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-lg max-w-2xl mx-auto font-light">
+          Espacios diseñados para psicólogos, terapeutas, masajistas y
+          profesionales independientes. Con gestión de tus reservas online, descuentos cuantas más horas uses y un ambiente de calma y
           profesionalismo.
         </p>
 
         {/* Botones de Llamada a la Acción */}
-        <div className="my-10 flex items-center justify-center gap-x-6">
+        <div className="my-10 flex items-center justify-center flex-wrap gap-6">
           <Button
             as={Link}
             href="/disponibilidad"
