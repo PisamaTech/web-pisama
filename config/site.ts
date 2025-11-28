@@ -85,6 +85,7 @@ export const siteConfig = {
         },
         { label: "Para Fisioterapeutas", href: "/soluciones/fisioterapeutas" },
         { label: "Para Masajistas", href: "/soluciones/masajistas" },
+        { label: "Para Psiquiatras", href: "/soluciones/psiquiatras" },
         { label: "Ver Todas", href: "/soluciones" },
       ],
     },
