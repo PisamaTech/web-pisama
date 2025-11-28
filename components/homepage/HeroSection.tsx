@@ -11,7 +11,7 @@ import heroImagen from "../../public/images/consultorio3-1.webp";
 export default function HeroSection() {
   return (
     // 1. Contenedor principal con posicionamiento relativo y altura de pantalla completa
-    <section className="relative flex h-[90vh] items-center justify-center text-center text-white">
+    <section className="relative flex items-center justify-center text-center text-white">
       {/* 2. Imagen de fondo que cubre todo el contenedor */}
       <Image
         src={heroImagen} // Ruta desde la carpeta 'public'
@@ -54,13 +54,12 @@ export default function HeroSection() {
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
         <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-xl max-w-2xl mx-auto font-light">
           Espacios diseñados para psicólogos, terapeutas, coaches y
-          profesionales independientes. Gestiona tu agenda online, olvídate de
-          las cuponeras y recibe a tus pacientes en un ambiente de calma y
+          profesionales independientes. Gestiona tus reservas online, paga menos, cuanto más horas uses y recibí a tus pacientes en un ambiente de calma y
           profesionalismo.
         </p>
 
         {/* Botones de Llamada a la Acción */}
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="my-10 flex items-center justify-center gap-x-6">
           <Button
             as={Link}
             href="/disponibilidad"
@@ -74,14 +73,16 @@ export default function HeroSection() {
           </Button>
           <Button
             as={Link}
-            href="/contacto"
+            href="https://wa.me/59895961360"
+            target="_blank"
+            rel="noopener noreferrer"
             size="lg"
             color="secondary"
             radius="md"
             variant="shadow"
             className="border border-white/30"
           >
-            Contactanos
+            Agendá una visita
           </Button>
         </div>
       </div>
