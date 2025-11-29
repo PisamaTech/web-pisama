@@ -53,7 +53,7 @@ export default function HeroSection() {
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
         <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-lg max-w-2xl mx-auto font-light">
           Espacios diseñados para psicólogos, terapeutas, masajistas y
-          profesionales independientes. Con gestión de tus reservas online, descuentos cuantas más horas uses y un ambiente de calma y
+          profesionales independientes. Con gestión de tus reservas online, descuentos cuantas más horas usas y un ambiente de calma y
           profesionalismo.
         </p>
 
