@@ -57,7 +57,7 @@ export default function BeneficiosClave() {
           {beneficios.map((beneficio, index) => (
             <Card
               key={index}
-              shadow="sm"
+              shadow="lg"
               className="bg-content1 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-transparent hover:border-primary/10"
             >
               <CardBody className="flex flex-col items-center text-center p-8">

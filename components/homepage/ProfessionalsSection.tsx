@@ -62,11 +62,11 @@ export default function ProfessionalsSection(): JSX.Element {
           {professionalData.map((card) => (
             <Card
               key={card.title}
-              className="flex h-full flex-col bg-content1 text-center shadow-lg transition-transform hover:-translate-y-2"
+              className="flex h-full flex-col bg-content1 text-center shadow-lg transition-transform hover:-translate-y-2 "
             >
               <CardBody className="flex flex-grow flex-col items-center p-8">
                 {/* Icono */}
-                <div className="mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+                <div className="mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 shadow-sm/50">
                   {card.icon}
                 </div>
                 {/* Título y Profesiones */}
