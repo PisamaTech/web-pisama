@@ -60,12 +60,18 @@ export default function LocationSection(): JSX.Element {
                   </p>
                 </div>
               </div>
+              <div className="flex items-center gap-4 text-left">
+                <FaMapMarkerAlt className="h-8 w-8 flex-shrink-0 text-secondary" />
+                <div>
+                  <h3 className="font-display font-bold text-primary">
+                    Ubicación Ideal
+                  </h3>
+                  <p className="font-sans text-primary/80">
+                   Juan Paullier 1192, Parque Rodó, Montevideo
+                  </p>
+                </div>
+              </div>
             </div>
-
-            <p className="mt-8 flex items-center justify-start font-sans font-bold text-primary">
-              <FaMapMarkerAlt className="mr-3 h-8 w-8 text-secondary" />
-              Juan Paullier 1192, Parque Rodó, Montevideo
-            </p>
           </div>
         </div>
       </div>
