@@ -5,7 +5,7 @@ const BeforeAfterSection = () => (
   <section className="pt-3 pb-20 bg-content2">
     <div className="container max-w-5xl mx-auto grid grid-cols-1 gap-10 px-4 lg:grid-cols-2 lg:px-8">
       {/* El Método Antiguo */}
-      <div className="w-5/6 mx-auto rounded-2xl border-2 border-danger/50 bg-danger/10 p-8 shadow-2xl transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+      <div className="w-full mx-auto rounded-4xl border-2 border-danger/50 bg-danger/10 p-8 shadow-2xl transition-transform duration-300 hover:scale-105 hover:shadow-lg">
         <h2 className="font-display text-2xl font-bold text-primary">
           El Laberinto de la Coordinación Manual
         </h2>
@@ -34,7 +34,7 @@ const BeforeAfterSection = () => (
         </ul>
       </div>
       {/* El Método Espacio Pisama */}
-      <div className="w-5/6 mx-auto rounded-2xl border-2 border-success bg-success/5 p-8 shadow-2xl transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+      <div className="w-full mx-auto rounded-4xl border-2 border-success bg-success/5 p-8 shadow-2xl transition-transform duration-300 hover:scale-105 hover:shadow-lg">
         <h2 className="font-display text-2xl font-bold text-primary">
           El Poder de la Certeza Instantánea
         </h2>

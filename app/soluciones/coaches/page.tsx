@@ -223,13 +223,16 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           <Indice sections={sections} />
 
           <p className="mt-12">
-            Como coach profesional, sé que el espacio donde trabajas no es solo
-            un detalle logístico: es parte integral del proceso de
-            transformación que facilitas. He vivido la frustración de intentar
-            dar sesiones de coaching en espacios inadecuados, donde la falta de
-            privacidad, el ambiente poco profesional o la coordinación caótica
-            de reservas afectan directamente la calidad de tu trabajo y la
-            confianza de tus coachees.
+            Mi nombre es Gastón y soy psicólogo. Aunque mi formación es en
+            psicología clínica, he trabajado junto a muchos coaches
+            profesionales en espacios compartidos y comprendo perfectamente las
+            necesidades específicas de tu práctica. Sé que el espacio donde
+            trabajas no es solo un detalle logístico: es parte integral del
+            proceso de transformación que facilitas con tus coachees. He visto
+            de cerca la frustración de colegas coaches que intentan dar sesiones
+            en espacios inadecuados, donde la falta de privacidad, el ambiente
+            poco profesional o la coordinación caótica de reservas afectan
+            directamente la calidad del trabajo y la confianza de los coachees.
           </p>
           <p>
             Por eso creé{" "}
@@ -246,10 +249,12 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             >
               espacio de alquiler de consultorios
             </Link>{" "}
-            por hora en Parque Rodó, Montevideo, diseñado específicamente para
-            profesionales del coaching que buscan un lugar donde puedan
-            concentrarse exclusivamente en lo que mejor hacen: acompañar
-            procesos de transformación personal y profesional.
+            por hora en Parque Rodó, Montevideo, diseñado para profesionales
+            del acompañamiento y la transformación. Aunque mi práctica es la
+            psicología, diseñé cada detalle pensando en las necesidades
+            específicas de los profesionales del coaching que buscan un lugar
+            donde puedan concentrarse exclusivamente en lo que mejor hacen:
+            acompañar procesos de transformación personal y profesional.
           </p>
 
           {/* --- SECCIÓN 1: EL CONTENEDOR --- */}
@@ -306,10 +311,12 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             Transformación
           </h3>
           <p>
-            He dado sesiones de coaching en cafeterías ruidosas, espacios
+            Como psicólogo, entiendo la importancia del ambiente para el trabajo
+            terapéutico, y sé que en el coaching es igual de crucial. He visto
+            colegas coaches dar sesiones en cafeterías ruidosas, espacios
             compartidos improvisados, y consultorios desprolijos que proyectaban
-            todo menos profesionalismo. Eso mina la credibilidad de tu trabajo
-            como coach y dificulta que el coachee se tome el proceso en serio.{" "}
+            todo menos profesionalismo. Eso mina la credibilidad del trabajo y
+            dificulta que el coachee se tome el proceso en serio.{" "}
             <strong>
               En Espacio PISAMA, cada detalle está pensado para facilitar
               conversaciones profundas y reflexión genuina.
@@ -317,11 +324,12 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </p>
           <ImageGallery />
           <p>
-            Buscamos un estilo minimalista pero cálido, profesional y acogedor.
-            Un lugar que invite a la introspección desde que cruzas la puerta.
-            Los muebles, la iluminación, los colores: todo está diseñado para
-            generar el ambiente ideal para sesiones de coaching ontológico,
-            coaching ejecutivo o life coaching.
+            Mi esposa también es psicóloga, y juntos diseñamos un estilo
+            minimalista pero cálido, profesional y acogedor. Un lugar que invite
+            a la introspección desde que cruzas la puerta. Los muebles, la
+            iluminación, los colores: todo está diseñado para generar el
+            ambiente ideal tanto para psicoterapia como para sesiones de
+            coaching ontológico, coaching ejecutivo o life coaching.
           </p>
 
           <h3 id="privacidad-acustica">
@@ -330,12 +338,13 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           <p>
             En el coaching, los coachees comparten metas profesionales, desafíos
             personales, vulnerabilidades y procesos de transformación profundos.
-            He trabajado en espacios donde se escuchaban fragmentos de otras
-            conversaciones desde la sala de espera. Eso es inaceptable para
-            cualquier coach profesional.{" "}
+            Como psicólogo, sé que la confidencialidad es tan sagrada en el
+            coaching como en la psicoterapia. He trabajado en espacios donde se
+            escuchaban fragmentos de otras sesiones desde la sala de espera. Eso
+            es inaceptable para cualquier profesional del acompañamiento.{" "}
             <strong>
               En nuestro consultorio en Parque Rodó, la privacidad acústica fue
-              una obsesión desde el diseño.
+              mi obsesión desde el diseño.
             </strong>{" "}
             No solo aislamos acústicamente cada consultorio, sino que instalamos
             música ambiental en la sala de espera para enmascarar cualquier
@@ -398,13 +407,13 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             Sistema de Reservas Online en Tiempo Real: Adiós al Caos
           </h3>
           <p>
-            Al inicio de mi carrera profesional, viví la pesadilla de la
+            Al inicio de mi carrera como psicólogo, viví la pesadilla de la
             coordinación por WhatsApp para reservar espacios. Consultar
-            disponibilidad, esperar respuesta, confirmar con el coachee, y al
-            volver a contactar descubrir que la hora ya no estaba disponible.
-            Tener que cambiar un horario ya confirmado proyecta una imagen poco
-            profesional y desorganizada. Es un desgaste innecesario que
-            resolvimos con nuestra plataforma de alquiler por hora online en
+            disponibilidad, esperar respuesta, confirmar con el paciente o
+            coachee, y al volver a contactar descubrir que la hora ya no estaba
+            disponible. Tener que cambiar un horario ya confirmado proyecta una
+            imagen poco profesional y desorganizada. Es un desgaste innecesario
+            que resolvimos con nuestra plataforma de alquiler por hora online en
             tiempo real.
           </p>
           <p>
@@ -489,9 +498,10 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             Otro factor de estrés son los colegas impuntuales que se pasan de
             horario. He tenido que interrumpir procesos delicados porque el
             profesional anterior no salía a tiempo, generando una situación
-            incómoda frente a mi coachee que esperaba. Por eso, en Espacio
-            Pisama, fomento una comunidad de profesionales estable y respetuosa.
-            Nuestro{" "}
+            incómoda frente a mi paciente que esperaba. Entiendo que esto es
+            igual de frustrante para coaches cuando un coachee está esperando.
+            Por eso, en Espacio Pisama, fomento una comunidad de profesionales
+            estable y respetuosa. Nuestro{" "}
             <Link
               href="/precios"
               className="text-secondary-500 font-semibold hover:text-secondary-400"
@@ -568,7 +578,8 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </h2>
           <p>
             Al crear Espacio PISAMA intenté resolver todos los problemas que
-            viví al buscar espacios profesionales para coaching.{" "}
+            viví como psicólogo al buscar espacios profesionales, y los mismos
+            que he visto enfrentar a colegas coaches.{" "}
             <strong>
               No es el espacio más barato ni el más lujoso. Es el que funciona.
             </strong>{" "}
@@ -580,7 +591,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             Si buscas un lugar donde simplemente puedas ser coach, sin
             preocupaciones logísticas ni sorpresas desagradables, ya sea que
             hagas coaching ontológico, coaching ejecutivo o life coaching,{" "}
-            <strong>Espacio PISAMA es tu lugar</strong>. Te invito a{" "}
+            <strong>Espacio PISAMA es tu lugar</strong>. Aunque yo soy
+            psicólogo, diseñé este espacio pensando en todos los profesionales
+            del acompañamiento. Te invito a{" "}
             <Link
               href="/contacto"
               className="text-secondary-500 font-semibold hover:text-secondary-400"

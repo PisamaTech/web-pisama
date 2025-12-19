@@ -32,7 +32,7 @@ export default function RelatedSolutions({
       <p className="text-center text-foreground/80 mb-8">
         Espacio PISAMA también ofrece consultorios especializados para:
       </p>
-      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center">
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto justify-items-center p-4">
         {relatedSolutions.map((solution) => {
           const Icon = solution.icon;
 

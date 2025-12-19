@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-21" />
 
       {/* 4. Contenedor del contenido, centrado */}
-      <div className="mx-auto max-w-4xl text-center z-25 relative">
+      <div className="mx-auto max-w-4xl text-center z-25 relative px-6">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
