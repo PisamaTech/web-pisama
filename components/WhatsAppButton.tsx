@@ -1,6 +1,6 @@
 import { Link } from "@heroui/link";
-
 import React from "react";
+
 import { WhatsappIcon } from "@/components/icons";
 
 export const WhatsAppButton = () => {

@@ -278,7 +278,7 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
 
           {/* Video Tour */}
           <div className="mt-12">
-            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+            <h3 className="mb-8 text-center font-display text-3xl font-bold text-primary">
               Recorrida por el <span className="text-secondary">Espacio</span>
             </h3>
             <div className="aspect-video max-w-3xl mx-auto">

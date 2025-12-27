@@ -332,12 +332,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
 
   masajistas: {
     slug: "masajistas",
-    heroTitle: "Alquiler de Consultorios para",
-    heroHighlight: "Masajistas",
+    heroTitle: "Alquiler de Consultorio con Camilla",
+    heroHighlight: "para Masajes",
     heroSubtitle:
-      "Camilla profesional incluida y espacio de trabajo 360° para tus sesiones. Ambiente relajante desde $250/hora.",
+      "Consultorio con camilla profesional incluida y espacio de trabajo 360° para tus sesiones de masajes. Ambiente relajante desde $250/hora en Parque Rodó.",
     heroImage: consultorio3,
-    heroImageAlt: "Consultorio con camilla para masajistas en Montevideo",
+    heroImageAlt: "Alquiler de consultorio con camilla para masajes en Montevideo",
     quickStats: [
       { value: "$250", label: "con camilla/hora" },
       { value: "360°", label: "espacio de trabajo" },
@@ -372,8 +372,8 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     ],
     benefitsTitle: "¿Por qué masajistas eligen",
     benefitsHighlight: "Espacio Pisama?",
-    midCtaTitle: "¿Listo para ofrecer",
-    midCtaHighlight: "masajes en un espacio ideal?",
+    midCtaTitle: "¿Listo para alquilar tu consultorio",
+    midCtaHighlight: "con camilla para masajes?",
   },
 };
 
