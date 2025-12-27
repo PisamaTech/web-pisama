@@ -10,13 +10,13 @@ const faqData = [
     key: "1",
     question: "¿Tengo que pagar extra por el uso de la camilla profesional?",
     answer:
-      "No. El uso de la camilla es completamente gratuito y está incluido en el valor de la hora del consultorio. Solo debes marcar la opción 'Requiere Camilla' al momento de hacer tu reserva online, y el sistema garantizará que esté disponible para ti.",
+      "No. El uso de la camilla es completamente gratuito y está incluido en el valor de la hora del consultorio. Solo debes marcar la opción 'Utilizaré la camilla' al momento de hacer tu reserva online, y el sistema garantizará que esté disponible para ti.",
   },
   {
     key: "2",
     question: "¿Cómo funciona el sistema de reserva de la camilla?",
     answer:
-      "Nuestro sistema de reserva online verifica la disponibilidad de la camilla en tiempo real. Cuando eliges tu horario y marcas 'Requiere Camilla', el sistema automáticamente chequea si está libre. Si está disponible, confirma tu reserva al instante. Si otro colega la está usando en ese horario, te avisa antes de confirmar. Así garantizamos que nunca llegues al consultorio y descubras que la camilla no está disponible.",
+      "Nuestro sistema de reserva online verifica la disponibilidad de la camilla en tiempo real. Cuando eliges tu horario y marcas 'Utilizaré la camilla', el sistema automáticamente chequea si está libre. Si está disponible, confirma tu reserva al instante. Si otro colega la está usando en ese horario, te avisa antes de confirmar. Así garantizamos que nunca llegues al consultorio y descubras que la camilla no está disponible.",
   },
   {
     key: "3",
@@ -47,7 +47,10 @@ const faqData = [
 export default function ConsultorioCamillaFaqSection() {
   return (
     <div className="border-t-1 border-primary pt-2">
-      <h2 id="preguntas-frecuentes" className="text-3xl font-bold pb-8 text-primary-500">
+      <h2
+        id="preguntas-frecuentes"
+        className="text-3xl font-bold pb-8 text-primary-500"
+      >
         Preguntas Frecuentes sobre Alquiler de Consultorio con Camilla
       </h2>
       <Accordion selectionMode="multiple" variant="splitted" className="mt-8">

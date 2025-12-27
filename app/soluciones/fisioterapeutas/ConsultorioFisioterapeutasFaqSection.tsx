@@ -11,12 +11,11 @@ const faqData = [
     key: "1",
     question: "¿La camilla de ustedes tiene costo extra?",
     answer:
-      "No, el uso de nuestra camilla profesional está bonificado dentro del costo de la hora ($250). Solo debes marcar 'Requiere Camilla' al momento de reservar en la plataforma online, y el sistema bloqueará automáticamente el recurso para ti en ese horario.",
+      "No, el uso de nuestra camilla profesional está bonificado dentro del costo de la hora ($250). Solo debes marcar 'Utilizaré la camilla' al momento de reservar en la plataforma online, y el sistema bloqueará automáticamente el recurso para ti en ese horario.",
   },
   {
     key: "2",
-    question:
-      "¿Puedo dejar mi propia camilla y mis materiales en el espacio?",
+    question: "¿Puedo dejar mi propia camilla y mis materiales en el espacio?",
     answer:
       "¡Sí! Entendemos que cargar una camilla portátil es agotador. Puedes dejarla guardada en nuestra Sala de Descanso, junto con otros materiales que necesites (equipos de electroterapia, bandas elásticas, pelotas, insumos). Ten en cuenta que no son lockers individuales con llave, sino una habitación de acceso exclusivo para los profesionales del espacio (sin acceso a pacientes). Es una comunidad basada en la confianza y el respeto.",
   },
@@ -60,8 +59,7 @@ const faqData = [
   },
   {
     key: "9",
-    question:
-      "¿Cómo funciona el sistema de descuentos por cantidad de horas?",
+    question: "¿Cómo funciona el sistema de descuentos por cantidad de horas?",
     answer:
       "El sistema de descuentos es automático y se aplica semanalmente según tu volumen de uso. Si reservas 4+ horas por semana, pagas $230/hora en lugar de $250. Con 8+ horas semanales, pagas $210/hora. Y con 12+ horas semanales, pagas solo $190/hora. No necesitas comprometerte a nada: el descuento se calcula automáticamente cada semana según tus reservas reales.",
   },

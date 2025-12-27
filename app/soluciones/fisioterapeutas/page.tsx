@@ -465,7 +465,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               >
                 plataforma web
               </Link>
-              , marcas &quot;Requiere Camilla&quot;. Nuestro{" "}
+              , marcas &quot;Utilizaré la camilla&quot;. Nuestro{" "}
               <strong>sistema bloquea el recurso para ti</strong>, asegurando
               que nadie más la reserve en tu horario. Cero conflictos.
             </li>

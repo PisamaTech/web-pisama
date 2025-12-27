@@ -107,17 +107,17 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroImageAlt:
       "Consultorio para terapias alternativas con camilla en Montevideo",
     quickStats: [
-      { value: "$200", label: "desde/hora" },
-      { value: "Camilla", label: "disponible" },
-      { value: "7-23hs", label: "todos los días" },
-      { value: "100%", label: "buena energía" },
+      { value: "$200", label: "Desde/hora" },
+      { value: "Camilla", label: "Disponible" },
+      { value: "7-23hs", label: "Todos los días" },
+      { value: "100%", label: "Buena energía" },
     ],
     benefits: [
       {
-        icon: FaSpa,
-        title: "Energía Armónica",
+        icon: FaCalendarCheck,
+        title: "Reservas Online",
         description:
-          "Espacio diseñado para terapias holísticas. Ambiente que vibra con tu práctica terapéutica.",
+          "Aplicación móvil y web para reservar en tiempo real. Elegí, reservá y confirmá en segundos, sin intermediarios.",
       },
       {
         icon: TbMassage,
@@ -132,7 +132,7 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
           "De 7:00 a 23:00 todos los días del año. Adaptate a los horarios de tus pacientes.",
       },
       {
-        icon: FaLeaf,
+        icon: FaSpa,
         title: "Ambiente Natural",
         description:
           "Iluminación cálida, plantas naturales, tonos neutros. Paz desde que cruzás la puerta.",
@@ -153,10 +153,10 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroImage: consultorio5,
     heroImageAlt: "Consultorio profesional para nutricionistas en Montevideo",
     quickStats: [
-      { value: "$200", label: "desde/hora" },
-      { value: "Online", label: "reservas 24/7" },
-      { value: "Parque Rodó", label: "ubicación" },
-      { value: "0", label: "compromiso mensual" },
+      { value: "$200", label: "Desde/hora" },
+      { value: "Online", label: "Reservas 24/7" },
+      { value: "Parque Rodó", label: "Ubicación" },
+      { value: "0", label: "Compromiso mensual" },
     ],
     benefits: [
       {
@@ -200,10 +200,10 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroImageAlt:
       "Consultorio médico profesional para psiquiatras en Montevideo",
     quickStats: [
-      { value: "$200", label: "desde/hora" },
-      { value: "100%", label: "privacidad" },
-      { value: "Premium", label: "disponibles" },
-      { value: "Online", label: "reservas" },
+      { value: "$200", label: "Desde/hora" },
+      { value: "100%", label: "Privacidad" },
+      { value: "Premium", label: "Disponibles" },
+      { value: "Online", label: "Reservas" },
     ],
     benefits: [
       {
@@ -246,10 +246,10 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroImage: consultorio5,
     heroImageAlt: "Espacio profesional para coaches en Montevideo",
     quickStats: [
-      { value: "$200", label: "desde/hora" },
-      { value: "Flexible", label: "sin compromiso" },
-      { value: "Premium", label: "disponibles" },
-      { value: "7-23hs", label: "todos los días" },
+      { value: "$200", label: "Desde/hora" },
+      { value: "Flexible", label: "Sin compromiso" },
+      { value: "Premium", label: "Disponibles" },
+      { value: "7-23hs", label: "Todos los días" },
     ],
     benefits: [
       {
@@ -337,7 +337,8 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroSubtitle:
       "Consultorio con camilla profesional incluida y espacio de trabajo 360° para tus sesiones de masajes. Ambiente relajante desde $250/hora en Parque Rodó.",
     heroImage: consultorio3,
-    heroImageAlt: "Alquiler de consultorio con camilla para masajes en Montevideo",
+    heroImageAlt:
+      "Alquiler de consultorio con camilla para masajes en Montevideo",
     quickStats: [
       { value: "$250", label: "con camilla/hora" },
       { value: "360°", label: "espacio de trabajo" },

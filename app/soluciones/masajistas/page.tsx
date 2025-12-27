@@ -355,7 +355,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
               sistema de reserva online
             </Link>{" "}
             que elimina completamente este problema. Cuando reservas y marcas
-            &quot;Requiere Camilla&quot;, el sistema te garantiza que estará
+            &quot;Utilizaré la camilla&quot;, el sistema te garantiza que estará
             disponible. Sin sorpresas, sin conflictos.
           </p>
 
@@ -387,7 +387,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             </li>
             <li>
               Eliges el horario que necesitas y marcas la opción{" "}
-              <strong>&quot;Requiere Camilla&quot;</strong>.
+              <strong>&quot;Utilizaré la camilla&quot;</strong>.
             </li>
             <li>
               El sistema verifica en tiempo real: Si la camilla está libre, te

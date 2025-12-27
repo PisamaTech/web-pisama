@@ -456,9 +456,13 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             Esa frase refleja exactamente lo que hacemos: crear espacios que
             inspiran confianza, contención y bienestar.
           </p>
-
-          <ImageGallery />
-
+          <Image
+            src="/images/consultorio2-3.webp"
+            alt="Consultorio luminoso y acogedor en Montevideo, ideal para alquiler por hora destinado a terapeutas alternativos."
+            width={800}
+            height={600}
+            className="rounded-xl shadow-2xl mx-auto"
+          />
           <h4 id="flexibilidad-horaria">
             3. Flexibilidad horaria: libertad para atender cuando lo necesites
           </h4>
@@ -567,7 +571,13 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             consultorio, sino de pertenecer a un espacio donde todos vibran en
             la misma frecuencia.
           </p>
-
+          <Image
+            src="/images/consultorio5-2.webp"
+            alt="Consultorio luminoso y acogedor en Montevideo, ideal para alquiler por hora destinado a terapeutas alternativos."
+            width={800}
+            height={600}
+            className="rounded-xl shadow-2xl mx-auto"
+          />
           <h4 id="diseno-profesional">
             7. Diseño profesional para potenciar la experiencia terapéutica
           </h4>
