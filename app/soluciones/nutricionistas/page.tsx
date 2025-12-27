@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
@@ -21,6 +27,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ConsultorioNutricionistasFaqSection from "./ConsultorioNutricionistasFaqSection";
 import ImageGallery from "./ImageGallery";
@@ -94,6 +101,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloNutricionistasPage(): React.JSX.Element {
+  // Obtener configuración de landing para nutricionistas
+  const landingConfig = getSolutionLandingConfig("nutricionistas")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -232,16 +242,82 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para nutricionistas en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para nutricionistas"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
@@ -250,10 +326,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorio para Nutricionistas en Montevideo: El
             Espacio que Acompaña el Cambio
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -285,10 +361,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: EL CONSULTORIO COMO HERRAMIENTA --- */}
-          <h2 id="herramienta-cambio">
+          <h3 id="herramienta-cambio">
             El Consultorio Nutricional como Herramienta de Cambio: Por Qué el
             Espacio Importa en Nutrición
-          </h2>
+          </h3>
           <p>
             En la práctica nutricional, el{" "}
             <strong>consultorio para nutricionistas</strong> es mucho más que
@@ -319,18 +395,18 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
-          <h2 id="pilares">
+          <h3 id="pilares">
             Los 3 Pilares que Hacen de Espacio PISAMA el Mejor Consultorio para
             Nutricionistas
-          </h2>
+          </h3>
           <p>
             Hay tres factores clave que priorizamos al diseñar este espacio,
             porque sabemos que son esenciales para la práctica nutricional:
           </p>
 
-          <h3 id="ambiente-bienestar">
+          <h4 id="ambiente-bienestar">
             1. Ambiente que Inspira Bienestar: Diseñado para Motivar el Cambio
-          </h3>
+          </h4>
           <p>
             El consultorio nutricional debe ser un lugar que inspire cambio
             positivo desde el primer momento.{" "}
@@ -357,9 +433,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             el compromiso con el cambio.
           </p>
 
-          <h3 id="privacidad-temas-sensibles">
+          <h4 id="privacidad-temas-sensibles">
             2. Privacidad para Temas Sensibles: Confidencialidad Absoluta
-          </h3>
+          </h4>
           <p>
             Hablar de peso, imagen corporal, trastornos alimentarios o hábitos
             de comida es profundamente íntimo.{" "}
@@ -394,10 +470,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="profesionalismo">
+          <h4 id="profesionalismo">
             3. Profesionalismo en Cada Detalle: Todo Lo Que Necesitás, Siempre
             Listo
-          </h3>
+          </h4>
           <p>
             <strong>
               En un consultorio nutricional, la imagen profesional es clave.
@@ -429,18 +505,18 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 3: LA LOGÍSTICA --- */}
-          <h2 id="logistica">
+          <h3 id="logistica">
             La Logística que Resolvimos para Facilitar tu Práctica Nutricional
-          </h2>
+          </h3>
           <p>
             Más allá del espacio físico, hay desafíos logísticos que pueden
             complicar tu práctica profesional. Por eso desarrollamos soluciones
             específicas:
           </p>
 
-          <h3 id="sistema-reservas">
+          <h4 id="sistema-reservas">
             Alquiler de Consultorio por Hora: Pagá Solo por lo que Usás
-          </h3>
+          </h4>
           <p>
             Uno de los mayores obstáculos para{" "}
             <strong>
@@ -477,10 +553,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             hace que el costo por hora disminuya.
           </p>
 
-          <h3 id="ubicacion">
+          <h4 id="ubicacion">
             Consultorio en Parque Rodó: Ubicación Estratégica para
             Nutricionistas en Montevideo
-          </h3>
+          </h4>
           <p>
             La{" "}
             <strong>
@@ -511,9 +587,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="espacio-funcional">
+          <h4 id="espacio-funcional">
             Espacio Funcional: Todo Lo Que Necesitás para Trabajar
-          </h3>
+          </h4>
           <p>
             Uno de los desafíos más grandes para nutricionistas que recién
             comienzan es encontrar un espacio que les permita trabajar
@@ -539,9 +615,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             espacio.
           </p>
 
-          <h3 id="comunidad">
+          <h4 id="comunidad">
             Comunidad Profesional: Colegas Respetuosos y Comprometidos
-          </h3>
+          </h4>
           <p>
             Trabajar como profesional independiente puede ser solitario. En
             Espacio PISAMA promovemos una comunidad de profesionales de la salud
@@ -563,10 +639,10 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 4: PROBLEMAS ELIMINADOS --- */}
-          <h2 id="problemas-eliminados">
+          <h3 id="problemas-eliminados">
             Problemas Comunes al Alquilar un Consultorio Nutricional que
             Resolvemos en PISAMA
-          </h2>
+          </h3>
           <p>
             Si alguna vez te preocupaste por alguno de estos problemas, Espacio
             PISAMA los resuelve todos:
@@ -608,9 +684,9 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           </ul>
 
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Espacio PISAMA: El Consultorio Nutricional que Trabaja para Vos
-          </h2>
+          </h3>
           <p>
             Al crear Espacio PISAMA, escuché las necesidades de muchos
             nutricionistas.{" "}
@@ -628,15 +704,6 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
             </strong>
             . Te invito a conocerlo.
           </p>
-          <div className="aspect-video my-8">
-            <iframe
-              className="rounded-lg shadow-xl w-full h-full"
-              src="https://www.youtube.com/embed/_0-Eh-JvQys"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
 
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioNutricionistasFaqSection />

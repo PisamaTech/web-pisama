@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
@@ -21,6 +27,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ConsultorioCamillaFaqSection from "./ConsultorioCamillaFaqSection";
 import ImageGallery from "./ImageGallery";
@@ -93,6 +100,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL ---
 export default function ArticuloMasajistasPage(): React.JSX.Element {
+  // Obtener configuración de landing para masajistas
+  const landingConfig = getSolutionLandingConfig("masajistas")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -189,16 +199,82 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           "Aire acondicionado",
         ]}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para masajistas en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para masajistas"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
@@ -207,10 +283,10 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorio para Masajistas por Hora en Montevideo: Con
             Camilla Profesional y Reserva Online
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -239,9 +315,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: EL PROBLEMA --- */}
-          <h2 id="problema">
+          <h3 id="problema">
             El Problema de la Camilla Compartida en Consultorios de Masajes
-          </h2>
+          </h3>
           <p>
             He visto masajistas llegar a un consultorio alquilado para descubrir
             que la camilla &quot;estaba reservada&quot; por otro colega. O peor:
@@ -277,9 +353,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: SISTEMA ANTI-CONFLICTOS --- */}
-          <h2 id="sistema">
+          <h3 id="sistema">
             Sistema Anti-Conflictos: Garantizamos tu Camilla Profesional por Web
-          </h2>
+          </h3>
           <p>
             Nuestro mayor diferencial es la tecnología. No usamos agendas de
             papel ni mensajes de WhatsApp que generan errores y malentendidos.{" "}
@@ -289,7 +365,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             .
           </p>
 
-          <h3 id="como-funciona">Cómo Funciona el Sistema de Reserva</h3>
+          <h4 id="como-funciona">Cómo Funciona el Sistema de Reserva</h4>
           <p>El proceso es simple, rápido y completamente automatizado:</p>
           <ol>
             <li>
@@ -327,10 +403,10 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="espacios-amplios">
+          <h4 id="espacios-amplios">
             5 Consultorios Premium Amplios: Tu Consultorio Equipado, Cuando lo
             Necesites
-          </h3>
+          </h4>
           <p>
             Al reservar con camilla, puedes utilizar cualquiera de nuestros{" "}
             <strong>5 Consultorios Premium</strong>. Estos son espacios
@@ -373,18 +449,18 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 3: PRECIOS --- */}
-          <h2 id="precios">
+          <h3 id="precios">
             Precios y Recomendaciones para Alquiler de Consultorio con Camilla
-          </h2>
+          </h3>
           <p>
             Transparencia total. Sin gastos comunes, sin contratos de
             permanencia, sin costos ocultos. Pagas únicamente por las horas que
             usas.
           </p>
 
-          <h3 id="consultorio-premium">
+          <h4 id="consultorio-premium">
             Consultorio Premium: La Opción Recomendada para Terapias con Camilla
-          </h3>
+          </h4>
           <p>
             <strong>Tarifa Base: $250 / hora</strong>
           </p>
@@ -402,9 +478,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             Prioriza tu comodidad y la de tu paciente eligiendo Premium.
           </blockquote>
 
-          <h3 id="descuentos">
+          <h4 id="descuentos">
             Descuentos Automáticos por Volumen: Premia tu Constancia
-          </h3>
+          </h4>
           <p>
             Mientras más horas reservas en la semana, menos pagas. Nuestro{" "}
             <Link
@@ -433,9 +509,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 4: UBICACIÓN --- */}
-          <h2 id="ubicacion">
+          <h3 id="ubicacion">
             Ubicación Estratégica del Consultorio en Parque Rodó, Montevideo
-          </h2>
+          </h3>
           <p>
             Nuestro consultorio con camilla profesional está en{" "}
             <strong>Parque Rodó, Montevideo</strong>, una ubicación privilegiada
@@ -471,10 +547,10 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 5: PARA QUIÉN --- */}
-          <h2 id="profesionales">
+          <h3 id="profesionales">
             ¿Para Quién es este Servicio de Alquiler de Consultorio para
             Masajistas?
-          </h2>
+          </h3>
           <p>
             Nuestros consultorios con camilla profesional están diseñados
             especialmente para masajistas y profesionales de terapias manuales:
@@ -523,9 +599,9 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 6: CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Empieza a Dar Masajes Profesionales Hoy Mismo en Montevideo
-          </h2>
+          </h3>
           <p>
             No pierdas clientes por falta de lugar o por problemas de
             coordinación de la camilla de masajes.{" "}
@@ -565,15 +641,6 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             </Link>
             .
           </p>
-          <div className="aspect-video my-8">
-            <iframe
-              className="rounded-lg shadow-xl w-full h-full"
-              src="https://www.youtube.com/embed/_0-Eh-JvQys"
-              title="Tour virtual Espacio PISAMA - Consultorios con camilla en Parque Rodó"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
 
           {/* --- SECCIÓN 7: FAQ --- */}
           <ConsultorioCamillaFaqSection />

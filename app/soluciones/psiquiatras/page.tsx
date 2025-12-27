@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
@@ -20,6 +26,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ImageGallery from "../psicologos/ImageGallery"; // Reusing gallery from psychologists
 
@@ -67,6 +74,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
+  // Obtener configuración de landing para psiquiatras
+  const landingConfig = getSolutionLandingConfig("psiquiatras")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -169,28 +179,94 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           "Sala de espera privada con música ambiental",
         ]}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para psiquiatras en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para psiquiatras"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
-          className="prose prose-lg mx-auto max-w-4xl px-4 
+          className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
-                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400 
+                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
                      prose-blockquote:border-secondary-500 prose-blockquote:text-foreground/70
                      prose-li:font-sans prose-li:text-foreground/90
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorios para Psiquiatras en Montevideo: Privacidad,
             Seguridad y Profesionalismo
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -221,9 +297,9 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: EL ENTORNO CLÍNICO --- */}
-          <h2 id="entorno-clinico">
+          <h3 id="entorno-clinico">
             El Entorno Clínico: Más que un Escritorio
-          </h2>
+          </h3>
           <p>
             Sabemos que el acto médico en psiquiatría es sagrado. Necesitas un
             lugar donde puedas realizar entrevistas, evaluaciones y tratamientos
@@ -245,11 +321,11 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </blockquote>
 
           {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
-          <h2 id="pilares">
+          <h3 id="pilares">
             Los 3 Pilares de un Consultorio Psiquiátrico Ideal
-          </h2>
+          </h3>
 
-          <h3 id="privacidad">1. Privacidad y Hermetismo Acústico</h3>
+          <h4 id="privacidad">1. Privacidad y Hermetismo Acústico</h4>
           <p>
             La confidencialidad es la base de la confianza. En Espacio PISAMA,
             la <strong>aislación acústica</strong> es una prioridad. Paredes
@@ -259,7 +335,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             privacidad extra a quienes aguardan.
           </p>
 
-          <h3 id="seguridad">2. Seguridad y Contención</h3>
+          <h4 id="seguridad">2. Seguridad y Contención</h4>
           <p>
             Atender pacientes, a veces en situaciones de crisis, requiere un
             entorno seguro. Nuestro espacio cuenta con acceso controlado y
@@ -284,7 +360,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="imagen-profesional">3. Imagen Médica Profesional</h3>
+          <h4 id="imagen-profesional">3. Imagen Médica Profesional</h4>
           <p>
             Tu consultorio habla de ti antes de que digas una palabra. Nuestros
             espacios están decorados con un estilo sobrio, moderno y cálido,
@@ -297,9 +373,9 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 3: GESTIÓN --- */}
-          <h2 id="gestion">Gestión Eficiente de tu Práctica Privada</h2>
+          <h3 id="gestion">Gestión Eficiente de tu Práctica Privada</h3>
 
-          <h3 id="agenda">Agenda Flexible y Sistema Online</h3>
+          <h4 id="agenda">Agenda Flexible y Sistema Online</h4>
           <p>
             Olvídate de los costos fijos de un alquiler mensual si recién
             empiezas o si solo atiendes algunos días a la semana. Con nuestro{" "}
@@ -322,7 +398,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="ubicacion">Ubicación Estratégica y Accesibilidad</h3>
+          <h4 id="ubicacion">Ubicación Estratégica y Accesibilidad</h4>
 
           {/* Row 1: Text Left, Image Right */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
@@ -374,7 +450,7 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 4: RIESGOS --- */}
-          <h2 id="riesgos">Eliminando Riesgos y Costos Fijos</h2>
+          <h3 id="riesgos">Eliminando Riesgos y Costos Fijos</h3>
           <p>
             Alquilar un consultorio propio implica contratos a dos años,
             garantías, gastos comunes, luz, internet, limpieza y mantenimiento.
@@ -389,9 +465,9 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Conclusión: Tu Consultorio Psiquiátrico en Montevideo
-          </h2>
+          </h3>
           <p>
             Si buscas un lugar que entienda las necesidades de la psiquiatría
             moderna —privacidad, seguridad, flexibilidad y profesionalismo— te

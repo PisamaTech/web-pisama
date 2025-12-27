@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import consultorio5 from "@/public/images/consultorio5-1.webp";
@@ -19,6 +25,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ConsultorioFisioterapeutasFaqSection from "./ConsultorioFisioterapeutasFaqSection";
 import ImageGallery from "./ImageGallery";
@@ -93,6 +100,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
+  // Obtener configuración de landing para fisioterapeutas
+  const landingConfig = getSolutionLandingConfig("fisioterapeutas")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -213,16 +223,82 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para fisioterapeutas en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para fisioterapeutas"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
@@ -231,10 +307,10 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorio para Fisioterapeutas en Montevideo:
             Ergonomía, Almacenamiento y Flexibilidad
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -273,10 +349,10 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: FIN DE CONSULTORIOS APRETADOS --- */}
-          <h2 id="consultorios-amplios">
+          <h3 id="consultorios-amplios">
             El Fin de los &quot;Consultorios Apretados&quot;: Priorizamos tu
             Ergonomía
-          </h2>
+          </h3>
           <p>
             Sabemos que para realizar una buena evaluación postural, una
             manipulación osteopática o un masaje terapéutico, necesitas{" "}
@@ -304,9 +380,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 2: CONSULTORIOS PREMIUM --- */}
-          <h2 id="premium-dimensiones">
+          <h3 id="premium-dimensiones">
             La Solución: Consultorios Premium de Amplias Dimensiones
-          </h2>
+          </h3>
           <p>
             Ponemos a tu disposición nuestros{" "}
             <Link
@@ -319,7 +395,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             y equipamiento.
           </p>
 
-          <h3>Características de nuestros Consultorios Premium:</h3>
+          <h4>Características de nuestros Consultorios Premium:</h4>
           <ul>
             <li>
               <strong>Metraje Generoso:</strong> Espacio suficiente para ubicar
@@ -364,17 +440,17 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 3: OPCIONES DE EQUIPAMIENTO --- */}
-          <h2 id="opciones-equipamiento">
+          <h3 id="opciones-equipamiento">
             Dos Opciones para tu Equipamiento: Resolvemos tu Logística
-          </h2>
+          </h3>
           <p>
             Sabemos que cada fisioterapeuta tiene sus preferencias respecto al
             equipamiento. En Espacio PISAMA te damos total libertad:
           </p>
 
-          <h3 id="camilla-nuestra">
+          <h4 id="camilla-nuestra">
             Opción A: Usa Nuestra Camilla Profesional
-          </h3>
+          </h4>
           <p>
             <strong>Olvídate de cargar peso</strong>. Tenemos una camilla
             robusta, profesional y en excelentes condiciones disponible para ti
@@ -404,9 +480,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             </li>
           </ul>
 
-          <h3 id="camilla-tuya">
+          <h4 id="camilla-tuya">
             Opción B: Trae tu Propia Camilla y Déjala Guardada Aquí
-          </h3>
+          </h4>
           <p>
             ¿Prefieres tu propia camilla portátil o tienes materiales
             específicos (equipos de electroterapia, bandas elásticas, pelotas de
@@ -449,9 +525,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 4: UBICACIÓN Y ACCESIBILIDAD --- */}
-          <h2 id="ubicacion-accesibilidad">
+          <h3 id="ubicacion-accesibilidad">
             Ubicación y Accesibilidad: Información Clave para tus Pacientes
-          </h2>
+          </h3>
           <p>
             Sabemos que la logística de llegada es vital para la adherencia al
             tratamiento de fisioterapia. Estamos en el corazón de{" "}
@@ -459,7 +535,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             aclaración importante:
           </p>
 
-          <h3>Ventajas de Ubicación:</h3>
+          <h4>Ventajas de Ubicación:</h4>
           <ul>
             <li>
               <strong>Estacionamiento Gratuito:</strong> Estamos en una zona
@@ -504,9 +580,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </div>
 
           {/* --- SECCIÓN 5: RENTABILIDAD --- */}
-          <h2 id="rentabilidad">
+          <h3 id="rentabilidad">
             Rentabilidad para tu Práctica Independiente de Fisioterapia
-          </h2>
+          </h3>
           <p>
             Montar un consultorio propio de fisioterapia implica garantías,
             gastos fijos que debes pagar tengas pacientes o no, y una inversión
@@ -528,7 +604,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             </p>
           </div>
 
-          <h3>Escala tus Ingresos con Descuentos Automáticos</h3>
+          <h4>Escala tus Ingresos con Descuentos Automáticos</h4>
           <p>
             Si tienes una cartera de pacientes sólida, el costo por hora baja
             drásticamente. Nuestro{" "}
@@ -601,9 +677,9 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </blockquote>
 
           {/* --- SECCIÓN 6: CÓMO EMPEZAR --- */}
-          <h2 id="como-empezar">
+          <h3 id="como-empezar">
             Empieza a Trabajar con Comodidad: Proceso Simple y Rápido
-          </h2>
+          </h3>
           <p>
             Comenzar a usar nuestros consultorios para fisioterapia es muy
             simple:

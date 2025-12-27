@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import {
@@ -16,6 +22,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ImageGallery from "./ImageGallery";
 
@@ -134,6 +141,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
+  // Obtener configuración de landing para terapeutas alternativos
+  const landingConfig = getSolutionLandingConfig("terapeutas-alternativos")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -218,28 +228,94 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para terapias alternativas en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para terapeutas"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
-          className="prose prose-lg mx-auto max-w-4xl px-4 
+          className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
-                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400 
+                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
                      prose-blockquote:border-secondary-500 prose-blockquote:text-foreground/70
                      prose-li:font-sans prose-li:text-foreground/90
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorios para Terapias Alternativas en Montevideo:
             Encuentra el Espacio que Vibra Contigo
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12" id="introduccion">
@@ -282,10 +358,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: POR QUÉ ELEGIR BIEN --- */}
-          <h2 id="por-que-elegir-bien">
+          <h3 id="por-que-elegir-bien">
             ¿Por qué es tan importante elegir bien el consultorio para terapias
             alternativas?
-          </h2>
+          </h3>
           <p>
             El lugar donde un terapeuta alternativo atiende impacta directamente
             en la experiencia del paciente. Un consultorio para terapias
@@ -321,14 +397,14 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: CLAVES PARA ALQUILAR --- */}
-          <h2 id="claves-alquiler">
+          <h3 id="claves-alquiler">
             8 Claves para el Alquiler de Consultorios para Terapias Alternativas
             en Montevideo
-          </h2>
-
-          <h3 id="ubicacion">
-            1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
           </h3>
+
+          <h4 id="ubicacion">
+            1. Ubicación estratégica del consultorio: Parque Rodó, Montevideo
+          </h4>
           <p>
             La ubicación no solo influye en la accesibilidad, sino también en la
             percepción profesional del terapeuta. En nuestro caso,{" "}
@@ -354,10 +430,10 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             nosotros.
           </blockquote>
 
-          <h3 id="energia-ambiente">
+          <h4 id="energia-ambiente">
             2. Energía y ambiente: el poder del espacio en el proceso
             terapéutico
-          </h3>
+          </h4>
           <p>
             Uno de los mayores desafíos al buscar alquiler de consultorio por
             hora en Montevideo para un terapeuta alternativo es no encontrar un
@@ -383,9 +459,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           <ImageGallery />
 
-          <h3 id="flexibilidad-horaria">
+          <h4 id="flexibilidad-horaria">
             3. Flexibilidad horaria: libertad para atender cuando lo necesites
-          </h3>
+          </h4>
           <p>
             Uno de los grandes desafíos de los terapeutas holísticos es
             encontrar un consultorio con alquiler por hora que se adapte a sus
@@ -403,9 +479,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </blockquote>
           <p>Esa libertad genera algo muy valioso: autonomía profesional.</p>
 
-          <h3 id="reservas-online">
+          <h4 id="reservas-online">
             4. Sistema de reservas online y camilla para terapeutas alternativos
-          </h3>
+          </h4>
           <p>
             La tecnología debe estar al servicio del bienestar. Por eso
             implementamos un{" "}
@@ -436,9 +512,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
 
           <CtaBox />
 
-          <h3 id="precios-justos">
+          <h4 id="precios-justos">
             5. Alquiler por hora con precios justos y descuentos progresivos
-          </h3>
+          </h4>
           <p>
             Otro punto de dolor frecuente: los costos altos o alquileres
             mensuales inflexibles. Muchos terapeutas recién comienzan y
@@ -467,9 +543,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             financiero, y crecer a medida que aumenta su cartera de pacientes.
           </p>
 
-          <h3 id="comunidad">
+          <h4 id="comunidad">
             6. Comunidad de terapeutas holísticos en Montevideo
-          </h3>
+          </h4>
           <p>
             Trabajar solo como terapeuta holístico puede ser un desafío
             emocional. Muchos profesionales de terapias alternativas buscan un
@@ -492,9 +568,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             la misma frecuencia.
           </p>
 
-          <h3 id="diseno-profesional">
+          <h4 id="diseno-profesional">
             7. Diseño profesional para potenciar la experiencia terapéutica
-          </h3>
+          </h4>
           <p>
             Cuando los consultorios para terapias holísticas son pensados por
             terapeutas, la diferencia se nota. Nosotros diseñamos cada sala de
@@ -507,9 +583,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
             lo esencial: acompañar a sus pacientes con serenidad y confianza.
           </p>
 
-          <h3 id="feedback-terapeutas">
+          <h4 id="feedback-terapeutas">
             8. Qué sienten los terapeutas cuando encuentran su espacio ideal
-          </h3>
+          </h4>
           <p>He escuchado muchas veces frases como:</p>
           <ul>
             <li>
@@ -526,9 +602,9 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           </p>
 
           {/* --- CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Conclusión: encontrá tu consultorio ideal para terapias holísticas
-          </h2>
+          </h3>
           <p>
             El alquiler de consultorios para terapias alternativas no debería
             ser una búsqueda complicada, sino una oportunidad para encontrar un

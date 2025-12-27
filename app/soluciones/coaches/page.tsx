@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
@@ -21,6 +27,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ConsultorioCoachesFaqSection from "./ConsultorioCoachesFaqSection";
 import ImageGallery from "./ImageGallery";
@@ -93,6 +100,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloCoachesPage(): React.JSX.Element {
+  // Obtener configuración de landing para coaches
+  const landingConfig = getSolutionLandingConfig("coaches")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -198,16 +208,82 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           "Sala de espera privada",
         ]}
       />
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para coaches en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para coaches"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
           className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
                      prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
@@ -216,10 +292,10 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorio para Coaches por Hora en Montevideo: El
             Espacio que Tu Práctica Necesita
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -258,9 +334,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 1: EL CONTENEDOR --- */}
-          <h2 id="contenedor">
+          <h3 id="contenedor">
             El Espacio como Contenedor del Proceso de Coaching en Montevideo
-          </h2>
+          </h3>
           <p>
             En el coaching ontológico, ejecutivo o personal, hablamos del
             &quot;espacio seguro&quot; como condición fundamental para que el
@@ -296,20 +372,20 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
-          <h2 id="pilares">
+          <h3 id="pilares">
             Los 3 Pilares del Alquiler de Consultorios para Coaches en Parque
             Rodó
-          </h2>
+          </h3>
           <p>
             Hay tres factores que prioricé al diseñar este espacio de alquiler
             de consultorios para coaches en Parque Rodó, porque sé que son
             esenciales para cualquier práctica de coaching profesional:
           </p>
 
-          <h3 id="ambiente-profesional">
+          <h4 id="ambiente-profesional">
             1. Ambiente Profesional: Diseñado para la Reflexión y la
             Transformación
-          </h3>
+          </h4>
           <p>
             Como psicólogo, entiendo la importancia del ambiente para el trabajo
             terapéutico, y sé que en el coaching es igual de crucial. He visto
@@ -332,9 +408,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             coaching ontológico, coaching ejecutivo o life coaching.
           </p>
 
-          <h3 id="privacidad-acustica">
+          <h4 id="privacidad-acustica">
             2. Privacidad Acústica Absoluta: La Base de la Confidencialidad
-          </h3>
+          </h4>
           <p>
             En el coaching, los coachees comparten metas profesionales, desafíos
             personales, vulnerabilidades y procesos de transformación profundos.
@@ -367,9 +443,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="funcionalidad">
+          <h4 id="funcionalidad">
             3. Funcionalidad Sin Preocupaciones: Cada Detalle Cubierto
-          </h3>
+          </h4>
           <p>
             <strong>
               En Espacio PISAMA, todo está como debe estar, siempre.
@@ -392,10 +468,10 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           <CtaBox />
 
           {/* --- SECCIÓN 3: LA LOGÍSTICA OCULTA --- */}
-          <h2 id="logistica">
+          <h3 id="logistica">
             Sistema de Reservas y Logística para Alquiler por Hora de
             Consultorios de Coaching
-          </h2>
+          </h3>
           <p>
             Más allá del espacio físico del consultorio, la gestión del día a
             día en tu práctica de coaching puede convertirse en una fuente
@@ -403,9 +479,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             para coaches que alquilan por hora:
           </p>
 
-          <h3 id="sistema-reservas">
+          <h4 id="sistema-reservas">
             Sistema de Reservas Online en Tiempo Real: Adiós al Caos
-          </h3>
+          </h4>
           <p>
             Al inicio de mi carrera como psicólogo, viví la pesadilla de la
             coordinación por WhatsApp para reservar espacios. Consultar
@@ -463,9 +539,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="ubicacion">
+          <h4 id="ubicacion">
             Ubicación Estratégica del Consultorio: Parque Rodó, Montevideo
-          </h3>
+          </h4>
           <p>
             Nuestro consultorio para coaches está en{" "}
             <strong>Parque Rodó, Montevideo</strong>, cerca de avenidas
@@ -491,9 +567,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="comunidad-profesional">
+          <h4 id="comunidad-profesional">
             Comunidad Profesional Respetuosa: Baja Rotación, Alta Calidad
-          </h3>
+          </h4>
           <p>
             Otro factor de estrés son los colegas impuntuales que se pasan de
             horario. He tenido que interrumpir procesos delicados porque el
@@ -521,10 +597,10 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </p>
 
           {/* --- SECCIÓN 4: BARRERAS --- */}
-          <h2 id="barreras">
+          <h3 id="barreras">
             En Espacio PISAMA Eliminamos todas las Barreras del Coaching
             Presencial
-          </h2>
+          </h3>
           <p>
             Si alguna vez te preocupaste por alguno de estos problemas, Espacio
             PISAMA los resuelve todos:
@@ -573,9 +649,9 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           </ul>
 
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Encontrá tu Consultorio Ideal para Coaching en Montevideo
-          </h2>
+          </h3>
           <p>
             Al crear Espacio PISAMA intenté resolver todos los problemas que
             viví como psicólogo al buscar espacios profesionales, y los mismos
@@ -602,15 +678,6 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
             </Link>
             .
           </p>
-          <div className="aspect-video my-8">
-            <iframe
-              className="rounded-lg shadow-xl w-full h-full"
-              src="https://www.youtube.com/embed/_0-Eh-JvQys"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
 
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioCoachesFaqSection />
