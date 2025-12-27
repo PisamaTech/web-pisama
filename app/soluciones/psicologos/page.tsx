@@ -8,7 +8,13 @@ import Indice from "@/components/blog/Indice";
 import CtaSection from "@/components/homepage/CtaSection";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/components/seo/ServiceSchema";
+import HowItWorks from "@/components/soluciones/HowItWorks";
+import MidCta from "@/components/soluciones/MidCta";
+import PricingPreview from "@/components/soluciones/PricingPreview";
+import QuickBenefits from "@/components/soluciones/QuickBenefits";
 import RelatedSolutions from "@/components/soluciones/RelatedSolutions";
+import SectionDivider from "@/components/soluciones/SectionDivider";
+import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
@@ -21,6 +27,7 @@ import {
   professionKeywordVariants,
 } from "@/src/extendedKeywords";
 import { allSolutions } from "@/src/solucionesData";
+import { getSolutionLandingConfig } from "@/src/solutionLandingData";
 
 import ConsultorioPsicologosFaqSection from "./ConsultorioPsicologosFaqSection";
 import ImageGallery from "./ImageGallery";
@@ -60,7 +67,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.pisama.uy/images/consultorio1-1.webp",
+        url: "https://www.pisama.uy/images/consultorio3-1.webp",
         width: 1200,
         height: 630,
         alt: "Consultorio profesional para psicólogos en Parque Rodó, Montevideo",
@@ -93,6 +100,9 @@ const CtaBox = () => (
 
 // --- PÁGINA PRINCIPAL QUE ENSAMBLA TODO ---
 export default function ArticuloPsicologosPage(): React.JSX.Element {
+  // Obtener configuración de landing para psicólogos
+  const landingConfig = getSolutionLandingConfig("psicologos")!;
+
   // Breadcrumb para SEO
   const breadcrumbItems = [
     {
@@ -217,7 +227,7 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           },
         ]}
         availableFeatures={[
-          "Privacidad acústica absoluta",
+          "Privacidad acústica",
           "Ambiente diseñado por psicólogos",
           "Reservas online en tiempo real",
           "Encuadre terapéutico estable",
@@ -231,28 +241,95 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+
+      {/* Breadcrumbs */}
       <section className="bg-content4/60 w-full border-b-1 border-content4">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <Breadcrumbs items={breadcrumbItems} />
         </div>
       </section>
-      <main className="bg-content2 pt-10">
+
+      {/* ===== LANDING SECTION: Para visitantes nuevos ===== */}
+
+      {/* Hero Section */}
+      <SolutionHero
+        title={landingConfig.heroTitle}
+        highlightedText={landingConfig.heroHighlight}
+        subtitle={landingConfig.heroSubtitle}
+        heroImage={landingConfig.heroImage}
+        heroImageAlt={landingConfig.heroImageAlt}
+        quickStats={landingConfig.quickStats}
+      />
+
+      {/* Quick Benefits */}
+      <QuickBenefits
+        title={landingConfig.benefitsTitle}
+        highlightedWord={landingConfig.benefitsHighlight}
+        benefits={landingConfig.benefits}
+      />
+
+      {/* Image Gallery + Video Tour */}
+      <section className="bg-content2 py-16">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="mb-8 text-center font-display text-3xl font-bold text-primary md:text-4xl">
+            Conocé Nuestros <span className="text-secondary">Consultorios</span>
+          </h2>
+          <ImageGallery />
+
+          {/* Video Tour */}
+          <div className="mt-12">
+            <h3 className="mb-6 text-center font-display text-2xl font-bold text-primary">
+              Recorrida por el <span className="text-secondary">Espacio</span>
+            </h3>
+            <div className="aspect-video max-w-3xl mx-auto">
+              <iframe
+                className="rounded-xl shadow-xl w-full h-full"
+                src="https://www.youtube.com/embed/_0-Eh-JvQys"
+                title="Recorrida por Espacio Pisama - Consultorios para psicólogos en Montevideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* Pricing Preview */}
+      <PricingPreview />
+
+      {/* Mid CTA */}
+      <MidCta
+        title={landingConfig.midCtaTitle}
+        highlightedText={landingConfig.midCtaHighlight}
+      />
+
+      {/* Divider antes del contenido SEO */}
+      <SectionDivider
+        text="Conocé más sobre nuestra propuesta para psicólogos"
+        anchorId="contenido-detallado"
+      />
+
+      {/* ===== CONTENIDO SEO: Artículo completo para posicionamiento ===== */}
+      <main id="contenido-detallado" className="bg-content2 pt-10">
         <article
-          className="prose prose-lg mx-auto max-w-4xl px-4 
+          className="prose prose-lg mx-auto max-w-4xl px-4
                      prose-headings:font-display prose-headings:text-primary-500
-                     prose-h1:text-4xl md:prose-h1:text-5xl 
+                     prose-h2:text-3xl md:prose-h2:text-4xl
                      prose-p:font-sans prose-p:text-foreground/90
                      prose-strong:text-primary-500
-                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400 
+                     prose-a:text-secondary-500 prose-a:font-semibold hover:prose-a:text-secondary-400
                      prose-blockquote:border-secondary-500 prose-blockquote:text-foreground/70
                      prose-li:font-sans prose-li:text-foreground/90
                      prose-img:mt-0"
         >
           {/* --- TÍTULO Y INTRODUCCIÓN --- */}
-          <h1>
+          <h2 className="text-3xl md:text-4xl">
             Alquiler de Consultorios para Psicólogos por Hora en Montevideo: La
             Solución para Trabajar Tranquilo
-          </h1>
+          </h2>
           <Indice sections={sections} />
 
           <p className="mt-12">
@@ -285,9 +362,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             trabajar con tranquilidad y profesionalismo.
           </p>
           {/* --- SECCIÓN 1: EL ENCUADRE --- */}
-          <h2 id="encuadre">
+          <h3 id="encuadre">
             El Consultorio Psicológico como Encuadre Terapéutico en Montevideo
-          </h2>
+          </h3>
           <p>
             En la psicología clínica, cuando hablamos del &quot;encuadre
             terapéutico&quot;, pensamos en el horario, los honorarios, nuestro
@@ -321,19 +398,19 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             trabajo.
           </p>
           {/* --- SECCIÓN 2: LOS 3 PILARES --- */}
-          <h2 id="pilares">
+          <h3 id="pilares">
             Los 3 Pilares del Alquiler de Consultorios para Psicólogos en Parque
             Rodó
-          </h2>
+          </h3>
           <p>
             Hay tres factores que prioricé al diseñar este espacio de alquiler
             de consultorios para psicólogos en Parque Rodó, porque sé que son
             esenciales para nuestra práctica psicológica privada:
           </p>
-          <h3 id="ambiente-profesional">
+          <h4 id="ambiente-profesional">
             1. Ambientación Profesional: Diseñado por Psicólogos, para
             Psicólogos
-          </h3>
+          </h4>
           <p>
             He tenido que alquilar consultorios psicológicos con sillones rotos
             o llegar a barrer antes de que llegara mi paciente. Eso te saca
@@ -343,7 +420,6 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               nuestro espacio terapéutico en Espacio PISAMA.
             </strong>
           </p>
-          <ImageGallery />
           <p>
             Buscamos un estilo minimalista pero cálido, profesional y acogedor.
             Un lugar que invite a la calma desde que cruzás la puerta. Los
@@ -351,9 +427,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             el ambiente terapéutico ideal.
           </p>
 
-          <h3 id="privacidad-acustica">
+          <h4 id="privacidad-acustica">
             2. Privacidad Acústica Absoluta en Consultorios Psicológicos
-          </h3>
+          </h4>
           <p>
             He trabajado en consultorios para psicólogos donde se escuchaban
             fragmentos de otras sesiones terapéuticas en la sala de espera. Eso
@@ -381,9 +457,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             />
           </div>
 
-          <h3 id="funcionalidad">
+          <h4 id="funcionalidad">
             3. Funcionalidad: Cada Detalle Cubierto, Siempre
-          </h3>
+          </h4>
           <p>
             <strong>
               En Espacio PISAMA, todo está como debe estar, siempre.
@@ -403,19 +479,19 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
           </div>
           <CtaBox />
           {/* --- SECCIÓN 3: LA LOGÍSTICA OCULTA --- */}
-          <h2 id="logistica">
+          <h3 id="logistica">
             Sistema de Reservas y Logística para Alquiler por Hora de
             Consultorios
-          </h2>
+          </h3>
           <p>
             Más allá del espacio físico del consultorio, la gestión del día a
             día en tu práctica privada puede convertirse en una fuente constante
             de estrés. Por eso desarrollamos soluciones específicas para
             psicólogos que alquilan por hora:
           </p>
-          <h3 id="sistema-reservas">
+          <h4 id="sistema-reservas">
             Sistema de Reservas Online en Tiempo Real: Adiós al Caos
-          </h3>
+          </h4>
           <p>
             Al principio de mi carrera como psicólogo, viví la pesadilla de la
             coordinación por mensaje para reservar consultorios. Consultar
@@ -465,9 +541,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               width={650}
             />
           </div>
-          <h3 id="ubicacion">
+          <h4 id="ubicacion">
             Ubicación Estratégica del Consultorio: Parque Rodó, Montevideo
-          </h3>
+          </h4>
           <p>
             Nuestro consultorio para psicólogos está en{" "}
             <strong>Parque Rodó, Montevideo</strong>, cerca de avenidas
@@ -491,9 +567,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
               width={350}
             />
           </div>
-          <h3 id="comunidad-colegas">
+          <h4 id="comunidad-colegas">
             Comunidad de Colegas Respetuosos: Baja Rotación, Alta Calidad
-          </h3>
+          </h4>
           <p>
             Otro factor de estrés son los colegas impuntuales. He tenido que
             golpear puertas para que un profesional saliera porque ya era mi
@@ -518,11 +594,11 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             .
           </p>
           {/* --- SECCIÓN 4: BANDERAS ROJAS --- */}
-          <h2 id="banderas-rojas">
+          <h3 id="banderas-rojas">
             En Espacio PISAMA Eliminamos todas las ⚠️{" "}
             <span className="text-red-400">Banderas Rojas </span>
             🚩 al momento de Alquilar un Consultorio Psicológico
-          </h2>
+          </h3>
           <p>
             Si alguna vez te preocupaste por alguno de estos problemas, Espacio
             PISAMA los resuelve todos:
@@ -564,9 +640,9 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             </li>
           </ul>
           {/* --- SECCIÓN 5: CONCLUSIÓN --- */}
-          <h2 id="conclusion">
+          <h3 id="conclusion">
             Encontrá tu Consultorio Ideal para Psicólogos en Montevideo
-          </h2>
+          </h3>
           <p>
             Al crear Espacio PISAMA intenté resolver todos los problemas que
             viví cuando tuve que alquilar un consultorio como psicólogo.{" "}
@@ -588,15 +664,6 @@ export default function ArticuloPsicologosPage(): React.JSX.Element {
             </Link>
             .
           </p>
-          <div className="aspect-video my-8">
-            <iframe
-              className="rounded-lg shadow-xl w-full h-full"
-              src="https://www.youtube.com/embed/_0-Eh-JvQys"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
           {/* --- SECCIÓN 6: FAQ --- */}
           <ConsultorioPsicologosFaqSection />
         </article>
