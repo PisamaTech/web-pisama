@@ -179,7 +179,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
       <BreadcrumbSchema items={breadcrumbItems} />
       <ServiceSchema
         serviceName="Alquiler de Consultorio con Camilla para Masajes"
-        serviceDescription="Alquiler de consultorio con camilla profesional para masajes en Parque Rodó, Montevideo. Consultorio para masajistas con camilla incluida, sistema anti-conflictos de reservas y espacios amplios para trabajar 360° alrededor del paciente."
+        serviceDescription="Alquiler de consultorio con camilla profesional para masajes en Parque Rodó, Montevideo. Consultorio para masajistas con camilla incluida, sistema anti-conflictos de reservas y amplio espacio de trabajo alrededor del paciente."
         serviceType="Alquiler de Consultorio con Camilla"
         url={`${siteConfig.url}/soluciones/masajistas`}
         image={[
@@ -201,7 +201,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           "Camilla profesional incluida en el alquiler",
           "5 Consultorios Premium amplios para masajes",
           "Sistema anti-conflictos de reservas de camilla",
-          "Espacio para moverte 360° alrededor del paciente",
+          "Amplio espacio de trabajo alrededor del paciente",
           "Reservas online en tiempo real",
           "Ubicación estratégica en Parque Rodó",
           "Aire acondicionado",

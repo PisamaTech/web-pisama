@@ -40,7 +40,7 @@ export const allSolutions = [
   },
   {
     title: "Masajistas",
-    description: "Camilla incluida y espacio de trabajo 360°",
+    description: "Camilla incluida y amplio espacio de trabajo",
     href: "/soluciones/masajistas",
     icon: TbMassage,
   },

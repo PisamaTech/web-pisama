@@ -248,7 +248,7 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     quickStats: [
       { value: "$200", label: "Desde/hora" },
       { value: "Flexible", label: "Sin compromiso" },
-      { value: "Premium", label: "Disponibles" },
+      { value: "Online", label: "Reservas" },
       { value: "7-23hs", label: "Todos los días" },
     ],
     benefits: [
@@ -294,9 +294,9 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
       "Consultorio amplio para fisioterapeutas con camilla en Montevideo",
     quickStats: [
       { value: "$250", label: "Premium/hora" },
-      { value: "Camilla", label: "incluida" },
-      { value: "Amplio", label: "espacio 360°" },
-      { value: "Online", label: "reservas" },
+      { value: "Camilla", label: "Incluida" },
+      { value: "Amplios", label: "Consultorios" },
+      { value: "Online", label: "Reservas" },
     ],
     benefits: [
       {
@@ -335,15 +335,15 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorio con Camilla",
     heroHighlight: "para Masajes",
     heroSubtitle:
-      "Consultorio con camilla profesional incluida y espacio de trabajo 360° para tus sesiones de masajes. Ambiente relajante desde $250/hora en Parque Rodó.",
+      "Consultorio con camilla profesional incluida y amplio espacio de trabajo para tus sesiones de masajes. Ambiente relajante desde $250/hora en Parque Rodó.",
     heroImage: consultorio3,
     heroImageAlt:
       "Alquiler de consultorio con camilla para masajes en Montevideo",
     quickStats: [
-      { value: "$250", label: "con camilla/hora" },
-      { value: "360°", label: "espacio de trabajo" },
-      { value: "Relajante", label: "ambiente" },
-      { value: "Flexible", label: "horarios" },
+      { value: "$250", label: "Con camilla/hora" },
+      { value: "Amplios", label: "Consultorios" },
+      { value: "Relajante", label: "Ambiente" },
+      { value: "Flexible", label: "Horarios" },
     ],
     benefits: [
       {
@@ -380,7 +380,7 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
 
 // Helper para obtener la configuración de una profesión
 export function getSolutionLandingConfig(
-  slug: string
+  slug: string,
 ): SolutionLandingConfig | undefined {
   return solutionLandingConfigs[slug];
 }
