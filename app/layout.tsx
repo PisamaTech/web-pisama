@@ -137,7 +137,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light", enableSystem: false, forcedTheme: "light" }}>
           <ScrollIndicator />
           <div className="relative flex flex-col h-screen">
             <Navbar />
