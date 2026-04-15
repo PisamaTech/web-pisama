@@ -11,6 +11,14 @@ import {
 } from "react-icons/fa";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
+// Imports estáticos — Next.js resuelve las dimensiones reales automáticamente
+// TODO: Reemplazar cada imagen con el screenshot real del paso correspondiente
+import imgPaso5 from "@/public/images/app/app_configuracion_cuenta.webp";
+import imgPaso2 from "@/public/images/app/app_inicio.webp";
+import imgPaso4 from "@/public/images/app/app_inicio.webp";
+import imgPaso3 from "@/public/images/app/app_reservas.webp";
+import imgPaso1 from "@/public/images/red-de-colegas/Red-de-Colegas-Perfil.webp";
+
 const steps = [
   {
     number: 1,
@@ -20,11 +28,8 @@ const steps = [
       "Ingresá a la sección Mi Perfil dentro de la Red de Colegas y completá tu información: profesión, especialidades, descripción, idiomas y disponibilidad. Cuanto más completo esté tu perfil, más chances tenés de que otros colegas te encuentren y se contacten con vos.",
     detail:
       "También podés elegir si querés aparecer en la red, si aceptás solicitudes de contacto, y si querés compartir tu email o teléfono con quienes aceptes.",
-    // TODO: Reemplazar con screenshot real de la sección "Mi Perfil" de la Red de Colegas
-    image: "/images/red-de-colegas/Red-de-Colegas-Perfil.webp",
+    image: imgPaso1,
     imageAlt: "Sección Mi Perfil en la Red de Colegas de Pisama",
-    imageWidth: 390,
-    imageHeight: 844,
   },
   {
     number: 2,
@@ -33,11 +38,8 @@ const steps = [
     description:
       "En la pestaña Buscar Colegas podés explorar los perfiles disponibles. Filtrá por profesión, especialidad, disponibilidad o población que atienden para encontrar exactamente lo que buscás.",
     detail: null,
-    // TODO: Reemplazar con screenshot real de la pestaña "Buscar Colegas"
-    image: "/images/app/app_inicio.webp",
+    image: imgPaso2,
     imageAlt: "Pantalla de búsqueda de colegas en la plataforma Pisama",
-    imageWidth: 390,
-    imageHeight: 844,
   },
   {
     number: 3,
@@ -46,11 +48,8 @@ const steps = [
     description:
       'Cuando encontrés a alguien que te interese, hacé clic en Contactar. Se abre un formulario donde podés indicar el asunto (por ejemplo: "Solicitud de derivación" o "Proyecto en conjunto") y un mensaje explicando el motivo del contacto.',
     detail: null,
-    // TODO: Reemplazar con screenshot real del formulario de solicitud de contacto
-    image: "/images/app/app_reservas.webp",
+    image: imgPaso3,
     imageAlt: "Formulario de solicitud de contacto en la Red de Colegas",
-    imageWidth: 390,
-    imageHeight: 844,
   },
   {
     number: 4,
@@ -59,11 +58,8 @@ const steps = [
     description:
       "La otra persona recibe una notificación dentro de la plataforma y puede ver tu perfil y tu mensaje. Tiene la opción de aceptar o rechazar la solicitud.",
     detail: null,
-    // TODO: Reemplazar con screenshot real de la notificación de solicitud recibida
-    image: "/images/app/app_inicio.webp",
+    image: imgPaso4,
     imageAlt: "Notificación de solicitud de contacto recibida en Pisama",
-    imageWidth: 390,
-    imageHeight: 844,
   },
   {
     number: 5,
@@ -72,11 +68,8 @@ const steps = [
     description:
       "Una vez aceptada la solicitud, ambos pueden ver los datos de contacto que cada uno eligió compartir (email y/o teléfono). A partir de ahí, la comunicación continúa por fuera de la plataforma como más les resulte cómodo.",
     detail: null,
-    // TODO: Reemplazar con screenshot real de la pantalla de datos revelados
-    image: "/images/app/app_configuracion_cuenta.webp",
+    image: imgPaso5,
     imageAlt: "Datos de contacto revelados tras aceptar solicitud en Pisama",
-    imageWidth: 390,
-    imageHeight: 844,
   },
 ];
 
@@ -100,17 +93,15 @@ export default function HowItWorksSection() {
                   key={step.number}
                   className={`rounded-2xl mb-6 overflow-hidden border border-content4 shadow-sm ${isEven ? "bg-content2" : "bg-content1"}`}
                 >
-                  <div
-                    className={`grid grid-cols-1 items-center gap-0 md:grid-cols-2`}
-                  >
+                  <div className="grid grid-cols-1 items-center gap-0 md:grid-cols-2">
                     {/* Columna imagen */}
                     <div
                       className={`relative flex items-center justify-center bg-content3/50 p-8 min-h-[320px] ${!isEven ? "md:order-2" : "md:order-1"}`}
                     >
                       <Item
-                        original={step.image}
-                        width={step.imageWidth}
-                        height={step.imageHeight}
+                        original={step.image.src}
+                        width={step.image.width}
+                        height={step.image.height}
                       >
                         {({ ref, open }) => (
                           <Image
@@ -120,8 +111,6 @@ export default function HowItWorksSection() {
                             onClick={open}
                             src={step.image}
                             alt={step.imageAlt}
-                            width={step.imageWidth}
-                            height={step.imageHeight}
                             className="mx-auto max-h-72 w-auto rounded-2xl shadow-xl object-contain cursor-pointer transition-transform duration-300 hover:scale-105"
                           />
                         )}

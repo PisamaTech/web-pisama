@@ -12,6 +12,7 @@ export default function CountUpStat() {
 
   useEffect(() => {
     const el = ref.current;
+
     if (!el) return;
 
     const observer = new IntersectionObserver(
@@ -25,6 +26,7 @@ export default function CountUpStat() {
             const progress = Math.min(elapsed / DURATION, 1);
             // Ease-out cuártica — desacelera más suavemente al final
             const eased = 1 - Math.pow(1 - progress, 4);
+
             setCount(Math.round(eased * TARGET));
             if (progress < 1) requestAnimationFrame(tick);
           };
@@ -37,6 +39,7 @@ export default function CountUpStat() {
     );
 
     observer.observe(el);
+
     return () => observer.disconnect();
   }, []);
 
