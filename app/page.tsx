@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import BookingSystemSection from "@/components/homepage/BookingSystemSection";
+import ColleaguesNetworkSection from "@/components/homepage/ColleaguesNetworkSection";
 import CtaSection from "@/components/homepage/CtaSection";
 import FeaturesSection from "@/components/homepage/FeaturesSection";
 import GalleryCard from "@/components/homepage/GalleryCard";
@@ -39,6 +40,7 @@ export default function Home() {
       {/* <TestimonialsSection /> */}
       <LocationSection />
       <PricingTeaser />
+      <ColleaguesNetworkSection />
       <CtaSection
         title="¿Listo para reservar tu consultorio?"
         description="Espacios profesionales, cómodos y listos para recibir a tus pacientes. Reserva en minutos y empieza a trabajar en el ambiente que mereces."

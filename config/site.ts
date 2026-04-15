@@ -70,6 +70,7 @@ export const siteConfig = {
       label: "App de Reservas",
       dropdown: [
         { label: "Conoce la App", href: "/app-de-reservas" },
+        { label: "Red de Colegas", href: "/app-de-reservas/red-de-colegas" },
         { label: "Guía de Uso", href: "/guia-de-uso" },
       ],
     },
@@ -105,6 +106,7 @@ export const siteConfig = {
     { label: "Disponibilidad", href: "/disponibilidad" },
     { label: "Precios", href: "/precios" },
     { label: "Conoce la App", href: "/app-de-reservas" },
+    { label: "Red de Colegas", href: "/app-de-reservas/red-de-colegas" },
     { label: "Guía de Uso", href: "/guia-de-uso" },
     { label: "Soluciones para Profesionales", href: "/soluciones" },
     { label: "Nuestra Filosofía", href: "/sobre-nosotros" },
@@ -119,6 +121,7 @@ export const siteConfig = {
       { label: "Precios", href: "/precios" },
       { label: "Disponibilidad", href: "/disponibilidad" },
       { label: "App de Reservas", href: "/app-de-reservas" },
+      { label: "Red de Colegas", href: "/app-de-reservas/red-de-colegas" },
       { label: "Blog", href: "/blog" },
     ],
     soluciones: [
