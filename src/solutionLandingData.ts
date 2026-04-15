@@ -6,7 +6,6 @@ import {
   FaMapMarkerAlt,
   FaUsers,
   FaSpa,
-  FaLeaf,
   FaHeart,
   FaUserMd,
   FaBrain,

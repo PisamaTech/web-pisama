@@ -18,7 +18,6 @@ import SolutionHero from "@/components/soluciones/SolutionHero";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 import appReservas from "@/public/images/blog/app-calendario-diario.webp";
-import consultorio3 from "@/public/images/consultorio3-1.webp";
 import consultorio1 from "@/public/images/consultorio1-3.webp";
 import consultorio2 from "@/public/images/consultorio2-3.webp";
 import fachada1 from "@/public/images/fachada-1.1.webp";
