@@ -13,10 +13,10 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 
 // Imports estáticos — Next.js resuelve las dimensiones reales automáticamente
 // TODO: Reemplazar cada imagen con el screenshot real del paso correspondiente
-import imgPaso5 from "@/public/images/app/app_configuracion_cuenta.webp";
-import imgPaso2 from "@/public/images/app/app_inicio.webp";
-import imgPaso4 from "@/public/images/app/app_inicio.webp";
-import imgPaso3 from "@/public/images/app/app_reservas.webp";
+import imgPaso5 from "@/public/images/red-de-colegas/Red-de-Colegas-Aceptado.webp";
+import imgPaso4 from "@/public/images/red-de-colegas/Red-de-Colegas-Recibir-Solicitud.webp";
+import imgPaso3 from "@/public/images/red-de-colegas/Red-de-Colegas-Contacto.webp";
+import imgPaso2 from "@/public/images/red-de-colegas/Red-de-Colegas-Busqueda.webp";
 import imgPaso1 from "@/public/images/red-de-colegas/Red-de-Colegas-Perfil.webp";
 
 const steps = [
@@ -93,10 +93,10 @@ export default function HowItWorksSection() {
                   key={step.number}
                   className={`rounded-2xl mb-6 overflow-hidden border border-content4 shadow-sm ${isEven ? "bg-content2" : "bg-content1"}`}
                 >
-                  <div className="grid grid-cols-1 items-center gap-0 md:grid-cols-2">
+                  <div className="grid grid-cols-1 items-stretch gap-0 md:grid-cols-2">
                     {/* Columna imagen */}
                     <div
-                      className={`relative flex items-center justify-center bg-content3/50 p-8 min-h-[320px] ${!isEven ? "md:order-2" : "md:order-1"}`}
+                      className={`flex items-center justify-center bg-content3/50 p-8 min-h-[320px] ${!isEven ? "md:order-2" : "md:order-1"}`}
                     >
                       <Item
                         original={step.image.src}
@@ -119,17 +119,17 @@ export default function HowItWorksSection() {
 
                     {/* Columna texto */}
                     <div
-                      className={`p-8 lg:p-12 ${!isEven ? "md:order-1" : "md:order-2"}`}
+                      className={`p-8 lg:p-10 ${!isEven ? "md:order-1" : "md:order-2"}`}
                     >
-                      <div className="mb-4 flex items-center gap-3">
+                      <div className="mb-4 flex justify-center">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary/20 font-display text-xl font-bold text-secondary">
                           {step.number}
                         </div>
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-content3">
-                          {step.icon}
-                        </div>
                       </div>
-                      <h3 className="font-display text-2xl font-bold text-primary">
+                      <h3 className="mt-3 font-display text-2xl font-bold text-primary flex items-center gap-3">
+                        <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-content3">
+                          {step.icon}
+                        </span>
                         {step.title}
                       </h3>
                       <p className="mt-4 font-sans text-base text-foreground/80 leading-relaxed">

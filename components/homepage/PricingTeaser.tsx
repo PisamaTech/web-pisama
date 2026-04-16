@@ -40,7 +40,7 @@ export default function PricingTeaser() {
             </p>
             <p className="font-display font-bold text-secondary">
               <span className="text-3xl">Hasta</span>{" "}
-              <span className="text-5xl">$150</span>
+              <span className="text-5xl text-secondary-600">$150</span>
               <span className="text-3xl"> / hora</span>
             </p>
             <p className="mt-4 font-sans text-sm text-primary">
@@ -62,7 +62,7 @@ export default function PricingTeaser() {
             </p>
             <p className="font-display font-bold text-secondary">
               <span className="text-3xl">Hasta</span>{" "}
-              <span className="text-5xl">$100</span>
+              <span className="text-5xl text-secondary-600">$100</span>
               <span className="text-3xl"> / hora</span>
             </p>
             <p className="mt-4 font-sans text-sm text-primary">

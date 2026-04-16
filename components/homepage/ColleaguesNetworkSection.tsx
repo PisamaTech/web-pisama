@@ -20,6 +20,11 @@ const profiles = [
     role: "Nutricionista",
     color: "bg-success/15 text-success-700",
   },
+  {
+    name: "Laura T.",
+    role: "Terapeuta alternativa",
+    color: "bg-success/15 text-success-700",
+  },
   { name: "Carlos V.", role: "Coach", color: "bg-warning/15 text-warning-700" },
   {
     name: "Paula M.",
@@ -81,15 +86,29 @@ export default function ColleaguesNetworkSection(): JSX.Element {
             </h2>
             <p className="mt-6 font-sans text-lg leading-relaxed text-primary/90">
               Compartir espacio es apenas el comienzo. Con la{" "}
-              <strong>Red de Colegas</strong> de Pisama podés encontrar y
-              contactar a otros profesionales del espacio: para derivar un
-              paciente, ofrecer tus servicios o armar un proyecto conjunto.
+              <strong>Red de Colegas</strong> de Pisama podés{" "}
+              <span className="text-secondary">
+                generar vínculos reales, intercambiar servicios, derivar
+                pacientes y construir proyectos junto a colegas
+              </span>{" "}
+              que comparten tu espacio y tu vocación.
             </p>
             <p className="mt-4 font-sans text-lg leading-relaxed text-primary/90">
-              Psicólogos, fisioterapeutas, nutricionistas, masajistas, coaches y
-              más. Cada uno con su perfil, sus especialidades y listo para
-              conectar cuando vos lo decidas.
+              Porque en Pisama creemos que el espacio que te ofrecemos debe
+              ayudarte a crecer:{" "}
+              <span className="text-secondary">
+                a ofrecer mejores servicios, a llegar a más personas, a
+                construir una práctica más sólida.
+              </span>{" "}
+              <strong>Cuando vos crecés, Pisama crece con vos.</strong>
             </p>
+            <div className="mt-6 rounded-xl border-l-4 border-secondary bg-content3 px-5 py-4 text-left">
+              <p className="font-sans text-base font-medium text-primary leading-relaxed">
+                Esto es lo que nos diferencia de un simple alquiler de salas:
+                apostamos activamente por tu crecimiento profesional, porque el
+                tuyo es también el nuestro.
+              </p>
+            </div>
             <div className="mt-8">
               <Button
                 as={Link}

@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 const useCases = [
   {
     icon: <FaHandshake size={24} className="text-secondary" />,
-    text: "Un psicólogo que atiende adultos deriva a un adolescente con un colega del espacio especializado en esa franja etaria.",
+    text: "Un psicólogo que atiende adultos deriva a un niño con un colega del espacio especializado en esa franja etaria.",
   },
   {
     icon: <FaHandshake size={24} className="text-secondary" />,
-    text: "Una nutricionista le ofrece sus servicios a una kinesióloga que comparte el espacio.",
+    text: "Una nutricionista le ofrece sus servicios a una fisioterapeuta que comparte el espacio.",
   },
   {
     icon: <FaHandshake size={24} className="text-secondary" />,
@@ -40,7 +40,7 @@ const useCases = [
   },
   {
     icon: <FaHandshake size={24} className="text-secondary" />,
-    text: "Un profesional que quiere hacerse sesiones de masajes contacta directamente a un masajista de la comunidad.",
+    text: "Un profesional que quiere hacerse sesiones de masajes contacta directamente a un masajista del espacio y en una hora libre puede disfrutar de un masaje.",
   },
 ];
 
@@ -49,23 +49,28 @@ const useCases = [
 const HeroSection = () => (
   <section className="bg-content2 py-14 text-center">
     <div className="container mx-auto max-w-4xl px-4 lg:px-8">
-      <Chip
-        className="mb-6"
-        color="secondary"
-        variant="flat"
-        startContent={<MdGroups size={18} />}
-      >
-        Funcionalidad de la App
-      </Chip>
       <h1 className="font-display text-4xl font-bold text-marron-cafe lg:text-5xl">
-        Ser parte de <span className="text-secondary">Pisama</span> te da acceso
-        a una Red de más de 100 Colegas con quienes derivar, colaborar y crecer.
+        Ser parte de Pisama te da acceso a una{" "}
+        <span className="text-secondary">Red de más de 100 Colegas</span> con
+        quienes derivar, colaborar y crecer.
       </h1>
       <p className="mx-auto mt-8 max-w-3xl font-sans text-xl text-marron-cafe/80">
-        Pisama no es solo un lugar donde alquilar un consultorio.{" "}
-        <strong>Es una comunidad profesional activa</strong> donde podés generar
-        vínculos reales, intercambiar servicios, derivar pacientes y construir
-        proyectos junto a colegas que comparten tu espacio y tu vocación.
+        Espacio Pisama no es solo un lugar donde alquilar un consultorio.{" "}
+        <strong>Es una comunidad profesional activa</strong> donde podés{" "}
+        <span className="text-secondary">
+          generar vínculos reales, intercambiar servicios, derivar pacientes y
+          construir proyectos junto a colegas
+        </span>{" "}
+        que comparten tu espacio y tu vocación.
+      </p>
+      <p className="mx-auto mt-4 max-w-3xl font-sans text-xl text-marron-cafe/80">
+        Porque en Pisama creemos que el espacio que te ofrecemos debe ayudarte a
+        crecer:{" "}
+        <span className="text-secondary">
+          a ofrecer mejores servicios, a llegar a más personas, a construir una
+          práctica más sólida.
+        </span>{" "}
+        <strong>Cuando vos crecés, Pisama crece con vos.</strong>
       </p>
     </div>
   </section>
@@ -87,26 +92,43 @@ const WhatIsSection = () => (
           <p className="mt-4 font-sans text-lg text-foreground/80 leading-relaxed">
             No importa la profesión ni el motivo: podés acercarte a un colega
             para <strong>derivarle un paciente</strong>,{" "}
-            <strong>ofrecerle tus servicios</strong>, pedirle los suyos, o
+            <strong>ofrecerle tus servicios, pedirle los suyos,</strong> o
             simplemente explorar si hay posibilidades de trabajo conjunto.
           </p>
+          <div className="mt-6 rounded-xl border-l-4 border-secondary bg-content3 px-5 py-4">
+            <p className="font-sans text-base font-medium text-primary leading-relaxed">
+              Esto es lo que nos diferencia de un simple alquiler de salas:
+              apostamos activamente por tu crecimiento profesional, porque el
+              tuyo es también el nuestro.
+            </p>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
           {[
             "Psicología",
+            "Psiquiatría",
             "Fisioterapia",
             "Nutrición",
             "Masajes",
             "Fonoaudiología",
+            "Terapias alternativas",
             "Y más...",
-          ].map((profession) => (
-            <div
-              key={profession}
-              className="flex items-center justify-center rounded-xl bg-content2 border border-content4 p-4 text-center font-semibold text-primary shadow-sm"
-            >
-              {profession}
-            </div>
-          ))}
+          ].map((profession, index) => {
+            const styles = [
+              "bg-content1 border border-primary/20 text-primary",
+              "bg-content3 border border-secondary/30 text-secondary-700",
+              "bg-primary/10 border border-primary/30 text-secondary-600",
+            ];
+
+            return (
+              <div
+                key={profession}
+                className={`flex items-center justify-center rounded-xl p-4 text-center font-semibold shadow-sm ${styles[index % 3]}`}
+              >
+                {profession}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -120,8 +142,8 @@ const WhoIsPartSection = () => (
         ¿Quiénes forman parte?
       </h2>
       <p className="mx-auto mt-6 max-w-2xl font-sans text-lg text-foreground/80 leading-relaxed">
-        Todos los profesionales registrados en la plataforma Pisama que hayan
-        activado su perfil en la red.
+        Todos los profesionales registrados en la aplicación de Espacio Pisama
+        que hayan activado su perfil en la red.
       </p>
       <div className="mt-10 inline-flex flex-col items-center justify-center rounded-2xl bg-content1 border border-content4 px-12 py-8 shadow-md">
         <CountUpStat />
@@ -195,7 +217,7 @@ const HowToStartSection = () => (
         ¿Cómo empiezo?
       </h2>
       <p className="mx-auto mt-6 max-w-xl font-sans text-lg text-foreground/80 leading-relaxed">
-        Ingresá a la plataforma y buscá la sección{" "}
+        Ingresá a la aplicación y buscá la sección{" "}
         <strong>Red de Colegas</strong> en el menú principal. Completá tu perfil
         y empezá a explorar a tus colegas.
       </p>
@@ -242,8 +264,8 @@ export default function RedDeColegasPage(): JSX.Element {
       <PrivacySection />
       <HowToStartSection />
       <CtaSection
-        title="Tu comunidad profesional te está esperando"
-        description="Completá tu perfil hoy y empezá a conectar con más de 100 colegas dentro de la plataforma Pisama. Derivaciones, colaboraciones y nuevas oportunidades a un clic."
+        title="Crecer juntos es nuestra apuesta"
+        description="En Espacio Pisama nos importa que tu práctica florezca. La Red de Colegas es una de las herramientas con las que apostamos a eso: más conexiones, más posibilidades, más crecimiento. Completá tu perfil y empezá a construir hoy."
         buttonText="Acceder a la plataforma"
         buttonLink={siteConfig.links.reservasApp}
       />
