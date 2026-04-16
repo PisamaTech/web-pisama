@@ -85,8 +85,9 @@ export default function ColleaguesNetworkSection(): JSX.Element {
               Crecer Juntos.
             </h2>
             <p className="mt-6 font-sans text-lg leading-relaxed text-primary/90">
-              Compartir espacio es apenas el comienzo. Con la{" "}
-              <strong>Red de Colegas</strong> de Pisama podés{" "}
+              Compartir espacio es apenas el comienzo. La{" "}
+              <strong>Red de Colegas</strong> es una funcionalidad incluida en
+              nuestra app de reservas con la que podés{" "}
               <span className="text-secondary">
                 generar vínculos reales, intercambiar servicios, derivar
                 pacientes y construir proyectos junto a colegas

@@ -85,9 +85,9 @@ const WhatIsSection = () => (
             ¿Qué es la Red de Colegas?
           </h2>
           <p className="mt-6 font-sans text-lg text-foreground/80 leading-relaxed">
-            La Red de Colegas es una funcionalidad de la plataforma Pisama que
-            te permite encontrar y contactar a otros profesionales que comparten
-            el espacio.
+            La Red de Colegas es una funcionalidad de la aplicación de Espacio
+            Pisama que te permite encontrar y contactar a otros profesionales
+            que comparten el espacio.
           </p>
           <p className="mt-4 font-sans text-lg text-foreground/80 leading-relaxed">
             No importa la profesión ni el motivo: podés acercarte a un colega
