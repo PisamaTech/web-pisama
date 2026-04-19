@@ -35,15 +35,15 @@ export default function PricingTeaser() {
               Consultorio Premium
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-lg text-primary/70 ">
+            <p className="my-3 font-sans text-base text-primary/70 ">
               Precio base: $250 / hora
             </p>
-            <p className="font-display font-bold text-secondary">
-              <span className="text-3xl">Hasta</span>{" "}
-              <span className="text-5xl text-secondary-600">$150</span>
+            <p className="font-display font-bold text-secondary-400">
+              <span className="text-3xl ">Hasta</span>{" "}
+              <span className="text-5xl text-secondary-500">$150</span>
               <span className="text-3xl"> / hora</span>
             </p>
-            <p className="mt-4 font-sans text-sm text-primary">
+            <p className="my-4 font-sans text-sm text-primary">
               con nuestro modelo de ahorro inteligente
             </p>
           </div>
@@ -57,15 +57,15 @@ export default function PricingTeaser() {
               Consultorio Estándar
             </h3>
             <Divider className="my-4" />
-            <p className="my-4 font-sans text-lg text-primary/70 ">
+            <p className="my-3 font-sans text-base text-primary/70 ">
               Precio base: $200 / hora
             </p>
-            <p className="font-display font-bold text-secondary">
+            <p className="font-display font-bold text-secondary-400">
               <span className="text-3xl">Hasta</span>{" "}
-              <span className="text-5xl text-secondary-600">$100</span>
+              <span className="text-5xl text-secondary-500">$100</span>
               <span className="text-3xl"> / hora</span>
             </p>
-            <p className="mt-4 font-sans text-sm text-primary">
+            <p className="my-4 font-sans text-sm text-primary">
               con nuestro modelo de ahorro inteligente
             </p>
           </div>

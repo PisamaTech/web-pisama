@@ -3,7 +3,14 @@ import { Chip } from "@heroui/chip";
 import { Metadata } from "next";
 import Link from "next/link";
 import { JSX } from "react";
-import { FaHandshake, FaLock } from "react-icons/fa";
+import {
+  FaExchangeAlt,
+  FaHandshake,
+  FaLock,
+  FaSpa,
+  FaUserCheck,
+  FaYinYang,
+} from "react-icons/fa";
 import { MdGroups } from "react-icons/md";
 
 import CountUpStat from "@/app/app-de-reservas/red-de-colegas/CountUpStat";
@@ -27,20 +34,28 @@ export const metadata: Metadata = {
 
 const useCases = [
   {
-    icon: <FaHandshake size={24} className="text-secondary" />,
-    text: "Un psicólogo que atiende adultos deriva a un niño con un colega del espacio especializado en esa franja etaria.",
+    icon: <FaUserCheck size={24} className="text-secondary" />,
+    text: "Un psicólogo que atiende adultos, deriva a un niño con un colega del espacio, especializado en esa franja etaria.",
   },
   {
-    icon: <FaHandshake size={24} className="text-secondary" />,
-    text: "Una nutricionista le ofrece sus servicios a una fisioterapeuta que comparte el espacio.",
+    icon: <FaExchangeAlt size={24} className="text-secondary" />,
+    text: "Una fonoaudióloga le recomienda sus servicios a una psicopedagoga que comparte el espacio, facilitando un abordaje integral para sus pacientes en común.",
   },
   {
-    icon: <FaHandshake size={24} className="text-secondary" />,
+    icon: <MdGroups size={24} className="text-secondary" />,
     text: "Dos profesionales de áreas complementarias coordinan un taller o programa conjunto.",
   },
   {
     icon: <FaHandshake size={24} className="text-secondary" />,
+    text: "Un psicólogo detecta que su paciente necesita acompañamiento nutricional como parte del tratamiento, y lo conecta con una nutricionista que también trabaja en Pisama.",
+  },
+  {
+    icon: <FaSpa size={24} className="text-secondary" />,
     text: "Un profesional que quiere hacerse sesiones de masajes contacta directamente a un masajista del espacio y en una hora libre puede disfrutar de un masaje.",
+  },
+  {
+    icon: <FaYinYang size={24} className="text-secondary" />,
+    text: "Una terapeuta de reiki sugiere a su consultante que también trabaje con una psicóloga del espacio para complementar el proceso de bienestar emocional.",
   },
 ];
 
@@ -64,13 +79,12 @@ const HeroSection = () => (
         que comparten tu espacio y tu vocación.
       </p>
       <p className="mx-auto mt-4 max-w-3xl font-sans text-xl text-marron-cafe/80">
-        Porque en Pisama creemos que el espacio que te ofrecemos debe ayudarte a
-        crecer:{" "}
+        En Pisama buscamos ayudarte a crecer:{" "}
         <span className="text-secondary">
           a ofrecer mejores servicios, a llegar a más personas, a construir una
           práctica más sólida.
         </span>{" "}
-        <strong>Cuando vos crecés, Pisama crece con vos.</strong>
+        <strong>Porque tu crecimiento, es también el nuestro.</strong>
       </p>
     </div>
   </section>
@@ -85,9 +99,10 @@ const WhatIsSection = () => (
             ¿Qué es la Red de Colegas?
           </h2>
           <p className="mt-6 font-sans text-lg text-foreground/80 leading-relaxed">
-            La Red de Colegas es una funcionalidad de la aplicación de Espacio
-            Pisama que te permite encontrar y contactar a otros profesionales
-            que comparten el espacio.
+            La Red de Colegas es una{" "}
+            <strong>funcionalidad de la aplicación </strong> de Espacio Pisama
+            que te permite encontrar y contactar a otros profesionales que
+            comparten el espacio.
           </p>
           <p className="mt-4 font-sans text-lg text-foreground/80 leading-relaxed">
             No importa la profesión ni el motivo: podés acercarte a un colega
@@ -218,17 +233,17 @@ const HowToStartSection = () => (
       </h2>
       <p className="mx-auto mt-6 max-w-xl font-sans text-lg text-foreground/80 leading-relaxed">
         Ingresá a la aplicación y buscá la sección{" "}
-        <strong>Red de Colegas</strong> en el menú principal. Completá tu perfil
-        y empezá a explorar a tus colegas.
+        <strong>Red de Colegas</strong>. Completá tu perfil y empezá a explorar
+        a tus colegas.
       </p>
       <div className="mt-8">
         <Link
-          href={siteConfig.links.reservasApp}
+          href="https://reservas.pisama.uy/red-de-colegas?tab=perfil"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-4 font-semibold text-white transition-colors hover:bg-secondary/80"
         >
-          Ir a la plataforma
+          Completa tu perfil en la App
         </Link>
       </div>
     </div>
@@ -266,7 +281,7 @@ export default function RedDeColegasPage(): JSX.Element {
       <CtaSection
         title="Crecer juntos es nuestra apuesta"
         description="En Espacio Pisama nos importa que tu práctica florezca. La Red de Colegas es una de las herramientas con las que apostamos a eso: más conexiones, más posibilidades, más crecimiento. Completá tu perfil y empezá a construir hoy."
-        buttonText="Acceder a la plataforma"
+        buttonText="Acceder a la aplicación"
         buttonLink={siteConfig.links.reservasApp}
       />
     </>

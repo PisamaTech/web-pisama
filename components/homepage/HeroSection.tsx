@@ -46,14 +46,23 @@ export default function HeroSection() {
           />
         </motion.div>
         {/* Título Principal (ahora en color blanco) */}
-        <h1 className="font-bold text-3xl tracking-tight text-white md:text-4xl lg:text-5xl drop-shadow-xl/50">
-          Alquiler de Consultorios por Hora en Montevideo:<br /> <span className="text-2xl md:text-3xl lg:text-4xl">Somos el espacio que</span> <span className="text-secondary-300 text-3xl md:text-4xl lg:text-5xl drop-shadow-xl/80">Impulsa tu Crecimiento</span>
+        <h1 className="font-bold text-3xl tracking-tight text-primary-100 md:text-4xl lg:text-5xl drop-shadow-xl/50">
+          Alquiler de Consultorios por Hora en Montevideo:
+          <br />{" "}
+          <span className="text-2xl text-white md:text-3xl lg:text-4xl">
+            Somos el espacio que
+          </span>{" "}
+          <br />
+          <span className="text-secondary-300 text-3xl md:text-4xl lg:text-5xl drop-shadow-xl/80">
+            Impulsa tu Crecimiento
+          </span>
         </h1>
 
         {/* Subtítulo / Descripción (en un tono de blanco más suave) */}
         <p className="mt-6 text-base leading-relaxed text-gray-100 sm:text-lg max-w-2xl mx-auto font-light">
           Espacios diseñados para psicólogos, terapeutas, masajistas y
-          profesionales independientes. Con gestión de tus reservas online, descuentos cuantas más horas usas y un ambiente de calma y
+          profesionales independientes. Con gestión de tus reservas online,
+          descuentos cuantas más horas usas y un ambiente de calma y
           profesionalismo.
         </p>
 
