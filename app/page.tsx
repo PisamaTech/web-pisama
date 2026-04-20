@@ -9,6 +9,7 @@ import HeroSection from "@/components/homepage/HeroSection";
 import LocationSection from "@/components/homepage/LocationSection";
 import PricingTeaser from "@/components/homepage/PricingTeaser";
 import ProfessionalsSection from "@/components/homepage/ProfessionalsSection";
+import TestimonialsSection from "@/components/homepage/TestimonialsSection";
 
 export const metadata: Metadata = {
   title:
@@ -37,10 +38,10 @@ export default function Home() {
       <ProfessionalsSection />
       <GalleryCard />
       <BookingSystemSection />
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <LocationSection />
-      <PricingTeaser />
       <ColleaguesNetworkSection />
+      <PricingTeaser />
       <CtaSection
         title="¿Listo para reservar tu consultorio?"
         description="Espacios profesionales, cómodos y listos para recibir a tus pacientes. Reserva en minutos y empieza a trabajar en el ambiente que mereces."

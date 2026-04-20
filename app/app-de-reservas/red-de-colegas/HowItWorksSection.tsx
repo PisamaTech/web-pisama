@@ -14,10 +14,10 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 // Imports estáticos — Next.js resuelve las dimensiones reales automáticamente
 // TODO: Reemplazar cada imagen con el screenshot real del paso correspondiente
 import imgPaso5 from "@/public/images/red-de-colegas/Red-de-Colegas-Aceptado.webp";
-import imgPaso4 from "@/public/images/red-de-colegas/Red-de-Colegas-Recibir-Solicitud.webp";
-import imgPaso3 from "@/public/images/red-de-colegas/Red-de-Colegas-Contacto.webp";
 import imgPaso2 from "@/public/images/red-de-colegas/Red-de-Colegas-Busqueda.webp";
+import imgPaso3 from "@/public/images/red-de-colegas/Red-de-Colegas-Contacto.webp";
 import imgPaso1 from "@/public/images/red-de-colegas/Red-de-Colegas-Perfil.webp";
+import imgPaso4 from "@/public/images/red-de-colegas/Red-de-Colegas-Recibir-Solicitud.webp";
 
 const steps = [
   {

@@ -1,5 +1,4 @@
 import { Card, CardBody } from "@heroui/card";
-import { Chip } from "@heroui/chip";
 import { Metadata } from "next";
 import Link from "next/link";
 import { JSX } from "react";

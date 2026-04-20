@@ -89,19 +89,18 @@ export default function ColleaguesNetworkSection(): JSX.Element {
               <strong>Red de Colegas</strong> es una funcionalidad incluida en
               nuestra app de reservas con la que podés{" "}
               <span className="text-secondary">
-                generar vínculos reales, intercambiar servicios, derivar
-                pacientes y construir proyectos junto a colegas
+                conocer y generar vínculos reales, intercambiar servicios,
+                derivar pacientes y construir proyectos
               </span>{" "}
-              que comparten tu espacio y tu vocación.
+              entre los colegas que comparten Espacio Pisama.
             </p>
             <p className="mt-4 font-sans text-lg leading-relaxed text-primary/90">
-              Porque en Pisama creemos que el espacio que te ofrecemos debe
-              ayudarte a crecer:{" "}
+              Creemos que el espacio que te ofrecemos debe ayudarte a crecer:{" "}
               <span className="text-secondary">
                 a ofrecer mejores servicios, a llegar a más personas, a
                 construir una práctica más sólida.
               </span>{" "}
-              <strong>Cuando vos crecés, Pisama crece con vos.</strong>
+              <strong>Porque cuando vos crecés, Pisama crece con vos.</strong>
             </p>
             <div className="mt-6 rounded-xl border-l-4 border-secondary bg-content3 px-5 py-4 text-left">
               <p className="font-sans text-base font-medium text-primary leading-relaxed">
