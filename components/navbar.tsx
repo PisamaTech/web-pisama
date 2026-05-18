@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from "@heroui/button";
 import {
   Dropdown,
@@ -26,6 +28,7 @@ import { siteConfig } from "@/config/site";
 import PisamaLogo from "../public/images/Logo-EspacioPisama-Texturado-SinFondo-300px.png";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const brandContent = (
     <NavbarBrand as={Link} href="/">
@@ -47,6 +50,8 @@ export const Navbar = () => {
     <HeroUINavbar
       isBordered
       className="fixed top-0 left-0 w-full z-50 bg-content1 text-secondary font-semibold "
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="lg:hidden" justify="start">
         <NavbarMenuToggle />
@@ -114,14 +119,24 @@ export const Navbar = () => {
           "dropdown" in item
             ? item.dropdown.map((subItem) => (
                 <NavbarMenuItem key={subItem.href}>
-                  <Link className="w-full" href={subItem.href} size="lg">
+                  <Link 
+                    className="w-full" 
+                    href={subItem.href} 
+                    size="lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     {subItem.label}
                   </Link>
                 </NavbarMenuItem>
               ))
             : [
                 <NavbarMenuItem key={item.href}>
-                  <Link className="w-full" href={item.href} size="lg">
+                  <Link 
+                    className="w-full" 
+                    href={item.href} 
+                    size="lg"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     {item.label}
                   </Link>
                 </NavbarMenuItem>,
