@@ -87,3 +87,12 @@
 .gradient-border-stop-hover:hover {
   animation-play-state: paused;
 }
+
+/* Ocultar barra de scroll en carrusel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
