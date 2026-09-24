@@ -107,11 +107,11 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
               </p>
             </div>
           </div>
-        </section>
 
-        {/* --- ÍNDICE DE CONTENIDO --- */}
-        <section className="flow-root bg-content1 border-t-1 border-default-100/50 px-4">
-          <Indice sections={sections} />
+          {/* --- ÍNDICE DE CONTENIDO --- */}
+          <div className="px-4">
+            <Indice sections={sections} />
+          </div>
         </section>
 
         {/* --- SECCIÓN DE PAGO --- */}
