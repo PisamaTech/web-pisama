@@ -23,6 +23,7 @@ import {
 import { HiUserPlus, HiUsers, HiMiniUserGroup } from "react-icons/hi2";
 import { PiPowerFill } from "react-icons/pi";
 
+import Indice from "@/components/blog/Indice";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { siteConfig } from "@/config/site";
@@ -54,6 +55,24 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
     },
   ];
 
+  const sections = [
+    {
+      title: "Gestionando el Pago de tu Reserva",
+      id: "pago",
+      subsections: [
+        {
+          title: "Datos para Realizar la Transferencia",
+          id: "datos-transferencia",
+        },
+      ],
+    },
+    { title: "Paso 1: Cómo Ingresar al Espacio", id: "paso-1-ingresar" },
+    { title: "Paso 2: Cómo Recibir a tus Pacientes", id: "paso-2-pacientes" },
+    { title: "Paso 3: Cómo Ajustar la Música Ambiente", id: "paso-3-musica" },
+    { title: "Paso 4: Cómo Salir del Espacio", id: "paso-4-salir" },
+    { title: "Normas de Convivencia", id: "normas-convivencia" },
+  ];
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
@@ -64,7 +83,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
       </section>
       <main>
         {/* --- SECCIÓN 1: BIENVENIDA DE LEO --- */}
-        <section className="bg-content2 py-16">
+        <section className="bg-content2 pt-16 pb-6">
           <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-4 lg:px-8">
             <div className="flex justify-center md:col-span-1">
               <Image
@@ -88,6 +107,180 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
               </p>
             </div>
           </div>
+
+          {/* --- ÍNDICE DE CONTENIDO --- */}
+          <div className="px-4 pt-6">
+            <Indice sections={sections} />
+          </div>
+        </section>
+
+        {/* --- SECCIÓN DE PAGO --- */}
+        <section className="bg-content4 py-16 border-t-1 border-default-100/50">
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="not-prose">
+              <h2
+                id="pago"
+                className="text-center font-display text-4xl font-bold text-primary-500"
+              >
+                Gestionando el Pago de tu Reserva
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-center font-sans text-lg text-foreground/80">
+                Nuestro sistema de pago está diseñado para construir una
+                relación de confianza mutua y se adapta a tu frecuencia de uso.
+                El proceso funciona en las siguientes etapas:
+              </p>
+
+              <div className="mt-12 grid gap-8 md:grid-cols-3">
+                <Card className="bg-content1">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiUserPlus size={40} className="text-secondary-400" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
+                      Nuevos Usuarios
+                    </h3>
+                    <Divider />
+                    <p className="mt-2 font-sans text-base text-foreground/80">
+                      Para confirmar tus primeras horas, te solicitaremos el
+                      pago por adelantado. Esto nos permite gestionar de forma
+                      segura el ingreso de nuevos profesionales.
+                    </p>
+                  </CardBody>
+                </Card>
+                <Card className="bg-content1">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiUsers size={40} className="text-secondary-500" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
+                      Usuarios Regulares
+                    </h3>
+                    <Divider />
+                    <p className="mt-2 font-sans text-base text-foreground/80">
+                      Al usar el espacio con regularidad, pasamos al pago
+                      semanal. Al final de la semana, el sistema calcula tus
+                      horas, aplica descuentos y te enviamos el resumen.
+                    </p>
+                  </CardBody>
+                </Card>
+                <Card className="bg-content1">
+                  <CardBody className="p-6 text-center">
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
+                      <HiMiniUserGroup
+                        size={40}
+                        className="text-secondary-500"
+                      />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
+                      Usuarios de Alto Volumen
+                    </h3>
+                    <Divider />
+                    <p className="mt-2 font-sans text-base text-foreground/80">
+                      Para facilitar la gestión, ofrecemos una única facturación
+                      mensual, coordinada de forma personalizada para adaptarnos
+                      a tu ritmo.
+                    </p>
+                  </CardBody>
+                </Card>
+              </div>
+
+              <Card className="mx-auto mt-12 bg-content1 shadow-lg">
+                <CardBody className="p-8">
+                  <h3
+                    id="datos-transferencia"
+                    className="text-center font-display text-2xl font-bold text-primary-500"
+                  >
+                    Datos para Realizar la Transferencia
+                  </h3>
+                  <p className="mb-6 mt-4 text-center font-sans text-foreground/90">
+                    Puedes realizar el pago a cualquiera de las siguientes
+                    cuentas. <br />
+                    Una vez hecho, por favor envía el comprobante por WhatsApp.
+                  </p>
+                  <div className="space-y-6">
+                    <div className="rounded-xl bg-content4 p-4 mx-auto border-1 border-default-100">
+                      <p className="font-semibold text-foreground text-center">
+                        Titular de la cuenta: PABLO GASTÓN CAMPO
+                      </p>
+                      <ul className="mt-2 list-inside list-disc space-y-2 text-foreground/80 text-center">
+                        <li>
+                          <strong>BROU (Nuevo):</strong> 001134168 - 00006
+                        </li>
+                        <li>
+                          <strong>BROU (Viejo):</strong> 600-4644377
+                        </li>
+                        <li>
+                          <strong>PREX:</strong> 1410588
+                        </li>
+                        <li>
+                          <strong>Mi Dinero:</strong> 9323694
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-4 rounded-xl bg-success-100/60 p-4 border-1 border-success-300">
+                      <FaWhatsapp className="h-8 w-8 flex-shrink-0 text-success-700" />
+                      <div className="text-center">
+                        <span className="font-semibold">
+                          Enviar comprobante a:
+                        </span>
+                        <a
+                          href="https://wa.me/59895961360"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-2 font-bold text-success-600"
+                        >
+                          095 961 360
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <Alert
+                    className="mt-8 text-base leading-8 mb-8 py-8"
+                    color="secondary"
+                    variant="faded"
+                    icon={<FaInfoCircle />}
+                  >
+                    <h4 className="font-bold text-lg">
+                      Aclaración Importante sobre Pagos y Facturas:
+                    </h4>
+                    <p>
+                      La validación de los pagos es un{" "}
+                      <strong>proceso manual</strong>. Luego de que envíes el
+                      comprobante por WhatsApp, Gastón revisará el pago y
+                      marcará la factura como &quot;pagada&quot; en la
+                      aplicación. Por esto, puede haber un desfasaje entre el
+                      momento en que pagas y el momento en que se actualiza el
+                      estado en la app.
+                    </p>
+                    <p className="mt-2">
+                      Las facturas se emiten los{" "}
+                      <strong>lunes de cada semana</strong> para calcular
+                      correctamente los descuentos por volumen de horas.
+                      Recibirás una notificación en la app y por mail. Aunque ya
+                      hayas pagado (especialmente en tus primeras reservas), la
+                      factura siempre se emitirá como &quot;pendiente&quot;
+                      hasta que sea revisada manualmente.
+                    </p>
+                    <p className="mt-4">
+                      Cuando una factura se marca como <strong>PAGADA</strong>{" "}
+                      te llegará una notificación por la aplicación. Puedes
+                      seguir el estado de tus facturas en la{" "}
+                      <Link
+                        href="https://reservas.pisama.uy/facturas"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-info-600 underline"
+                      >
+                        sección &quot;Facturas&quot;
+                      </Link>{" "}
+                      de tu perfil.
+                    </p>
+                  </Alert>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
         </section>
 
         {/* --- PASO 1 --- */}
@@ -96,7 +289,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
               {/* --- INICIO DE CONTENIDO MODIFICADO --- */}
               <div>
-                <h2>
+                <h2 id="paso-1-ingresar">
                   <span className="text-secondary-500">Paso 1:</span> Cómo
                   Ingresar al Espacio
                 </h2>
@@ -182,7 +375,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
               </div>
               {/* Columna Derecha: Texto */}
               <div>
-                <h2>
+                <h2 id="paso-2-pacientes">
                   <span className="text-secondary-500">Paso 2:</span> Cómo
                   Recibir a tus Pacientes
                 </h2>
@@ -272,7 +465,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                 />
               </div>
               <div>
-                <h2>
+                <h2 id="paso-3-musica">
                   <span className="text-secondary-500">Paso 3:</span> Cómo
                   Ajustar la Música Ambiente
                 </h2>
@@ -361,7 +554,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
           <div className="prose prose-lg container mx-auto max-w-6xl px-4 prose-headings:font-display prose-headings:text-primary-500">
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
               <div className="md:order-last">
-                <h2>
+                <h2 id="paso-4-salir">
                   <span className="text-secondary-500">Paso 4:</span> Cómo Salir
                   del Espacio
                 </h2>
@@ -428,7 +621,10 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
         <section className="bg-content2 py-16 border-t-1 border-default-100/50">
           <div className="container mx-auto max-w-4xl px-4 lg:px-8">
             <div className="text-center">
-              <h2 className="font-display text-4xl font-bold text-primary-500">
+              <h2
+                id="normas-convivencia"
+                className="font-display text-4xl font-bold text-primary-500"
+              >
                 Normas de Convivencia
               </h2>
               <p className="mx-auto my-6 max-w-2xl font-sans text-lg text-foreground/80">
@@ -640,169 +836,6 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* --- SECCIÓN DE PAGO --- */}
-        <section className="bg-content4 py-16 border-t-1 border-default-100/50">
-          <div className="container mx-auto max-w-4xl px-4">
-            <div className="not-prose">
-              <h2 className="text-center font-display text-4xl font-bold text-primary-500">
-                Gestionando el Pago de tu Reserva
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-center font-sans text-lg text-foreground/80">
-                Nuestro sistema de pago está diseñado para construir una
-                relación de confianza mutua y se adapta a tu frecuencia de uso.
-                El proceso funciona en las siguientes etapas:
-              </p>
-
-              <div className="mt-12 grid gap-8 md:grid-cols-3">
-                <Card className="bg-content1">
-                  <CardBody className="p-6 text-center">
-                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
-                      <HiUserPlus size={40} className="text-secondary-400" />
-                    </div>
-                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
-                      Nuevos Usuarios
-                    </h3>
-                    <Divider />
-                    <p className="mt-2 font-sans text-base text-foreground/80">
-                      Para confirmar tus primeras horas, te solicitaremos el
-                      pago por adelantado. Esto nos permite gestionar de forma
-                      segura el ingreso de nuevos profesionales.
-                    </p>
-                  </CardBody>
-                </Card>
-                <Card className="bg-content1">
-                  <CardBody className="p-6 text-center">
-                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
-                      <HiUsers size={40} className="text-secondary-500" />
-                    </div>
-                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
-                      Usuarios Regulares
-                    </h3>
-                    <Divider />
-                    <p className="mt-2 font-sans text-base text-foreground/80">
-                      Al usar el espacio con regularidad, pasamos al pago
-                      semanal. Al final de la semana, el sistema calcula tus
-                      horas, aplica descuentos y te enviamos el resumen.
-                    </p>
-                  </CardBody>
-                </Card>
-                <Card className="bg-content1">
-                  <CardBody className="p-6 text-center">
-                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto">
-                      <HiMiniUserGroup
-                        size={40}
-                        className="text-secondary-500"
-                      />
-                    </div>
-                    <h3 className="font-display text-xl font-bold text-secondary-500 pb-2">
-                      Usuarios de Alto Volumen
-                    </h3>
-                    <Divider />
-                    <p className="mt-2 font-sans text-base text-foreground/80">
-                      Para facilitar la gestión, ofrecemos una única facturación
-                      mensual, coordinada de forma personalizada para adaptarnos
-                      a tu ritmo.
-                    </p>
-                  </CardBody>
-                </Card>
-              </div>
-
-              <Card className="mx-auto mt-12 bg-content1 shadow-lg">
-                <CardBody className="p-8">
-                  <h3 className="text-center font-display text-2xl font-bold text-primary-500">
-                    Datos para Realizar la Transferencia
-                  </h3>
-                  <p className="mb-6 mt-4 text-center font-sans text-foreground/90">
-                    Puedes realizar el pago a cualquiera de las siguientes
-                    cuentas. <br />
-                    Una vez hecho, por favor envía el comprobante por WhatsApp.
-                  </p>
-                  <div className="space-y-6">
-                    <div className="rounded-xl bg-content4 p-4 mx-auto border-1 border-default-100">
-                      <p className="font-semibold text-foreground text-center">
-                        Titular de la cuenta: PABLO GASTÓN CAMPO
-                      </p>
-                      <ul className="mt-2 list-inside list-disc space-y-2 text-foreground/80 text-center">
-                        <li>
-                          <strong>BROU (Nuevo):</strong> 001134168 - 00006
-                        </li>
-                        <li>
-                          <strong>BROU (Viejo):</strong> 600-4644377
-                        </li>
-                        <li>
-                          <strong>PREX:</strong> 1410588
-                        </li>
-                        <li>
-                          <strong>Mi Dinero:</strong> 9323694
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-4 rounded-xl bg-success-100/60 p-4 border-1 border-success-300">
-                      <FaWhatsapp className="h-8 w-8 flex-shrink-0 text-success-700" />
-                      <div className="text-center">
-                        <span className="font-semibold">
-                          Enviar comprobante a:
-                        </span>
-                        <a
-                          href="https://wa.me/59895961360"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ml-2 font-bold text-success-600"
-                        >
-                          095 961 360
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <Alert
-                    className="mt-8 text-base leading-8 mb-8 py-8"
-                    color="secondary"
-                    variant="faded"
-                    icon={<FaInfoCircle />}
-                  >
-                    <h4 className="font-bold text-lg">
-                      Aclaración Importante sobre Pagos y Facturas:
-                    </h4>
-                    <p>
-                      La validación de los pagos es un{" "}
-                      <strong>proceso manual</strong>. Luego de que envíes el
-                      comprobante por WhatsApp, Gastón revisará el pago y
-                      marcará la factura como &quot;pagada&quot; en la
-                      aplicación. Por esto, puede haber un desfasaje entre el
-                      momento en que pagas y el momento en que se actualiza el
-                      estado en la app.
-                    </p>
-                    <p className="mt-2">
-                      Las facturas se emiten los{" "}
-                      <strong>lunes de cada semana</strong> para calcular
-                      correctamente los descuentos por volumen de horas.
-                      Recibirás una notificación en la app y por mail. Aunque ya
-                      hayas pagado (especialmente en tus primeras reservas), la
-                      factura siempre se emitirá como &quot;pendiente&quot;
-                      hasta que sea revisada manualmente.
-                    </p>
-                    <p className="mt-4">
-                      Cuando una factura se marca como <strong>PAGADA</strong>{" "}
-                      te llegará una notificación por la aplicación. Puedes
-                      seguir el estado de tus facturas en la{" "}
-                      <Link
-                        href="https://reservas.pisama.uy/facturas"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-info-600 underline"
-                      >
-                        sección &quot;Facturas&quot;
-                      </Link>{" "}
-                      de tu perfil.
-                    </p>
-                  </Alert>
-                </CardBody>
-              </Card>
             </div>
           </div>
         </section>
