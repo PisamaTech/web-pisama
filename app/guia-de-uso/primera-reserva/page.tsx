@@ -83,7 +83,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
       </section>
       <main>
         {/* --- SECCIÓN 1: BIENVENIDA DE LEO --- */}
-        <section className="bg-content2 py-16">
+        <section className="bg-content2 pt-16 pb-6">
           <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-4 lg:px-8">
             <div className="flex justify-center md:col-span-1">
               <Image
@@ -109,7 +109,7 @@ export default function GuiaPrimeraVisitaPage(): JSX.Element {
           </div>
 
           {/* --- ÍNDICE DE CONTENIDO --- */}
-          <div className="px-4">
+          <div className="px-4 pt-6">
             <Indice sections={sections} />
           </div>
         </section>
