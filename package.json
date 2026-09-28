@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "test": "node --test components/precios/discountCalculatorLogic.test.mjs"
   },
   "dependencies": {
     "@heroui/accordion": "^2.2.29",

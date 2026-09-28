@@ -30,11 +30,11 @@ export default function PreciosPage() {
     name: "Alquiler de Consultorios por Hora",
     description:
       "Alquiler flexible de consultorios profesionales en Montevideo",
-    price: "200",
+    price: "220",
     priceCurrency: "UYU",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
-      price: "200",
+      price: "220",
       priceCurrency: "UYU",
       unitText: "hora",
     },

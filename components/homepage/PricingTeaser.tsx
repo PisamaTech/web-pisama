@@ -36,11 +36,11 @@ export default function PricingTeaser() {
             </h3>
             <Divider className="my-4" />
             <p className="my-3 inline-flex items-center gap-1 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 font-sans text-sm font-medium text-primary/70">
-              Precio base: $250 / hora
+              Precio base: $270 / hora
             </p>
             <p className="font-display font-bold text-secondary-400">
               <span className="text-3xl ">Hasta</span>{" "}
-              <span className="text-5xl text-secondary-500">$150</span>
+              <span className="text-5xl text-secondary-500">$170</span>
               <span className="text-3xl"> / hora</span>
             </p>
             <p className="my-4 font-sans text-sm text-primary">
@@ -58,11 +58,11 @@ export default function PricingTeaser() {
             </h3>
             <Divider className="my-4" />
             <p className="my-3 inline-flex items-center gap-1 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 font-sans text-sm font-medium text-primary/70">
-              Precio base: $200 / hora
+              Precio base: $220 / hora
             </p>
             <p className="font-display font-bold text-secondary-400">
               <span className="text-3xl">Hasta</span>{" "}
-              <span className="text-5xl text-secondary-500">$100</span>
+              <span className="text-5xl text-secondary-500">$120</span>
               <span className="text-3xl"> / hora</span>
             </p>
             <p className="my-4 font-sans text-sm text-primary">

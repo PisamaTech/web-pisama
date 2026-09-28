@@ -34,7 +34,7 @@ const faqData = [
     key: "5",
     question: "¿Qué consultorio debo elegir si trabajo con camilla?",
     answer:
-      "Recomendamos encarecidamente los Consultorios Premium ($250/hora) para trabajar con camilla. Estos espacios son amplios y te permiten circular alrededor de la camilla con total ergonomía, realizar maniobras terapéuticas, estiramientos y evaluaciones sin limitaciones de espacio. Si bien tenemos un Consultorio Estándar más económico ($200/hora), por sus dimensiones reducidas no es recomendable para terapias con camilla.",
+      "Recomendamos encarecidamente los Consultorios Premium ($270/hora) para trabajar con camilla. Estos espacios son amplios y te permiten circular alrededor de la camilla con total ergonomía, realizar maniobras terapéuticas, estiramientos y evaluaciones sin limitaciones de espacio. Si bien tenemos un Consultorio Estándar más económico ($220/hora), por sus dimensiones reducidas no es recomendable para terapias con camilla.",
   },
   {
     key: "6",

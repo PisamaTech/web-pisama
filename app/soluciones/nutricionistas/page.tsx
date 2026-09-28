@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title:
     "Alquiler de Consultorio para Nutricionistas en Montevideo | Por Hora y Sin Compromiso | PISAMA",
   description:
-    "Consultorio nutricional por hora en Parque Rodó, Montevideo. Privacidad total, ambiente profesional y reservas online. Alquiler flexible para nutricionistas desde $200/hora.",
+    "Consultorio nutricional por hora en Parque Rodó, Montevideo. Privacidad total, ambiente profesional y reservas online. Alquiler flexible para nutricionistas desde $220/hora.",
   keywords: [
     "alquiler consultorio nutricionista montevideo",
     "consultorio nutricional montevideo",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title:
       "Alquiler de Consultorios para Nutricionistas en Montevideo | PISAMA",
     description:
-      "Consultorio nutricional por hora en Parque Rodó. Ambiente profesional, privacidad total y reservas online desde $200/hora.",
+      "Consultorio nutricional por hora en Parque Rodó. Ambiente profesional, privacidad total y reservas online desde $220/hora.",
     url: "https://www.pisama.uy/soluciones/nutricionistas",
     siteName: "Espacio Pisama",
     locale: "es_UY",
@@ -218,13 +218,13 @@ export default function ArticuloNutricionistasPage(): React.JSX.Element {
           {
             name: "Consultorio Estándar",
             description: "Consultorio profesional para nutrición por hora",
-            price: "200",
+            price: "220",
             priceCurrency: "UYU",
           },
           {
             name: "Consultorio Premium",
             description: "Consultorio amplio Premium para nutrición por hora",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}

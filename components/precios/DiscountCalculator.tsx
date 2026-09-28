@@ -2,34 +2,16 @@
 import { Slider } from "@heroui/slider";
 import React, { useState, useMemo } from "react";
 
-// Precios base actualizados con la nueva nomenclatura
-const PRECIO_PREMIUM = 250;
-const PRECIO_ESTANDAR = 200;
-
-// TIPADO: Definimos el tipo de retorno de nuestra función de cálculo
-type DiscountInfo = {
-  discount: number;
-};
-
-const getDiscountInfo = (hours: number): DiscountInfo => {
-  if (hours >= 20) return { discount: 100 };
-  if (hours >= 16) return { discount: 80 };
-  if (hours >= 12) return { discount: 60 };
-  if (hours >= 8) return { discount: 40 };
-  if (hours >= 4) return { discount: 20 };
-
-  return { discount: 0 };
-};
+import { calculateDiscount } from "./discountCalculatorLogic";
 
 export default function DiscountCalculator() {
   // TIPADO: Especificamos que el estado 'hours' es un número
   const [hours, setHours] = useState<number>(0);
 
-  const { discount } = useMemo(() => getDiscountInfo(hours), [hours]);
-
-  const finalPricePremium = PRECIO_PREMIUM - discount;
-  const finalPriceEstandar = PRECIO_ESTANDAR - discount;
-  const weeklySaving = hours * discount;
+  const { finalPricePremium, finalPriceEstandar, weeklySaving } = useMemo(
+    () => calculateDiscount(hours),
+    [hours],
+  );
 
   return (
     <div className="mx-auto w-full max-w-2xl rounded-lg bg-crema-suave p-8 shadow-lg">

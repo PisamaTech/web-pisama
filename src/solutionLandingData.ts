@@ -54,12 +54,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Psicólogos",
     heroSubtitle:
-      "Privacidad acústica absoluta, reservas online en tiempo real y un ambiente diseñado por psicólogos para psicólogos. Desde $200/hora en Parque Rodó.",
+      "Privacidad acústica absoluta, reservas online en tiempo real y un ambiente diseñado por psicólogos para psicólogos. Desde $220/hora en Parque Rodó.",
     heroImage: consultorio3,
     heroImageAlt:
       "Consultorio profesional para psicólogos en Parque Rodó, Montevideo",
     quickStats: [
-      { value: "$200", label: "Desde/hora" },
+      { value: "$220", label: "Desde/hora" },
       { value: "24/7", label: "Reservas online" },
       { value: "6", label: "Consultorios" },
       { value: "100%", label: "Privacidad acústica" },
@@ -101,12 +101,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Terapias Alternativas",
     heroSubtitle:
-      "Ambiente armónico con excelente energía, camilla profesional disponible y flexibilidad total. Desde $200/hora en Parque Rodó.",
+      "Ambiente armónico con excelente energía, camilla profesional disponible y flexibilidad total. Desde $220/hora en Parque Rodó.",
     heroImage: consultorio3,
     heroImageAlt:
       "Consultorio para terapias alternativas con camilla en Montevideo",
     quickStats: [
-      { value: "$200", label: "Desde/hora" },
+      { value: "$220", label: "Desde/hora" },
       { value: "Camilla", label: "Disponible" },
       { value: "7-23hs", label: "Todos los días" },
       { value: "100%", label: "Buena energía" },
@@ -148,11 +148,11 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Nutricionistas",
     heroSubtitle:
-      "Ambiente profesional que inspira cambio y hábitos saludables. Reservas online y flexibilidad total desde $200/hora.",
+      "Ambiente profesional que inspira cambio y hábitos saludables. Reservas online y flexibilidad total desde $220/hora.",
     heroImage: consultorio5,
     heroImageAlt: "Consultorio profesional para nutricionistas en Montevideo",
     quickStats: [
-      { value: "$200", label: "Desde/hora" },
+      { value: "$220", label: "Desde/hora" },
       { value: "Online", label: "Reservas 24/7" },
       { value: "Parque Rodó", label: "Ubicación" },
       { value: "0", label: "Compromiso mensual" },
@@ -194,12 +194,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Psiquiatras",
     heroSubtitle:
-      "Privacidad total, ambiente médico profesional y sistema de reservas online. Consultorios desde $200/hora en Parque Rodó.",
+      "Privacidad total, ambiente médico profesional y sistema de reservas online. Consultorios desde $220/hora en Parque Rodó.",
     heroImage: consultorio1,
     heroImageAlt:
       "Consultorio médico profesional para psiquiatras en Montevideo",
     quickStats: [
-      { value: "$200", label: "Desde/hora" },
+      { value: "$220", label: "Desde/hora" },
       { value: "100%", label: "Privacidad" },
       { value: "Premium", label: "Disponibles" },
       { value: "Online", label: "Reservas" },
@@ -241,11 +241,11 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Coaches",
     heroSubtitle:
-      "Espacio diseñado para transformación y crecimiento personal. Ambiente que potencia tus sesiones desde $200/hora.",
+      "Espacio diseñado para transformación y crecimiento personal. Ambiente que potencia tus sesiones desde $220/hora.",
     heroImage: consultorio5,
     heroImageAlt: "Espacio profesional para coaches en Montevideo",
     quickStats: [
-      { value: "$200", label: "Desde/hora" },
+      { value: "$220", label: "Desde/hora" },
       { value: "Flexible", label: "Sin compromiso" },
       { value: "Online", label: "Reservas" },
       { value: "7-23hs", label: "Todos los días" },
@@ -287,12 +287,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorios para",
     heroHighlight: "Fisioterapeutas",
     heroSubtitle:
-      "Consultorios Premium amplios con camilla profesional y espacio de trabajo 360°. Desde $250/hora en Parque Rodó.",
+      "Consultorios Premium amplios con camilla profesional y espacio de trabajo 360°. Desde $270/hora en Parque Rodó.",
     heroImage: consultorio3,
     heroImageAlt:
       "Consultorio amplio para fisioterapeutas con camilla en Montevideo",
     quickStats: [
-      { value: "$250", label: "Premium/hora" },
+      { value: "$270", label: "Premium/hora" },
       { value: "Camilla", label: "Incluida" },
       { value: "Amplios", label: "Consultorios" },
       { value: "Online", label: "Reservas" },
@@ -334,12 +334,12 @@ export const solutionLandingConfigs: Record<string, SolutionLandingConfig> = {
     heroTitle: "Alquiler de Consultorio con Camilla",
     heroHighlight: "para Masajes",
     heroSubtitle:
-      "Consultorio con camilla profesional incluida y amplio espacio de trabajo para tus sesiones de masajes. Ambiente relajante desde $250/hora en Parque Rodó.",
+      "Consultorio con camilla profesional incluida y amplio espacio de trabajo para tus sesiones de masajes. Ambiente relajante desde $270/hora en Parque Rodó.",
     heroImage: consultorio3,
     heroImageAlt:
       "Alquiler de consultorio con camilla para masajes en Montevideo",
     quickStats: [
-      { value: "$250", label: "Con camilla/hora" },
+      { value: "$270", label: "Con camilla/hora" },
       { value: "Amplios", label: "Consultorios" },
       { value: "Relajante", label: "Ambiente" },
       { value: "Flexible", label: "Horarios" },

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title:
     "Alquiler de Consultorio para Coaches por Hora en Parque Rodó, Montevideo | PISAMA",
   description:
-    "Consultorio para coaches por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente profesional y reservas online. Ideal para coaching ontológico, ejecutivo y personal. Sin compromiso mensual.",
+    "Consultorio para coaches por hora en Parque Rodó desde $220. Privacidad acústica absoluta, ambiente profesional y reservas online. Ideal para coaching ontológico, ejecutivo y personal. Sin compromiso mensual.",
   keywords: [
     "alquiler consultorio coaches montevideo",
     "consultorio coaching parque rodó",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alquiler de Consultorio para Coaches en Montevideo | PISAMA",
     description:
-      "Consultorio para coaching por hora con privacidad acústica absoluta en Parque Rodó. Desde $200/hora sin compromiso mensual.",
+      "Consultorio para coaching por hora con privacidad acústica absoluta en Parque Rodó. Desde $220/hora sin compromiso mensual.",
     url: "https://www.pisama.uy/soluciones/coaches",
     siteName: "Espacio Pisama",
     locale: "es_UY",
@@ -82,7 +82,7 @@ const CtaBox = () => (
       ¿Listo para reservar tu consultorio para coaching en Parque Rodó?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Alquiler por hora desde $200 en Montevideo. Privacidad acústica absoluta,
+      Alquiler por hora desde $220 en Montevideo. Privacidad acústica absoluta,
       reservas online en tiempo real y ambiente diseñado para sesiones de
       coaching profesional. Sin compromiso mensual.
     </p>
@@ -188,13 +188,13 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
           {
             name: "Consultorio Estándar",
             description: "Consultorio profesional para coaching por hora",
-            price: "200",
+            price: "220",
             priceCurrency: "UYU",
           },
           {
             name: "Consultorio Premium",
             description: "Consultorio amplio Premium para coaching por hora",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}
@@ -689,7 +689,7 @@ export default function ArticuloCoachesPage(): React.JSX.Element {
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Coaching en Montevideo Hoy"
-        description="Alquiler por hora en Parque Rodó desde $200. Privacidad acústica absoluta, ambiente diseñado para coaching profesional y sistema de reservas online en tiempo real. Todo lo que necesitas para tu práctica de coaching ontológico, ejecutivo o personal sin compromiso mensual. Encontrá tu horario ideal ahora."
+        description="Alquiler por hora en Parque Rodó desde $220. Privacidad acústica absoluta, ambiente diseñado para coaching profesional y sistema de reservas online en tiempo real. Todo lo que necesitas para tu práctica de coaching ontológico, ejecutivo o personal sin compromiso mensual. Encontrá tu horario ideal ahora."
         buttonText="Ver Disponibilidad Ahora"
         buttonLink="/disponibilidad"
       />

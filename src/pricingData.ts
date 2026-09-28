@@ -11,8 +11,8 @@ interface PricingPlan {
 export const pricingData: PricingPlan[] = [
   {
     title: "Consultorio Estándar",
-    price: 200,
-    priceSubtitle: "(o hasta $100/hora con descuentos)",
+    price: 220,
+    priceSubtitle: "(o hasta $120/hora con descuentos)",
     description:
       "Acogedor, funcional y con todo lo indispensable para una sesión productiva. Un ambiente íntimo y profesional, optimizado para terapias individuales, coaching o consultas nutricionales. La solución más eficiente en costos.",
     features: [
@@ -27,8 +27,8 @@ export const pricingData: PricingPlan[] = [
   },
   {
     title: "Consultorio Premium",
-    price: 250,
-    priceSubtitle: "(o hasta $150/hora con descuentos)",
+    price: 270,
+    priceSubtitle: "(o hasta $170/hora con descuentos)",
     description:
       "Ideal para profesionales que buscan un extra de confort y amplitud. Un espacio generoso con mobiliario seleccionado para crear una atmósfera de calma y distinción. Perfecto para terapias de pareja, sesiones familiares o para ofrecer una experiencia superior.",
     features: [

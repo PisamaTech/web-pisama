@@ -14,7 +14,7 @@ export const consultoriosData: Espacio[] = [
     nombre: "Consultorio 1",
     descripcion:
       "Espacio luminoso y profesional de estilo minimalista, diseñado para consultas individuales y sesiones de terapia.",
-    precio: "$250 / hora",
+    precio: "$270 / hora",
     caracteristicas: [
       "Amplio ventanal con luz natural",
       "Mobiliario versátil: sillones y sofa de 3 cuerpos",
@@ -38,7 +38,7 @@ export const consultoriosData: Espacio[] = [
     nombre: "Consultorio 2",
     descripcion:
       "Un consultorio cálido y ecléctico, con un ambiente natural y relajado.",
-    precio: "$250 / hora",
+    precio: "$270 / hora",
     caracteristicas: [
       "Excelente iluminación natural",
       "Decoración con plantas y texturas",
@@ -61,7 +61,7 @@ export const consultoriosData: Espacio[] = [
     id: "consultorio-3",
     nombre: "Consultorio 3",
     descripcion: "Un espacio íntimo con una decoración moderna y unificada.",
-    precio: "$250 / hora",
+    precio: "$270 / hora",
     caracteristicas: [
       "Mobiliario de diseño a juego",
       "Iluminación cálida y acogedora",
@@ -85,7 +85,7 @@ export const consultoriosData: Espacio[] = [
     nombre: "Consultorio 4",
     descripcion:
       "Ambiente clásico y sereno que transmite estabilidad y confort.",
-    precio: "$250 / hora",
+    precio: "$270 / hora",
     caracteristicas: [
       "Sillones amplios y cómodos",
       "Detalles en madera y texturas cálidas",
@@ -109,7 +109,7 @@ export const consultoriosData: Espacio[] = [
     nombre: "Consultorio 5",
     descripcion:
       "Un espacio sofisticado, ideal para crear un ambiente distinguido.",
-    precio: "$200 / hora",
+    precio: "$220 / hora",
     caracteristicas: [
       "Decoración con detalles artísticos",
       "Diseño simétrico para terapia individual",
@@ -133,7 +133,7 @@ export const consultoriosData: Espacio[] = [
     nombre: "Consultorio 6",
     descripcion:
       "Consultorio con carácter único que combina elementos vintage y modernos.",
-    precio: "$250 / hora",
+    precio: "$270 / hora",
     caracteristicas: [
       "Distintivo piso de baldosas de época",
       "Mobiliario de alto contraste (sofá púrpura)",

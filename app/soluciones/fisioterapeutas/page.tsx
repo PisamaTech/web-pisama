@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   title:
     "Alquiler de Consultorio para Fisioterapeutas en Montevideo | Camilla y Almacenamiento | PISAMA",
   description:
-    "Consultorio para fisioterapeutas y kinesiólogos en Parque Rodó desde $250/hora. Espacios amplios Premium, camilla incluida, almacenamiento seguro y ergonomía garantizada. Reserva online sin compromiso mensual.",
+    "Consultorio para fisioterapeutas y kinesiólogos en Parque Rodó desde $270/hora. Espacios amplios Premium, camilla incluida, almacenamiento seguro y ergonomía garantizada. Reserva online sin compromiso mensual.",
   keywords: [
     "alquiler consultorio fisioterapeutas montevideo",
     "consultorio fisioterapia parque rodó",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title:
       "Alquiler de Consultorio para Fisioterapeutas en Montevideo | PISAMA",
     description:
-      "Consultorio para fisioterapeutas con espacios amplios, camilla profesional incluida y almacenamiento seguro. Desde $250/hora en Parque Rodó sin compromiso mensual.",
+      "Consultorio para fisioterapeutas con espacios amplios, camilla profesional incluida y almacenamiento seguro. Desde $270/hora en Parque Rodó sin compromiso mensual.",
     url: "https://www.pisama.uy/soluciones/fisioterapeutas",
     siteName: "Espacio Pisama",
     locale: "es_UY",
@@ -82,7 +82,7 @@ const CtaBox = () => (
       ¿Listo para trabajar con ergonomía y comodidad?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Alquiler de consultorio para fisioterapeutas desde $250/hora en Parque
+      Alquiler de consultorio para fisioterapeutas desde $270/hora en Parque
       Rodó, Montevideo. Espacios Premium amplios, camilla profesional incluida y
       almacenamiento seguro. Sin compromiso mensual.
     </p>
@@ -204,7 +204,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
             name: "Consultorio Premium con Camilla",
             description:
               "Consultorio amplio para fisioterapeutas con camilla profesional bonificada",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}
@@ -595,7 +595,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
               Tarifa Premium + Camilla / Guardado:
             </h3>
             <p className="text-4xl font-bold text-secondary-500 my-4">
-              $250 / hora
+              $270 / hora
             </p>
             <p className="text-foreground/80 mb-0">
               <strong>Incluye:</strong> Consultorio Premium amplio, uso de
@@ -638,7 +638,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
                     4+ horas/sem
                   </td>
                   <td className="border border-primary-200 p-3 font-bold">
-                    $230/hora
+                    $250/hora
                   </td>
                   <td className="border border-primary-200 p-3">
                     $80 (con 4 horas)
@@ -649,7 +649,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
                     8+ horas/sem
                   </td>
                   <td className="border border-primary-200 p-3 font-bold">
-                    $210/hora
+                    $230/hora
                   </td>
                   <td className="border border-primary-200 p-3">
                     $320 (con 8 horas)
@@ -660,7 +660,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
                     12+ horas/sem
                   </td>
                   <td className="border border-primary-200 p-3 font-bold text-secondary-500">
-                    $190/hora
+                    $210/hora
                   </td>
                   <td className="border border-primary-200 p-3 font-bold text-secondary-500">
                     $720 (con 12 horas)
@@ -671,7 +671,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
           </div>
 
           <blockquote>
-            Si trabajas 12 horas semanales, pagas $190/hora en lugar de $250.
+            Si trabajas 12 horas semanales, pagas $210/hora en lugar de $270.
             Eso representa un ahorro de $720 por semana, casi $3,000 por mes,
             sin comprometerte a contratos de largo plazo.
           </blockquote>
@@ -759,7 +759,7 @@ export default function ArticuloFisioterapeutasPage(): React.JSX.Element {
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Fisioterapeutas en Montevideo Hoy"
-        description="Alquiler por hora en Parque Rodó desde $250. Espacios Premium amplios, camilla profesional incluida, almacenamiento seguro y ergonomía garantizada. Todo lo que necesitás para tu práctica de fisioterapia sin compromiso mensual. Encontrá tu horario ideal ahora."
+        description="Alquiler por hora en Parque Rodó desde $270. Espacios Premium amplios, camilla profesional incluida, almacenamiento seguro y ergonomía garantizada. Todo lo que necesitás para tu práctica de fisioterapia sin compromiso mensual. Encontrá tu horario ideal ahora."
         buttonText="Ver Disponibilidad y Reservar"
         buttonLink="/disponibilidad"
       />

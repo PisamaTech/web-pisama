@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   title:
     "Alquiler de Consultorios para Terapias Alternativas en Montevideo | Por Hora en Parque Rodó | PISAMA",
   description:
-    "Consultorio para terapeutas alternativos en Parque Rodó, Montevideo. Camilla disponible, ambiente armónico y reservas online. Alquiler flexible desde $200/hora para terapias holísticas.",
+    "Consultorio para terapeutas alternativos en Parque Rodó, Montevideo. Camilla disponible, ambiente armónico y reservas online. Alquiler flexible desde $220/hora para terapias holísticas.",
   keywords: [
     "alquiler consultorios terapias alternativas montevideo",
     "consultorio terapeutas alternativos parque rodó",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title:
       "Alquiler de Consultorios para Terapias Alternativas en Montevideo | PISAMA",
     description:
-      "Consultorio con camilla disponible para terapeutas alternativos en Parque Rodó. Ambiente armónico y reservas online desde $200/hora.",
+      "Consultorio con camilla disponible para terapeutas alternativos en Parque Rodó. Ambiente armónico y reservas online desde $220/hora.",
     url: "https://www.pisama.uy/soluciones/terapeutas-alternativos",
     siteName: "Espacio Pisama",
     locale: "es_UY",
@@ -124,7 +124,7 @@ const CtaBox = () => (
       ¿Listo para encontrar tu consultorio ideal para terapias holísticas?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Alquiler por hora desde $200 en Parque Rodó. Con camilla disponible,
+      Alquiler por hora desde $220 en Parque Rodó. Con camilla disponible,
       ambiente armónico y sistema de reservas online. Sin compromiso mensual.
     </p>
     <Button
@@ -203,14 +203,14 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
           {
             name: "Consultorio Estándar",
             description: "Consultorio para terapias alternativas por hora",
-            price: "200",
+            price: "220",
             priceCurrency: "UYU",
           },
           {
             name: "Consultorio Premium con Camilla",
             description:
               "Consultorio amplio con camilla para terapias holísticas",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}
@@ -646,7 +646,7 @@ export default function ArticuloTerapiasAlternativasPage(): React.JSX.Element {
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Terapias Alternativas en Montevideo"
-        description="Alquiler por hora en Parque Rodó desde $200. Camilla profesional disponible, ambiente con excelente energía y reservas online. Ideal para reiki, acupuntura, masajes terapéuticos y todas las terapias holísticas. Sin compromiso mensual, total flexibilidad."
+        description="Alquiler por hora en Parque Rodó desde $220. Camilla profesional disponible, ambiente con excelente energía y reservas online. Ideal para reiki, acupuntura, masajes terapéuticos y todas las terapias holísticas. Sin compromiso mensual, total flexibilidad."
         buttonText="Ver Disponibilidad Ahora"
         buttonLink="/disponibilidad"
       />

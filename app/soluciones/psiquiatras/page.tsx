@@ -158,14 +158,14 @@ export default function ArticuloPsiquiatrasPage(): React.JSX.Element {
             name: "Consultorio Estándar",
             description:
               "Consultorio profesional para práctica psiquiátrica por hora",
-            price: "200",
+            price: "220",
             priceCurrency: "UYU",
           },
           {
             name: "Consultorio Premium",
             description:
               "Consultorio amplio Premium para práctica psiquiátrica por hora",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}

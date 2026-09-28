@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title:
     "Alquiler de Consultorio con Camilla para Masajes en Montevideo | Por Hora | PISAMA",
   description:
-    "Alquiler de consultorio con camilla profesional para masajes desde $250/hora en Parque Rodó, Montevideo. Consultorio para masajistas con reserva online. Espacios amplios para masajes terapéuticos, deportivos y relajantes. Sin compromiso mensual.",
+    "Alquiler de consultorio con camilla profesional para masajes desde $270/hora en Parque Rodó, Montevideo. Consultorio para masajistas con reserva online. Espacios amplios para masajes terapéuticos, deportivos y relajantes. Sin compromiso mensual.",
   keywords: [
     // Keywords principales objetivo
     "alquiler de consultorio con camilla",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title:
       "Alquiler de Consultorio con Camilla para Masajes en Montevideo | PISAMA",
     description:
-      "Alquiler de consultorio con camilla profesional para masajes desde $250/hora. Reserva online en tiempo real. Ideal para masajistas en Parque Rodó, Montevideo.",
+      "Alquiler de consultorio con camilla profesional para masajes desde $270/hora. Reserva online en tiempo real. Ideal para masajistas en Parque Rodó, Montevideo.",
     url: "https://www.pisama.uy/soluciones/masajistas",
     siteName: "Espacio Pisama",
     locale: "es_UY",
@@ -88,7 +88,7 @@ const CtaBox = () => (
       ¿Listo para alquilar tu consultorio con camilla para masajes?
     </h3>
     <p className="mx-auto mt-4 max-w-xl font-sans text-foreground/80">
-      Alquiler de consultorio con camilla profesional desde $250/hora en Parque
+      Alquiler de consultorio con camilla profesional desde $270/hora en Parque
       Rodó, Montevideo. 5 espacios Premium amplios para masajes terapéuticos y
       deportivos. Reserva online que garantiza tu equipamiento. Sin compromiso
       mensual.
@@ -192,7 +192,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             name: "Alquiler de Consultorio con Camilla para Masajes",
             description:
               "Consultorio amplio con camilla profesional incluida para masajes terapéuticos, deportivos y relajantes",
-            price: "250",
+            price: "270",
             priceCurrency: "UYU",
           },
         ]}
@@ -467,7 +467,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             Consultorio Premium: La Opción Recomendada para Terapias con Camilla
           </h4>
           <p>
-            <strong>Tarifa Base: $250 / hora</strong>
+            <strong>Tarifa Base: $270 / hora</strong>
           </p>
           <p>
             <strong>¿Por qué elegirlo?</strong> Es el espacio ideal para
@@ -478,7 +478,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
             salud profesional y la calidad de atención a tus pacientes.
           </p>
           <blockquote>
-            Nota: Contamos con un Consultorio Estándar a $200/hora, pero por sus
+            Nota: Contamos con un Consultorio Estándar a $220/hora, pero por sus
             dimensiones reducidas, no lo recomendamos para terapias con camilla.
             Prioriza tu comodidad y la de tu paciente eligiendo Premium.
           </blockquote>
@@ -498,13 +498,13 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
           </p>
           <ul>
             <li>
-              <strong>4+ horas/semana:</strong> Ahorras $20/hora → $230/hora
+              <strong>4+ horas/semana:</strong> Ahorras $20/hora → $250/hora
             </li>
             <li>
-              <strong>8+ horas/semana:</strong> Ahorras $40/hora → $210/hora
+              <strong>8+ horas/semana:</strong> Ahorras $40/hora → $230/hora
             </li>
             <li>
-              <strong>12+ horas/semana:</strong> Ahorras $60/hora → $190/hora
+              <strong>12+ horas/semana:</strong> Ahorras $60/hora → $210/hora
             </li>
           </ul>
           <p>
@@ -661,7 +661,7 @@ export default function ArticuloMasajistasPage(): React.JSX.Element {
       </main>
       <CtaSection
         title="Reservá tu Consultorio para Masajes en Montevideo Hoy"
-        description="Alquiler por hora desde $250 en Parque Rodó. Camilla profesional incluida, 5 espacios Premium amplios diseñados para masajistas. Sistema de reserva online que garantiza tu camilla en tiempo real. Sin compromiso mensual. Ideal para masajes terapéuticos, deportivos y relajantes."
+        description="Alquiler por hora desde $270 en Parque Rodó. Camilla profesional incluida, 5 espacios Premium amplios diseñados para masajistas. Sistema de reserva online que garantiza tu camilla en tiempo real. Sin compromiso mensual. Ideal para masajes terapéuticos, deportivos y relajantes."
         buttonText="Ver Disponibilidad y Reservar Ahora"
         buttonLink="/disponibilidad"
       />
