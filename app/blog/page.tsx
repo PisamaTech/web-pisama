@@ -15,6 +15,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "redes-derivacion-profesionales",
+    title:
+      "Redes de derivación entre profesionales: cómo construir vínculos de confianza",
+    description:
+      "Derivar también es cuidar. Criterios de confianza, confidencialidad y pasos prácticos para construir una red de derivación sólida entre profesionales de la salud.",
+    date: "30 de septiembre, 2026",
+  },
+  {
     slug: "10-estrategias-conseguir-primeros-pacientes",
     title: "10 Estrategias Efectivas para Conseguir tus Primeros Pacientes",
     description:

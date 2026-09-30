@@ -27,6 +27,10 @@ async function getPublishedBlogArticles(): Promise<BlogArticle[]> {
       slug: "10-estrategias-conseguir-primeros-pacientes",
       lastModified: new Date("2025-11-26"),
     },
+    {
+      slug: "redes-derivacion-profesionales",
+      lastModified: new Date("2026-09-30"),
+    },
     // Futuros artículos se agregarán aquí
   ];
 }
